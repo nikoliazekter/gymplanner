@@ -37,11 +37,7 @@
             this.ExercisesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ExerciseInfoLabel = new System.Windows.Forms.Label();
             this.ExercisesDataGridView = new System.Windows.Forms.DataGridView();
-            this.назваDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.інформаціяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.групимязівDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.тренуванняDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.вправиBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.exercisesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ExercisesMenuStrip = new System.Windows.Forms.MenuStrip();
             this.AddNewExerciseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveExerciseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,12 +48,16 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.MainTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.informationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.muscleGroupsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.workoutsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainTabControl.SuspendLayout();
             this.CalendarTab.SuspendLayout();
             this.ExercisesTab.SuspendLayout();
             this.ExercisesTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExercisesDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.вправиBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exercisesBindingSource)).BeginInit();
             this.ExercisesMenuStrip.SuspendLayout();
             this.StatTab.SuspendLayout();
             this.MainTableLayout.SuspendLayout();
@@ -149,11 +149,11 @@
             this.ExercisesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ExercisesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ExercisesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.назваDataGridViewTextBoxColumn,
-            this.інформаціяDataGridViewTextBoxColumn,
-            this.групимязівDataGridViewTextBoxColumn,
-            this.тренуванняDataGridViewTextBoxColumn});
-            this.ExercisesDataGridView.DataSource = this.вправиBindingSource;
+            this.nameDataGridViewTextBoxColumn,
+            this.informationDataGridViewTextBoxColumn,
+            this.muscleGroupsDataGridViewTextBoxColumn,
+            this.workoutsDataGridViewTextBoxColumn});
+            this.ExercisesDataGridView.DataSource = this.exercisesBindingSource;
             this.ExercisesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ExercisesDataGridView.Location = new System.Drawing.Point(3, 3);
             this.ExercisesDataGridView.Name = "ExercisesDataGridView";
@@ -164,40 +164,10 @@
             this.ExercisesDataGridView.TabIndex = 2;
             this.ExercisesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExercisesDataGridView_CellContentClick);
             // 
-            // назваDataGridViewTextBoxColumn
+            // exercisesBindingSource
             // 
-            this.назваDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.назваDataGridViewTextBoxColumn.DataPropertyName = "Назва";
-            this.назваDataGridViewTextBoxColumn.HeaderText = "Назва";
-            this.назваDataGridViewTextBoxColumn.Name = "назваDataGridViewTextBoxColumn";
-            this.назваDataGridViewTextBoxColumn.Width = 77;
-            // 
-            // інформаціяDataGridViewTextBoxColumn
-            // 
-            this.інформаціяDataGridViewTextBoxColumn.DataPropertyName = "Інформація";
-            this.інформаціяDataGridViewTextBoxColumn.HeaderText = "Інформація";
-            this.інформаціяDataGridViewTextBoxColumn.Name = "інформаціяDataGridViewTextBoxColumn";
-            this.інформаціяDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // групимязівDataGridViewTextBoxColumn
-            // 
-            this.групимязівDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.групимязівDataGridViewTextBoxColumn.DataPropertyName = "Групи_м_язів";
-            this.групимязівDataGridViewTextBoxColumn.HeaderText = "М\'язова група";
-            this.групимязівDataGridViewTextBoxColumn.Name = "групимязівDataGridViewTextBoxColumn";
-            this.групимязівDataGridViewTextBoxColumn.Width = 129;
-            // 
-            // тренуванняDataGridViewTextBoxColumn
-            // 
-            this.тренуванняDataGridViewTextBoxColumn.DataPropertyName = "Тренування";
-            this.тренуванняDataGridViewTextBoxColumn.HeaderText = "Тренування";
-            this.тренуванняDataGridViewTextBoxColumn.Name = "тренуванняDataGridViewTextBoxColumn";
-            this.тренуванняDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // вправиBindingSource
-            // 
-            this.вправиBindingSource.DataSource = typeof(LibraryGymPlanner.Exercises);
-            this.вправиBindingSource.CurrentChanged += new System.EventHandler(this.вправиBindingSource_CurrentChanged);
+            this.exercisesBindingSource.DataSource = typeof(LibraryGymPlanner.Exercises);
+            this.exercisesBindingSource.CurrentChanged += new System.EventHandler(this.вправиBindingSource_CurrentChanged);
             // 
             // ExercisesMenuStrip
             // 
@@ -299,6 +269,32 @@
             this.MainTableLayout.Size = new System.Drawing.Size(824, 482);
             this.MainTableLayout.TabIndex = 2;
             // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Назва";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // informationDataGridViewTextBoxColumn
+            // 
+            this.informationDataGridViewTextBoxColumn.DataPropertyName = "Information";
+            this.informationDataGridViewTextBoxColumn.HeaderText = "Information";
+            this.informationDataGridViewTextBoxColumn.Name = "informationDataGridViewTextBoxColumn";
+            this.informationDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // muscleGroupsDataGridViewTextBoxColumn
+            // 
+            this.muscleGroupsDataGridViewTextBoxColumn.DataPropertyName = "MuscleGroups";
+            this.muscleGroupsDataGridViewTextBoxColumn.HeaderText = "Група м\'язів";
+            this.muscleGroupsDataGridViewTextBoxColumn.Name = "muscleGroupsDataGridViewTextBoxColumn";
+            // 
+            // workoutsDataGridViewTextBoxColumn
+            // 
+            this.workoutsDataGridViewTextBoxColumn.DataPropertyName = "Workouts";
+            this.workoutsDataGridViewTextBoxColumn.HeaderText = "Workouts";
+            this.workoutsDataGridViewTextBoxColumn.Name = "workoutsDataGridViewTextBoxColumn";
+            this.workoutsDataGridViewTextBoxColumn.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -316,7 +312,7 @@
             this.ExercisesTableLayoutPanel.ResumeLayout(false);
             this.ExercisesTableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExercisesDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.вправиBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exercisesBindingSource)).EndInit();
             this.ExercisesMenuStrip.ResumeLayout(false);
             this.ExercisesMenuStrip.PerformLayout();
             this.StatTab.ResumeLayout(false);
@@ -350,6 +346,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn інформаціяDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn групимязівDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn тренуванняDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource вправиBindingSource;
+        private System.Windows.Forms.BindingSource exercisesBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn informationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn muscleGroupsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn workoutsDataGridViewTextBoxColumn;
     }
 }
