@@ -12,7 +12,7 @@ namespace Gym_Planner
 {
     public partial class ExerciseChooseForm : Form
     {
-        public String exerciseName;
+        public string exerciseName;
         public ExerciseChooseForm()
         {
             InitializeComponent();
@@ -20,9 +20,12 @@ namespace Gym_Planner
 
         private void GetExerciseButton_Click(object sender, EventArgs e)
         {
-            //this.exerciseName.
-            /*SetApproachesForm newApproachesForm = new SetApproachesForm();
-            newApproachesForm.Show();*/
+            /*
+             if list has elements and selected != null
+                    this.exerciseName = selected.name
+                    return
+             this.exerciseName = this.textBox.text
+             */
         }
     }
 }

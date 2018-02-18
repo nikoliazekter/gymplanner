@@ -61,6 +61,9 @@ namespace Gym_Planner
                 }
                 exerciseName = Window.exerciseName;
             }
+            /*
+             * do some load stuff for our chart
+             */
         }
     }
 }
