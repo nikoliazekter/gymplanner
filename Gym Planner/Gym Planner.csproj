@@ -71,6 +71,11 @@
     <Compile Include="NewAccountForm.Designer.cs">
       <DependentUpon>NewAccountForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewGymPlannerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewGymPlannerDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SetApproachesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,7 +127,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Properties\DataSources\LibraryGymPlanner.Вправи.datasource" />
+    <None Include="NewGymPlannerDataSet.xsc">
+      <DependentUpon>NewGymPlannerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NewGymPlannerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NewGymPlannerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NewGymPlannerDataSet.xss">
+      <DependentUpon>NewGymPlannerDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -153,6 +168,9 @@
       <Project>{b2c2d56e-dbe2-44c9-8c79-b34eff60aa4a}</Project>
       <Name>LibraryGymPlanner</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -60,5 +60,12 @@ namespace Gym_Planner
              * do some load stuff for our chart
              */
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'newGymPlannerDataSet.Exercises' table. You can move, or remove it, as needed.
+            this.exercisesTableAdapter.Fill(this.newGymPlannerDataSet.Exercises);
+
+        }
     }
 }
