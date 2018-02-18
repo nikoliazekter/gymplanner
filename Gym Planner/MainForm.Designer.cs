@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -40,30 +39,24 @@
             this.ExercisesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ExerciseInfoLabel = new System.Windows.Forms.Label();
             this.ExercisesDataGridView = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.informationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.muscleGroupsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.workoutsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.exercisesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ExercisesMenuStrip = new System.Windows.Forms.MenuStrip();
             this.AddNewExerciseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveExerciseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatTab = new System.Windows.Forms.TabPage();
-            this.MainTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.ExerciseStatisticChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.StatMenuStrip = new System.Windows.Forms.MenuStrip();
             this.ChooseExToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ExerciseStatisticChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.MainTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.MainTabControl.SuspendLayout();
             this.CalendarTab.SuspendLayout();
             this.ExercisesTab.SuspendLayout();
             this.ExercisesTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExercisesDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exercisesBindingSource)).BeginInit();
             this.ExercisesMenuStrip.SuspendLayout();
             this.StatTab.SuspendLayout();
-            this.MainTableLayout.SuspendLayout();
-            this.StatMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExerciseStatisticChart)).BeginInit();
+            this.StatMenuStrip.SuspendLayout();
+            this.MainTableLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -148,15 +141,8 @@
             // 
             // ExercisesDataGridView
             // 
-            this.ExercisesDataGridView.AutoGenerateColumns = false;
             this.ExercisesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ExercisesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ExercisesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn,
-            this.informationDataGridViewTextBoxColumn,
-            this.muscleGroupsDataGridViewTextBoxColumn,
-            this.workoutsDataGridViewTextBoxColumn});
-            this.ExercisesDataGridView.DataSource = this.exercisesBindingSource;
             this.ExercisesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ExercisesDataGridView.Location = new System.Drawing.Point(3, 3);
             this.ExercisesDataGridView.Name = "ExercisesDataGridView";
@@ -166,37 +152,6 @@
             this.ExercisesDataGridView.Size = new System.Drawing.Size(418, 333);
             this.ExercisesDataGridView.TabIndex = 2;
             this.ExercisesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExercisesDataGridView_CellContentClick);
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Назва";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // informationDataGridViewTextBoxColumn
-            // 
-            this.informationDataGridViewTextBoxColumn.DataPropertyName = "Information";
-            this.informationDataGridViewTextBoxColumn.HeaderText = "Information";
-            this.informationDataGridViewTextBoxColumn.Name = "informationDataGridViewTextBoxColumn";
-            this.informationDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // muscleGroupsDataGridViewTextBoxColumn
-            // 
-            this.muscleGroupsDataGridViewTextBoxColumn.DataPropertyName = "MuscleGroups";
-            this.muscleGroupsDataGridViewTextBoxColumn.HeaderText = "Група м\'язів";
-            this.muscleGroupsDataGridViewTextBoxColumn.Name = "muscleGroupsDataGridViewTextBoxColumn";
-            // 
-            // workoutsDataGridViewTextBoxColumn
-            // 
-            this.workoutsDataGridViewTextBoxColumn.DataPropertyName = "Workouts";
-            this.workoutsDataGridViewTextBoxColumn.HeaderText = "Workouts";
-            this.workoutsDataGridViewTextBoxColumn.Name = "workoutsDataGridViewTextBoxColumn";
-            this.workoutsDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // exercisesBindingSource
-            // 
-            this.exercisesBindingSource.DataSource = typeof(LibraryGymPlanner.Exercises);
-            this.exercisesBindingSource.CurrentChanged += new System.EventHandler(this.вправиBindingSource_CurrentChanged);
             // 
             // ExercisesMenuStrip
             // 
@@ -234,20 +189,22 @@
             this.StatTab.Text = "Статистика";
             this.StatTab.UseVisualStyleBackColor = true;
             // 
-            // MainTableLayout
+            // ExerciseStatisticChart
             // 
-            this.MainTableLayout.BackgroundImage = global::Gym_Planner.Properties.Resources.MainFrom;
-            this.MainTableLayout.ColumnCount = 1;
-            this.MainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.MainTableLayout.Controls.Add(this.MainTabControl, 0, 1);
-            this.MainTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainTableLayout.Location = new System.Drawing.Point(0, 0);
-            this.MainTableLayout.Name = "MainTableLayout";
-            this.MainTableLayout.RowCount = 2;
-            this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.71018F));
-            this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.28982F));
-            this.MainTableLayout.Size = new System.Drawing.Size(824, 482);
-            this.MainTableLayout.TabIndex = 2;
+            chartArea1.Name = "ChartArea1";
+            this.ExerciseStatisticChart.ChartAreas.Add(chartArea1);
+            this.ExerciseStatisticChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.ExerciseStatisticChart.Legends.Add(legend1);
+            this.ExerciseStatisticChart.Location = new System.Drawing.Point(0, 28);
+            this.ExerciseStatisticChart.Name = "ExerciseStatisticChart";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.ExerciseStatisticChart.Series.Add(series1);
+            this.ExerciseStatisticChart.Size = new System.Drawing.Size(810, 339);
+            this.ExerciseStatisticChart.TabIndex = 1;
+            this.ExerciseStatisticChart.Text = "chart1";
             // 
             // StatMenuStrip
             // 
@@ -267,22 +224,20 @@
             this.ChooseExToolStripMenuItem.Text = "Вибрати вправу";
             this.ChooseExToolStripMenuItem.Click += new System.EventHandler(this.ChooseExToolStripMenuItem_Click);
             // 
-            // ExerciseStatisticChart
+            // MainTableLayout
             // 
-            chartArea1.Name = "ChartArea1";
-            this.ExerciseStatisticChart.ChartAreas.Add(chartArea1);
-            this.ExerciseStatisticChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.ExerciseStatisticChart.Legends.Add(legend1);
-            this.ExerciseStatisticChart.Location = new System.Drawing.Point(0, 28);
-            this.ExerciseStatisticChart.Name = "ExerciseStatisticChart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.ExerciseStatisticChart.Series.Add(series1);
-            this.ExerciseStatisticChart.Size = new System.Drawing.Size(810, 339);
-            this.ExerciseStatisticChart.TabIndex = 1;
-            this.ExerciseStatisticChart.Text = "chart1";
+            this.MainTableLayout.BackgroundImage = global::Gym_Planner.Properties.Resources.MainFrom;
+            this.MainTableLayout.ColumnCount = 1;
+            this.MainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.MainTableLayout.Controls.Add(this.MainTabControl, 0, 1);
+            this.MainTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainTableLayout.Location = new System.Drawing.Point(0, 0);
+            this.MainTableLayout.Name = "MainTableLayout";
+            this.MainTableLayout.RowCount = 2;
+            this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.71018F));
+            this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.28982F));
+            this.MainTableLayout.Size = new System.Drawing.Size(824, 482);
+            this.MainTableLayout.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -301,15 +256,14 @@
             this.ExercisesTableLayoutPanel.ResumeLayout(false);
             this.ExercisesTableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExercisesDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exercisesBindingSource)).EndInit();
             this.ExercisesMenuStrip.ResumeLayout(false);
             this.ExercisesMenuStrip.PerformLayout();
             this.StatTab.ResumeLayout(false);
             this.StatTab.PerformLayout();
-            this.MainTableLayout.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ExerciseStatisticChart)).EndInit();
             this.StatMenuStrip.ResumeLayout(false);
             this.StatMenuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ExerciseStatisticChart)).EndInit();
+            this.MainTableLayout.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -333,7 +287,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn інформаціяDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn групимязівDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn тренуванняDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource exercisesBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn informationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn muscleGroupsDataGridViewTextBoxColumn;
