@@ -5,12 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="22d47c19f9d44fce9d900f34bcfe612e" Name="Diagram1" ZoomLevel="77">
-        <EntityTypeShape EntityType="Model.Вправи" Width="1.5" PointX="5" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Групи_м_язів" Width="1.5" PointX="7.5" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Дні" Width="1.5" PointX="0.5" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Користувачі" Width="1.5" PointX="2.75" PointY="4.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Підходи" Width="1.5" PointX="6.375" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.Тренування" Width="1.5" PointX="4.125" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Exercises" Width="1.5" PointX="5" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.MuscleGroups" Width="1.5" PointX="7.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Days" Width="1.5" PointX="0.5" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Users" Width="1.5" PointX="2.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Sets" Width="1.5" PointX="6.375" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Workouts" Width="1.5" PointX="4.125" PointY="1.5" IsExpanded="true" />
         <AssociationConnector Association="Model.Вправа_Група" ManuallyRouted="false" />
         <AssociationConnector Association="Model.День_Тренування" ManuallyRouted="false" />
         <AssociationConnector Association="Model.Користувач_День" ManuallyRouted="false" />

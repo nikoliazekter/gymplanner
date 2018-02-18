@@ -196,7 +196,7 @@
             // 
             // вправиBindingSource
             // 
-            this.вправиBindingSource.DataSource = typeof(LibraryGymPlanner.Вправи);
+            this.вправиBindingSource.DataSource = typeof(LibraryGymPlanner.Exercises);
             this.вправиBindingSource.CurrentChanged += new System.EventHandler(this.вправиBindingSource_CurrentChanged);
             // 
             // ExercisesMenuStrip

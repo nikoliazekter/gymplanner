@@ -268,88 +268,88 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Вправи">
+        <EntityType Name="Exercises">
           <Key>
-            <PropertyRef Name="Назва" />
+            <PropertyRef Name="Name" />
           </Key>
-          <Property Name="Назва" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="Інформація" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Групи_м_язів" Relationship="Self.Вправа_Група" FromRole="Вправи" ToRole="Групи_м_язів" />
-          <NavigationProperty Name="Тренування" Relationship="Self.Тренування_Вправа" FromRole="Вправи" ToRole="Тренування" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Information" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MuscleGroups" Relationship="Self.Вправа_Група" FromRole="Вправи" ToRole="Групи_м_язів" />
+          <NavigationProperty Name="Workouts" Relationship="Self.Тренування_Вправа" FromRole="Вправи" ToRole="Тренування" />
         </EntityType>
-        <EntityType Name="Групи_м_язів">
+        <EntityType Name="MuscleGroups">
           <Key>
-            <PropertyRef Name="Назва" />
+            <PropertyRef Name="Name" />
           </Key>
-          <Property Name="Назва" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="Інформація" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Вправи" Relationship="Self.Вправа_Група" FromRole="Групи_м_язів" ToRole="Вправи" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Information" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Exercises" Relationship="Self.Вправа_Група" FromRole="Групи_м_язів" ToRole="Вправи" />
         </EntityType>
-        <EntityType Name="Дні">
+        <EntityType Name="Days">
           <Key>
-            <PropertyRef Name="ID_дня" />
+            <PropertyRef Name="ID_day" />
           </Key>
-          <Property Name="Дата" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Коментар" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="ID_дня" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Тренування" Relationship="Self.День_Тренування" FromRole="Дні" ToRole="Тренування" />
-          <NavigationProperty Name="Користувачі" Relationship="Self.Користувач_День" FromRole="Дні" ToRole="Користувачі" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ID_day" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Workouts" Relationship="Self.День_Тренування" FromRole="Дні" ToRole="Тренування" />
+          <NavigationProperty Name="Users" Relationship="Self.Користувач_День" FromRole="Дні" ToRole="Користувачі" />
         </EntityType>
-        <EntityType Name="Користувачі">
+        <EntityType Name="Users">
           <Key>
-            <PropertyRef Name="Логін" />
+            <PropertyRef Name="Login" />
           </Key>
-          <Property Name="Логін" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Пароль" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Ім_я" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Дні" Relationship="Self.Користувач_День" FromRole="Користувачі" ToRole="Дні" />
+          <Property Name="Login" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Days" Relationship="Self.Користувач_День" FromRole="Користувачі" ToRole="Дні" />
         </EntityType>
-        <EntityType Name="Підходи">
+        <EntityType Name="Sets">
           <Key>
-            <PropertyRef Name="ID_підходу" />
+            <PropertyRef Name="ID_set" />
           </Key>
-          <Property Name="ID_підходу" Type="Int32" Nullable="false" />
-          <Property Name="Кількість_повторень" Type="Int32" />
-          <Property Name="Вага" Type="Int32" />
-          <NavigationProperty Name="Тренування" Relationship="Self.Тренування_Підхід" FromRole="Підходи" ToRole="Тренування" />
+          <Property Name="ID_set" Type="Int32" Nullable="false" />
+          <Property Name="Num_reps" Type="Int32" />
+          <Property Name="Weight" Type="Int32" />
+          <NavigationProperty Name="Workout" Relationship="Self.Тренування_Підхід" FromRole="Підходи" ToRole="Тренування" />
         </EntityType>
-        <EntityType Name="Тренування">
+        <EntityType Name="Workouts">
           <Key>
-            <PropertyRef Name="ID_тренування" />
+            <PropertyRef Name="ID_workout" />
           </Key>
-          <Property Name="ID_тренування" Type="Int32" Nullable="false" />
-          <Property Name="Кількість_підходів" Type="Int32" />
-          <NavigationProperty Name="Дні" Relationship="Self.День_Тренування" FromRole="Тренування" ToRole="Дні" />
-          <NavigationProperty Name="Вправи" Relationship="Self.Тренування_Вправа" FromRole="Тренування" ToRole="Вправи" />
-          <NavigationProperty Name="Підходи" Relationship="Self.Тренування_Підхід" FromRole="Тренування" ToRole="Підходи" />
+          <Property Name="ID_workout" Type="Int32" Nullable="false" />
+          <Property Name="Num_sets" Type="Int32" />
+          <NavigationProperty Name="Days" Relationship="Self.День_Тренування" FromRole="Тренування" ToRole="Дні" />
+          <NavigationProperty Name="Exercises" Relationship="Self.Тренування_Вправа" FromRole="Тренування" ToRole="Вправи" />
+          <NavigationProperty Name="Sets" Relationship="Self.Тренування_Підхід" FromRole="Тренування" ToRole="Підходи" />
         </EntityType>
         <Association Name="Вправа_Група">
-          <End Role="Вправи" Type="Self.Вправи" Multiplicity="*" />
-          <End Role="Групи_м_язів" Type="Self.Групи_м_язів" Multiplicity="*" />
+          <End Role="Вправи" Type="Model.Exercises" Multiplicity="*" />
+          <End Role="Групи_м_язів" Type="Model.MuscleGroups" Multiplicity="*" />
         </Association>
         <Association Name="День_Тренування">
-          <End Role="Дні" Type="Self.Дні" Multiplicity="*" />
-          <End Role="Тренування" Type="Self.Тренування" Multiplicity="*" />
+          <End Role="Дні" Type="Model.Days" Multiplicity="*" />
+          <End Role="Тренування" Type="Model.Workouts" Multiplicity="*" />
         </Association>
         <Association Name="Користувач_День">
-          <End Role="Дні" Type="Self.Дні" Multiplicity="*" />
-          <End Role="Користувачі" Type="Self.Користувачі" Multiplicity="*" />
+          <End Role="Дні" Type="Model.Days" Multiplicity="*" />
+          <End Role="Користувачі" Type="Model.Users" Multiplicity="*" />
         </Association>
         <Association Name="Тренування_Вправа">
-          <End Role="Вправи" Type="Self.Вправи" Multiplicity="*" />
-          <End Role="Тренування" Type="Self.Тренування" Multiplicity="*" />
+          <End Role="Вправи" Type="Model.Exercises" Multiplicity="*" />
+          <End Role="Тренування" Type="Model.Workouts" Multiplicity="*" />
         </Association>
         <Association Name="Тренування_Підхід">
-          <End Role="Підходи" Type="Self.Підходи" Multiplicity="*" />
-          <End Role="Тренування" Type="Self.Тренування" Multiplicity="*" />
+          <End Role="Підходи" Type="Model.Sets" Multiplicity="*" />
+          <End Role="Тренування" Type="Model.Workouts" Multiplicity="*" />
         </Association>
         <EntityContainer Name="Gym_PlannerEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Вправи" EntityType="Self.Вправи" />
-          <EntitySet Name="Групи_м_язів" EntityType="Self.Групи_м_язів" />
-          <EntitySet Name="Дні" EntityType="Self.Дні" />
-          <EntitySet Name="Користувачі" EntityType="Self.Користувачі" />
-          <EntitySet Name="Підходи" EntityType="Self.Підходи" />
-          <EntitySet Name="Тренування" EntityType="Self.Тренування" />
+          <EntitySet Name="Вправи" EntityType="Model.Exercises" />
+          <EntitySet Name="Групи_м_язів" EntityType="Model.MuscleGroups" />
+          <EntitySet Name="Дні" EntityType="Model.Days" />
+          <EntitySet Name="Користувачі" EntityType="Model.Users" />
+          <EntitySet Name="Підходи" EntityType="Model.Sets" />
+          <EntitySet Name="Тренування" EntityType="Model.Workouts" />
           <AssociationSet Name="Вправа_Група" Association="Self.Вправа_Група">
             <End Role="Вправи" EntitySet="Вправи" />
             <End Role="Групи_м_язів" EntitySet="Групи_м_язів" />
@@ -378,94 +378,94 @@
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Gym_PlannerEntities">
           <EntitySetMapping Name="Вправи">
-            <EntityTypeMapping TypeName="Model.Вправи">
+            <EntityTypeMapping TypeName="Model.Exercises">
               <MappingFragment StoreEntitySet="Вправи">
-                <ScalarProperty Name="Назва" ColumnName="Назва" />
-                <ScalarProperty Name="Інформація" ColumnName="Інформація" />
+                <ScalarProperty Name="Name" ColumnName="Назва" />
+                <ScalarProperty Name="Information" ColumnName="Інформація" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Групи_м_язів">
-            <EntityTypeMapping TypeName="Model.Групи_м_язів">
+            <EntityTypeMapping TypeName="Model.MuscleGroups">
               <MappingFragment StoreEntitySet="Групи м'язів">
-                <ScalarProperty Name="Назва" ColumnName="Назва" />
-                <ScalarProperty Name="Інформація" ColumnName="Інформація" />
+                <ScalarProperty Name="Name" ColumnName="Назва" />
+                <ScalarProperty Name="Information" ColumnName="Інформація" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Дні">
-            <EntityTypeMapping TypeName="Model.Дні">
+            <EntityTypeMapping TypeName="Model.Days">
               <MappingFragment StoreEntitySet="Дні">
-                <ScalarProperty Name="Дата" ColumnName="Дата" />
-                <ScalarProperty Name="Коментар" ColumnName="Коментар" />
-                <ScalarProperty Name="ID_дня" ColumnName="ID дня" />
+                <ScalarProperty Name="Date" ColumnName="Дата" />
+                <ScalarProperty Name="Comment" ColumnName="Коментар" />
+                <ScalarProperty Name="ID_day" ColumnName="ID дня" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Користувачі">
-            <EntityTypeMapping TypeName="Model.Користувачі">
+            <EntityTypeMapping TypeName="Model.Users">
               <MappingFragment StoreEntitySet="Користувачі">
-                <ScalarProperty Name="Логін" ColumnName="Логін" />
-                <ScalarProperty Name="Пароль" ColumnName="Пароль" />
-                <ScalarProperty Name="Ім_я" ColumnName="Ім'я" />
+                <ScalarProperty Name="Login" ColumnName="Логін" />
+                <ScalarProperty Name="Password" ColumnName="Пароль" />
+                <ScalarProperty Name="Name" ColumnName="Ім'я" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Підходи">
-            <EntityTypeMapping TypeName="Model.Підходи">
+            <EntityTypeMapping TypeName="Model.Sets">
               <MappingFragment StoreEntitySet="Підходи">
-                <ScalarProperty Name="ID_підходу" ColumnName="ID підходу" />
-                <ScalarProperty Name="Кількість_повторень" ColumnName="Кількість повторень" />
-                <ScalarProperty Name="Вага" ColumnName="Вага" />
+                <ScalarProperty Name="ID_set" ColumnName="ID підходу" />
+                <ScalarProperty Name="Num_reps" ColumnName="Кількість повторень" />
+                <ScalarProperty Name="Weight" ColumnName="Вага" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Тренування">
-            <EntityTypeMapping TypeName="Model.Тренування">
+            <EntityTypeMapping TypeName="Model.Workouts">
               <MappingFragment StoreEntitySet="Тренування">
-                <ScalarProperty Name="ID_тренування" ColumnName="ID тренування" />
-                <ScalarProperty Name="Кількість_підходів" ColumnName="Кількість підходів" />
+                <ScalarProperty Name="ID_workout" ColumnName="ID тренування" />
+                <ScalarProperty Name="Num_sets" ColumnName="Кількість підходів" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <AssociationSetMapping Name="Вправа_Група" TypeName="Model.Вправа_Група" StoreEntitySet="Вправа_Група">
             <EndProperty Name="Вправи">
-              <ScalarProperty Name="Назва" ColumnName="Назва вправи" />
+              <ScalarProperty Name="Name" ColumnName="Назва вправи" />
             </EndProperty>
             <EndProperty Name="Групи_м_язів">
-              <ScalarProperty Name="Назва" ColumnName="Назва групи м'язів" />
+              <ScalarProperty Name="Name" ColumnName="Назва групи м'язів" />
             </EndProperty>
           </AssociationSetMapping>
           <AssociationSetMapping Name="День_Тренування" TypeName="Model.День_Тренування" StoreEntitySet="День_Тренування">
             <EndProperty Name="Дні">
-              <ScalarProperty Name="ID_дня" ColumnName="ID дня" />
+              <ScalarProperty Name="ID_day" ColumnName="ID дня" />
             </EndProperty>
             <EndProperty Name="Тренування">
-              <ScalarProperty Name="ID_тренування" ColumnName="ID тренування" />
+              <ScalarProperty Name="ID_workout" ColumnName="ID тренування" />
             </EndProperty>
           </AssociationSetMapping>
           <AssociationSetMapping Name="Користувач_День" TypeName="Model.Користувач_День" StoreEntitySet="Користувач_День">
             <EndProperty Name="Дні">
-              <ScalarProperty Name="ID_дня" ColumnName="ID дня" />
+              <ScalarProperty Name="ID_day" ColumnName="ID дня" />
             </EndProperty>
             <EndProperty Name="Користувачі">
-              <ScalarProperty Name="Логін" ColumnName="Логін" />
+              <ScalarProperty Name="Login" ColumnName="Логін" />
             </EndProperty>
           </AssociationSetMapping>
           <AssociationSetMapping Name="Тренування_Вправа" TypeName="Model.Тренування_Вправа" StoreEntitySet="Тренування_Вправа">
             <EndProperty Name="Вправи">
-              <ScalarProperty Name="Назва" ColumnName="Назва вправи" />
+              <ScalarProperty Name="Name" ColumnName="Назва вправи" />
             </EndProperty>
             <EndProperty Name="Тренування">
-              <ScalarProperty Name="ID_тренування" ColumnName="ID тренування" />
+              <ScalarProperty Name="ID_workout" ColumnName="ID тренування" />
             </EndProperty>
           </AssociationSetMapping>
           <AssociationSetMapping Name="Тренування_Підхід" TypeName="Model.Тренування_Підхід" StoreEntitySet="Тренування_Підхід">
             <EndProperty Name="Підходи">
-              <ScalarProperty Name="ID_підходу" ColumnName="ID підходу" />
+              <ScalarProperty Name="ID_set" ColumnName="ID підходу" />
             </EndProperty>
             <EndProperty Name="Тренування">
-              <ScalarProperty Name="ID_тренування" ColumnName="ID тренування" />
+              <ScalarProperty Name="ID_workout" ColumnName="ID тренування" />
             </EndProperty>
           </AssociationSetMapping>
         </EntityContainerMapping>
