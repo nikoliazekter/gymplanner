@@ -32,17 +32,17 @@ public partial class Gym_PlannerEntities : DbContext
     }
 
 
-    public virtual DbSet<Exercises> Вправи { get; set; }
+    public virtual DbSet<Exercises> Exercises { get; set; }
 
-    public virtual DbSet<MuscleGroups> Групи_м_язів { get; set; }
+    public virtual DbSet<MuscleGroups> MuscleGroups { get; set; }
 
-    public virtual DbSet<Days> Дні { get; set; }
+    public virtual DbSet<Days> Days { get; set; }
 
-    public virtual DbSet<Users> Користувачі { get; set; }
+    public virtual DbSet<Users> Users { get; set; }
 
-    public virtual DbSet<Sets> Підходи { get; set; }
+    public virtual DbSet<Sets> Sets { get; set; }
 
-    public virtual DbSet<Workouts> Тренування { get; set; }
+    public virtual DbSet<Workouts> Workouts { get; set; }
 
 }
 
