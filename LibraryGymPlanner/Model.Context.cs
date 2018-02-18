@@ -25,7 +25,6 @@ namespace LibraryGymPlanner
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Вправи> Вправи { get; set; }
         public virtual DbSet<Групи_м_язів> Групи_м_язів { get; set; }
         public virtual DbSet<Дні> Дні { get; set; }

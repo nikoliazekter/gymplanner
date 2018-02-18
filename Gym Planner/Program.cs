@@ -14,7 +14,6 @@ namespace Gym_Planner
         [STAThread]
         static void Main()
         {
-            MessageBox.Show("Test Commit");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new AuthorizationForm());
