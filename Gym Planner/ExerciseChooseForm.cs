@@ -12,16 +12,10 @@ namespace Gym_Planner
 {
     public partial class ExerciseChooseForm : Form
     {
-        private String exerciseName;
+        public String exerciseName;
         public ExerciseChooseForm()
         {
             InitializeComponent();
-        }
-
-        public ExerciseChooseForm(String exerciseName)
-        {
-            InitializeComponent();
-            this.exerciseName = exerciseName;
         }
 
         private void GetExerciseButton_Click(object sender, EventArgs e)

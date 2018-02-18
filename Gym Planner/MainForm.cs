@@ -50,11 +50,17 @@ namespace Gym_Planner
             //
         }
 
-        private void ChooseExerciseToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ChooseExToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            String exerciseName = "";
-            ExerciseChooseForm exerciseChooseForm = new ExerciseChooseForm(exerciseName);
-            exerciseChooseForm.Show();
+            string exerciseName;
+            using (ExerciseChooseForm Window = new ExerciseChooseForm())
+            {
+                if (Window.ShowDialog() != DialogResult.OK)
+                {
+                    return;
+                }
+                exerciseName = Window.exerciseName;
+            }
         }
     }
 }
