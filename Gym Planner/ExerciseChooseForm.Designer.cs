@@ -1,6 +1,6 @@
 ﻿namespace Gym_Planner
 {
-    partial class NewTrainForm
+    partial class ExerciseChooseForm
     {
         /// <summary>
         /// Required designer variable.
@@ -78,9 +78,8 @@
             this.ExerciseFindLabel.Size = new System.Drawing.Size(375, 17);
             this.ExerciseFindLabel.TabIndex = 4;
             this.ExerciseFindLabel.Text = "...або виберіть групу м\'язів та потрібну вправу зі списку";
-            this.ExerciseFindLabel.Click += new System.EventHandler(this.label2_Click);
             // 
-            // NewTrainForm
+            // ExerciseChooseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -90,8 +89,8 @@
             this.Controls.Add(this.GetExerciseButton);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.textBox1);
-            this.Name = "NewTrainForm";
-            this.Text = "Додавання тренування";
+            this.Name = "ExerciseChooseForm";
+            this.Text = "Вибір вправи";
             this.ResumeLayout(false);
             this.PerformLayout();
 

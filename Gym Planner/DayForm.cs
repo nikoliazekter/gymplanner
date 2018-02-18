@@ -30,7 +30,7 @@ namespace Gym_Planner
 
         private void AddTrainToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NewTrainForm newTrainForm = new NewTrainForm();
+            ExerciseChooseForm newTrainForm = new ExerciseChooseForm();
             newTrainForm.Show();
         }
 

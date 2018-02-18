@@ -49,5 +49,12 @@ namespace Gym_Planner
         {
             //
         }
+
+        private void ChooseExerciseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String exerciseName = "";
+            ExerciseChooseForm exerciseChooseForm = new ExerciseChooseForm(exerciseName);
+            exerciseChooseForm.Show();
+        }
     }
 }

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.PersonalInfoTab = new System.Windows.Forms.TabPage();
             this.CalendarTab = new System.Windows.Forms.TabPage();
@@ -37,21 +40,15 @@
             this.ExercisesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ExerciseInfoLabel = new System.Windows.Forms.Label();
             this.ExercisesDataGridView = new System.Windows.Forms.DataGridView();
-            this.назваDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.інформаціяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.групимязівDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.тренуванняDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.вправиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ExercisesMenuStrip = new System.Windows.Forms.MenuStrip();
             this.AddNewExerciseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveExerciseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatTab = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.MainTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.StatMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.ChooseExerciseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ExerciseStatChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.MainTabControl.SuspendLayout();
             this.CalendarTab.SuspendLayout();
             this.ExercisesTab.SuspendLayout();
@@ -61,6 +58,8 @@
             this.ExercisesMenuStrip.SuspendLayout();
             this.StatTab.SuspendLayout();
             this.MainTableLayout.SuspendLayout();
+            this.StatMenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ExerciseStatChart)).BeginInit();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -148,11 +147,6 @@
             this.ExercisesDataGridView.AutoGenerateColumns = false;
             this.ExercisesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ExercisesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ExercisesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.назваDataGridViewTextBoxColumn,
-            this.інформаціяDataGridViewTextBoxColumn,
-            this.групимязівDataGridViewTextBoxColumn,
-            this.тренуванняDataGridViewTextBoxColumn});
             this.ExercisesDataGridView.DataSource = this.вправиBindingSource;
             this.ExercisesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ExercisesDataGridView.Location = new System.Drawing.Point(3, 3);
@@ -164,39 +158,8 @@
             this.ExercisesDataGridView.TabIndex = 2;
             this.ExercisesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExercisesDataGridView_CellContentClick);
             // 
-            // назваDataGridViewTextBoxColumn
-            // 
-            this.назваDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.назваDataGridViewTextBoxColumn.DataPropertyName = "Назва";
-            this.назваDataGridViewTextBoxColumn.HeaderText = "Назва";
-            this.назваDataGridViewTextBoxColumn.Name = "назваDataGridViewTextBoxColumn";
-            this.назваDataGridViewTextBoxColumn.Width = 77;
-            // 
-            // інформаціяDataGridViewTextBoxColumn
-            // 
-            this.інформаціяDataGridViewTextBoxColumn.DataPropertyName = "Інформація";
-            this.інформаціяDataGridViewTextBoxColumn.HeaderText = "Інформація";
-            this.інформаціяDataGridViewTextBoxColumn.Name = "інформаціяDataGridViewTextBoxColumn";
-            this.інформаціяDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // групимязівDataGridViewTextBoxColumn
-            // 
-            this.групимязівDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.групимязівDataGridViewTextBoxColumn.DataPropertyName = "Групи_м_язів";
-            this.групимязівDataGridViewTextBoxColumn.HeaderText = "М\'язова група";
-            this.групимязівDataGridViewTextBoxColumn.Name = "групимязівDataGridViewTextBoxColumn";
-            this.групимязівDataGridViewTextBoxColumn.Width = 129;
-            // 
-            // тренуванняDataGridViewTextBoxColumn
-            // 
-            this.тренуванняDataGridViewTextBoxColumn.DataPropertyName = "Тренування";
-            this.тренуванняDataGridViewTextBoxColumn.HeaderText = "Тренування";
-            this.тренуванняDataGridViewTextBoxColumn.Name = "тренуванняDataGridViewTextBoxColumn";
-            this.тренуванняDataGridViewTextBoxColumn.Visible = false;
-            // 
             // вправиBindingSource
             // 
-            this.вправиBindingSource.DataSource = typeof(LibraryGymPlanner.Exercises);
             this.вправиBindingSource.CurrentChanged += new System.EventHandler(this.вправиBindingSource_CurrentChanged);
             // 
             // ExercisesMenuStrip
@@ -226,63 +189,14 @@
             // 
             // StatTab
             // 
-            this.StatTab.Controls.Add(this.tableLayoutPanel1);
-            this.StatTab.Controls.Add(this.label2);
-            this.StatTab.Controls.Add(this.label1);
-            this.StatTab.Controls.Add(this.listView1);
-            this.StatTab.Controls.Add(this.textBox1);
+            this.StatTab.Controls.Add(this.ExerciseStatChart);
+            this.StatTab.Controls.Add(this.StatMenuStrip);
             this.StatTab.Location = new System.Drawing.Point(4, 25);
             this.StatTab.Name = "StatTab";
             this.StatTab.Size = new System.Drawing.Size(810, 367);
             this.StatTab.TabIndex = 3;
             this.StatTab.Text = "Статистика";
             this.StatTab.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(465, 119);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel1.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(51, 108);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(121, 97);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(74, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 0;
             // 
             // MainTableLayout
             // 
@@ -298,6 +212,41 @@
             this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.28982F));
             this.MainTableLayout.Size = new System.Drawing.Size(824, 482);
             this.MainTableLayout.TabIndex = 2;
+            // 
+            // StatMenuStrip
+            // 
+            this.StatMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.StatMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ChooseExerciseToolStripMenuItem});
+            this.StatMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.StatMenuStrip.Name = "StatMenuStrip";
+            this.StatMenuStrip.Size = new System.Drawing.Size(810, 28);
+            this.StatMenuStrip.TabIndex = 0;
+            this.StatMenuStrip.Text = "menuStrip1";
+            // 
+            // ChooseExerciseToolStripMenuItem
+            // 
+            this.ChooseExerciseToolStripMenuItem.Name = "ChooseExerciseToolStripMenuItem";
+            this.ChooseExerciseToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
+            this.ChooseExerciseToolStripMenuItem.Text = "Вибрати вправу";
+            this.ChooseExerciseToolStripMenuItem.Click += new System.EventHandler(this.ChooseExerciseToolStripMenuItem_Click);
+            // 
+            // ExerciseStatChart
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.ExerciseStatChart.ChartAreas.Add(chartArea1);
+            this.ExerciseStatChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.ExerciseStatChart.Legends.Add(legend1);
+            this.ExerciseStatChart.Location = new System.Drawing.Point(0, 28);
+            this.ExerciseStatChart.Name = "ExerciseStatChart";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.ExerciseStatChart.Series.Add(series1);
+            this.ExerciseStatChart.Size = new System.Drawing.Size(810, 339);
+            this.ExerciseStatChart.TabIndex = 1;
+            this.ExerciseStatChart.Text = "chart1";
             // 
             // MainForm
             // 
@@ -322,6 +271,9 @@
             this.StatTab.ResumeLayout(false);
             this.StatTab.PerformLayout();
             this.MainTableLayout.ResumeLayout(false);
+            this.StatMenuStrip.ResumeLayout(false);
+            this.StatMenuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ExerciseStatChart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,16 +292,14 @@
         private System.Windows.Forms.ToolStripMenuItem RemoveExerciseToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel ExercisesTableLayoutPanel;
         private System.Windows.Forms.Label ExerciseInfoLabel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView ExercisesDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn назваDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn інформаціяDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn групимязівDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn тренуванняDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource вправиBindingSource;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ExerciseStatChart;
+        private System.Windows.Forms.MenuStrip StatMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem ChooseExerciseToolStripMenuItem;
     }
 }

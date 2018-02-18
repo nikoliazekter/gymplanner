@@ -10,22 +10,25 @@ using System.Windows.Forms;
 
 namespace Gym_Planner
 {
-    public partial class NewTrainForm : Form
+    public partial class ExerciseChooseForm : Form
     {
-        public NewTrainForm()
+        private String exerciseName;
+        public ExerciseChooseForm()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        public ExerciseChooseForm(String exerciseName)
         {
-
+            InitializeComponent();
+            this.exerciseName = exerciseName;
         }
 
         private void GetExerciseButton_Click(object sender, EventArgs e)
         {
-            SetApproachesForm newApproachesForm = new SetApproachesForm();
-            newApproachesForm.Show();
+            //this.exerciseName.
+            /*SetApproachesForm newApproachesForm = new SetApproachesForm();
+            newApproachesForm.Show();*/
         }
     }
 }
