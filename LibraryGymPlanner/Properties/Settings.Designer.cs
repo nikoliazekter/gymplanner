@@ -33,5 +33,16 @@ namespace LibraryGymPlanner.Properties {
                 return ((string)(this["Gym_PlannerConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-48IR1E0\\SQLEXPRESS;Initial Catalog=NewGymPlanner;Integrated S" +
+            "ecurity=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True")]
+        public string NewGymPlannerConnectionString {
+            get {
+                return ((string)(this["NewGymPlannerConnectionString"]));
+            }
+        }
     }
 }

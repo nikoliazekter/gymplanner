@@ -24,47 +24,47 @@ namespace LibraryGymPlanner {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DSGymPlanner : global::System.Data.DataSet {
         
-        private КористувачіDataTable tableКористувачі;
+        private Day_WorkoutDataTable tableDay_Workout;
         
-        private Вправа_ГрупаDataTable tableВправа_Група;
+        private DaysDataTable tableDays;
         
-        private ВправиDataTable tableВправи;
+        private Exercise_MuscleGroupDataTable tableExercise_MuscleGroup;
         
-        private _Групи_м_язівDataTable _tableГрупи_м_язів;
+        private ExercisesDataTable tableExercises;
         
-        private День_ТренуванняDataTable tableДень_Тренування;
+        private MuscleGroupsDataTable tableMuscleGroups;
         
-        private ДніDataTable tableДні;
+        private SetsDataTable tableSets;
         
-        private Користувач_ДеньDataTable tableКористувач_День;
+        private User_DayDataTable tableUser_Day;
         
-        private ПідходиDataTable tableПідходи;
+        private UsersDataTable tableUsers;
         
-        private ТренуванняDataTable tableТренування;
+        private Workout_ExerciseDataTable tableWorkout_Exercise;
         
-        private Тренування_ВправаDataTable tableТренування_Вправа;
+        private Workout_SetDataTable tableWorkout_Set;
         
-        private Тренування_ПідхідDataTable tableТренування_Підхід;
+        private WorkoutsDataTable tableWorkouts;
         
-        private global::System.Data.DataRelation relationFK_Вправа_Група_Вправи;
+        private global::System.Data.DataRelation relationFK_Day_Workout_Days;
         
-        private global::System.Data.DataRelation _relationFK_Вправа_Група_Групи_м_язів;
+        private global::System.Data.DataRelation relationFK_Day_Workout_Workouts;
         
-        private global::System.Data.DataRelation relationFK_День_Тренування_Дні1;
+        private global::System.Data.DataRelation relationFK_Exercise_MuscleGroup_Exercises;
         
-        private global::System.Data.DataRelation relationFK_Користувач_День_Дні;
+        private global::System.Data.DataRelation relationFK_Exercise_MuscleGroup_MuscleGroups;
         
-        private global::System.Data.DataRelation relationFK_Користувач_День_Користувачі;
+        private global::System.Data.DataRelation relationFK_User_Day_Days;
         
-        private global::System.Data.DataRelation relationFK_День_Тренування_Тренування;
+        private global::System.Data.DataRelation relationFK_User_Day_Users;
         
-        private global::System.Data.DataRelation relationFK_Тренування_Вправа_Вправи;
+        private global::System.Data.DataRelation relationFK_Workout_Exercise_Exercises;
         
-        private global::System.Data.DataRelation relationFK_Тренування_Вправа_Тренування;
+        private global::System.Data.DataRelation relationFK_Workout_Exercise_Workouts;
         
-        private global::System.Data.DataRelation relationFK_Тренування_Підхід_Підходи;
+        private global::System.Data.DataRelation relationFK_Workout_Set_Sets;
         
-        private global::System.Data.DataRelation relationFK_Тренування_Підхід_Тренування;
+        private global::System.Data.DataRelation relationFK_Workout_Set_Workouts;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -94,38 +94,38 @@ namespace LibraryGymPlanner {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Користувачі"] != null)) {
-                    base.Tables.Add(new КористувачіDataTable(ds.Tables["Користувачі"]));
+                if ((ds.Tables["Day_Workout"] != null)) {
+                    base.Tables.Add(new Day_WorkoutDataTable(ds.Tables["Day_Workout"]));
                 }
-                if ((ds.Tables["Вправа_Група"] != null)) {
-                    base.Tables.Add(new Вправа_ГрупаDataTable(ds.Tables["Вправа_Група"]));
+                if ((ds.Tables["Days"] != null)) {
+                    base.Tables.Add(new DaysDataTable(ds.Tables["Days"]));
                 }
-                if ((ds.Tables["Вправи"] != null)) {
-                    base.Tables.Add(new ВправиDataTable(ds.Tables["Вправи"]));
+                if ((ds.Tables["Exercise_MuscleGroup"] != null)) {
+                    base.Tables.Add(new Exercise_MuscleGroupDataTable(ds.Tables["Exercise_MuscleGroup"]));
                 }
-                if ((ds.Tables["Групи м\'язів"] != null)) {
-                    base.Tables.Add(new _Групи_м_язівDataTable(ds.Tables["Групи м\'язів"]));
+                if ((ds.Tables["Exercises"] != null)) {
+                    base.Tables.Add(new ExercisesDataTable(ds.Tables["Exercises"]));
                 }
-                if ((ds.Tables["День_Тренування"] != null)) {
-                    base.Tables.Add(new День_ТренуванняDataTable(ds.Tables["День_Тренування"]));
+                if ((ds.Tables["MuscleGroups"] != null)) {
+                    base.Tables.Add(new MuscleGroupsDataTable(ds.Tables["MuscleGroups"]));
                 }
-                if ((ds.Tables["Дні"] != null)) {
-                    base.Tables.Add(new ДніDataTable(ds.Tables["Дні"]));
+                if ((ds.Tables["Sets"] != null)) {
+                    base.Tables.Add(new SetsDataTable(ds.Tables["Sets"]));
                 }
-                if ((ds.Tables["Користувач_День"] != null)) {
-                    base.Tables.Add(new Користувач_ДеньDataTable(ds.Tables["Користувач_День"]));
+                if ((ds.Tables["User_Day"] != null)) {
+                    base.Tables.Add(new User_DayDataTable(ds.Tables["User_Day"]));
                 }
-                if ((ds.Tables["Підходи"] != null)) {
-                    base.Tables.Add(new ПідходиDataTable(ds.Tables["Підходи"]));
+                if ((ds.Tables["Users"] != null)) {
+                    base.Tables.Add(new UsersDataTable(ds.Tables["Users"]));
                 }
-                if ((ds.Tables["Тренування"] != null)) {
-                    base.Tables.Add(new ТренуванняDataTable(ds.Tables["Тренування"]));
+                if ((ds.Tables["Workout_Exercise"] != null)) {
+                    base.Tables.Add(new Workout_ExerciseDataTable(ds.Tables["Workout_Exercise"]));
                 }
-                if ((ds.Tables["Тренування_Вправа"] != null)) {
-                    base.Tables.Add(new Тренування_ВправаDataTable(ds.Tables["Тренування_Вправа"]));
+                if ((ds.Tables["Workout_Set"] != null)) {
+                    base.Tables.Add(new Workout_SetDataTable(ds.Tables["Workout_Set"]));
                 }
-                if ((ds.Tables["Тренування_Підхід"] != null)) {
-                    base.Tables.Add(new Тренування_ПідхідDataTable(ds.Tables["Тренування_Підхід"]));
+                if ((ds.Tables["Workouts"] != null)) {
+                    base.Tables.Add(new WorkoutsDataTable(ds.Tables["Workouts"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -149,9 +149,9 @@ namespace LibraryGymPlanner {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public КористувачіDataTable Користувачі {
+        public Day_WorkoutDataTable Day_Workout {
             get {
-                return this.tableКористувачі;
+                return this.tableDay_Workout;
             }
         }
         
@@ -159,9 +159,9 @@ namespace LibraryGymPlanner {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Вправа_ГрупаDataTable Вправа_Група {
+        public DaysDataTable Days {
             get {
-                return this.tableВправа_Група;
+                return this.tableDays;
             }
         }
         
@@ -169,9 +169,9 @@ namespace LibraryGymPlanner {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ВправиDataTable Вправи {
+        public Exercise_MuscleGroupDataTable Exercise_MuscleGroup {
             get {
-                return this.tableВправи;
+                return this.tableExercise_MuscleGroup;
             }
         }
         
@@ -179,9 +179,9 @@ namespace LibraryGymPlanner {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public _Групи_м_язівDataTable _Групи_м_язів {
+        public ExercisesDataTable Exercises {
             get {
-                return this._tableГрупи_м_язів;
+                return this.tableExercises;
             }
         }
         
@@ -189,9 +189,9 @@ namespace LibraryGymPlanner {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public День_ТренуванняDataTable День_Тренування {
+        public MuscleGroupsDataTable MuscleGroups {
             get {
-                return this.tableДень_Тренування;
+                return this.tableMuscleGroups;
             }
         }
         
@@ -199,9 +199,9 @@ namespace LibraryGymPlanner {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ДніDataTable Дні {
+        public SetsDataTable Sets {
             get {
-                return this.tableДні;
+                return this.tableSets;
             }
         }
         
@@ -209,9 +209,9 @@ namespace LibraryGymPlanner {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Користувач_ДеньDataTable Користувач_День {
+        public User_DayDataTable User_Day {
             get {
-                return this.tableКористувач_День;
+                return this.tableUser_Day;
             }
         }
         
@@ -219,9 +219,9 @@ namespace LibraryGymPlanner {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ПідходиDataTable Підходи {
+        public UsersDataTable Users {
             get {
-                return this.tableПідходи;
+                return this.tableUsers;
             }
         }
         
@@ -229,9 +229,9 @@ namespace LibraryGymPlanner {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ТренуванняDataTable Тренування {
+        public Workout_ExerciseDataTable Workout_Exercise {
             get {
-                return this.tableТренування;
+                return this.tableWorkout_Exercise;
             }
         }
         
@@ -239,9 +239,9 @@ namespace LibraryGymPlanner {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Тренування_ВправаDataTable Тренування_Вправа {
+        public Workout_SetDataTable Workout_Set {
             get {
-                return this.tableТренування_Вправа;
+                return this.tableWorkout_Set;
             }
         }
         
@@ -249,9 +249,9 @@ namespace LibraryGymPlanner {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Тренування_ПідхідDataTable Тренування_Підхід {
+        public WorkoutsDataTable Workouts {
             get {
-                return this.tableТренування_Підхід;
+                return this.tableWorkouts;
             }
         }
         
@@ -322,38 +322,38 @@ namespace LibraryGymPlanner {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Користувачі"] != null)) {
-                    base.Tables.Add(new КористувачіDataTable(ds.Tables["Користувачі"]));
+                if ((ds.Tables["Day_Workout"] != null)) {
+                    base.Tables.Add(new Day_WorkoutDataTable(ds.Tables["Day_Workout"]));
                 }
-                if ((ds.Tables["Вправа_Група"] != null)) {
-                    base.Tables.Add(new Вправа_ГрупаDataTable(ds.Tables["Вправа_Група"]));
+                if ((ds.Tables["Days"] != null)) {
+                    base.Tables.Add(new DaysDataTable(ds.Tables["Days"]));
                 }
-                if ((ds.Tables["Вправи"] != null)) {
-                    base.Tables.Add(new ВправиDataTable(ds.Tables["Вправи"]));
+                if ((ds.Tables["Exercise_MuscleGroup"] != null)) {
+                    base.Tables.Add(new Exercise_MuscleGroupDataTable(ds.Tables["Exercise_MuscleGroup"]));
                 }
-                if ((ds.Tables["Групи м\'язів"] != null)) {
-                    base.Tables.Add(new _Групи_м_язівDataTable(ds.Tables["Групи м\'язів"]));
+                if ((ds.Tables["Exercises"] != null)) {
+                    base.Tables.Add(new ExercisesDataTable(ds.Tables["Exercises"]));
                 }
-                if ((ds.Tables["День_Тренування"] != null)) {
-                    base.Tables.Add(new День_ТренуванняDataTable(ds.Tables["День_Тренування"]));
+                if ((ds.Tables["MuscleGroups"] != null)) {
+                    base.Tables.Add(new MuscleGroupsDataTable(ds.Tables["MuscleGroups"]));
                 }
-                if ((ds.Tables["Дні"] != null)) {
-                    base.Tables.Add(new ДніDataTable(ds.Tables["Дні"]));
+                if ((ds.Tables["Sets"] != null)) {
+                    base.Tables.Add(new SetsDataTable(ds.Tables["Sets"]));
                 }
-                if ((ds.Tables["Користувач_День"] != null)) {
-                    base.Tables.Add(new Користувач_ДеньDataTable(ds.Tables["Користувач_День"]));
+                if ((ds.Tables["User_Day"] != null)) {
+                    base.Tables.Add(new User_DayDataTable(ds.Tables["User_Day"]));
                 }
-                if ((ds.Tables["Підходи"] != null)) {
-                    base.Tables.Add(new ПідходиDataTable(ds.Tables["Підходи"]));
+                if ((ds.Tables["Users"] != null)) {
+                    base.Tables.Add(new UsersDataTable(ds.Tables["Users"]));
                 }
-                if ((ds.Tables["Тренування"] != null)) {
-                    base.Tables.Add(new ТренуванняDataTable(ds.Tables["Тренування"]));
+                if ((ds.Tables["Workout_Exercise"] != null)) {
+                    base.Tables.Add(new Workout_ExerciseDataTable(ds.Tables["Workout_Exercise"]));
                 }
-                if ((ds.Tables["Тренування_Вправа"] != null)) {
-                    base.Tables.Add(new Тренування_ВправаDataTable(ds.Tables["Тренування_Вправа"]));
+                if ((ds.Tables["Workout_Set"] != null)) {
+                    base.Tables.Add(new Workout_SetDataTable(ds.Tables["Workout_Set"]));
                 }
-                if ((ds.Tables["Тренування_Підхід"] != null)) {
-                    base.Tables.Add(new Тренування_ПідхідDataTable(ds.Tables["Тренування_Підхід"]));
+                if ((ds.Tables["Workouts"] != null)) {
+                    base.Tables.Add(new WorkoutsDataTable(ds.Tables["Workouts"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -388,82 +388,82 @@ namespace LibraryGymPlanner {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableКористувачі = ((КористувачіDataTable)(base.Tables["Користувачі"]));
+            this.tableDay_Workout = ((Day_WorkoutDataTable)(base.Tables["Day_Workout"]));
             if ((initTable == true)) {
-                if ((this.tableКористувачі != null)) {
-                    this.tableКористувачі.InitVars();
+                if ((this.tableDay_Workout != null)) {
+                    this.tableDay_Workout.InitVars();
                 }
             }
-            this.tableВправа_Група = ((Вправа_ГрупаDataTable)(base.Tables["Вправа_Група"]));
+            this.tableDays = ((DaysDataTable)(base.Tables["Days"]));
             if ((initTable == true)) {
-                if ((this.tableВправа_Група != null)) {
-                    this.tableВправа_Група.InitVars();
+                if ((this.tableDays != null)) {
+                    this.tableDays.InitVars();
                 }
             }
-            this.tableВправи = ((ВправиDataTable)(base.Tables["Вправи"]));
+            this.tableExercise_MuscleGroup = ((Exercise_MuscleGroupDataTable)(base.Tables["Exercise_MuscleGroup"]));
             if ((initTable == true)) {
-                if ((this.tableВправи != null)) {
-                    this.tableВправи.InitVars();
+                if ((this.tableExercise_MuscleGroup != null)) {
+                    this.tableExercise_MuscleGroup.InitVars();
                 }
             }
-            this._tableГрупи_м_язів = ((_Групи_м_язівDataTable)(base.Tables["Групи м\'язів"]));
+            this.tableExercises = ((ExercisesDataTable)(base.Tables["Exercises"]));
             if ((initTable == true)) {
-                if ((this._tableГрупи_м_язів != null)) {
-                    this._tableГрупи_м_язів.InitVars();
+                if ((this.tableExercises != null)) {
+                    this.tableExercises.InitVars();
                 }
             }
-            this.tableДень_Тренування = ((День_ТренуванняDataTable)(base.Tables["День_Тренування"]));
+            this.tableMuscleGroups = ((MuscleGroupsDataTable)(base.Tables["MuscleGroups"]));
             if ((initTable == true)) {
-                if ((this.tableДень_Тренування != null)) {
-                    this.tableДень_Тренування.InitVars();
+                if ((this.tableMuscleGroups != null)) {
+                    this.tableMuscleGroups.InitVars();
                 }
             }
-            this.tableДні = ((ДніDataTable)(base.Tables["Дні"]));
+            this.tableSets = ((SetsDataTable)(base.Tables["Sets"]));
             if ((initTable == true)) {
-                if ((this.tableДні != null)) {
-                    this.tableДні.InitVars();
+                if ((this.tableSets != null)) {
+                    this.tableSets.InitVars();
                 }
             }
-            this.tableКористувач_День = ((Користувач_ДеньDataTable)(base.Tables["Користувач_День"]));
+            this.tableUser_Day = ((User_DayDataTable)(base.Tables["User_Day"]));
             if ((initTable == true)) {
-                if ((this.tableКористувач_День != null)) {
-                    this.tableКористувач_День.InitVars();
+                if ((this.tableUser_Day != null)) {
+                    this.tableUser_Day.InitVars();
                 }
             }
-            this.tableПідходи = ((ПідходиDataTable)(base.Tables["Підходи"]));
+            this.tableUsers = ((UsersDataTable)(base.Tables["Users"]));
             if ((initTable == true)) {
-                if ((this.tableПідходи != null)) {
-                    this.tableПідходи.InitVars();
+                if ((this.tableUsers != null)) {
+                    this.tableUsers.InitVars();
                 }
             }
-            this.tableТренування = ((ТренуванняDataTable)(base.Tables["Тренування"]));
+            this.tableWorkout_Exercise = ((Workout_ExerciseDataTable)(base.Tables["Workout_Exercise"]));
             if ((initTable == true)) {
-                if ((this.tableТренування != null)) {
-                    this.tableТренування.InitVars();
+                if ((this.tableWorkout_Exercise != null)) {
+                    this.tableWorkout_Exercise.InitVars();
                 }
             }
-            this.tableТренування_Вправа = ((Тренування_ВправаDataTable)(base.Tables["Тренування_Вправа"]));
+            this.tableWorkout_Set = ((Workout_SetDataTable)(base.Tables["Workout_Set"]));
             if ((initTable == true)) {
-                if ((this.tableТренування_Вправа != null)) {
-                    this.tableТренування_Вправа.InitVars();
+                if ((this.tableWorkout_Set != null)) {
+                    this.tableWorkout_Set.InitVars();
                 }
             }
-            this.tableТренування_Підхід = ((Тренування_ПідхідDataTable)(base.Tables["Тренування_Підхід"]));
+            this.tableWorkouts = ((WorkoutsDataTable)(base.Tables["Workouts"]));
             if ((initTable == true)) {
-                if ((this.tableТренування_Підхід != null)) {
-                    this.tableТренування_Підхід.InitVars();
+                if ((this.tableWorkouts != null)) {
+                    this.tableWorkouts.InitVars();
                 }
             }
-            this.relationFK_Вправа_Група_Вправи = this.Relations["FK_Вправа_Група_Вправи"];
-            this._relationFK_Вправа_Група_Групи_м_язів = this.Relations["FK_Вправа_Група_Групи м\'язів"];
-            this.relationFK_День_Тренування_Дні1 = this.Relations["FK_День_Тренування_Дні1"];
-            this.relationFK_Користувач_День_Дні = this.Relations["FK_Користувач_День_Дні"];
-            this.relationFK_Користувач_День_Користувачі = this.Relations["FK_Користувач_День_Користувачі"];
-            this.relationFK_День_Тренування_Тренування = this.Relations["FK_День_Тренування_Тренування"];
-            this.relationFK_Тренування_Вправа_Вправи = this.Relations["FK_Тренування_Вправа_Вправи"];
-            this.relationFK_Тренування_Вправа_Тренування = this.Relations["FK_Тренування_Вправа_Тренування"];
-            this.relationFK_Тренування_Підхід_Підходи = this.Relations["FK_Тренування_Підхід_Підходи"];
-            this.relationFK_Тренування_Підхід_Тренування = this.Relations["FK_Тренування_Підхід_Тренування"];
+            this.relationFK_Day_Workout_Days = this.Relations["FK_Day_Workout_Days"];
+            this.relationFK_Day_Workout_Workouts = this.Relations["FK_Day_Workout_Workouts"];
+            this.relationFK_Exercise_MuscleGroup_Exercises = this.Relations["FK_Exercise_MuscleGroup_Exercises"];
+            this.relationFK_Exercise_MuscleGroup_MuscleGroups = this.Relations["FK_Exercise_MuscleGroup_MuscleGroups"];
+            this.relationFK_User_Day_Days = this.Relations["FK_User_Day_Days"];
+            this.relationFK_User_Day_Users = this.Relations["FK_User_Day_Users"];
+            this.relationFK_Workout_Exercise_Exercises = this.Relations["FK_Workout_Exercise_Exercises"];
+            this.relationFK_Workout_Exercise_Workouts = this.Relations["FK_Workout_Exercise_Workouts"];
+            this.relationFK_Workout_Set_Sets = this.Relations["FK_Workout_Set_Sets"];
+            this.relationFK_Workout_Set_Workouts = this.Relations["FK_Workout_Set_Workouts"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -474,133 +474,133 @@ namespace LibraryGymPlanner {
             this.Namespace = "http://tempuri.org/DSGymPlanner.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableКористувачі = new КористувачіDataTable();
-            base.Tables.Add(this.tableКористувачі);
-            this.tableВправа_Група = new Вправа_ГрупаDataTable();
-            base.Tables.Add(this.tableВправа_Група);
-            this.tableВправи = new ВправиDataTable();
-            base.Tables.Add(this.tableВправи);
-            this._tableГрупи_м_язів = new _Групи_м_язівDataTable();
-            base.Tables.Add(this._tableГрупи_м_язів);
-            this.tableДень_Тренування = new День_ТренуванняDataTable();
-            base.Tables.Add(this.tableДень_Тренування);
-            this.tableДні = new ДніDataTable();
-            base.Tables.Add(this.tableДні);
-            this.tableКористувач_День = new Користувач_ДеньDataTable();
-            base.Tables.Add(this.tableКористувач_День);
-            this.tableПідходи = new ПідходиDataTable();
-            base.Tables.Add(this.tableПідходи);
-            this.tableТренування = new ТренуванняDataTable();
-            base.Tables.Add(this.tableТренування);
-            this.tableТренування_Вправа = new Тренування_ВправаDataTable();
-            base.Tables.Add(this.tableТренування_Вправа);
-            this.tableТренування_Підхід = new Тренування_ПідхідDataTable();
-            base.Tables.Add(this.tableТренування_Підхід);
-            this.relationFK_Вправа_Група_Вправи = new global::System.Data.DataRelation("FK_Вправа_Група_Вправи", new global::System.Data.DataColumn[] {
-                        this.tableВправи.НазваColumn}, new global::System.Data.DataColumn[] {
-                        this.tableВправа_Група.Назва_вправиColumn}, false);
-            this.Relations.Add(this.relationFK_Вправа_Група_Вправи);
-            this._relationFK_Вправа_Група_Групи_м_язів = new global::System.Data.DataRelation("FK_Вправа_Група_Групи м\'язів", new global::System.Data.DataColumn[] {
-                        this._tableГрупи_м_язів.НазваColumn}, new global::System.Data.DataColumn[] {
-                        this.tableВправа_Група._Назва_групи_м_язівColumn}, false);
-            this.Relations.Add(this._relationFK_Вправа_Група_Групи_м_язів);
-            this.relationFK_День_Тренування_Дні1 = new global::System.Data.DataRelation("FK_День_Тренування_Дні1", new global::System.Data.DataColumn[] {
-                        this.tableДні.ID_дняColumn}, new global::System.Data.DataColumn[] {
-                        this.tableДень_Тренування.ID_дняColumn}, false);
-            this.Relations.Add(this.relationFK_День_Тренування_Дні1);
-            this.relationFK_Користувач_День_Дні = new global::System.Data.DataRelation("FK_Користувач_День_Дні", new global::System.Data.DataColumn[] {
-                        this.tableДні.ID_дняColumn}, new global::System.Data.DataColumn[] {
-                        this.tableКористувач_День.ID_дняColumn}, false);
-            this.Relations.Add(this.relationFK_Користувач_День_Дні);
-            this.relationFK_Користувач_День_Користувачі = new global::System.Data.DataRelation("FK_Користувач_День_Користувачі", new global::System.Data.DataColumn[] {
-                        this.tableКористувачі.ЛогінColumn}, new global::System.Data.DataColumn[] {
-                        this.tableКористувач_День.ЛогінColumn}, false);
-            this.Relations.Add(this.relationFK_Користувач_День_Користувачі);
-            this.relationFK_День_Тренування_Тренування = new global::System.Data.DataRelation("FK_День_Тренування_Тренування", new global::System.Data.DataColumn[] {
-                        this.tableТренування.ID_тренуванняColumn}, new global::System.Data.DataColumn[] {
-                        this.tableДень_Тренування.ID_тренуванняColumn}, false);
-            this.Relations.Add(this.relationFK_День_Тренування_Тренування);
-            this.relationFK_Тренування_Вправа_Вправи = new global::System.Data.DataRelation("FK_Тренування_Вправа_Вправи", new global::System.Data.DataColumn[] {
-                        this.tableВправи.НазваColumn}, new global::System.Data.DataColumn[] {
-                        this.tableТренування_Вправа.Назва_вправиColumn}, false);
-            this.Relations.Add(this.relationFK_Тренування_Вправа_Вправи);
-            this.relationFK_Тренування_Вправа_Тренування = new global::System.Data.DataRelation("FK_Тренування_Вправа_Тренування", new global::System.Data.DataColumn[] {
-                        this.tableТренування.ID_тренуванняColumn}, new global::System.Data.DataColumn[] {
-                        this.tableТренування_Вправа.ID_тренуванняColumn}, false);
-            this.Relations.Add(this.relationFK_Тренування_Вправа_Тренування);
-            this.relationFK_Тренування_Підхід_Підходи = new global::System.Data.DataRelation("FK_Тренування_Підхід_Підходи", new global::System.Data.DataColumn[] {
-                        this.tableПідходи.ID_підходуColumn}, new global::System.Data.DataColumn[] {
-                        this.tableТренування_Підхід.ID_підходуColumn}, false);
-            this.Relations.Add(this.relationFK_Тренування_Підхід_Підходи);
-            this.relationFK_Тренування_Підхід_Тренування = new global::System.Data.DataRelation("FK_Тренування_Підхід_Тренування", new global::System.Data.DataColumn[] {
-                        this.tableТренування.ID_тренуванняColumn}, new global::System.Data.DataColumn[] {
-                        this.tableТренування_Підхід.ID_тренуванняColumn}, false);
-            this.Relations.Add(this.relationFK_Тренування_Підхід_Тренування);
+            this.tableDay_Workout = new Day_WorkoutDataTable();
+            base.Tables.Add(this.tableDay_Workout);
+            this.tableDays = new DaysDataTable();
+            base.Tables.Add(this.tableDays);
+            this.tableExercise_MuscleGroup = new Exercise_MuscleGroupDataTable();
+            base.Tables.Add(this.tableExercise_MuscleGroup);
+            this.tableExercises = new ExercisesDataTable();
+            base.Tables.Add(this.tableExercises);
+            this.tableMuscleGroups = new MuscleGroupsDataTable();
+            base.Tables.Add(this.tableMuscleGroups);
+            this.tableSets = new SetsDataTable();
+            base.Tables.Add(this.tableSets);
+            this.tableUser_Day = new User_DayDataTable();
+            base.Tables.Add(this.tableUser_Day);
+            this.tableUsers = new UsersDataTable();
+            base.Tables.Add(this.tableUsers);
+            this.tableWorkout_Exercise = new Workout_ExerciseDataTable();
+            base.Tables.Add(this.tableWorkout_Exercise);
+            this.tableWorkout_Set = new Workout_SetDataTable();
+            base.Tables.Add(this.tableWorkout_Set);
+            this.tableWorkouts = new WorkoutsDataTable();
+            base.Tables.Add(this.tableWorkouts);
+            this.relationFK_Day_Workout_Days = new global::System.Data.DataRelation("FK_Day_Workout_Days", new global::System.Data.DataColumn[] {
+                        this.tableDays.ID_DayColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDay_Workout.ID_DayColumn}, false);
+            this.Relations.Add(this.relationFK_Day_Workout_Days);
+            this.relationFK_Day_Workout_Workouts = new global::System.Data.DataRelation("FK_Day_Workout_Workouts", new global::System.Data.DataColumn[] {
+                        this.tableWorkouts.ID_WorkoutColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDay_Workout.ID_WorkoutColumn}, false);
+            this.Relations.Add(this.relationFK_Day_Workout_Workouts);
+            this.relationFK_Exercise_MuscleGroup_Exercises = new global::System.Data.DataRelation("FK_Exercise_MuscleGroup_Exercises", new global::System.Data.DataColumn[] {
+                        this.tableExercises.NameColumn}, new global::System.Data.DataColumn[] {
+                        this.tableExercise_MuscleGroup.Name_ExerciseColumn}, false);
+            this.Relations.Add(this.relationFK_Exercise_MuscleGroup_Exercises);
+            this.relationFK_Exercise_MuscleGroup_MuscleGroups = new global::System.Data.DataRelation("FK_Exercise_MuscleGroup_MuscleGroups", new global::System.Data.DataColumn[] {
+                        this.tableMuscleGroups.NameColumn}, new global::System.Data.DataColumn[] {
+                        this.tableExercise_MuscleGroup.Name_MuscleGroupColumn}, false);
+            this.Relations.Add(this.relationFK_Exercise_MuscleGroup_MuscleGroups);
+            this.relationFK_User_Day_Days = new global::System.Data.DataRelation("FK_User_Day_Days", new global::System.Data.DataColumn[] {
+                        this.tableDays.ID_DayColumn}, new global::System.Data.DataColumn[] {
+                        this.tableUser_Day.ID_DayColumn}, false);
+            this.Relations.Add(this.relationFK_User_Day_Days);
+            this.relationFK_User_Day_Users = new global::System.Data.DataRelation("FK_User_Day_Users", new global::System.Data.DataColumn[] {
+                        this.tableUsers.LoginColumn}, new global::System.Data.DataColumn[] {
+                        this.tableUser_Day.LoginColumn}, false);
+            this.Relations.Add(this.relationFK_User_Day_Users);
+            this.relationFK_Workout_Exercise_Exercises = new global::System.Data.DataRelation("FK_Workout_Exercise_Exercises", new global::System.Data.DataColumn[] {
+                        this.tableExercises.NameColumn}, new global::System.Data.DataColumn[] {
+                        this.tableWorkout_Exercise.Name_ExerciseColumn}, false);
+            this.Relations.Add(this.relationFK_Workout_Exercise_Exercises);
+            this.relationFK_Workout_Exercise_Workouts = new global::System.Data.DataRelation("FK_Workout_Exercise_Workouts", new global::System.Data.DataColumn[] {
+                        this.tableWorkouts.ID_WorkoutColumn}, new global::System.Data.DataColumn[] {
+                        this.tableWorkout_Exercise.ID_WorkoutColumn}, false);
+            this.Relations.Add(this.relationFK_Workout_Exercise_Workouts);
+            this.relationFK_Workout_Set_Sets = new global::System.Data.DataRelation("FK_Workout_Set_Sets", new global::System.Data.DataColumn[] {
+                        this.tableSets.ID_SetColumn}, new global::System.Data.DataColumn[] {
+                        this.tableWorkout_Set.ID_SetColumn}, false);
+            this.Relations.Add(this.relationFK_Workout_Set_Sets);
+            this.relationFK_Workout_Set_Workouts = new global::System.Data.DataRelation("FK_Workout_Set_Workouts", new global::System.Data.DataColumn[] {
+                        this.tableWorkouts.ID_WorkoutColumn}, new global::System.Data.DataColumn[] {
+                        this.tableWorkout_Set.ID_WorkoutColumn}, false);
+            this.Relations.Add(this.relationFK_Workout_Set_Workouts);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeКористувачі() {
+        private bool ShouldSerializeDay_Workout() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeВправа_Група() {
+        private bool ShouldSerializeDays() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeВправи() {
+        private bool ShouldSerializeExercise_MuscleGroup() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerialize_Групи_м_язів() {
+        private bool ShouldSerializeExercises() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeДень_Тренування() {
+        private bool ShouldSerializeMuscleGroups() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeДні() {
+        private bool ShouldSerializeSets() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeКористувач_День() {
+        private bool ShouldSerializeUser_Day() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeПідходи() {
+        private bool ShouldSerializeUsers() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeТренування() {
+        private bool ShouldSerializeWorkout_Exercise() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeТренування_Вправа() {
+        private bool ShouldSerializeWorkout_Set() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeТренування_Підхід() {
+        private bool ShouldSerializeWorkouts() {
             return false;
         }
         
@@ -660,55 +660,53 @@ namespace LibraryGymPlanner {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void КористувачіRowChangeEventHandler(object sender, КористувачіRowChangeEvent e);
+        public delegate void Day_WorkoutRowChangeEventHandler(object sender, Day_WorkoutRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void Вправа_ГрупаRowChangeEventHandler(object sender, Вправа_ГрупаRowChangeEvent e);
+        public delegate void DaysRowChangeEventHandler(object sender, DaysRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void ВправиRowChangeEventHandler(object sender, ВправиRowChangeEvent e);
+        public delegate void Exercise_MuscleGroupRowChangeEventHandler(object sender, Exercise_MuscleGroupRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void _Групи_м_язівRowChangeEventHandler(object sender, _Групи_м_язівRowChangeEvent e);
+        public delegate void ExercisesRowChangeEventHandler(object sender, ExercisesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void День_ТренуванняRowChangeEventHandler(object sender, День_ТренуванняRowChangeEvent e);
+        public delegate void MuscleGroupsRowChangeEventHandler(object sender, MuscleGroupsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void ДніRowChangeEventHandler(object sender, ДніRowChangeEvent e);
+        public delegate void SetsRowChangeEventHandler(object sender, SetsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void Користувач_ДеньRowChangeEventHandler(object sender, Користувач_ДеньRowChangeEvent e);
+        public delegate void User_DayRowChangeEventHandler(object sender, User_DayRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void ПідходиRowChangeEventHandler(object sender, ПідходиRowChangeEvent e);
+        public delegate void UsersRowChangeEventHandler(object sender, UsersRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void ТренуванняRowChangeEventHandler(object sender, ТренуванняRowChangeEvent e);
+        public delegate void Workout_ExerciseRowChangeEventHandler(object sender, Workout_ExerciseRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void Тренування_ВправаRowChangeEventHandler(object sender, Тренування_ВправаRowChangeEvent e);
+        public delegate void Workout_SetRowChangeEventHandler(object sender, Workout_SetRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void Тренування_ПідхідRowChangeEventHandler(object sender, Тренування_ПідхідRowChangeEvent e);
+        public delegate void WorkoutsRowChangeEventHandler(object sender, WorkoutsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class КористувачіDataTable : global::System.Data.TypedTableBase<КористувачіRow> {
+        public partial class Day_WorkoutDataTable : global::System.Data.TypedTableBase<Day_WorkoutRow> {
             
-            private global::System.Data.DataColumn columnЛогін;
+            private global::System.Data.DataColumn columnID_Day;
             
-            private global::System.Data.DataColumn columnПароль;
-            
-            private global::System.Data.DataColumn _columnІм_я;
+            private global::System.Data.DataColumn columnID_Workout;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public КористувачіDataTable() {
-                this.TableName = "Користувачі";
+            public Day_WorkoutDataTable() {
+                this.TableName = "Day_Workout";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -716,7 +714,7 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal КористувачіDataTable(global::System.Data.DataTable table) {
+            internal Day_WorkoutDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -733,32 +731,24 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected КористувачіDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Day_WorkoutDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ЛогінColumn {
+            public global::System.Data.DataColumn ID_DayColumn {
                 get {
-                    return this.columnЛогін;
+                    return this.columnID_Day;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ПарольColumn {
+            public global::System.Data.DataColumn ID_WorkoutColumn {
                 get {
-                    return this.columnПароль;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn _Ім_яColumn {
-                get {
-                    return this._columnІм_я;
+                    return this.columnID_Workout;
                 }
             }
             
@@ -773,343 +763,60 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public КористувачіRow this[int index] {
+            public Day_WorkoutRow this[int index] {
                 get {
-                    return ((КористувачіRow)(this.Rows[index]));
+                    return ((Day_WorkoutRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event КористувачіRowChangeEventHandler КористувачіRowChanging;
+            public event Day_WorkoutRowChangeEventHandler Day_WorkoutRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event КористувачіRowChangeEventHandler КористувачіRowChanged;
+            public event Day_WorkoutRowChangeEventHandler Day_WorkoutRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event КористувачіRowChangeEventHandler КористувачіRowDeleting;
+            public event Day_WorkoutRowChangeEventHandler Day_WorkoutRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event КористувачіRowChangeEventHandler КористувачіRowDeleted;
+            public event Day_WorkoutRowChangeEventHandler Day_WorkoutRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddКористувачіRow(КористувачіRow row) {
+            public void AddDay_WorkoutRow(Day_WorkoutRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public КористувачіRow AddКористувачіRow(string Логін, string Пароль, string _Ім_я) {
-                КористувачіRow rowКористувачіRow = ((КористувачіRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        Логін,
-                        Пароль,
-                        _Ім_я};
-                rowКористувачіRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowКористувачіRow);
-                return rowКористувачіRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public КористувачіRow FindByЛогін(string Логін) {
-                return ((КористувачіRow)(this.Rows.Find(new object[] {
-                            Логін})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                КористувачіDataTable cln = ((КористувачіDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new КористувачіDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnЛогін = base.Columns["Логін"];
-                this.columnПароль = base.Columns["Пароль"];
-                this._columnІм_я = base.Columns["Ім\'я"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnЛогін = new global::System.Data.DataColumn("Логін", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnЛогін);
-                this.columnПароль = new global::System.Data.DataColumn("Пароль", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnПароль);
-                this._columnІм_я = new global::System.Data.DataColumn("Ім\'я", typeof(string), null, global::System.Data.MappingType.Element);
-                this._columnІм_я.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnІм_я");
-                this._columnІм_я.ExtendedProperties.Add("Generator_UserColumnName", "Ім\'я");
-                base.Columns.Add(this._columnІм_я);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnЛогін}, true));
-                this.columnЛогін.AllowDBNull = false;
-                this.columnЛогін.Unique = true;
-                this.columnЛогін.MaxLength = 10;
-                this.columnПароль.AllowDBNull = false;
-                this.columnПароль.MaxLength = 10;
-                this._columnІм_я.AllowDBNull = false;
-                this._columnІм_я.MaxLength = 10;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public КористувачіRow NewКористувачіRow() {
-                return ((КористувачіRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new КористувачіRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(КористувачіRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.КористувачіRowChanged != null)) {
-                    this.КористувачіRowChanged(this, new КористувачіRowChangeEvent(((КористувачіRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.КористувачіRowChanging != null)) {
-                    this.КористувачіRowChanging(this, new КористувачіRowChangeEvent(((КористувачіRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.КористувачіRowDeleted != null)) {
-                    this.КористувачіRowDeleted(this, new КористувачіRowChangeEvent(((КористувачіRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.КористувачіRowDeleting != null)) {
-                    this.КористувачіRowDeleting(this, new КористувачіRowChangeEvent(((КористувачіRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveКористувачіRow(КористувачіRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DSGymPlanner ds = new DSGymPlanner();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "КористувачіDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Вправа_ГрупаDataTable : global::System.Data.TypedTableBase<Вправа_ГрупаRow> {
-            
-            private global::System.Data.DataColumn _columnНазва_групи_м_язів;
-            
-            private global::System.Data.DataColumn columnНазва_вправи;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Вправа_ГрупаDataTable() {
-                this.TableName = "Вправа_Група";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Вправа_ГрупаDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected Вправа_ГрупаDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn _Назва_групи_м_язівColumn {
-                get {
-                    return this._columnНазва_групи_м_язів;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Назва_вправиColumn {
-                get {
-                    return this.columnНазва_вправи;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Вправа_ГрупаRow this[int index] {
-                get {
-                    return ((Вправа_ГрупаRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Вправа_ГрупаRowChangeEventHandler Вправа_ГрупаRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Вправа_ГрупаRowChangeEventHandler Вправа_ГрупаRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Вправа_ГрупаRowChangeEventHandler Вправа_ГрупаRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Вправа_ГрупаRowChangeEventHandler Вправа_ГрупаRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddВправа_ГрупаRow(Вправа_ГрупаRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Вправа_ГрупаRow AddВправа_ГрупаRow(_Групи_м_язівRow _parent_Групи_м_язівRowByFK_Вправа_Група_Групи_м_язів, ВправиRow parentВправиRowByFK_Вправа_Група_Вправи) {
-                Вправа_ГрупаRow rowВправа_ГрупаRow = ((Вправа_ГрупаRow)(this.NewRow()));
+            public Day_WorkoutRow AddDay_WorkoutRow(DaysRow parentDaysRowByFK_Day_Workout_Days, WorkoutsRow parentWorkoutsRowByFK_Day_Workout_Workouts) {
+                Day_WorkoutRow rowDay_WorkoutRow = ((Day_WorkoutRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null};
-                if ((_parent_Групи_м_язівRowByFK_Вправа_Група_Групи_м_язів != null)) {
-                    columnValuesArray[0] = _parent_Групи_м_язівRowByFK_Вправа_Група_Групи_м_язів[0];
+                if ((parentDaysRowByFK_Day_Workout_Days != null)) {
+                    columnValuesArray[0] = parentDaysRowByFK_Day_Workout_Days[0];
                 }
-                if ((parentВправиRowByFK_Вправа_Група_Вправи != null)) {
-                    columnValuesArray[1] = parentВправиRowByFK_Вправа_Група_Вправи[0];
+                if ((parentWorkoutsRowByFK_Day_Workout_Workouts != null)) {
+                    columnValuesArray[1] = parentWorkoutsRowByFK_Day_Workout_Workouts[0];
                 }
-                rowВправа_ГрупаRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowВправа_ГрупаRow);
-                return rowВправа_ГрупаRow;
+                rowDay_WorkoutRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDay_WorkoutRow);
+                return rowDay_WorkoutRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Вправа_ГрупаRow FindBy_Назва_групи_м_язівНазва_вправи(string _Назва_групи_м_язів, string Назва_вправи) {
-                return ((Вправа_ГрупаRow)(this.Rows.Find(new object[] {
-                            _Назва_групи_м_язів,
-                            Назва_вправи})));
+            public Day_WorkoutRow FindByID_DayID_Workout(int ID_Day, int ID_Workout) {
+                return ((Day_WorkoutRow)(this.Rows.Find(new object[] {
+                            ID_Day,
+                            ID_Workout})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Вправа_ГрупаDataTable cln = ((Вправа_ГрупаDataTable)(base.Clone()));
+                Day_WorkoutDataTable cln = ((Day_WorkoutDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1117,58 +824,54 @@ namespace LibraryGymPlanner {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Вправа_ГрупаDataTable();
+                return new Day_WorkoutDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this._columnНазва_групи_м_язів = base.Columns["Назва групи м\'язів"];
-                this.columnНазва_вправи = base.Columns["Назва вправи"];
+                this.columnID_Day = base.Columns["ID_Day"];
+                this.columnID_Workout = base.Columns["ID_Workout"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this._columnНазва_групи_м_язів = new global::System.Data.DataColumn("Назва групи м\'язів", typeof(string), null, global::System.Data.MappingType.Element);
-                this._columnНазва_групи_м_язів.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnНазва_групи_м_язів");
-                this._columnНазва_групи_м_язів.ExtendedProperties.Add("Generator_UserColumnName", "Назва групи м\'язів");
-                base.Columns.Add(this._columnНазва_групи_м_язів);
-                this.columnНазва_вправи = new global::System.Data.DataColumn("Назва вправи", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnНазва_вправи);
+                this.columnID_Day = new global::System.Data.DataColumn("ID_Day", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Day);
+                this.columnID_Workout = new global::System.Data.DataColumn("ID_Workout", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Workout);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this._columnНазва_групи_м_язів,
-                                this.columnНазва_вправи}, true));
-                this._columnНазва_групи_м_язів.AllowDBNull = false;
-                this._columnНазва_групи_м_язів.MaxLength = 20;
-                this.columnНазва_вправи.AllowDBNull = false;
-                this.columnНазва_вправи.MaxLength = 20;
+                                this.columnID_Day,
+                                this.columnID_Workout}, true));
+                this.columnID_Day.AllowDBNull = false;
+                this.columnID_Workout.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Вправа_ГрупаRow NewВправа_ГрупаRow() {
-                return ((Вправа_ГрупаRow)(this.NewRow()));
+            public Day_WorkoutRow NewDay_WorkoutRow() {
+                return ((Day_WorkoutRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Вправа_ГрупаRow(builder);
+                return new Day_WorkoutRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Вправа_ГрупаRow);
+                return typeof(Day_WorkoutRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Вправа_ГрупаRowChanged != null)) {
-                    this.Вправа_ГрупаRowChanged(this, new Вправа_ГрупаRowChangeEvent(((Вправа_ГрупаRow)(e.Row)), e.Action));
+                if ((this.Day_WorkoutRowChanged != null)) {
+                    this.Day_WorkoutRowChanged(this, new Day_WorkoutRowChangeEvent(((Day_WorkoutRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1176,8 +879,8 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Вправа_ГрупаRowChanging != null)) {
-                    this.Вправа_ГрупаRowChanging(this, new Вправа_ГрупаRowChangeEvent(((Вправа_ГрупаRow)(e.Row)), e.Action));
+                if ((this.Day_WorkoutRowChanging != null)) {
+                    this.Day_WorkoutRowChanging(this, new Day_WorkoutRowChangeEvent(((Day_WorkoutRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1185,8 +888,8 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Вправа_ГрупаRowDeleted != null)) {
-                    this.Вправа_ГрупаRowDeleted(this, new Вправа_ГрупаRowChangeEvent(((Вправа_ГрупаRow)(e.Row)), e.Action));
+                if ((this.Day_WorkoutRowDeleted != null)) {
+                    this.Day_WorkoutRowDeleted(this, new Day_WorkoutRowChangeEvent(((Day_WorkoutRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1194,14 +897,14 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Вправа_ГрупаRowDeleting != null)) {
-                    this.Вправа_ГрупаRowDeleting(this, new Вправа_ГрупаRowChangeEvent(((Вправа_ГрупаRow)(e.Row)), e.Action));
+                if ((this.Day_WorkoutRowDeleting != null)) {
+                    this.Day_WorkoutRowDeleting(this, new Day_WorkoutRowChangeEvent(((Day_WorkoutRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveВправа_ГрупаRow(Вправа_ГрупаRow row) {
+            public void RemoveDay_WorkoutRow(Day_WorkoutRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1228,7 +931,7 @@ namespace LibraryGymPlanner {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Вправа_ГрупаDataTable";
+                attribute2.FixedValue = "Day_WorkoutDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1274,16 +977,18 @@ namespace LibraryGymPlanner {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ВправиDataTable : global::System.Data.TypedTableBase<ВправиRow> {
+        public partial class DaysDataTable : global::System.Data.TypedTableBase<DaysRow> {
             
-            private global::System.Data.DataColumn columnНазва;
+            private global::System.Data.DataColumn columnID_Day;
             
-            private global::System.Data.DataColumn columnІнформація;
+            private global::System.Data.DataColumn columnDate;
+            
+            private global::System.Data.DataColumn columnComment;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ВправиDataTable() {
-                this.TableName = "Вправи";
+            public DaysDataTable() {
+                this.TableName = "Days";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1291,7 +996,7 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal ВправиDataTable(global::System.Data.DataTable table) {
+            internal DaysDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1308,24 +1013,32 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected ВправиDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DaysDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn НазваColumn {
+            public global::System.Data.DataColumn ID_DayColumn {
                 get {
-                    return this.columnНазва;
+                    return this.columnID_Day;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ІнформаціяColumn {
+            public global::System.Data.DataColumn DateColumn {
                 get {
-                    return this.columnІнформація;
+                    return this.columnDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CommentColumn {
+                get {
+                    return this.columnComment;
                 }
             }
             
@@ -1340,53 +1053,54 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ВправиRow this[int index] {
+            public DaysRow this[int index] {
                 get {
-                    return ((ВправиRow)(this.Rows[index]));
+                    return ((DaysRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ВправиRowChangeEventHandler ВправиRowChanging;
+            public event DaysRowChangeEventHandler DaysRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ВправиRowChangeEventHandler ВправиRowChanged;
+            public event DaysRowChangeEventHandler DaysRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ВправиRowChangeEventHandler ВправиRowDeleting;
+            public event DaysRowChangeEventHandler DaysRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ВправиRowChangeEventHandler ВправиRowDeleted;
+            public event DaysRowChangeEventHandler DaysRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddВправиRow(ВправиRow row) {
+            public void AddDaysRow(DaysRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ВправиRow AddВправиRow(string Назва, string Інформація) {
-                ВправиRow rowВправиRow = ((ВправиRow)(this.NewRow()));
+            public DaysRow AddDaysRow(System.DateTime Date, string Comment) {
+                DaysRow rowDaysRow = ((DaysRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Назва,
-                        Інформація};
-                rowВправиRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowВправиRow);
-                return rowВправиRow;
+                        null,
+                        Date,
+                        Comment};
+                rowDaysRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDaysRow);
+                return rowDaysRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ВправиRow FindByНазва(string Назва) {
-                return ((ВправиRow)(this.Rows.Find(new object[] {
-                            Назва})));
+            public DaysRow FindByID_Day(int ID_Day) {
+                return ((DaysRow)(this.Rows.Find(new object[] {
+                            ID_Day})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ВправиDataTable cln = ((ВправиDataTable)(base.Clone()));
+                DaysDataTable cln = ((DaysDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1394,55 +1108,63 @@ namespace LibraryGymPlanner {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ВправиDataTable();
+                return new DaysDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnНазва = base.Columns["Назва"];
-                this.columnІнформація = base.Columns["Інформація"];
+                this.columnID_Day = base.Columns["ID_Day"];
+                this.columnDate = base.Columns["Date"];
+                this.columnComment = base.Columns["Comment"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnНазва = new global::System.Data.DataColumn("Назва", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnНазва);
-                this.columnІнформація = new global::System.Data.DataColumn("Інформація", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnІнформація);
+                this.columnID_Day = new global::System.Data.DataColumn("ID_Day", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Day);
+                this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDate);
+                this.columnComment = new global::System.Data.DataColumn("Comment", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComment);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnНазва}, true));
-                this.columnНазва.AllowDBNull = false;
-                this.columnНазва.Unique = true;
-                this.columnНазва.MaxLength = 20;
-                this.columnІнформація.MaxLength = 2147483647;
+                                this.columnID_Day}, true));
+                this.columnID_Day.AutoIncrement = true;
+                this.columnID_Day.AutoIncrementSeed = -1;
+                this.columnID_Day.AutoIncrementStep = -1;
+                this.columnID_Day.AllowDBNull = false;
+                this.columnID_Day.ReadOnly = true;
+                this.columnID_Day.Unique = true;
+                this.columnDate.AllowDBNull = false;
+                this.columnComment.AllowDBNull = false;
+                this.columnComment.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ВправиRow NewВправиRow() {
-                return ((ВправиRow)(this.NewRow()));
+            public DaysRow NewDaysRow() {
+                return ((DaysRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ВправиRow(builder);
+                return new DaysRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ВправиRow);
+                return typeof(DaysRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ВправиRowChanged != null)) {
-                    this.ВправиRowChanged(this, new ВправиRowChangeEvent(((ВправиRow)(e.Row)), e.Action));
+                if ((this.DaysRowChanged != null)) {
+                    this.DaysRowChanged(this, new DaysRowChangeEvent(((DaysRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1450,8 +1172,8 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ВправиRowChanging != null)) {
-                    this.ВправиRowChanging(this, new ВправиRowChangeEvent(((ВправиRow)(e.Row)), e.Action));
+                if ((this.DaysRowChanging != null)) {
+                    this.DaysRowChanging(this, new DaysRowChangeEvent(((DaysRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1459,8 +1181,8 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ВправиRowDeleted != null)) {
-                    this.ВправиRowDeleted(this, new ВправиRowChangeEvent(((ВправиRow)(e.Row)), e.Action));
+                if ((this.DaysRowDeleted != null)) {
+                    this.DaysRowDeleted(this, new DaysRowChangeEvent(((DaysRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1468,14 +1190,14 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ВправиRowDeleting != null)) {
-                    this.ВправиRowDeleting(this, new ВправиRowChangeEvent(((ВправиRow)(e.Row)), e.Action));
+                if ((this.DaysRowDeleting != null)) {
+                    this.DaysRowDeleting(this, new DaysRowChangeEvent(((DaysRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveВправиRow(ВправиRow row) {
+            public void RemoveDaysRow(DaysRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1502,7 +1224,7 @@ namespace LibraryGymPlanner {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ВправиDataTable";
+                attribute2.FixedValue = "DaysDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1548,16 +1270,16 @@ namespace LibraryGymPlanner {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class _Групи_м_язівDataTable : global::System.Data.TypedTableBase<_Групи_м_язівRow> {
+        public partial class Exercise_MuscleGroupDataTable : global::System.Data.TypedTableBase<Exercise_MuscleGroupRow> {
             
-            private global::System.Data.DataColumn columnНазва;
+            private global::System.Data.DataColumn columnName_Exercise;
             
-            private global::System.Data.DataColumn columnІнформація;
+            private global::System.Data.DataColumn columnName_MuscleGroup;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _Групи_м_язівDataTable() {
-                this.TableName = "Групи м\'язів";
+            public Exercise_MuscleGroupDataTable() {
+                this.TableName = "Exercise_MuscleGroup";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1565,7 +1287,7 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal _Групи_м_язівDataTable(global::System.Data.DataTable table) {
+            internal Exercise_MuscleGroupDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1582,24 +1304,24 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected _Групи_м_язівDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Exercise_MuscleGroupDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn НазваColumn {
+            public global::System.Data.DataColumn Name_ExerciseColumn {
                 get {
-                    return this.columnНазва;
+                    return this.columnName_Exercise;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ІнформаціяColumn {
+            public global::System.Data.DataColumn Name_MuscleGroupColumn {
                 get {
-                    return this.columnІнформація;
+                    return this.columnName_MuscleGroup;
                 }
             }
             
@@ -1614,336 +1336,60 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _Групи_м_язівRow this[int index] {
+            public Exercise_MuscleGroupRow this[int index] {
                 get {
-                    return ((_Групи_м_язівRow)(this.Rows[index]));
+                    return ((Exercise_MuscleGroupRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event _Групи_м_язівRowChangeEventHandler _Групи_м_язівRowChanging;
+            public event Exercise_MuscleGroupRowChangeEventHandler Exercise_MuscleGroupRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event _Групи_м_язівRowChangeEventHandler _Групи_м_язівRowChanged;
+            public event Exercise_MuscleGroupRowChangeEventHandler Exercise_MuscleGroupRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event _Групи_м_язівRowChangeEventHandler _Групи_м_язівRowDeleting;
+            public event Exercise_MuscleGroupRowChangeEventHandler Exercise_MuscleGroupRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event _Групи_м_язівRowChangeEventHandler _Групи_м_язівRowDeleted;
+            public event Exercise_MuscleGroupRowChangeEventHandler Exercise_MuscleGroupRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Add_Групи_м_язівRow(_Групи_м_язівRow row) {
+            public void AddExercise_MuscleGroupRow(Exercise_MuscleGroupRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _Групи_м_язівRow Add_Групи_м_язівRow(string Назва, string Інформація) {
-                _Групи_м_язівRow row_Групи_м_язівRow = ((_Групи_м_язівRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        Назва,
-                        Інформація};
-                row_Групи_м_язівRow.ItemArray = columnValuesArray;
-                this.Rows.Add(row_Групи_м_язівRow);
-                return row_Групи_м_язівRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _Групи_м_язівRow FindByНазва(string Назва) {
-                return ((_Групи_м_язівRow)(this.Rows.Find(new object[] {
-                            Назва})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                _Групи_м_язівDataTable cln = ((_Групи_м_язівDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new _Групи_м_язівDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnНазва = base.Columns["Назва"];
-                this.columnІнформація = base.Columns["Інформація"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnНазва = new global::System.Data.DataColumn("Назва", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnНазва);
-                this.columnІнформація = new global::System.Data.DataColumn("Інформація", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnІнформація);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnНазва}, true));
-                this.columnНазва.AllowDBNull = false;
-                this.columnНазва.Unique = true;
-                this.columnНазва.MaxLength = 20;
-                this.columnІнформація.MaxLength = 2147483647;
-                this.ExtendedProperties.Add("Generator_TableVarName", "_tableГрупи_м_язів");
-                this.ExtendedProperties.Add("Generator_UserTableName", "Групи м\'язів");
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _Групи_м_язівRow New_Групи_м_язівRow() {
-                return ((_Групи_м_язівRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new _Групи_м_язівRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(_Групи_м_язівRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this._Групи_м_язівRowChanged != null)) {
-                    this._Групи_м_язівRowChanged(this, new _Групи_м_язівRowChangeEvent(((_Групи_м_язівRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this._Групи_м_язівRowChanging != null)) {
-                    this._Групи_м_язівRowChanging(this, new _Групи_м_язівRowChangeEvent(((_Групи_м_язівRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this._Групи_м_язівRowDeleted != null)) {
-                    this._Групи_м_язівRowDeleted(this, new _Групи_м_язівRowChangeEvent(((_Групи_м_язівRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this._Групи_м_язівRowDeleting != null)) {
-                    this._Групи_м_язівRowDeleting(this, new _Групи_м_язівRowChangeEvent(((_Групи_м_язівRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Remove_Групи_м_язівRow(_Групи_м_язівRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DSGymPlanner ds = new DSGymPlanner();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "_Групи_м_язівDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class День_ТренуванняDataTable : global::System.Data.TypedTableBase<День_ТренуванняRow> {
-            
-            private global::System.Data.DataColumn columnID_дня;
-            
-            private global::System.Data.DataColumn columnID_тренування;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public День_ТренуванняDataTable() {
-                this.TableName = "День_Тренування";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal День_ТренуванняDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected День_ТренуванняDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_дняColumn {
-                get {
-                    return this.columnID_дня;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_тренуванняColumn {
-                get {
-                    return this.columnID_тренування;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public День_ТренуванняRow this[int index] {
-                get {
-                    return ((День_ТренуванняRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event День_ТренуванняRowChangeEventHandler День_ТренуванняRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event День_ТренуванняRowChangeEventHandler День_ТренуванняRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event День_ТренуванняRowChangeEventHandler День_ТренуванняRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event День_ТренуванняRowChangeEventHandler День_ТренуванняRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddДень_ТренуванняRow(День_ТренуванняRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public День_ТренуванняRow AddДень_ТренуванняRow(ДніRow parentДніRowByFK_День_Тренування_Дні1, ТренуванняRow parentТренуванняRowByFK_День_Тренування_Тренування) {
-                День_ТренуванняRow rowДень_ТренуванняRow = ((День_ТренуванняRow)(this.NewRow()));
+            public Exercise_MuscleGroupRow AddExercise_MuscleGroupRow(ExercisesRow parentExercisesRowByFK_Exercise_MuscleGroup_Exercises, MuscleGroupsRow parentMuscleGroupsRowByFK_Exercise_MuscleGroup_MuscleGroups) {
+                Exercise_MuscleGroupRow rowExercise_MuscleGroupRow = ((Exercise_MuscleGroupRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null};
-                if ((parentДніRowByFK_День_Тренування_Дні1 != null)) {
-                    columnValuesArray[0] = parentДніRowByFK_День_Тренування_Дні1[2];
+                if ((parentExercisesRowByFK_Exercise_MuscleGroup_Exercises != null)) {
+                    columnValuesArray[0] = parentExercisesRowByFK_Exercise_MuscleGroup_Exercises[0];
                 }
-                if ((parentТренуванняRowByFK_День_Тренування_Тренування != null)) {
-                    columnValuesArray[1] = parentТренуванняRowByFK_День_Тренування_Тренування[0];
+                if ((parentMuscleGroupsRowByFK_Exercise_MuscleGroup_MuscleGroups != null)) {
+                    columnValuesArray[1] = parentMuscleGroupsRowByFK_Exercise_MuscleGroup_MuscleGroups[0];
                 }
-                rowДень_ТренуванняRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowДень_ТренуванняRow);
-                return rowДень_ТренуванняRow;
+                rowExercise_MuscleGroupRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowExercise_MuscleGroupRow);
+                return rowExercise_MuscleGroupRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public День_ТренуванняRow FindByID_дняID_тренування(int ID_дня, int ID_тренування) {
-                return ((День_ТренуванняRow)(this.Rows.Find(new object[] {
-                            ID_дня,
-                            ID_тренування})));
+            public Exercise_MuscleGroupRow FindByName_ExerciseName_MuscleGroup(string Name_Exercise, string Name_MuscleGroup) {
+                return ((Exercise_MuscleGroupRow)(this.Rows.Find(new object[] {
+                            Name_Exercise,
+                            Name_MuscleGroup})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                День_ТренуванняDataTable cln = ((День_ТренуванняDataTable)(base.Clone()));
+                Exercise_MuscleGroupDataTable cln = ((Exercise_MuscleGroupDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1951,54 +1397,56 @@ namespace LibraryGymPlanner {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new День_ТренуванняDataTable();
+                return new Exercise_MuscleGroupDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnID_дня = base.Columns["ID дня"];
-                this.columnID_тренування = base.Columns["ID тренування"];
+                this.columnName_Exercise = base.Columns["Name_Exercise"];
+                this.columnName_MuscleGroup = base.Columns["Name_MuscleGroup"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnID_дня = new global::System.Data.DataColumn("ID дня", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_дня);
-                this.columnID_тренування = new global::System.Data.DataColumn("ID тренування", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_тренування);
+                this.columnName_Exercise = new global::System.Data.DataColumn("Name_Exercise", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName_Exercise);
+                this.columnName_MuscleGroup = new global::System.Data.DataColumn("Name_MuscleGroup", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName_MuscleGroup);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_дня,
-                                this.columnID_тренування}, true));
-                this.columnID_дня.AllowDBNull = false;
-                this.columnID_тренування.AllowDBNull = false;
+                                this.columnName_Exercise,
+                                this.columnName_MuscleGroup}, true));
+                this.columnName_Exercise.AllowDBNull = false;
+                this.columnName_Exercise.MaxLength = 20;
+                this.columnName_MuscleGroup.AllowDBNull = false;
+                this.columnName_MuscleGroup.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public День_ТренуванняRow NewДень_ТренуванняRow() {
-                return ((День_ТренуванняRow)(this.NewRow()));
+            public Exercise_MuscleGroupRow NewExercise_MuscleGroupRow() {
+                return ((Exercise_MuscleGroupRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new День_ТренуванняRow(builder);
+                return new Exercise_MuscleGroupRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(День_ТренуванняRow);
+                return typeof(Exercise_MuscleGroupRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.День_ТренуванняRowChanged != null)) {
-                    this.День_ТренуванняRowChanged(this, new День_ТренуванняRowChangeEvent(((День_ТренуванняRow)(e.Row)), e.Action));
+                if ((this.Exercise_MuscleGroupRowChanged != null)) {
+                    this.Exercise_MuscleGroupRowChanged(this, new Exercise_MuscleGroupRowChangeEvent(((Exercise_MuscleGroupRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2006,8 +1454,8 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.День_ТренуванняRowChanging != null)) {
-                    this.День_ТренуванняRowChanging(this, new День_ТренуванняRowChangeEvent(((День_ТренуванняRow)(e.Row)), e.Action));
+                if ((this.Exercise_MuscleGroupRowChanging != null)) {
+                    this.Exercise_MuscleGroupRowChanging(this, new Exercise_MuscleGroupRowChangeEvent(((Exercise_MuscleGroupRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2015,8 +1463,8 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.День_ТренуванняRowDeleted != null)) {
-                    this.День_ТренуванняRowDeleted(this, new День_ТренуванняRowChangeEvent(((День_ТренуванняRow)(e.Row)), e.Action));
+                if ((this.Exercise_MuscleGroupRowDeleted != null)) {
+                    this.Exercise_MuscleGroupRowDeleted(this, new Exercise_MuscleGroupRowChangeEvent(((Exercise_MuscleGroupRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2024,14 +1472,14 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.День_ТренуванняRowDeleting != null)) {
-                    this.День_ТренуванняRowDeleting(this, new День_ТренуванняRowChangeEvent(((День_ТренуванняRow)(e.Row)), e.Action));
+                if ((this.Exercise_MuscleGroupRowDeleting != null)) {
+                    this.Exercise_MuscleGroupRowDeleting(this, new Exercise_MuscleGroupRowChangeEvent(((Exercise_MuscleGroupRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveДень_ТренуванняRow(День_ТренуванняRow row) {
+            public void RemoveExercise_MuscleGroupRow(Exercise_MuscleGroupRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2058,7 +1506,7 @@ namespace LibraryGymPlanner {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "День_ТренуванняDataTable";
+                attribute2.FixedValue = "Exercise_MuscleGroupDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2104,18 +1552,16 @@ namespace LibraryGymPlanner {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ДніDataTable : global::System.Data.TypedTableBase<ДніRow> {
+        public partial class ExercisesDataTable : global::System.Data.TypedTableBase<ExercisesRow> {
             
-            private global::System.Data.DataColumn columnДата;
+            private global::System.Data.DataColumn columnName;
             
-            private global::System.Data.DataColumn columnКоментар;
-            
-            private global::System.Data.DataColumn columnID_дня;
+            private global::System.Data.DataColumn columnInformation;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ДніDataTable() {
-                this.TableName = "Дні";
+            public ExercisesDataTable() {
+                this.TableName = "Exercises";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2123,7 +1569,7 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal ДніDataTable(global::System.Data.DataTable table) {
+            internal ExercisesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2140,32 +1586,24 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected ДніDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ExercisesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ДатаColumn {
+            public global::System.Data.DataColumn NameColumn {
                 get {
-                    return this.columnДата;
+                    return this.columnName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn КоментарColumn {
+            public global::System.Data.DataColumn InformationColumn {
                 get {
-                    return this.columnКоментар;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_дняColumn {
-                get {
-                    return this.columnID_дня;
+                    return this.columnInformation;
                 }
             }
             
@@ -2180,54 +1618,53 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ДніRow this[int index] {
+            public ExercisesRow this[int index] {
                 get {
-                    return ((ДніRow)(this.Rows[index]));
+                    return ((ExercisesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ДніRowChangeEventHandler ДніRowChanging;
+            public event ExercisesRowChangeEventHandler ExercisesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ДніRowChangeEventHandler ДніRowChanged;
+            public event ExercisesRowChangeEventHandler ExercisesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ДніRowChangeEventHandler ДніRowDeleting;
+            public event ExercisesRowChangeEventHandler ExercisesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ДніRowChangeEventHandler ДніRowDeleted;
+            public event ExercisesRowChangeEventHandler ExercisesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddДніRow(ДніRow row) {
+            public void AddExercisesRow(ExercisesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ДніRow AddДніRow(System.DateTime Дата, string Коментар, int ID_дня) {
-                ДніRow rowДніRow = ((ДніRow)(this.NewRow()));
+            public ExercisesRow AddExercisesRow(string Name, string Information) {
+                ExercisesRow rowExercisesRow = ((ExercisesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Дата,
-                        Коментар,
-                        ID_дня};
-                rowДніRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowДніRow);
-                return rowДніRow;
+                        Name,
+                        Information};
+                rowExercisesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowExercisesRow);
+                return rowExercisesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ДніRow FindByID_дня(int ID_дня) {
-                return ((ДніRow)(this.Rows.Find(new object[] {
-                            ID_дня})));
+            public ExercisesRow FindByName(string Name) {
+                return ((ExercisesRow)(this.Rows.Find(new object[] {
+                            Name})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ДніDataTable cln = ((ДніDataTable)(base.Clone()));
+                ExercisesDataTable cln = ((ExercisesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2235,58 +1672,56 @@ namespace LibraryGymPlanner {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ДніDataTable();
+                return new ExercisesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnДата = base.Columns["Дата"];
-                this.columnКоментар = base.Columns["Коментар"];
-                this.columnID_дня = base.Columns["ID дня"];
+                this.columnName = base.Columns["Name"];
+                this.columnInformation = base.Columns["Information"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnДата = new global::System.Data.DataColumn("Дата", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnДата);
-                this.columnКоментар = new global::System.Data.DataColumn("Коментар", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnКоментар);
-                this.columnID_дня = new global::System.Data.DataColumn("ID дня", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_дня);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
+                this.columnInformation = new global::System.Data.DataColumn("Information", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInformation);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_дня}, true));
-                this.columnДата.AllowDBNull = false;
-                this.columnКоментар.MaxLength = 2147483647;
-                this.columnID_дня.AllowDBNull = false;
-                this.columnID_дня.Unique = true;
+                                this.columnName}, true));
+                this.columnName.AllowDBNull = false;
+                this.columnName.Unique = true;
+                this.columnName.MaxLength = 20;
+                this.columnInformation.AllowDBNull = false;
+                this.columnInformation.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ДніRow NewДніRow() {
-                return ((ДніRow)(this.NewRow()));
+            public ExercisesRow NewExercisesRow() {
+                return ((ExercisesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ДніRow(builder);
+                return new ExercisesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ДніRow);
+                return typeof(ExercisesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ДніRowChanged != null)) {
-                    this.ДніRowChanged(this, new ДніRowChangeEvent(((ДніRow)(e.Row)), e.Action));
+                if ((this.ExercisesRowChanged != null)) {
+                    this.ExercisesRowChanged(this, new ExercisesRowChangeEvent(((ExercisesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2294,8 +1729,8 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ДніRowChanging != null)) {
-                    this.ДніRowChanging(this, new ДніRowChangeEvent(((ДніRow)(e.Row)), e.Action));
+                if ((this.ExercisesRowChanging != null)) {
+                    this.ExercisesRowChanging(this, new ExercisesRowChangeEvent(((ExercisesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2303,8 +1738,8 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ДніRowDeleted != null)) {
-                    this.ДніRowDeleted(this, new ДніRowChangeEvent(((ДніRow)(e.Row)), e.Action));
+                if ((this.ExercisesRowDeleted != null)) {
+                    this.ExercisesRowDeleted(this, new ExercisesRowChangeEvent(((ExercisesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2312,14 +1747,14 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ДніRowDeleting != null)) {
-                    this.ДніRowDeleting(this, new ДніRowChangeEvent(((ДніRow)(e.Row)), e.Action));
+                if ((this.ExercisesRowDeleting != null)) {
+                    this.ExercisesRowDeleting(this, new ExercisesRowChangeEvent(((ExercisesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveДніRow(ДніRow row) {
+            public void RemoveExercisesRow(ExercisesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2346,7 +1781,7 @@ namespace LibraryGymPlanner {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ДніDataTable";
+                attribute2.FixedValue = "ExercisesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2392,16 +1827,16 @@ namespace LibraryGymPlanner {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Користувач_ДеньDataTable : global::System.Data.TypedTableBase<Користувач_ДеньRow> {
+        public partial class MuscleGroupsDataTable : global::System.Data.TypedTableBase<MuscleGroupsRow> {
             
-            private global::System.Data.DataColumn columnЛогін;
+            private global::System.Data.DataColumn columnName;
             
-            private global::System.Data.DataColumn columnID_дня;
+            private global::System.Data.DataColumn columnInformation;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Користувач_ДеньDataTable() {
-                this.TableName = "Користувач_День";
+            public MuscleGroupsDataTable() {
+                this.TableName = "MuscleGroups";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2409,7 +1844,7 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Користувач_ДеньDataTable(global::System.Data.DataTable table) {
+            internal MuscleGroupsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2426,24 +1861,24 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected Користувач_ДеньDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected MuscleGroupsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ЛогінColumn {
+            public global::System.Data.DataColumn NameColumn {
                 get {
-                    return this.columnЛогін;
+                    return this.columnName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_дняColumn {
+            public global::System.Data.DataColumn InformationColumn {
                 get {
-                    return this.columnID_дня;
+                    return this.columnInformation;
                 }
             }
             
@@ -2458,60 +1893,627 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Користувач_ДеньRow this[int index] {
+            public MuscleGroupsRow this[int index] {
                 get {
-                    return ((Користувач_ДеньRow)(this.Rows[index]));
+                    return ((MuscleGroupsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Користувач_ДеньRowChangeEventHandler Користувач_ДеньRowChanging;
+            public event MuscleGroupsRowChangeEventHandler MuscleGroupsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Користувач_ДеньRowChangeEventHandler Користувач_ДеньRowChanged;
+            public event MuscleGroupsRowChangeEventHandler MuscleGroupsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Користувач_ДеньRowChangeEventHandler Користувач_ДеньRowDeleting;
+            public event MuscleGroupsRowChangeEventHandler MuscleGroupsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Користувач_ДеньRowChangeEventHandler Користувач_ДеньRowDeleted;
+            public event MuscleGroupsRowChangeEventHandler MuscleGroupsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddКористувач_ДеньRow(Користувач_ДеньRow row) {
+            public void AddMuscleGroupsRow(MuscleGroupsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Користувач_ДеньRow AddКористувач_ДеньRow(КористувачіRow parentКористувачіRowByFK_Користувач_День_Користувачі, ДніRow parentДніRowByFK_Користувач_День_Дні) {
-                Користувач_ДеньRow rowКористувач_ДеньRow = ((Користувач_ДеньRow)(this.NewRow()));
+            public MuscleGroupsRow AddMuscleGroupsRow(string Name, string Information) {
+                MuscleGroupsRow rowMuscleGroupsRow = ((MuscleGroupsRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Name,
+                        Information};
+                rowMuscleGroupsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMuscleGroupsRow);
+                return rowMuscleGroupsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MuscleGroupsRow FindByName(string Name) {
+                return ((MuscleGroupsRow)(this.Rows.Find(new object[] {
+                            Name})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                MuscleGroupsDataTable cln = ((MuscleGroupsDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new MuscleGroupsDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnName = base.Columns["Name"];
+                this.columnInformation = base.Columns["Information"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
+                this.columnInformation = new global::System.Data.DataColumn("Information", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInformation);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnName}, true));
+                this.columnName.AllowDBNull = false;
+                this.columnName.Unique = true;
+                this.columnName.MaxLength = 20;
+                this.columnInformation.AllowDBNull = false;
+                this.columnInformation.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MuscleGroupsRow NewMuscleGroupsRow() {
+                return ((MuscleGroupsRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new MuscleGroupsRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(MuscleGroupsRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.MuscleGroupsRowChanged != null)) {
+                    this.MuscleGroupsRowChanged(this, new MuscleGroupsRowChangeEvent(((MuscleGroupsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.MuscleGroupsRowChanging != null)) {
+                    this.MuscleGroupsRowChanging(this, new MuscleGroupsRowChangeEvent(((MuscleGroupsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.MuscleGroupsRowDeleted != null)) {
+                    this.MuscleGroupsRowDeleted(this, new MuscleGroupsRowChangeEvent(((MuscleGroupsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.MuscleGroupsRowDeleting != null)) {
+                    this.MuscleGroupsRowDeleting(this, new MuscleGroupsRowChangeEvent(((MuscleGroupsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveMuscleGroupsRow(MuscleGroupsRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DSGymPlanner ds = new DSGymPlanner();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "MuscleGroupsDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class SetsDataTable : global::System.Data.TypedTableBase<SetsRow> {
+            
+            private global::System.Data.DataColumn columnID_Set;
+            
+            private global::System.Data.DataColumn columnNum_Reps;
+            
+            private global::System.Data.DataColumn columnWeight;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SetsDataTable() {
+                this.TableName = "Sets";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal SetsDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected SetsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_SetColumn {
+                get {
+                    return this.columnID_Set;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Num_RepsColumn {
+                get {
+                    return this.columnNum_Reps;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn WeightColumn {
+                get {
+                    return this.columnWeight;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SetsRow this[int index] {
+                get {
+                    return ((SetsRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event SetsRowChangeEventHandler SetsRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event SetsRowChangeEventHandler SetsRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event SetsRowChangeEventHandler SetsRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event SetsRowChangeEventHandler SetsRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddSetsRow(SetsRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SetsRow AddSetsRow(int Num_Reps, decimal Weight) {
+                SetsRow rowSetsRow = ((SetsRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Num_Reps,
+                        Weight};
+                rowSetsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSetsRow);
+                return rowSetsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SetsRow FindByID_Set(int ID_Set) {
+                return ((SetsRow)(this.Rows.Find(new object[] {
+                            ID_Set})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                SetsDataTable cln = ((SetsDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new SetsDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnID_Set = base.Columns["ID_Set"];
+                this.columnNum_Reps = base.Columns["Num_Reps"];
+                this.columnWeight = base.Columns["Weight"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnID_Set = new global::System.Data.DataColumn("ID_Set", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Set);
+                this.columnNum_Reps = new global::System.Data.DataColumn("Num_Reps", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNum_Reps);
+                this.columnWeight = new global::System.Data.DataColumn("Weight", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWeight);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID_Set}, true));
+                this.columnID_Set.AutoIncrement = true;
+                this.columnID_Set.AutoIncrementSeed = -1;
+                this.columnID_Set.AutoIncrementStep = -1;
+                this.columnID_Set.AllowDBNull = false;
+                this.columnID_Set.ReadOnly = true;
+                this.columnID_Set.Unique = true;
+                this.columnNum_Reps.AllowDBNull = false;
+                this.columnWeight.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SetsRow NewSetsRow() {
+                return ((SetsRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new SetsRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(SetsRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.SetsRowChanged != null)) {
+                    this.SetsRowChanged(this, new SetsRowChangeEvent(((SetsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.SetsRowChanging != null)) {
+                    this.SetsRowChanging(this, new SetsRowChangeEvent(((SetsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.SetsRowDeleted != null)) {
+                    this.SetsRowDeleted(this, new SetsRowChangeEvent(((SetsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.SetsRowDeleting != null)) {
+                    this.SetsRowDeleting(this, new SetsRowChangeEvent(((SetsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveSetsRow(SetsRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DSGymPlanner ds = new DSGymPlanner();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "SetsDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class User_DayDataTable : global::System.Data.TypedTableBase<User_DayRow> {
+            
+            private global::System.Data.DataColumn columnLogin;
+            
+            private global::System.Data.DataColumn columnID_Day;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public User_DayDataTable() {
+                this.TableName = "User_Day";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal User_DayDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected User_DayDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LoginColumn {
+                get {
+                    return this.columnLogin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_DayColumn {
+                get {
+                    return this.columnID_Day;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public User_DayRow this[int index] {
+                get {
+                    return ((User_DayRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event User_DayRowChangeEventHandler User_DayRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event User_DayRowChangeEventHandler User_DayRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event User_DayRowChangeEventHandler User_DayRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event User_DayRowChangeEventHandler User_DayRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddUser_DayRow(User_DayRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public User_DayRow AddUser_DayRow(UsersRow parentUsersRowByFK_User_Day_Users, DaysRow parentDaysRowByFK_User_Day_Days) {
+                User_DayRow rowUser_DayRow = ((User_DayRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null};
-                if ((parentКористувачіRowByFK_Користувач_День_Користувачі != null)) {
-                    columnValuesArray[0] = parentКористувачіRowByFK_Користувач_День_Користувачі[0];
+                if ((parentUsersRowByFK_User_Day_Users != null)) {
+                    columnValuesArray[0] = parentUsersRowByFK_User_Day_Users[0];
                 }
-                if ((parentДніRowByFK_Користувач_День_Дні != null)) {
-                    columnValuesArray[1] = parentДніRowByFK_Користувач_День_Дні[2];
+                if ((parentDaysRowByFK_User_Day_Days != null)) {
+                    columnValuesArray[1] = parentDaysRowByFK_User_Day_Days[0];
                 }
-                rowКористувач_ДеньRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowКористувач_ДеньRow);
-                return rowКористувач_ДеньRow;
+                rowUser_DayRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowUser_DayRow);
+                return rowUser_DayRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Користувач_ДеньRow FindByЛогінID_дня(string Логін, int ID_дня) {
-                return ((Користувач_ДеньRow)(this.Rows.Find(new object[] {
-                            Логін,
-                            ID_дня})));
+            public User_DayRow FindByLoginID_Day(string Login, int ID_Day) {
+                return ((User_DayRow)(this.Rows.Find(new object[] {
+                            Login,
+                            ID_Day})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Користувач_ДеньDataTable cln = ((Користувач_ДеньDataTable)(base.Clone()));
+                User_DayDataTable cln = ((User_DayDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2519,55 +2521,55 @@ namespace LibraryGymPlanner {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Користувач_ДеньDataTable();
+                return new User_DayDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnЛогін = base.Columns["Логін"];
-                this.columnID_дня = base.Columns["ID дня"];
+                this.columnLogin = base.Columns["Login"];
+                this.columnID_Day = base.Columns["ID_Day"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnЛогін = new global::System.Data.DataColumn("Логін", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnЛогін);
-                this.columnID_дня = new global::System.Data.DataColumn("ID дня", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_дня);
+                this.columnLogin = new global::System.Data.DataColumn("Login", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLogin);
+                this.columnID_Day = new global::System.Data.DataColumn("ID_Day", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Day);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnЛогін,
-                                this.columnID_дня}, true));
-                this.columnЛогін.AllowDBNull = false;
-                this.columnЛогін.MaxLength = 10;
-                this.columnID_дня.AllowDBNull = false;
+                                this.columnLogin,
+                                this.columnID_Day}, true));
+                this.columnLogin.AllowDBNull = false;
+                this.columnLogin.MaxLength = 20;
+                this.columnID_Day.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Користувач_ДеньRow NewКористувач_ДеньRow() {
-                return ((Користувач_ДеньRow)(this.NewRow()));
+            public User_DayRow NewUser_DayRow() {
+                return ((User_DayRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Користувач_ДеньRow(builder);
+                return new User_DayRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Користувач_ДеньRow);
+                return typeof(User_DayRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Користувач_ДеньRowChanged != null)) {
-                    this.Користувач_ДеньRowChanged(this, new Користувач_ДеньRowChangeEvent(((Користувач_ДеньRow)(e.Row)), e.Action));
+                if ((this.User_DayRowChanged != null)) {
+                    this.User_DayRowChanged(this, new User_DayRowChangeEvent(((User_DayRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2575,8 +2577,8 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Користувач_ДеньRowChanging != null)) {
-                    this.Користувач_ДеньRowChanging(this, new Користувач_ДеньRowChangeEvent(((Користувач_ДеньRow)(e.Row)), e.Action));
+                if ((this.User_DayRowChanging != null)) {
+                    this.User_DayRowChanging(this, new User_DayRowChangeEvent(((User_DayRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2584,8 +2586,8 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Користувач_ДеньRowDeleted != null)) {
-                    this.Користувач_ДеньRowDeleted(this, new Користувач_ДеньRowChangeEvent(((Користувач_ДеньRow)(e.Row)), e.Action));
+                if ((this.User_DayRowDeleted != null)) {
+                    this.User_DayRowDeleted(this, new User_DayRowChangeEvent(((User_DayRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2593,14 +2595,14 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Користувач_ДеньRowDeleting != null)) {
-                    this.Користувач_ДеньRowDeleting(this, new Користувач_ДеньRowChangeEvent(((Користувач_ДеньRow)(e.Row)), e.Action));
+                if ((this.User_DayRowDeleting != null)) {
+                    this.User_DayRowDeleting(this, new User_DayRowChangeEvent(((User_DayRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveКористувач_ДеньRow(Користувач_ДеньRow row) {
+            public void RemoveUser_DayRow(User_DayRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2627,7 +2629,7 @@ namespace LibraryGymPlanner {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Користувач_ДеньDataTable";
+                attribute2.FixedValue = "User_DayDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2673,18 +2675,18 @@ namespace LibraryGymPlanner {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ПідходиDataTable : global::System.Data.TypedTableBase<ПідходиRow> {
+        public partial class UsersDataTable : global::System.Data.TypedTableBase<UsersRow> {
             
-            private global::System.Data.DataColumn columnID_підходу;
+            private global::System.Data.DataColumn columnLogin;
             
-            private global::System.Data.DataColumn columnКількість_повторень;
+            private global::System.Data.DataColumn columnPassword;
             
-            private global::System.Data.DataColumn columnВага;
+            private global::System.Data.DataColumn columnName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ПідходиDataTable() {
-                this.TableName = "Підходи";
+            public UsersDataTable() {
+                this.TableName = "Users";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2692,7 +2694,7 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal ПідходиDataTable(global::System.Data.DataTable table) {
+            internal UsersDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2709,32 +2711,32 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected ПідходиDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected UsersDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_підходуColumn {
+            public global::System.Data.DataColumn LoginColumn {
                 get {
-                    return this.columnID_підходу;
+                    return this.columnLogin;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Кількість_повтореньColumn {
+            public global::System.Data.DataColumn PasswordColumn {
                 get {
-                    return this.columnКількість_повторень;
+                    return this.columnPassword;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ВагаColumn {
+            public global::System.Data.DataColumn NameColumn {
                 get {
-                    return this.columnВага;
+                    return this.columnName;
                 }
             }
             
@@ -2749,54 +2751,54 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ПідходиRow this[int index] {
+            public UsersRow this[int index] {
                 get {
-                    return ((ПідходиRow)(this.Rows[index]));
+                    return ((UsersRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ПідходиRowChangeEventHandler ПідходиRowChanging;
+            public event UsersRowChangeEventHandler UsersRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ПідходиRowChangeEventHandler ПідходиRowChanged;
+            public event UsersRowChangeEventHandler UsersRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ПідходиRowChangeEventHandler ПідходиRowDeleting;
+            public event UsersRowChangeEventHandler UsersRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ПідходиRowChangeEventHandler ПідходиRowDeleted;
+            public event UsersRowChangeEventHandler UsersRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddПідходиRow(ПідходиRow row) {
+            public void AddUsersRow(UsersRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ПідходиRow AddПідходиRow(int ID_підходу, int Кількість_повторень, int Вага) {
-                ПідходиRow rowПідходиRow = ((ПідходиRow)(this.NewRow()));
+            public UsersRow AddUsersRow(string Login, string Password, string Name) {
+                UsersRow rowUsersRow = ((UsersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID_підходу,
-                        Кількість_повторень,
-                        Вага};
-                rowПідходиRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowПідходиRow);
-                return rowПідходиRow;
+                        Login,
+                        Password,
+                        Name};
+                rowUsersRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowUsersRow);
+                return rowUsersRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ПідходиRow FindByID_підходу(int ID_підходу) {
-                return ((ПідходиRow)(this.Rows.Find(new object[] {
-                            ID_підходу})));
+            public UsersRow FindByLogin(string Login) {
+                return ((UsersRow)(this.Rows.Find(new object[] {
+                            Login})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ПідходиDataTable cln = ((ПідходиDataTable)(base.Clone()));
+                UsersDataTable cln = ((UsersDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2804,56 +2806,59 @@ namespace LibraryGymPlanner {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ПідходиDataTable();
+                return new UsersDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnID_підходу = base.Columns["ID підходу"];
-                this.columnКількість_повторень = base.Columns["Кількість повторень"];
-                this.columnВага = base.Columns["Вага"];
+                this.columnLogin = base.Columns["Login"];
+                this.columnPassword = base.Columns["Password"];
+                this.columnName = base.Columns["Name"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnID_підходу = new global::System.Data.DataColumn("ID підходу", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_підходу);
-                this.columnКількість_повторень = new global::System.Data.DataColumn("Кількість повторень", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnКількість_повторень);
-                this.columnВага = new global::System.Data.DataColumn("Вага", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnВага);
+                this.columnLogin = new global::System.Data.DataColumn("Login", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLogin);
+                this.columnPassword = new global::System.Data.DataColumn("Password", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPassword);
+                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_підходу}, true));
-                this.columnID_підходу.AllowDBNull = false;
-                this.columnID_підходу.Unique = true;
+                                this.columnLogin}, true));
+                this.columnLogin.AllowDBNull = false;
+                this.columnLogin.Unique = true;
+                this.columnLogin.MaxLength = 20;
+                this.columnPassword.MaxLength = 20;
+                this.columnName.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ПідходиRow NewПідходиRow() {
-                return ((ПідходиRow)(this.NewRow()));
+            public UsersRow NewUsersRow() {
+                return ((UsersRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ПідходиRow(builder);
+                return new UsersRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ПідходиRow);
+                return typeof(UsersRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ПідходиRowChanged != null)) {
-                    this.ПідходиRowChanged(this, new ПідходиRowChangeEvent(((ПідходиRow)(e.Row)), e.Action));
+                if ((this.UsersRowChanged != null)) {
+                    this.UsersRowChanged(this, new UsersRowChangeEvent(((UsersRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2861,8 +2866,8 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ПідходиRowChanging != null)) {
-                    this.ПідходиRowChanging(this, new ПідходиRowChangeEvent(((ПідходиRow)(e.Row)), e.Action));
+                if ((this.UsersRowChanging != null)) {
+                    this.UsersRowChanging(this, new UsersRowChangeEvent(((UsersRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2870,8 +2875,8 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ПідходиRowDeleted != null)) {
-                    this.ПідходиRowDeleted(this, new ПідходиRowChangeEvent(((ПідходиRow)(e.Row)), e.Action));
+                if ((this.UsersRowDeleted != null)) {
+                    this.UsersRowDeleted(this, new UsersRowChangeEvent(((UsersRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2879,14 +2884,14 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ПідходиRowDeleting != null)) {
-                    this.ПідходиRowDeleting(this, new ПідходиRowChangeEvent(((ПідходиRow)(e.Row)), e.Action));
+                if ((this.UsersRowDeleting != null)) {
+                    this.UsersRowDeleting(this, new UsersRowChangeEvent(((UsersRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveПідходиRow(ПідходиRow row) {
+            public void RemoveUsersRow(UsersRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2913,7 +2918,7 @@ namespace LibraryGymPlanner {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ПідходиDataTable";
+                attribute2.FixedValue = "UsersDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2959,16 +2964,16 @@ namespace LibraryGymPlanner {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ТренуванняDataTable : global::System.Data.TypedTableBase<ТренуванняRow> {
+        public partial class Workout_ExerciseDataTable : global::System.Data.TypedTableBase<Workout_ExerciseRow> {
             
-            private global::System.Data.DataColumn columnID_тренування;
+            private global::System.Data.DataColumn columnName_Exercise;
             
-            private global::System.Data.DataColumn columnКількість_підходів;
+            private global::System.Data.DataColumn columnID_Workout;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ТренуванняDataTable() {
-                this.TableName = "Тренування";
+            public Workout_ExerciseDataTable() {
+                this.TableName = "Workout_Exercise";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2976,7 +2981,7 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal ТренуванняDataTable(global::System.Data.DataTable table) {
+            internal Workout_ExerciseDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2993,24 +2998,24 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected ТренуванняDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Workout_ExerciseDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_тренуванняColumn {
+            public global::System.Data.DataColumn Name_ExerciseColumn {
                 get {
-                    return this.columnID_тренування;
+                    return this.columnName_Exercise;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Кількість_підходівColumn {
+            public global::System.Data.DataColumn ID_WorkoutColumn {
                 get {
-                    return this.columnКількість_підходів;
+                    return this.columnID_Workout;
                 }
             }
             
@@ -3025,332 +3030,60 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ТренуванняRow this[int index] {
+            public Workout_ExerciseRow this[int index] {
                 get {
-                    return ((ТренуванняRow)(this.Rows[index]));
+                    return ((Workout_ExerciseRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ТренуванняRowChangeEventHandler ТренуванняRowChanging;
+            public event Workout_ExerciseRowChangeEventHandler Workout_ExerciseRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ТренуванняRowChangeEventHandler ТренуванняRowChanged;
+            public event Workout_ExerciseRowChangeEventHandler Workout_ExerciseRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ТренуванняRowChangeEventHandler ТренуванняRowDeleting;
+            public event Workout_ExerciseRowChangeEventHandler Workout_ExerciseRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ТренуванняRowChangeEventHandler ТренуванняRowDeleted;
+            public event Workout_ExerciseRowChangeEventHandler Workout_ExerciseRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddТренуванняRow(ТренуванняRow row) {
+            public void AddWorkout_ExerciseRow(Workout_ExerciseRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ТренуванняRow AddТренуванняRow(int ID_тренування, int Кількість_підходів) {
-                ТренуванняRow rowТренуванняRow = ((ТренуванняRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        ID_тренування,
-                        Кількість_підходів};
-                rowТренуванняRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowТренуванняRow);
-                return rowТренуванняRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ТренуванняRow FindByID_тренування(int ID_тренування) {
-                return ((ТренуванняRow)(this.Rows.Find(new object[] {
-                            ID_тренування})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                ТренуванняDataTable cln = ((ТренуванняDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new ТренуванняDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnID_тренування = base.Columns["ID тренування"];
-                this.columnКількість_підходів = base.Columns["Кількість підходів"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnID_тренування = new global::System.Data.DataColumn("ID тренування", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_тренування);
-                this.columnКількість_підходів = new global::System.Data.DataColumn("Кількість підходів", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnКількість_підходів);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_тренування}, true));
-                this.columnID_тренування.AllowDBNull = false;
-                this.columnID_тренування.Unique = true;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ТренуванняRow NewТренуванняRow() {
-                return ((ТренуванняRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ТренуванняRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(ТренуванняRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.ТренуванняRowChanged != null)) {
-                    this.ТренуванняRowChanged(this, new ТренуванняRowChangeEvent(((ТренуванняRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.ТренуванняRowChanging != null)) {
-                    this.ТренуванняRowChanging(this, new ТренуванняRowChangeEvent(((ТренуванняRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.ТренуванняRowDeleted != null)) {
-                    this.ТренуванняRowDeleted(this, new ТренуванняRowChangeEvent(((ТренуванняRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.ТренуванняRowDeleting != null)) {
-                    this.ТренуванняRowDeleting(this, new ТренуванняRowChangeEvent(((ТренуванняRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveТренуванняRow(ТренуванняRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DSGymPlanner ds = new DSGymPlanner();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ТренуванняDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Тренування_ВправаDataTable : global::System.Data.TypedTableBase<Тренування_ВправаRow> {
-            
-            private global::System.Data.DataColumn columnНазва_вправи;
-            
-            private global::System.Data.DataColumn columnID_тренування;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ВправаDataTable() {
-                this.TableName = "Тренування_Вправа";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Тренування_ВправаDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected Тренування_ВправаDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Назва_вправиColumn {
-                get {
-                    return this.columnНазва_вправи;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_тренуванняColumn {
-                get {
-                    return this.columnID_тренування;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ВправаRow this[int index] {
-                get {
-                    return ((Тренування_ВправаRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Тренування_ВправаRowChangeEventHandler Тренування_ВправаRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Тренування_ВправаRowChangeEventHandler Тренування_ВправаRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Тренування_ВправаRowChangeEventHandler Тренування_ВправаRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Тренування_ВправаRowChangeEventHandler Тренування_ВправаRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddТренування_ВправаRow(Тренування_ВправаRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ВправаRow AddТренування_ВправаRow(ВправиRow parentВправиRowByFK_Тренування_Вправа_Вправи, ТренуванняRow parentТренуванняRowByFK_Тренування_Вправа_Тренування) {
-                Тренування_ВправаRow rowТренування_ВправаRow = ((Тренування_ВправаRow)(this.NewRow()));
+            public Workout_ExerciseRow AddWorkout_ExerciseRow(ExercisesRow parentExercisesRowByFK_Workout_Exercise_Exercises, WorkoutsRow parentWorkoutsRowByFK_Workout_Exercise_Workouts) {
+                Workout_ExerciseRow rowWorkout_ExerciseRow = ((Workout_ExerciseRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null};
-                if ((parentВправиRowByFK_Тренування_Вправа_Вправи != null)) {
-                    columnValuesArray[0] = parentВправиRowByFK_Тренування_Вправа_Вправи[0];
+                if ((parentExercisesRowByFK_Workout_Exercise_Exercises != null)) {
+                    columnValuesArray[0] = parentExercisesRowByFK_Workout_Exercise_Exercises[0];
                 }
-                if ((parentТренуванняRowByFK_Тренування_Вправа_Тренування != null)) {
-                    columnValuesArray[1] = parentТренуванняRowByFK_Тренування_Вправа_Тренування[0];
+                if ((parentWorkoutsRowByFK_Workout_Exercise_Workouts != null)) {
+                    columnValuesArray[1] = parentWorkoutsRowByFK_Workout_Exercise_Workouts[0];
                 }
-                rowТренування_ВправаRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowТренування_ВправаRow);
-                return rowТренування_ВправаRow;
+                rowWorkout_ExerciseRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowWorkout_ExerciseRow);
+                return rowWorkout_ExerciseRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ВправаRow FindByНазва_вправиID_тренування(string Назва_вправи, int ID_тренування) {
-                return ((Тренування_ВправаRow)(this.Rows.Find(new object[] {
-                            Назва_вправи,
-                            ID_тренування})));
+            public Workout_ExerciseRow FindByName_ExerciseID_Workout(string Name_Exercise, int ID_Workout) {
+                return ((Workout_ExerciseRow)(this.Rows.Find(new object[] {
+                            Name_Exercise,
+                            ID_Workout})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Тренування_ВправаDataTable cln = ((Тренування_ВправаDataTable)(base.Clone()));
+                Workout_ExerciseDataTable cln = ((Workout_ExerciseDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -3358,55 +3091,55 @@ namespace LibraryGymPlanner {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Тренування_ВправаDataTable();
+                return new Workout_ExerciseDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnНазва_вправи = base.Columns["Назва вправи"];
-                this.columnID_тренування = base.Columns["ID тренування"];
+                this.columnName_Exercise = base.Columns["Name_Exercise"];
+                this.columnID_Workout = base.Columns["ID_Workout"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnНазва_вправи = new global::System.Data.DataColumn("Назва вправи", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnНазва_вправи);
-                this.columnID_тренування = new global::System.Data.DataColumn("ID тренування", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_тренування);
+                this.columnName_Exercise = new global::System.Data.DataColumn("Name_Exercise", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnName_Exercise);
+                this.columnID_Workout = new global::System.Data.DataColumn("ID_Workout", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Workout);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnНазва_вправи,
-                                this.columnID_тренування}, true));
-                this.columnНазва_вправи.AllowDBNull = false;
-                this.columnНазва_вправи.MaxLength = 20;
-                this.columnID_тренування.AllowDBNull = false;
+                                this.columnName_Exercise,
+                                this.columnID_Workout}, true));
+                this.columnName_Exercise.AllowDBNull = false;
+                this.columnName_Exercise.MaxLength = 20;
+                this.columnID_Workout.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ВправаRow NewТренування_ВправаRow() {
-                return ((Тренування_ВправаRow)(this.NewRow()));
+            public Workout_ExerciseRow NewWorkout_ExerciseRow() {
+                return ((Workout_ExerciseRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Тренування_ВправаRow(builder);
+                return new Workout_ExerciseRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Тренування_ВправаRow);
+                return typeof(Workout_ExerciseRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Тренування_ВправаRowChanged != null)) {
-                    this.Тренування_ВправаRowChanged(this, new Тренування_ВправаRowChangeEvent(((Тренування_ВправаRow)(e.Row)), e.Action));
+                if ((this.Workout_ExerciseRowChanged != null)) {
+                    this.Workout_ExerciseRowChanged(this, new Workout_ExerciseRowChangeEvent(((Workout_ExerciseRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3414,8 +3147,8 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Тренування_ВправаRowChanging != null)) {
-                    this.Тренування_ВправаRowChanging(this, new Тренування_ВправаRowChangeEvent(((Тренування_ВправаRow)(e.Row)), e.Action));
+                if ((this.Workout_ExerciseRowChanging != null)) {
+                    this.Workout_ExerciseRowChanging(this, new Workout_ExerciseRowChangeEvent(((Workout_ExerciseRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3423,8 +3156,8 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Тренування_ВправаRowDeleted != null)) {
-                    this.Тренування_ВправаRowDeleted(this, new Тренування_ВправаRowChangeEvent(((Тренування_ВправаRow)(e.Row)), e.Action));
+                if ((this.Workout_ExerciseRowDeleted != null)) {
+                    this.Workout_ExerciseRowDeleted(this, new Workout_ExerciseRowChangeEvent(((Workout_ExerciseRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3432,14 +3165,14 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Тренування_ВправаRowDeleting != null)) {
-                    this.Тренування_ВправаRowDeleting(this, new Тренування_ВправаRowChangeEvent(((Тренування_ВправаRow)(e.Row)), e.Action));
+                if ((this.Workout_ExerciseRowDeleting != null)) {
+                    this.Workout_ExerciseRowDeleting(this, new Workout_ExerciseRowChangeEvent(((Workout_ExerciseRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveТренування_ВправаRow(Тренування_ВправаRow row) {
+            public void RemoveWorkout_ExerciseRow(Workout_ExerciseRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -3466,7 +3199,7 @@ namespace LibraryGymPlanner {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Тренування_ВправаDataTable";
+                attribute2.FixedValue = "Workout_ExerciseDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3512,16 +3245,16 @@ namespace LibraryGymPlanner {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Тренування_ПідхідDataTable : global::System.Data.TypedTableBase<Тренування_ПідхідRow> {
+        public partial class Workout_SetDataTable : global::System.Data.TypedTableBase<Workout_SetRow> {
             
-            private global::System.Data.DataColumn columnID_тренування;
+            private global::System.Data.DataColumn columnID_Workout;
             
-            private global::System.Data.DataColumn columnID_підходу;
+            private global::System.Data.DataColumn columnID_Set;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ПідхідDataTable() {
-                this.TableName = "Тренування_Підхід";
+            public Workout_SetDataTable() {
+                this.TableName = "Workout_Set";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -3529,7 +3262,7 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Тренування_ПідхідDataTable(global::System.Data.DataTable table) {
+            internal Workout_SetDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -3546,24 +3279,24 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected Тренування_ПідхідDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Workout_SetDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_тренуванняColumn {
+            public global::System.Data.DataColumn ID_WorkoutColumn {
                 get {
-                    return this.columnID_тренування;
+                    return this.columnID_Workout;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_підходуColumn {
+            public global::System.Data.DataColumn ID_SetColumn {
                 get {
-                    return this.columnID_підходу;
+                    return this.columnID_Set;
                 }
             }
             
@@ -3578,60 +3311,60 @@ namespace LibraryGymPlanner {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ПідхідRow this[int index] {
+            public Workout_SetRow this[int index] {
                 get {
-                    return ((Тренування_ПідхідRow)(this.Rows[index]));
+                    return ((Workout_SetRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Тренування_ПідхідRowChangeEventHandler Тренування_ПідхідRowChanging;
+            public event Workout_SetRowChangeEventHandler Workout_SetRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Тренування_ПідхідRowChangeEventHandler Тренування_ПідхідRowChanged;
+            public event Workout_SetRowChangeEventHandler Workout_SetRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Тренування_ПідхідRowChangeEventHandler Тренування_ПідхідRowDeleting;
+            public event Workout_SetRowChangeEventHandler Workout_SetRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Тренування_ПідхідRowChangeEventHandler Тренування_ПідхідRowDeleted;
+            public event Workout_SetRowChangeEventHandler Workout_SetRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddТренування_ПідхідRow(Тренування_ПідхідRow row) {
+            public void AddWorkout_SetRow(Workout_SetRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ПідхідRow AddТренування_ПідхідRow(ТренуванняRow parentТренуванняRowByFK_Тренування_Підхід_Тренування, ПідходиRow parentПідходиRowByFK_Тренування_Підхід_Підходи) {
-                Тренування_ПідхідRow rowТренування_ПідхідRow = ((Тренування_ПідхідRow)(this.NewRow()));
+            public Workout_SetRow AddWorkout_SetRow(WorkoutsRow parentWorkoutsRowByFK_Workout_Set_Workouts, SetsRow parentSetsRowByFK_Workout_Set_Sets) {
+                Workout_SetRow rowWorkout_SetRow = ((Workout_SetRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         null};
-                if ((parentТренуванняRowByFK_Тренування_Підхід_Тренування != null)) {
-                    columnValuesArray[0] = parentТренуванняRowByFK_Тренування_Підхід_Тренування[0];
+                if ((parentWorkoutsRowByFK_Workout_Set_Workouts != null)) {
+                    columnValuesArray[0] = parentWorkoutsRowByFK_Workout_Set_Workouts[0];
                 }
-                if ((parentПідходиRowByFK_Тренування_Підхід_Підходи != null)) {
-                    columnValuesArray[1] = parentПідходиRowByFK_Тренування_Підхід_Підходи[0];
+                if ((parentSetsRowByFK_Workout_Set_Sets != null)) {
+                    columnValuesArray[1] = parentSetsRowByFK_Workout_Set_Sets[0];
                 }
-                rowТренування_ПідхідRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowТренування_ПідхідRow);
-                return rowТренування_ПідхідRow;
+                rowWorkout_SetRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowWorkout_SetRow);
+                return rowWorkout_SetRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ПідхідRow FindByID_тренуванняID_підходу(int ID_тренування, int ID_підходу) {
-                return ((Тренування_ПідхідRow)(this.Rows.Find(new object[] {
-                            ID_тренування,
-                            ID_підходу})));
+            public Workout_SetRow FindByID_WorkoutID_Set(int ID_Workout, int ID_Set) {
+                return ((Workout_SetRow)(this.Rows.Find(new object[] {
+                            ID_Workout,
+                            ID_Set})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Тренування_ПідхідDataTable cln = ((Тренування_ПідхідDataTable)(base.Clone()));
+                Workout_SetDataTable cln = ((Workout_SetDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -3639,54 +3372,54 @@ namespace LibraryGymPlanner {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Тренування_ПідхідDataTable();
+                return new Workout_SetDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnID_тренування = base.Columns["ID тренування"];
-                this.columnID_підходу = base.Columns["ID підходу"];
+                this.columnID_Workout = base.Columns["ID_Workout"];
+                this.columnID_Set = base.Columns["ID_Set"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnID_тренування = new global::System.Data.DataColumn("ID тренування", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_тренування);
-                this.columnID_підходу = new global::System.Data.DataColumn("ID підходу", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_підходу);
+                this.columnID_Workout = new global::System.Data.DataColumn("ID_Workout", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Workout);
+                this.columnID_Set = new global::System.Data.DataColumn("ID_Set", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Set);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_тренування,
-                                this.columnID_підходу}, true));
-                this.columnID_тренування.AllowDBNull = false;
-                this.columnID_підходу.AllowDBNull = false;
+                                this.columnID_Workout,
+                                this.columnID_Set}, true));
+                this.columnID_Workout.AllowDBNull = false;
+                this.columnID_Set.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ПідхідRow NewТренування_ПідхідRow() {
-                return ((Тренування_ПідхідRow)(this.NewRow()));
+            public Workout_SetRow NewWorkout_SetRow() {
+                return ((Workout_SetRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Тренування_ПідхідRow(builder);
+                return new Workout_SetRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Тренування_ПідхідRow);
+                return typeof(Workout_SetRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Тренування_ПідхідRowChanged != null)) {
-                    this.Тренування_ПідхідRowChanged(this, new Тренування_ПідхідRowChangeEvent(((Тренування_ПідхідRow)(e.Row)), e.Action));
+                if ((this.Workout_SetRowChanged != null)) {
+                    this.Workout_SetRowChanged(this, new Workout_SetRowChangeEvent(((Workout_SetRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3694,8 +3427,8 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Тренування_ПідхідRowChanging != null)) {
-                    this.Тренування_ПідхідRowChanging(this, new Тренування_ПідхідRowChangeEvent(((Тренування_ПідхідRow)(e.Row)), e.Action));
+                if ((this.Workout_SetRowChanging != null)) {
+                    this.Workout_SetRowChanging(this, new Workout_SetRowChangeEvent(((Workout_SetRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3703,8 +3436,8 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Тренування_ПідхідRowDeleted != null)) {
-                    this.Тренування_ПідхідRowDeleted(this, new Тренування_ПідхідRowChangeEvent(((Тренування_ПідхідRow)(e.Row)), e.Action));
+                if ((this.Workout_SetRowDeleted != null)) {
+                    this.Workout_SetRowDeleted(this, new Workout_SetRowChangeEvent(((Workout_SetRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3712,14 +3445,14 @@ namespace LibraryGymPlanner {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Тренування_ПідхідRowDeleting != null)) {
-                    this.Тренування_ПідхідRowDeleting(this, new Тренування_ПідхідRowChangeEvent(((Тренування_ПідхідRow)(e.Row)), e.Action));
+                if ((this.Workout_SetRowDeleting != null)) {
+                    this.Workout_SetRowDeleting(this, new Workout_SetRowChangeEvent(((Workout_SetRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveТренування_ПідхідRow(Тренування_ПідхідRow row) {
+            public void RemoveWorkout_SetRow(Workout_SetRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -3746,7 +3479,284 @@ namespace LibraryGymPlanner {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Тренування_ПідхідDataTable";
+                attribute2.FixedValue = "Workout_SetDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class WorkoutsDataTable : global::System.Data.TypedTableBase<WorkoutsRow> {
+            
+            private global::System.Data.DataColumn columnID_Workout;
+            
+            private global::System.Data.DataColumn columnNum_Sets;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public WorkoutsDataTable() {
+                this.TableName = "Workouts";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal WorkoutsDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected WorkoutsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_WorkoutColumn {
+                get {
+                    return this.columnID_Workout;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Num_SetsColumn {
+                get {
+                    return this.columnNum_Sets;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public WorkoutsRow this[int index] {
+                get {
+                    return ((WorkoutsRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event WorkoutsRowChangeEventHandler WorkoutsRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event WorkoutsRowChangeEventHandler WorkoutsRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event WorkoutsRowChangeEventHandler WorkoutsRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event WorkoutsRowChangeEventHandler WorkoutsRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddWorkoutsRow(WorkoutsRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public WorkoutsRow AddWorkoutsRow(int Num_Sets) {
+                WorkoutsRow rowWorkoutsRow = ((WorkoutsRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        Num_Sets};
+                rowWorkoutsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowWorkoutsRow);
+                return rowWorkoutsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public WorkoutsRow FindByID_Workout(int ID_Workout) {
+                return ((WorkoutsRow)(this.Rows.Find(new object[] {
+                            ID_Workout})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                WorkoutsDataTable cln = ((WorkoutsDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new WorkoutsDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnID_Workout = base.Columns["ID_Workout"];
+                this.columnNum_Sets = base.Columns["Num_Sets"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnID_Workout = new global::System.Data.DataColumn("ID_Workout", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_Workout);
+                this.columnNum_Sets = new global::System.Data.DataColumn("Num_Sets", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNum_Sets);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID_Workout}, true));
+                this.columnID_Workout.AutoIncrement = true;
+                this.columnID_Workout.AutoIncrementSeed = -1;
+                this.columnID_Workout.AutoIncrementStep = -1;
+                this.columnID_Workout.AllowDBNull = false;
+                this.columnID_Workout.ReadOnly = true;
+                this.columnID_Workout.Unique = true;
+                this.columnNum_Sets.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public WorkoutsRow NewWorkoutsRow() {
+                return ((WorkoutsRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new WorkoutsRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(WorkoutsRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.WorkoutsRowChanged != null)) {
+                    this.WorkoutsRowChanged(this, new WorkoutsRowChangeEvent(((WorkoutsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.WorkoutsRowChanging != null)) {
+                    this.WorkoutsRowChanging(this, new WorkoutsRowChangeEvent(((WorkoutsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.WorkoutsRowDeleted != null)) {
+                    this.WorkoutsRowDeleted(this, new WorkoutsRowChangeEvent(((WorkoutsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.WorkoutsRowDeleting != null)) {
+                    this.WorkoutsRowDeleting(this, new WorkoutsRowChangeEvent(((WorkoutsRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveWorkoutsRow(WorkoutsRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DSGymPlanner ds = new DSGymPlanner();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "WorkoutsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3790,58 +3800,128 @@ namespace LibraryGymPlanner {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class КористувачіRow : global::System.Data.DataRow {
+        public partial class Day_WorkoutRow : global::System.Data.DataRow {
             
-            private КористувачіDataTable tableКористувачі;
+            private Day_WorkoutDataTable tableDay_Workout;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal КористувачіRow(global::System.Data.DataRowBuilder rb) : 
+            internal Day_WorkoutRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableКористувачі = ((КористувачіDataTable)(this.Table));
+                this.tableDay_Workout = ((Day_WorkoutDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Логін {
+            public int ID_Day {
                 get {
-                    return ((string)(this[this.tableКористувачі.ЛогінColumn]));
+                    return ((int)(this[this.tableDay_Workout.ID_DayColumn]));
                 }
                 set {
-                    this[this.tableКористувачі.ЛогінColumn] = value;
+                    this[this.tableDay_Workout.ID_DayColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Пароль {
+            public int ID_Workout {
                 get {
-                    return ((string)(this[this.tableКористувачі.ПарольColumn]));
+                    return ((int)(this[this.tableDay_Workout.ID_WorkoutColumn]));
                 }
                 set {
-                    this[this.tableКористувачі.ПарольColumn] = value;
+                    this[this.tableDay_Workout.ID_WorkoutColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string _Ім_я {
+            public DaysRow DaysRow {
                 get {
-                    return ((string)(this[this.tableКористувачі._Ім_яColumn]));
+                    return ((DaysRow)(this.GetParentRow(this.Table.ParentRelations["FK_Day_Workout_Days"])));
                 }
                 set {
-                    this[this.tableКористувачі._Ім_яColumn] = value;
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Day_Workout_Days"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Користувач_ДеньRow[] GetКористувач_ДеньRows() {
-                if ((this.Table.ChildRelations["FK_Користувач_День_Користувачі"] == null)) {
-                    return new Користувач_ДеньRow[0];
+            public WorkoutsRow WorkoutsRow {
+                get {
+                    return ((WorkoutsRow)(this.GetParentRow(this.Table.ParentRelations["FK_Day_Workout_Workouts"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Day_Workout_Workouts"]);
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class DaysRow : global::System.Data.DataRow {
+            
+            private DaysDataTable tableDays;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal DaysRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableDays = ((DaysDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID_Day {
+                get {
+                    return ((int)(this[this.tableDays.ID_DayColumn]));
+                }
+                set {
+                    this[this.tableDays.ID_DayColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime Date {
+                get {
+                    return ((global::System.DateTime)(this[this.tableDays.DateColumn]));
+                }
+                set {
+                    this[this.tableDays.DateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Comment {
+                get {
+                    return ((string)(this[this.tableDays.CommentColumn]));
+                }
+                set {
+                    this[this.tableDays.CommentColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Day_WorkoutRow[] GetDay_WorkoutRows() {
+                if ((this.Table.ChildRelations["FK_Day_Workout_Days"] == null)) {
+                    return new Day_WorkoutRow[0];
                 }
                 else {
-                    return ((Користувач_ДеньRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Користувач_День_Користувачі"])));
+                    return ((Day_WorkoutRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Day_Workout_Days"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public User_DayRow[] GetUser_DayRows() {
+                if ((this.Table.ChildRelations["FK_User_Day_Days"] == null)) {
+                    return new User_DayRow[0];
+                }
+                else {
+                    return ((User_DayRow[])(base.GetChildRows(this.Table.ChildRelations["FK_User_Day_Days"])));
                 }
             }
         }
@@ -3849,58 +3929,58 @@ namespace LibraryGymPlanner {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Вправа_ГрупаRow : global::System.Data.DataRow {
+        public partial class Exercise_MuscleGroupRow : global::System.Data.DataRow {
             
-            private Вправа_ГрупаDataTable tableВправа_Група;
+            private Exercise_MuscleGroupDataTable tableExercise_MuscleGroup;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Вправа_ГрупаRow(global::System.Data.DataRowBuilder rb) : 
+            internal Exercise_MuscleGroupRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableВправа_Група = ((Вправа_ГрупаDataTable)(this.Table));
+                this.tableExercise_MuscleGroup = ((Exercise_MuscleGroupDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string _Назва_групи_м_язів {
+            public string Name_Exercise {
                 get {
-                    return ((string)(this[this.tableВправа_Група._Назва_групи_м_язівColumn]));
+                    return ((string)(this[this.tableExercise_MuscleGroup.Name_ExerciseColumn]));
                 }
                 set {
-                    this[this.tableВправа_Група._Назва_групи_м_язівColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Назва_вправи {
-                get {
-                    return ((string)(this[this.tableВправа_Група.Назва_вправиColumn]));
-                }
-                set {
-                    this[this.tableВправа_Група.Назва_вправиColumn] = value;
+                    this[this.tableExercise_MuscleGroup.Name_ExerciseColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ВправиRow ВправиRow {
+            public string Name_MuscleGroup {
                 get {
-                    return ((ВправиRow)(this.GetParentRow(this.Table.ParentRelations["FK_Вправа_Група_Вправи"])));
+                    return ((string)(this[this.tableExercise_MuscleGroup.Name_MuscleGroupColumn]));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Вправа_Група_Вправи"]);
+                    this[this.tableExercise_MuscleGroup.Name_MuscleGroupColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _Групи_м_язівRow _Групи_м_язівRow {
+            public ExercisesRow ExercisesRow {
                 get {
-                    return ((_Групи_м_язівRow)(this.GetParentRow(this.Table.ParentRelations["FK_Вправа_Група_Групи м\'язів"])));
+                    return ((ExercisesRow)(this.GetParentRow(this.Table.ParentRelations["FK_Exercise_MuscleGroup_Exercises"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Вправа_Група_Групи м\'язів"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Exercise_MuscleGroup_Exercises"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MuscleGroupsRow MuscleGroupsRow {
+                get {
+                    return ((MuscleGroupsRow)(this.GetParentRow(this.Table.ParentRelations["FK_Exercise_MuscleGroup_MuscleGroups"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Exercise_MuscleGroup_MuscleGroups"]);
                 }
             }
         }
@@ -3908,140 +3988,317 @@ namespace LibraryGymPlanner {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ВправиRow : global::System.Data.DataRow {
+        public partial class ExercisesRow : global::System.Data.DataRow {
             
-            private ВправиDataTable tableВправи;
+            private ExercisesDataTable tableExercises;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal ВправиRow(global::System.Data.DataRowBuilder rb) : 
+            internal ExercisesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableВправи = ((ВправиDataTable)(this.Table));
+                this.tableExercises = ((ExercisesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Назва {
+            public string Name {
                 get {
-                    return ((string)(this[this.tableВправи.НазваColumn]));
+                    return ((string)(this[this.tableExercises.NameColumn]));
                 }
                 set {
-                    this[this.tableВправи.НазваColumn] = value;
+                    this[this.tableExercises.NameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Інформація {
+            public string Information {
+                get {
+                    return ((string)(this[this.tableExercises.InformationColumn]));
+                }
+                set {
+                    this[this.tableExercises.InformationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Exercise_MuscleGroupRow[] GetExercise_MuscleGroupRows() {
+                if ((this.Table.ChildRelations["FK_Exercise_MuscleGroup_Exercises"] == null)) {
+                    return new Exercise_MuscleGroupRow[0];
+                }
+                else {
+                    return ((Exercise_MuscleGroupRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Exercise_MuscleGroup_Exercises"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Workout_ExerciseRow[] GetWorkout_ExerciseRows() {
+                if ((this.Table.ChildRelations["FK_Workout_Exercise_Exercises"] == null)) {
+                    return new Workout_ExerciseRow[0];
+                }
+                else {
+                    return ((Workout_ExerciseRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Workout_Exercise_Exercises"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class MuscleGroupsRow : global::System.Data.DataRow {
+            
+            private MuscleGroupsDataTable tableMuscleGroups;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal MuscleGroupsRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableMuscleGroups = ((MuscleGroupsDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Name {
+                get {
+                    return ((string)(this[this.tableMuscleGroups.NameColumn]));
+                }
+                set {
+                    this[this.tableMuscleGroups.NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Information {
+                get {
+                    return ((string)(this[this.tableMuscleGroups.InformationColumn]));
+                }
+                set {
+                    this[this.tableMuscleGroups.InformationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Exercise_MuscleGroupRow[] GetExercise_MuscleGroupRows() {
+                if ((this.Table.ChildRelations["FK_Exercise_MuscleGroup_MuscleGroups"] == null)) {
+                    return new Exercise_MuscleGroupRow[0];
+                }
+                else {
+                    return ((Exercise_MuscleGroupRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Exercise_MuscleGroup_MuscleGroups"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class SetsRow : global::System.Data.DataRow {
+            
+            private SetsDataTable tableSets;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal SetsRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableSets = ((SetsDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID_Set {
+                get {
+                    return ((int)(this[this.tableSets.ID_SetColumn]));
+                }
+                set {
+                    this[this.tableSets.ID_SetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Num_Reps {
+                get {
+                    return ((int)(this[this.tableSets.Num_RepsColumn]));
+                }
+                set {
+                    this[this.tableSets.Num_RepsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Weight {
+                get {
+                    return ((decimal)(this[this.tableSets.WeightColumn]));
+                }
+                set {
+                    this[this.tableSets.WeightColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Workout_SetRow[] GetWorkout_SetRows() {
+                if ((this.Table.ChildRelations["FK_Workout_Set_Sets"] == null)) {
+                    return new Workout_SetRow[0];
+                }
+                else {
+                    return ((Workout_SetRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Workout_Set_Sets"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class User_DayRow : global::System.Data.DataRow {
+            
+            private User_DayDataTable tableUser_Day;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal User_DayRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableUser_Day = ((User_DayDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Login {
+                get {
+                    return ((string)(this[this.tableUser_Day.LoginColumn]));
+                }
+                set {
+                    this[this.tableUser_Day.LoginColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ID_Day {
+                get {
+                    return ((int)(this[this.tableUser_Day.ID_DayColumn]));
+                }
+                set {
+                    this[this.tableUser_Day.ID_DayColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DaysRow DaysRow {
+                get {
+                    return ((DaysRow)(this.GetParentRow(this.Table.ParentRelations["FK_User_Day_Days"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_User_Day_Days"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public UsersRow UsersRow {
+                get {
+                    return ((UsersRow)(this.GetParentRow(this.Table.ParentRelations["FK_User_Day_Users"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_User_Day_Users"]);
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class UsersRow : global::System.Data.DataRow {
+            
+            private UsersDataTable tableUsers;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal UsersRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableUsers = ((UsersDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Login {
+                get {
+                    return ((string)(this[this.tableUsers.LoginColumn]));
+                }
+                set {
+                    this[this.tableUsers.LoginColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Password {
                 get {
                     try {
-                        return ((string)(this[this.tableВправи.ІнформаціяColumn]));
+                        return ((string)(this[this.tableUsers.PasswordColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Інформація\' in table \'Вправи\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Password\' in table \'Users\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableВправи.ІнформаціяColumn] = value;
+                    this[this.tableUsers.PasswordColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsІнформаціяNull() {
-                return this.IsNull(this.tableВправи.ІнформаціяColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetІнформаціяNull() {
-                this[this.tableВправи.ІнформаціяColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Вправа_ГрупаRow[] GetВправа_ГрупаRows() {
-                if ((this.Table.ChildRelations["FK_Вправа_Група_Вправи"] == null)) {
-                    return new Вправа_ГрупаRow[0];
-                }
-                else {
-                    return ((Вправа_ГрупаRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Вправа_Група_Вправи"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ВправаRow[] GetТренування_ВправаRows() {
-                if ((this.Table.ChildRelations["FK_Тренування_Вправа_Вправи"] == null)) {
-                    return new Тренування_ВправаRow[0];
-                }
-                else {
-                    return ((Тренування_ВправаRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Тренування_Вправа_Вправи"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class _Групи_м_язівRow : global::System.Data.DataRow {
-            
-            private _Групи_м_язівDataTable _tableГрупи_м_язів;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal _Групи_м_язівRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this._tableГрупи_м_язів = ((_Групи_м_язівDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Назва {
-                get {
-                    return ((string)(this[this._tableГрупи_м_язів.НазваColumn]));
-                }
-                set {
-                    this[this._tableГрупи_м_язів.НазваColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Інформація {
+            public string Name {
                 get {
                     try {
-                        return ((string)(this[this._tableГрупи_м_язів.ІнформаціяColumn]));
+                        return ((string)(this[this.tableUsers.NameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Інформація\' in table \'Групи м\'язів\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Name\' in table \'Users\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this._tableГрупи_м_язів.ІнформаціяColumn] = value;
+                    this[this.tableUsers.NameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsІнформаціяNull() {
-                return this.IsNull(this._tableГрупи_м_язів.ІнформаціяColumn);
+            public bool IsPasswordNull() {
+                return this.IsNull(this.tableUsers.PasswordColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetІнформаціяNull() {
-                this[this._tableГрупи_м_язів.ІнформаціяColumn] = global::System.Convert.DBNull;
+            public void SetPasswordNull() {
+                this[this.tableUsers.PasswordColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Вправа_ГрупаRow[] GetВправа_ГрупаRows() {
-                if ((this.Table.ChildRelations["FK_Вправа_Група_Групи м\'язів"] == null)) {
-                    return new Вправа_ГрупаRow[0];
+            public bool IsNameNull() {
+                return this.IsNull(this.tableUsers.NameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNameNull() {
+                this[this.tableUsers.NameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public User_DayRow[] GetUser_DayRows() {
+                if ((this.Table.ChildRelations["FK_User_Day_Users"] == null)) {
+                    return new User_DayRow[0];
                 }
                 else {
-                    return ((Вправа_ГрупаRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Вправа_Група_Групи м\'язів"])));
+                    return ((User_DayRow[])(base.GetChildRows(this.Table.ChildRelations["FK_User_Day_Users"])));
                 }
             }
         }
@@ -4049,58 +4306,58 @@ namespace LibraryGymPlanner {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class День_ТренуванняRow : global::System.Data.DataRow {
+        public partial class Workout_ExerciseRow : global::System.Data.DataRow {
             
-            private День_ТренуванняDataTable tableДень_Тренування;
+            private Workout_ExerciseDataTable tableWorkout_Exercise;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal День_ТренуванняRow(global::System.Data.DataRowBuilder rb) : 
+            internal Workout_ExerciseRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableДень_Тренування = ((День_ТренуванняDataTable)(this.Table));
+                this.tableWorkout_Exercise = ((Workout_ExerciseDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_дня {
+            public string Name_Exercise {
                 get {
-                    return ((int)(this[this.tableДень_Тренування.ID_дняColumn]));
+                    return ((string)(this[this.tableWorkout_Exercise.Name_ExerciseColumn]));
                 }
                 set {
-                    this[this.tableДень_Тренування.ID_дняColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_тренування {
-                get {
-                    return ((int)(this[this.tableДень_Тренування.ID_тренуванняColumn]));
-                }
-                set {
-                    this[this.tableДень_Тренування.ID_тренуванняColumn] = value;
+                    this[this.tableWorkout_Exercise.Name_ExerciseColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ДніRow ДніRow {
+            public int ID_Workout {
                 get {
-                    return ((ДніRow)(this.GetParentRow(this.Table.ParentRelations["FK_День_Тренування_Дні1"])));
+                    return ((int)(this[this.tableWorkout_Exercise.ID_WorkoutColumn]));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_День_Тренування_Дні1"]);
+                    this[this.tableWorkout_Exercise.ID_WorkoutColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ТренуванняRow ТренуванняRow {
+            public ExercisesRow ExercisesRow {
                 get {
-                    return ((ТренуванняRow)(this.GetParentRow(this.Table.ParentRelations["FK_День_Тренування_Тренування"])));
+                    return ((ExercisesRow)(this.GetParentRow(this.Table.ParentRelations["FK_Workout_Exercise_Exercises"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_День_Тренування_Тренування"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Workout_Exercise_Exercises"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public WorkoutsRow WorkoutsRow {
+                get {
+                    return ((WorkoutsRow)(this.GetParentRow(this.Table.ParentRelations["FK_Workout_Exercise_Workouts"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Workout_Exercise_Workouts"]);
                 }
             }
         }
@@ -4108,86 +4365,58 @@ namespace LibraryGymPlanner {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ДніRow : global::System.Data.DataRow {
+        public partial class Workout_SetRow : global::System.Data.DataRow {
             
-            private ДніDataTable tableДні;
+            private Workout_SetDataTable tableWorkout_Set;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal ДніRow(global::System.Data.DataRowBuilder rb) : 
+            internal Workout_SetRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableДні = ((ДніDataTable)(this.Table));
+                this.tableWorkout_Set = ((Workout_SetDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime Дата {
+            public int ID_Workout {
                 get {
-                    return ((global::System.DateTime)(this[this.tableДні.ДатаColumn]));
+                    return ((int)(this[this.tableWorkout_Set.ID_WorkoutColumn]));
                 }
                 set {
-                    this[this.tableДні.ДатаColumn] = value;
+                    this[this.tableWorkout_Set.ID_WorkoutColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Коментар {
+            public int ID_Set {
                 get {
-                    try {
-                        return ((string)(this[this.tableДні.КоментарColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Коментар\' in table \'Дні\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableWorkout_Set.ID_SetColumn]));
                 }
                 set {
-                    this[this.tableДні.КоментарColumn] = value;
+                    this[this.tableWorkout_Set.ID_SetColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_дня {
+            public SetsRow SetsRow {
                 get {
-                    return ((int)(this[this.tableДні.ID_дняColumn]));
+                    return ((SetsRow)(this.GetParentRow(this.Table.ParentRelations["FK_Workout_Set_Sets"])));
                 }
                 set {
-                    this[this.tableДні.ID_дняColumn] = value;
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Workout_Set_Sets"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsКоментарNull() {
-                return this.IsNull(this.tableДні.КоментарColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetКоментарNull() {
-                this[this.tableДні.КоментарColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public День_ТренуванняRow[] GetДень_ТренуванняRows() {
-                if ((this.Table.ChildRelations["FK_День_Тренування_Дні1"] == null)) {
-                    return new День_ТренуванняRow[0];
+            public WorkoutsRow WorkoutsRow {
+                get {
+                    return ((WorkoutsRow)(this.GetParentRow(this.Table.ParentRelations["FK_Workout_Set_Workouts"])));
                 }
-                else {
-                    return ((День_ТренуванняRow[])(base.GetChildRows(this.Table.ChildRelations["FK_День_Тренування_Дні1"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Користувач_ДеньRow[] GetКористувач_ДеньRows() {
-                if ((this.Table.ChildRelations["FK_Користувач_День_Дні"] == null)) {
-                    return new Користувач_ДеньRow[0];
-                }
-                else {
-                    return ((Користувач_ДеньRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Користувач_День_Дні"])));
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Workout_Set_Workouts"]);
                 }
             }
         }
@@ -4195,356 +4424,69 @@ namespace LibraryGymPlanner {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Користувач_ДеньRow : global::System.Data.DataRow {
+        public partial class WorkoutsRow : global::System.Data.DataRow {
             
-            private Користувач_ДеньDataTable tableКористувач_День;
+            private WorkoutsDataTable tableWorkouts;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Користувач_ДеньRow(global::System.Data.DataRowBuilder rb) : 
+            internal WorkoutsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableКористувач_День = ((Користувач_ДеньDataTable)(this.Table));
+                this.tableWorkouts = ((WorkoutsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Логін {
+            public int ID_Workout {
                 get {
-                    return ((string)(this[this.tableКористувач_День.ЛогінColumn]));
+                    return ((int)(this[this.tableWorkouts.ID_WorkoutColumn]));
                 }
                 set {
-                    this[this.tableКористувач_День.ЛогінColumn] = value;
+                    this[this.tableWorkouts.ID_WorkoutColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_дня {
+            public int Num_Sets {
                 get {
-                    return ((int)(this[this.tableКористувач_День.ID_дняColumn]));
+                    return ((int)(this[this.tableWorkouts.Num_SetsColumn]));
                 }
                 set {
-                    this[this.tableКористувач_День.ID_дняColumn] = value;
+                    this[this.tableWorkouts.Num_SetsColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ДніRow ДніRow {
-                get {
-                    return ((ДніRow)(this.GetParentRow(this.Table.ParentRelations["FK_Користувач_День_Дні"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Користувач_День_Дні"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public КористувачіRow КористувачіRow {
-                get {
-                    return ((КористувачіRow)(this.GetParentRow(this.Table.ParentRelations["FK_Користувач_День_Користувачі"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Користувач_День_Користувачі"]);
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class ПідходиRow : global::System.Data.DataRow {
-            
-            private ПідходиDataTable tableПідходи;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal ПідходиRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableПідходи = ((ПідходиDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_підходу {
-                get {
-                    return ((int)(this[this.tableПідходи.ID_підходуColumn]));
-                }
-                set {
-                    this[this.tableПідходи.ID_підходуColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Кількість_повторень {
-                get {
-                    try {
-                        return ((int)(this[this.tableПідходи.Кількість_повтореньColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Кількість повторень\' in table \'Підходи\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableПідходи.Кількість_повтореньColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Вага {
-                get {
-                    try {
-                        return ((int)(this[this.tableПідходи.ВагаColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Вага\' in table \'Підходи\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableПідходи.ВагаColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsКількість_повтореньNull() {
-                return this.IsNull(this.tableПідходи.Кількість_повтореньColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetКількість_повтореньNull() {
-                this[this.tableПідходи.Кількість_повтореньColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsВагаNull() {
-                return this.IsNull(this.tableПідходи.ВагаColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetВагаNull() {
-                this[this.tableПідходи.ВагаColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ПідхідRow[] GetТренування_ПідхідRows() {
-                if ((this.Table.ChildRelations["FK_Тренування_Підхід_Підходи"] == null)) {
-                    return new Тренування_ПідхідRow[0];
+            public Day_WorkoutRow[] GetDay_WorkoutRows() {
+                if ((this.Table.ChildRelations["FK_Day_Workout_Workouts"] == null)) {
+                    return new Day_WorkoutRow[0];
                 }
                 else {
-                    return ((Тренування_ПідхідRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Тренування_Підхід_Підходи"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class ТренуванняRow : global::System.Data.DataRow {
-            
-            private ТренуванняDataTable tableТренування;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal ТренуванняRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableТренування = ((ТренуванняDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_тренування {
-                get {
-                    return ((int)(this[this.tableТренування.ID_тренуванняColumn]));
-                }
-                set {
-                    this[this.tableТренування.ID_тренуванняColumn] = value;
+                    return ((Day_WorkoutRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Day_Workout_Workouts"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Кількість_підходів {
-                get {
-                    try {
-                        return ((int)(this[this.tableТренування.Кількість_підходівColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Кількість підходів\' in table \'Тренування\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableТренування.Кількість_підходівColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsКількість_підходівNull() {
-                return this.IsNull(this.tableТренування.Кількість_підходівColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetКількість_підходівNull() {
-                this[this.tableТренування.Кількість_підходівColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public День_ТренуванняRow[] GetДень_ТренуванняRows() {
-                if ((this.Table.ChildRelations["FK_День_Тренування_Тренування"] == null)) {
-                    return new День_ТренуванняRow[0];
+            public Workout_ExerciseRow[] GetWorkout_ExerciseRows() {
+                if ((this.Table.ChildRelations["FK_Workout_Exercise_Workouts"] == null)) {
+                    return new Workout_ExerciseRow[0];
                 }
                 else {
-                    return ((День_ТренуванняRow[])(base.GetChildRows(this.Table.ChildRelations["FK_День_Тренування_Тренування"])));
+                    return ((Workout_ExerciseRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Workout_Exercise_Workouts"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ВправаRow[] GetТренування_ВправаRows() {
-                if ((this.Table.ChildRelations["FK_Тренування_Вправа_Тренування"] == null)) {
-                    return new Тренування_ВправаRow[0];
-                }
-                else {
-                    return ((Тренування_ВправаRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Тренування_Вправа_Тренування"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ПідхідRow[] GetТренування_ПідхідRows() {
-                if ((this.Table.ChildRelations["FK_Тренування_Підхід_Тренування"] == null)) {
-                    return new Тренування_ПідхідRow[0];
+            public Workout_SetRow[] GetWorkout_SetRows() {
+                if ((this.Table.ChildRelations["FK_Workout_Set_Workouts"] == null)) {
+                    return new Workout_SetRow[0];
                 }
                 else {
-                    return ((Тренування_ПідхідRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Тренування_Підхід_Тренування"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class Тренування_ВправаRow : global::System.Data.DataRow {
-            
-            private Тренування_ВправаDataTable tableТренування_Вправа;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Тренування_ВправаRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableТренування_Вправа = ((Тренування_ВправаDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Назва_вправи {
-                get {
-                    return ((string)(this[this.tableТренування_Вправа.Назва_вправиColumn]));
-                }
-                set {
-                    this[this.tableТренування_Вправа.Назва_вправиColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_тренування {
-                get {
-                    return ((int)(this[this.tableТренування_Вправа.ID_тренуванняColumn]));
-                }
-                set {
-                    this[this.tableТренування_Вправа.ID_тренуванняColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ВправиRow ВправиRow {
-                get {
-                    return ((ВправиRow)(this.GetParentRow(this.Table.ParentRelations["FK_Тренування_Вправа_Вправи"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Тренування_Вправа_Вправи"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ТренуванняRow ТренуванняRow {
-                get {
-                    return ((ТренуванняRow)(this.GetParentRow(this.Table.ParentRelations["FK_Тренування_Вправа_Тренування"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Тренування_Вправа_Тренування"]);
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class Тренування_ПідхідRow : global::System.Data.DataRow {
-            
-            private Тренування_ПідхідDataTable tableТренування_Підхід;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Тренування_ПідхідRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableТренування_Підхід = ((Тренування_ПідхідDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_тренування {
-                get {
-                    return ((int)(this[this.tableТренування_Підхід.ID_тренуванняColumn]));
-                }
-                set {
-                    this[this.tableТренування_Підхід.ID_тренуванняColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ID_підходу {
-                get {
-                    return ((int)(this[this.tableТренування_Підхід.ID_підходуColumn]));
-                }
-                set {
-                    this[this.tableТренування_Підхід.ID_підходуColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ПідходиRow ПідходиRow {
-                get {
-                    return ((ПідходиRow)(this.GetParentRow(this.Table.ParentRelations["FK_Тренування_Підхід_Підходи"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Тренування_Підхід_Підходи"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ТренуванняRow ТренуванняRow {
-                get {
-                    return ((ТренуванняRow)(this.GetParentRow(this.Table.ParentRelations["FK_Тренування_Підхід_Тренування"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Тренування_Підхід_Тренування"]);
+                    return ((Workout_SetRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Workout_Set_Workouts"])));
                 }
             }
         }
@@ -4553,22 +4495,22 @@ namespace LibraryGymPlanner {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class КористувачіRowChangeEvent : global::System.EventArgs {
+        public class Day_WorkoutRowChangeEvent : global::System.EventArgs {
             
-            private КористувачіRow eventRow;
+            private Day_WorkoutRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public КористувачіRowChangeEvent(КористувачіRow row, global::System.Data.DataRowAction action) {
+            public Day_WorkoutRowChangeEvent(Day_WorkoutRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public КористувачіRow Row {
+            public Day_WorkoutRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4587,22 +4529,22 @@ namespace LibraryGymPlanner {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class Вправа_ГрупаRowChangeEvent : global::System.EventArgs {
+        public class DaysRowChangeEvent : global::System.EventArgs {
             
-            private Вправа_ГрупаRow eventRow;
+            private DaysRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Вправа_ГрупаRowChangeEvent(Вправа_ГрупаRow row, global::System.Data.DataRowAction action) {
+            public DaysRowChangeEvent(DaysRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Вправа_ГрупаRow Row {
+            public DaysRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4621,22 +4563,22 @@ namespace LibraryGymPlanner {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class ВправиRowChangeEvent : global::System.EventArgs {
+        public class Exercise_MuscleGroupRowChangeEvent : global::System.EventArgs {
             
-            private ВправиRow eventRow;
+            private Exercise_MuscleGroupRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ВправиRowChangeEvent(ВправиRow row, global::System.Data.DataRowAction action) {
+            public Exercise_MuscleGroupRowChangeEvent(Exercise_MuscleGroupRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ВправиRow Row {
+            public Exercise_MuscleGroupRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4655,22 +4597,22 @@ namespace LibraryGymPlanner {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class _Групи_м_язівRowChangeEvent : global::System.EventArgs {
+        public class ExercisesRowChangeEvent : global::System.EventArgs {
             
-            private _Групи_м_язівRow eventRow;
+            private ExercisesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _Групи_м_язівRowChangeEvent(_Групи_м_язівRow row, global::System.Data.DataRowAction action) {
+            public ExercisesRowChangeEvent(ExercisesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _Групи_м_язівRow Row {
+            public ExercisesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4689,22 +4631,22 @@ namespace LibraryGymPlanner {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class День_ТренуванняRowChangeEvent : global::System.EventArgs {
+        public class MuscleGroupsRowChangeEvent : global::System.EventArgs {
             
-            private День_ТренуванняRow eventRow;
+            private MuscleGroupsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public День_ТренуванняRowChangeEvent(День_ТренуванняRow row, global::System.Data.DataRowAction action) {
+            public MuscleGroupsRowChangeEvent(MuscleGroupsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public День_ТренуванняRow Row {
+            public MuscleGroupsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4723,22 +4665,22 @@ namespace LibraryGymPlanner {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class ДніRowChangeEvent : global::System.EventArgs {
+        public class SetsRowChangeEvent : global::System.EventArgs {
             
-            private ДніRow eventRow;
+            private SetsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ДніRowChangeEvent(ДніRow row, global::System.Data.DataRowAction action) {
+            public SetsRowChangeEvent(SetsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ДніRow Row {
+            public SetsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4757,22 +4699,22 @@ namespace LibraryGymPlanner {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class Користувач_ДеньRowChangeEvent : global::System.EventArgs {
+        public class User_DayRowChangeEvent : global::System.EventArgs {
             
-            private Користувач_ДеньRow eventRow;
+            private User_DayRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Користувач_ДеньRowChangeEvent(Користувач_ДеньRow row, global::System.Data.DataRowAction action) {
+            public User_DayRowChangeEvent(User_DayRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Користувач_ДеньRow Row {
+            public User_DayRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4791,22 +4733,22 @@ namespace LibraryGymPlanner {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class ПідходиRowChangeEvent : global::System.EventArgs {
+        public class UsersRowChangeEvent : global::System.EventArgs {
             
-            private ПідходиRow eventRow;
+            private UsersRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ПідходиRowChangeEvent(ПідходиRow row, global::System.Data.DataRowAction action) {
+            public UsersRowChangeEvent(UsersRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ПідходиRow Row {
+            public UsersRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4825,22 +4767,22 @@ namespace LibraryGymPlanner {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class ТренуванняRowChangeEvent : global::System.EventArgs {
+        public class Workout_ExerciseRowChangeEvent : global::System.EventArgs {
             
-            private ТренуванняRow eventRow;
+            private Workout_ExerciseRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ТренуванняRowChangeEvent(ТренуванняRow row, global::System.Data.DataRowAction action) {
+            public Workout_ExerciseRowChangeEvent(Workout_ExerciseRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ТренуванняRow Row {
+            public Workout_ExerciseRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4859,22 +4801,22 @@ namespace LibraryGymPlanner {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class Тренування_ВправаRowChangeEvent : global::System.EventArgs {
+        public class Workout_SetRowChangeEvent : global::System.EventArgs {
             
-            private Тренування_ВправаRow eventRow;
+            private Workout_SetRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ВправаRowChangeEvent(Тренування_ВправаRow row, global::System.Data.DataRowAction action) {
+            public Workout_SetRowChangeEvent(Workout_SetRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ВправаRow Row {
+            public Workout_SetRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4893,22 +4835,22 @@ namespace LibraryGymPlanner {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class Тренування_ПідхідRowChangeEvent : global::System.EventArgs {
+        public class WorkoutsRowChangeEvent : global::System.EventArgs {
             
-            private Тренування_ПідхідRow eventRow;
+            private WorkoutsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ПідхідRowChangeEvent(Тренування_ПідхідRow row, global::System.Data.DataRowAction action) {
+            public WorkoutsRowChangeEvent(WorkoutsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Тренування_ПідхідRow Row {
+            public WorkoutsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4936,7 +4878,7 @@ namespace LibraryGymPlanner.DSGymPlannerTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class КористувачіTableAdapter : global::System.ComponentModel.Component {
+    public partial class Day_WorkoutTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4950,7 +4892,7 @@ namespace LibraryGymPlanner.DSGymPlannerTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public КористувачіTableAdapter() {
+        public Day_WorkoutTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -5047,47 +4989,41 @@ namespace LibraryGymPlanner.DSGymPlannerTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Користувачі";
-            tableMapping.ColumnMappings.Add("Логін", "Логін");
-            tableMapping.ColumnMappings.Add("Пароль", "Пароль");
-            tableMapping.ColumnMappings.Add("Ім\'я", "Ім\'я");
+            tableMapping.DataSetTable = "Day_Workout";
+            tableMapping.ColumnMappings.Add("ID_Day", "ID_Day");
+            tableMapping.ColumnMappings.Add("ID_Workout", "ID_Workout");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Користувачі] WHERE (([Логін] = @Original_Логін) AND ([Пароль] " +
-                "= @Original_Пароль) AND ([Ім\'я] = @p2))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Day_Workout] WHERE (([ID_Day] = @Original_ID_Day) AND ([ID_Wor" +
+                "kout] = @Original_ID_Workout))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Логін", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Логін", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Пароль", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Пароль", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ім\'я", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Day", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Workout", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Workout", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Користувачі] ([Логін], [Пароль], [Ім\'я]) VALUES (@Логін, @Паро" +
-                "ль, @p1);\r\nSELECT Логін, Пароль, [Ім\'я] FROM Користувачі WHERE (Логін = @Логін)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Day_Workout] ([ID_Day], [ID_Workout]) VALUES (@ID_Day, @ID_Wor" +
+                "kout);\r\nSELECT ID_Day, ID_Workout FROM Day_Workout WHERE (ID_Day = @ID_Day) AND " +
+                "(ID_Workout = @ID_Workout)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Логін", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Логін", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Пароль", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Пароль", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ім\'я", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Day", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Workout", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Workout", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Користувачі] SET [Логін] = @Логін, [Пароль] = @Пароль, [Ім\'я] = @p1" +
-                " WHERE (([Логін] = @Original_Логін) AND ([Пароль] = @Original_Пароль) AND ([Ім\'я" +
-                "] = @p2));\r\nSELECT Логін, Пароль, [Ім\'я] FROM Користувачі WHERE (Логін = @Логін)" +
-                "";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Day_Workout] SET [ID_Day] = @ID_Day, [ID_Workout] = @ID_Workout WHERE (([ID_Day] = @Original_ID_Day) AND ([ID_Workout] = @Original_ID_Workout));
+SELECT ID_Day, ID_Workout FROM Day_Workout WHERE (ID_Day = @ID_Day) AND (ID_Workout = @ID_Workout)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Логін", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Логін", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Пароль", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Пароль", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ім\'я", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Логін", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Логін", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Пароль", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Пароль", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ім\'я", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Day", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Workout", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Workout", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Day", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Workout", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Workout", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.Gym_PlannerConnectionString;
+            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.NewGymPlannerConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5096,7 +5032,7 @@ namespace LibraryGymPlanner.DSGymPlannerTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Логін, Пароль, [Ім\'я] FROM dbo.Користувачі";
+            this._commandCollection[0].CommandText = "SELECT ID_Day, ID_Workout FROM dbo.Day_Workout";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5104,7 +5040,7 @@ namespace LibraryGymPlanner.DSGymPlannerTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSGymPlanner.КористувачіDataTable dataTable) {
+        public virtual int Fill(DSGymPlanner.Day_WorkoutDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5117,9 +5053,9 @@ namespace LibraryGymPlanner.DSGymPlannerTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSGymPlanner.КористувачіDataTable GetData() {
+        public virtual DSGymPlanner.Day_WorkoutDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DSGymPlanner.КористувачіDataTable dataTable = new DSGymPlanner.КористувачіDataTable();
+            DSGymPlanner.Day_WorkoutDataTable dataTable = new DSGymPlanner.Day_WorkoutDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5127,7 +5063,7 @@ namespace LibraryGymPlanner.DSGymPlannerTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DSGymPlanner.КористувачіDataTable dataTable) {
+        public virtual int Update(DSGymPlanner.Day_WorkoutDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -5135,7 +5071,7 @@ namespace LibraryGymPlanner.DSGymPlannerTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DSGymPlanner dataSet) {
-            return this.Adapter.Update(dataSet, "Користувачі");
+            return this.Adapter.Update(dataSet, "Day_Workout");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5157,25 +5093,9 @@ namespace LibraryGymPlanner.DSGymPlannerTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Логін, string Original_Пароль, string p2) {
-            if ((Original_Логін == null)) {
-                throw new global::System.ArgumentNullException("Original_Логін");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Логін));
-            }
-            if ((Original_Пароль == null)) {
-                throw new global::System.ArgumentNullException("Original_Пароль");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Пароль));
-            }
-            if ((p2 == null)) {
-                throw new global::System.ArgumentNullException("p2");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(p2));
-            }
+        public virtual int Delete(int Original_ID_Day, int Original_ID_Workout) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Day));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ID_Workout));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5196,24 +5116,315 @@ namespace LibraryGymPlanner.DSGymPlannerTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Логін, string Пароль, string p1) {
-            if ((Логін == null)) {
-                throw new global::System.ArgumentNullException("Логін");
+        public virtual int Insert(int ID_Day, int ID_Workout) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_Day));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ID_Workout));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int ID_Day, int ID_Workout, int Original_ID_Day, int Original_ID_Workout) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_Day));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ID_Workout));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID_Day));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID_Workout));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int Original_ID_Day, int Original_ID_Workout) {
+            return this.Update(Original_ID_Day, Original_ID_Workout, Original_ID_Day, Original_ID_Workout);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class DaysTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public DaysTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Days";
+            tableMapping.ColumnMappings.Add("ID_Day", "ID_Day");
+            tableMapping.ColumnMappings.Add("Date", "Date");
+            tableMapping.ColumnMappings.Add("Comment", "Comment");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Days] WHERE (([ID_Day] = @Original_ID_Day) AND ([Date] = @Orig" +
+                "inal_Date))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Day", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Days] ([Date], [Comment]) VALUES (@Date, @Comment);\r\nSELECT ID" +
+                "_Day, Date, Comment FROM Days WHERE (ID_Day = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comment", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Days] SET [Date] = @Date, [Comment] = @Comment WHERE (([ID_Day] = @" +
+                "Original_ID_Day) AND ([Date] = @Original_Date));\r\nSELECT ID_Day, Date, Comment F" +
+                "ROM Days WHERE (ID_Day = @ID_Day)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Comment", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Comment", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Day", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Day", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Day", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.NewGymPlannerConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT ID_Day, Date, Comment FROM dbo.Days";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DSGymPlanner.DaysDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DSGymPlanner.DaysDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DSGymPlanner.DaysDataTable dataTable = new DSGymPlanner.DaysDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DSGymPlanner.DaysDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DSGymPlanner dataSet) {
+            return this.Adapter.Update(dataSet, "Days");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_ID_Day, System.DateTime Original_Date) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Day));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_Date));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(System.DateTime Date, string Comment) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Date));
+            if ((Comment == null)) {
+                throw new global::System.ArgumentNullException("Comment");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Логін));
-            }
-            if ((Пароль == null)) {
-                throw new global::System.ArgumentNullException("Пароль");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Пароль));
-            }
-            if ((p1 == null)) {
-                throw new global::System.ArgumentNullException("p1");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(p1));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Comment));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5235,43 +5446,17 @@ namespace LibraryGymPlanner.DSGymPlannerTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Логін, string Пароль, string p1, string Original_Логін, string Original_Пароль, string p2) {
-            if ((Логін == null)) {
-                throw new global::System.ArgumentNullException("Логін");
+        public virtual int Update(System.DateTime Date, string Comment, int Original_ID_Day, System.DateTime Original_Date, int ID_Day) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Date));
+            if ((Comment == null)) {
+                throw new global::System.ArgumentNullException("Comment");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Логін));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Comment));
             }
-            if ((Пароль == null)) {
-                throw new global::System.ArgumentNullException("Пароль");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Пароль));
-            }
-            if ((p1 == null)) {
-                throw new global::System.ArgumentNullException("p1");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(p1));
-            }
-            if ((Original_Логін == null)) {
-                throw new global::System.ArgumentNullException("Original_Логін");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Логін));
-            }
-            if ((Original_Пароль == null)) {
-                throw new global::System.ArgumentNullException("Original_Пароль");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Пароль));
-            }
-            if ((p2 == null)) {
-                throw new global::System.ArgumentNullException("p2");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(p2));
-            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID_Day));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Original_Date));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(ID_Day));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5292,8 +5477,8 @@ namespace LibraryGymPlanner.DSGymPlannerTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Пароль, string p1, string Original_Логін, string Original_Пароль, string p2) {
-            return this.Update(Original_Логін, Пароль, p1, Original_Логін, Original_Пароль, p2);
+        public virtual int Update(System.DateTime Date, string Comment, int Original_ID_Day, System.DateTime Original_Date) {
+            return this.Update(Date, Comment, Original_ID_Day, Original_Date, Original_ID_Day);
         }
     }
     
@@ -5306,7 +5491,7 @@ namespace LibraryGymPlanner.DSGymPlannerTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Вправа_ГрупаTableAdapter : global::System.ComponentModel.Component {
+    public partial class Exercise_MuscleGroupTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -5320,7 +5505,7 @@ namespace LibraryGymPlanner.DSGymPlannerTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Вправа_ГрупаTableAdapter() {
+        public Exercise_MuscleGroupTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -5417,44 +5602,40 @@ namespace LibraryGymPlanner.DSGymPlannerTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Вправа_Група";
-            tableMapping.ColumnMappings.Add("Назва групи м\'язів", "Назва групи м\'язів");
-            tableMapping.ColumnMappings.Add("Назва вправи", "Назва вправи");
+            tableMapping.DataSetTable = "Exercise_MuscleGroup";
+            tableMapping.ColumnMappings.Add("Name_Exercise", "Name_Exercise");
+            tableMapping.ColumnMappings.Add("Name_MuscleGroup", "Name_MuscleGroup");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Вправа_Група] WHERE (([Назва групи м\'язів] = @p2) AND ([Назва " +
-                "вправи] = @Original_Назва_вправи))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Exercise_MuscleGroup] WHERE (([Name_Exercise] = @Original_Name" +
+                "_Exercise) AND ([Name_MuscleGroup] = @Original_Name_MuscleGroup))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва групи м\'язів", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Назва_вправи", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва вправи", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_Exercise", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Exercise", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_MuscleGroup", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_MuscleGroup", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Вправа_Група] ([Назва групи м\'язів], [Назва вправи]) VALUES (@" +
-                "p1, @Назва_вправи);\r\nSELECT [Назва групи м\'язів], [Назва вправи] FROM Вправа_Гру" +
-                "па WHERE ([Назва вправи] = @Назва_вправи) AND ([Назва групи м\'язів] = @Назва_гру" +
-                "пи_м_язів)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Exercise_MuscleGroup] ([Name_Exercise], [Name_MuscleGroup]) VALUES (@Name_Exercise, @Name_MuscleGroup);
+SELECT Name_Exercise, Name_MuscleGroup FROM Exercise_MuscleGroup WHERE (Name_Exercise = @Name_Exercise) AND (Name_MuscleGroup = @Name_MuscleGroup)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва групи м\'язів", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Назва_вправи", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва вправи", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Назва_групи_м_язів", global::System.Data.SqlDbType.Char, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Назва групи м\'язів", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_Exercise", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Exercise", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_MuscleGroup", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_MuscleGroup", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Вправа_Група] SET [Назва групи м'язів] = @p1, [Назва вправи] = @Назва_вправи WHERE (([Назва групи м'язів] = @p2) AND ([Назва вправи] = @Original_Назва_вправи));
-SELECT [Назва групи м'язів], [Назва вправи] FROM Вправа_Група WHERE ([Назва вправи] = @Назва_вправи) AND ([Назва групи м'язів] = @Назва_групи_м_язів)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Exercise_MuscleGroup] SET [Name_Exercise] = @Name_Exercise, [Name_MuscleGroup] = @Name_MuscleGroup WHERE (([Name_Exercise] = @Original_Name_Exercise) AND ([Name_MuscleGroup] = @Original_Name_MuscleGroup));
+SELECT Name_Exercise, Name_MuscleGroup FROM Exercise_MuscleGroup WHERE (Name_Exercise = @Name_Exercise) AND (Name_MuscleGroup = @Name_MuscleGroup)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p1", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва групи м\'язів", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Назва_вправи", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва вправи", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@p2", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва групи м\'язів", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Назва_вправи", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва вправи", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Назва_групи_м_язів", global::System.Data.SqlDbType.Char, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Назва групи м\'язів", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_Exercise", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Exercise", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_MuscleGroup", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_MuscleGroup", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_Exercise", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Exercise", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_MuscleGroup", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_MuscleGroup", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.Gym_PlannerConnectionString;
+            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.NewGymPlannerConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5463,7 +5644,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Назва групи м\'язів], [Назва вправи] FROM dbo.Вправа_Група";
+            this._commandCollection[0].CommandText = "SELECT Name_Exercise, Name_MuscleGroup FROM dbo.Exercise_MuscleGroup";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5471,7 +5652,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSGymPlanner.Вправа_ГрупаDataTable dataTable) {
+        public virtual int Fill(DSGymPlanner.Exercise_MuscleGroupDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5484,9 +5665,9 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSGymPlanner.Вправа_ГрупаDataTable GetData() {
+        public virtual DSGymPlanner.Exercise_MuscleGroupDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DSGymPlanner.Вправа_ГрупаDataTable dataTable = new DSGymPlanner.Вправа_ГрупаDataTable();
+            DSGymPlanner.Exercise_MuscleGroupDataTable dataTable = new DSGymPlanner.Exercise_MuscleGroupDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5494,7 +5675,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DSGymPlanner.Вправа_ГрупаDataTable dataTable) {
+        public virtual int Update(DSGymPlanner.Exercise_MuscleGroupDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -5502,7 +5683,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DSGymPlanner dataSet) {
-            return this.Adapter.Update(dataSet, "Вправа_Група");
+            return this.Adapter.Update(dataSet, "Exercise_MuscleGroup");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5524,18 +5705,18 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string p2, string Original_Назва_вправи) {
-            if ((p2 == null)) {
-                throw new global::System.ArgumentNullException("p2");
+        public virtual int Delete(string Original_Name_Exercise, string Original_Name_MuscleGroup) {
+            if ((Original_Name_Exercise == null)) {
+                throw new global::System.ArgumentNullException("Original_Name_Exercise");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(p2));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Name_Exercise));
             }
-            if ((Original_Назва_вправи == null)) {
-                throw new global::System.ArgumentNullException("Original_Назва_вправи");
+            if ((Original_Name_MuscleGroup == null)) {
+                throw new global::System.ArgumentNullException("Original_Name_MuscleGroup");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Назва_вправи));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Name_MuscleGroup));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5557,24 +5738,18 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string p1, string Назва_вправи, string Назва_групи_м_язів) {
-            if ((p1 == null)) {
-                throw new global::System.ArgumentNullException("p1");
+        public virtual int Insert(string Name_Exercise, string Name_MuscleGroup) {
+            if ((Name_Exercise == null)) {
+                throw new global::System.ArgumentNullException("Name_Exercise");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(p1));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Name_Exercise));
             }
-            if ((Назва_вправи == null)) {
-                throw new global::System.ArgumentNullException("Назва_вправи");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Назва_вправи));
-            }
-            if ((Назва_групи_м_язів == null)) {
-                throw new global::System.ArgumentNullException("Назва_групи_м_язів");
+            if ((Name_MuscleGroup == null)) {
+                throw new global::System.ArgumentNullException("Name_MuscleGroup");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Назва_групи_м_язів));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Name_MuscleGroup));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5596,36 +5771,30 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string p1, string Назва_вправи, string p2, string Original_Назва_вправи, string Назва_групи_м_язів) {
-            if ((p1 == null)) {
-                throw new global::System.ArgumentNullException("p1");
+        public virtual int Update(string Name_Exercise, string Name_MuscleGroup, string Original_Name_Exercise, string Original_Name_MuscleGroup) {
+            if ((Name_Exercise == null)) {
+                throw new global::System.ArgumentNullException("Name_Exercise");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(p1));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name_Exercise));
             }
-            if ((Назва_вправи == null)) {
-                throw new global::System.ArgumentNullException("Назва_вправи");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Назва_вправи));
-            }
-            if ((p2 == null)) {
-                throw new global::System.ArgumentNullException("p2");
+            if ((Name_MuscleGroup == null)) {
+                throw new global::System.ArgumentNullException("Name_MuscleGroup");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(p2));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Name_MuscleGroup));
             }
-            if ((Original_Назва_вправи == null)) {
-                throw new global::System.ArgumentNullException("Original_Назва_вправи");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Назва_вправи));
-            }
-            if ((Назва_групи_м_язів == null)) {
-                throw new global::System.ArgumentNullException("Назва_групи_м_язів");
+            if ((Original_Name_Exercise == null)) {
+                throw new global::System.ArgumentNullException("Original_Name_Exercise");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Назва_групи_м_язів));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Name_Exercise));
+            }
+            if ((Original_Name_MuscleGroup == null)) {
+                throw new global::System.ArgumentNullException("Original_Name_MuscleGroup");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Name_MuscleGroup));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5647,8 +5816,8 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string p2, string Original_Назва_вправи) {
-            return this.Update(p2, Original_Назва_вправи, p2, Original_Назва_вправи, p2);
+        public virtual int Update(string Original_Name_Exercise, string Original_Name_MuscleGroup) {
+            return this.Update(Original_Name_Exercise, Original_Name_MuscleGroup, Original_Name_Exercise, Original_Name_MuscleGroup);
         }
     }
     
@@ -5661,7 +5830,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ВправиTableAdapter : global::System.ComponentModel.Component {
+    public partial class ExercisesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -5675,7 +5844,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public ВправиTableAdapter() {
+        public ExercisesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -5772,38 +5941,38 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Вправи";
-            tableMapping.ColumnMappings.Add("Назва", "Назва");
-            tableMapping.ColumnMappings.Add("Інформація", "Інформація");
+            tableMapping.DataSetTable = "Exercises";
+            tableMapping.ColumnMappings.Add("Name", "Name");
+            tableMapping.ColumnMappings.Add("Information", "Information");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Вправи] WHERE (([Назва] = @Original_Назва))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Exercises] WHERE (([Name] = @Original_Name))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Назва", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Вправи] ([Назва], [Інформація]) VALUES (@Назва, @Інформація);\r" +
-                "\nSELECT Назва, Інформація FROM Вправи WHERE (Назва = @Назва)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Exercises] ([Name], [Information]) VALUES (@Name, @Information" +
+                ");\r\nSELECT Name, Information FROM Exercises WHERE (Name = @Name)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Назва", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Інформація", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Інформація", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Information", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Information", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Вправи] SET [Назва] = @Назва, [Інформація] = @Інформація WHERE (([Н" +
-                "азва] = @Original_Назва));\r\nSELECT Назва, Інформація FROM Вправи WHERE (Назва = " +
-                "@Назва)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Exercises] SET [Name] = @Name, [Information] = @Information WHERE (" +
+                "([Name] = @Original_Name));\r\nSELECT Name, Information FROM Exercises WHERE (Name" +
+                " = @Name)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Назва", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Інформація", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Інформація", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Назва", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Information", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Information", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.Gym_PlannerConnectionString;
+            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.NewGymPlannerConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5812,7 +5981,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Назва, Інформація FROM dbo.Вправи";
+            this._commandCollection[0].CommandText = "SELECT Name, Information FROM dbo.Exercises";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5820,7 +5989,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSGymPlanner.ВправиDataTable dataTable) {
+        public virtual int Fill(DSGymPlanner.ExercisesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5833,9 +6002,9 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSGymPlanner.ВправиDataTable GetData() {
+        public virtual DSGymPlanner.ExercisesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DSGymPlanner.ВправиDataTable dataTable = new DSGymPlanner.ВправиDataTable();
+            DSGymPlanner.ExercisesDataTable dataTable = new DSGymPlanner.ExercisesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5843,7 +6012,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DSGymPlanner.ВправиDataTable dataTable) {
+        public virtual int Update(DSGymPlanner.ExercisesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -5851,7 +6020,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DSGymPlanner dataSet) {
-            return this.Adapter.Update(dataSet, "Вправи");
+            return this.Adapter.Update(dataSet, "Exercises");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5873,12 +6042,12 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Назва) {
-            if ((Original_Назва == null)) {
-                throw new global::System.ArgumentNullException("Original_Назва");
+        public virtual int Delete(string Original_Name) {
+            if ((Original_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_Name");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Назва));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5900,18 +6069,18 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Назва, string Інформація) {
-            if ((Назва == null)) {
-                throw new global::System.ArgumentNullException("Назва");
+        public virtual int Insert(string Name, string Information) {
+            if ((Name == null)) {
+                throw new global::System.ArgumentNullException("Name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Назва));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Name));
             }
-            if ((Інформація == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            if ((Information == null)) {
+                throw new global::System.ArgumentNullException("Information");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Інформація));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Information));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5933,24 +6102,24 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Назва, string Інформація, string Original_Назва) {
-            if ((Назва == null)) {
-                throw new global::System.ArgumentNullException("Назва");
+        public virtual int Update(string Name, string Information, string Original_Name) {
+            if ((Name == null)) {
+                throw new global::System.ArgumentNullException("Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Назва));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name));
             }
-            if ((Інформація == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Інформація));
-            }
-            if ((Original_Назва == null)) {
-                throw new global::System.ArgumentNullException("Original_Назва");
+            if ((Information == null)) {
+                throw new global::System.ArgumentNullException("Information");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Назва));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Information));
+            }
+            if ((Original_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_Name");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5972,8 +6141,8 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Інформація, string Original_Назва) {
-            return this.Update(Original_Назва, Інформація, Original_Назва);
+        public virtual int Update(string Information, string Original_Name) {
+            return this.Update(Original_Name, Information, Original_Name);
         }
     }
     
@@ -5986,7 +6155,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Групи_м_язівTableAdapter : global::System.ComponentModel.Component {
+    public partial class MuscleGroupsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -6000,7 +6169,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Групи_м_язівTableAdapter() {
+        public MuscleGroupsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -6097,38 +6266,38 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Групи м\'язів";
-            tableMapping.ColumnMappings.Add("Назва", "Назва");
-            tableMapping.ColumnMappings.Add("Інформація", "Інформація");
+            tableMapping.DataSetTable = "MuscleGroups";
+            tableMapping.ColumnMappings.Add("Name", "Name");
+            tableMapping.ColumnMappings.Add("Information", "Information");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Групи м\'язів] WHERE (([Назва] = @Original_Назва))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[MuscleGroups] WHERE (([Name] = @Original_Name))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Назва", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Групи м\'язів] ([Назва], [Інформація]) VALUES (@Назва, @Інформа" +
-                "ція);\r\nSELECT Назва, Інформація FROM [Групи м\'язів] WHERE (Назва = @Назва)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[MuscleGroups] ([Name], [Information]) VALUES (@Name, @Informat" +
+                "ion);\r\nSELECT Name, Information FROM MuscleGroups WHERE (Name = @Name)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Назва", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Інформація", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Інформація", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Information", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Information", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Групи м\'язів] SET [Назва] = @Назва, [Інформація] = @Інформація WHER" +
-                "E (([Назва] = @Original_Назва));\r\nSELECT Назва, Інформація FROM [Групи м\'язів] W" +
-                "HERE (Назва = @Назва)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[MuscleGroups] SET [Name] = @Name, [Information] = @Information WHER" +
+                "E (([Name] = @Original_Name));\r\nSELECT Name, Information FROM MuscleGroups WHERE" +
+                " (Name = @Name)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Назва", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Інформація", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Інформація", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Назва", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Information", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Information", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.Gym_PlannerConnectionString;
+            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.NewGymPlannerConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6137,7 +6306,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Назва, Інформація FROM dbo.[Групи м\'язів]";
+            this._commandCollection[0].CommandText = "SELECT Name, Information FROM dbo.MuscleGroups";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6145,7 +6314,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSGymPlanner._Групи_м_язівDataTable dataTable) {
+        public virtual int Fill(DSGymPlanner.MuscleGroupsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6158,9 +6327,9 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSGymPlanner._Групи_м_язівDataTable GetData() {
+        public virtual DSGymPlanner.MuscleGroupsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DSGymPlanner._Групи_м_язівDataTable dataTable = new DSGymPlanner._Групи_м_язівDataTable();
+            DSGymPlanner.MuscleGroupsDataTable dataTable = new DSGymPlanner.MuscleGroupsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6168,7 +6337,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DSGymPlanner._Групи_м_язівDataTable dataTable) {
+        public virtual int Update(DSGymPlanner.MuscleGroupsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -6176,7 +6345,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DSGymPlanner dataSet) {
-            return this.Adapter.Update(dataSet, "Групи м\'язів");
+            return this.Adapter.Update(dataSet, "MuscleGroups");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6198,12 +6367,12 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Назва) {
-            if ((Original_Назва == null)) {
-                throw new global::System.ArgumentNullException("Original_Назва");
+        public virtual int Delete(string Original_Name) {
+            if ((Original_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_Name");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Назва));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6225,18 +6394,18 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Назва, string Інформація) {
-            if ((Назва == null)) {
-                throw new global::System.ArgumentNullException("Назва");
+        public virtual int Insert(string Name, string Information) {
+            if ((Name == null)) {
+                throw new global::System.ArgumentNullException("Name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Назва));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Name));
             }
-            if ((Інформація == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            if ((Information == null)) {
+                throw new global::System.ArgumentNullException("Information");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Інформація));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Information));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6258,24 +6427,24 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Назва, string Інформація, string Original_Назва) {
-            if ((Назва == null)) {
-                throw new global::System.ArgumentNullException("Назва");
+        public virtual int Update(string Name, string Information, string Original_Name) {
+            if ((Name == null)) {
+                throw new global::System.ArgumentNullException("Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Назва));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name));
             }
-            if ((Інформація == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Інформація));
-            }
-            if ((Original_Назва == null)) {
-                throw new global::System.ArgumentNullException("Original_Назва");
+            if ((Information == null)) {
+                throw new global::System.ArgumentNullException("Information");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Назва));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Information));
+            }
+            if ((Original_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_Name");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6297,8 +6466,8 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Інформація, string Original_Назва) {
-            return this.Update(Original_Назва, Інформація, Original_Назва);
+        public virtual int Update(string Information, string Original_Name) {
+            return this.Update(Original_Name, Information, Original_Name);
         }
     }
     
@@ -6311,7 +6480,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class День_ТренуванняTableAdapter : global::System.ComponentModel.Component {
+    public partial class SetsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -6325,7 +6494,7 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public День_ТренуванняTableAdapter() {
+        public SetsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -6422,41 +6591,46 @@ SELECT [Назва групи м'язів], [Назва вправи] FROM Вп�
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "День_Тренування";
-            tableMapping.ColumnMappings.Add("ID дня", "ID дня");
-            tableMapping.ColumnMappings.Add("ID тренування", "ID тренування");
+            tableMapping.DataSetTable = "Sets";
+            tableMapping.ColumnMappings.Add("ID_Set", "ID_Set");
+            tableMapping.ColumnMappings.Add("Num_Reps", "Num_Reps");
+            tableMapping.ColumnMappings.Add("Weight", "Weight");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[День_Тренування] WHERE (([ID дня] = @Original_ID_дня) AND ([ID" +
-                " тренування] = @Original_ID_тренування))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Sets] WHERE (([ID_Set] = @Original_ID_Set) AND ([Num_Reps] = @" +
+                "Original_Num_Reps) AND ([Weight] = @Original_Weight))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_дня", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID дня", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_тренування", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID тренування", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Set", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Set", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Num_Reps", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Reps", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Weight", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 1, "Weight", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[День_Тренування] ([ID дня], [ID тренування]) VALUES (@ID_дня, " +
-                "@ID_тренування);\r\nSELECT [ID дня], [ID тренування] FROM День_Тренування WHERE ([" +
-                "ID дня] = @ID_дня) AND ([ID тренування] = @ID_тренування)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Sets] ([Num_Reps], [Weight]) VALUES (@Num_Reps, @Weight);\r\nSEL" +
+                "ECT ID_Set, Num_Reps, Weight FROM Sets WHERE (ID_Set = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_дня", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID дня", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_тренування", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID тренування", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num_Reps", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Reps", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Weight", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 1, "Weight", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[День_Тренування] SET [ID дня] = @ID_дня, [ID тренування] = @ID_тренування WHERE (([ID дня] = @Original_ID_дня) AND ([ID тренування] = @Original_ID_тренування));
-SELECT [ID дня], [ID тренування] FROM День_Тренування WHERE ([ID дня] = @ID_дня) AND ([ID тренування] = @ID_тренування)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Sets] SET [Num_Reps] = @Num_Reps, [Weight] = @Weight WHERE (([ID_Se" +
+                "t] = @Original_ID_Set) AND ([Num_Reps] = @Original_Num_Reps) AND ([Weight] = @Or" +
+                "iginal_Weight));\r\nSELECT ID_Set, Num_Reps, Weight FROM Sets WHERE (ID_Set = @ID_" +
+                "Set)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_дня", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID дня", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_тренування", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID тренування", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_дня", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID дня", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_тренування", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID тренування", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num_Reps", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Reps", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Weight", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 1, "Weight", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Set", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Set", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Num_Reps", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Reps", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Weight", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 4, 1, "Weight", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Set", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Set", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.Gym_PlannerConnectionString;
+            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.NewGymPlannerConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6465,7 +6639,7 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [ID дня], [ID тренування] FROM dbo.День_Тренування";
+            this._commandCollection[0].CommandText = "SELECT ID_Set, Num_Reps, Weight FROM dbo.Sets";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6473,7 +6647,7 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSGymPlanner.День_ТренуванняDataTable dataTable) {
+        public virtual int Fill(DSGymPlanner.SetsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6486,9 +6660,9 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSGymPlanner.День_ТренуванняDataTable GetData() {
+        public virtual DSGymPlanner.SetsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DSGymPlanner.День_ТренуванняDataTable dataTable = new DSGymPlanner.День_ТренуванняDataTable();
+            DSGymPlanner.SetsDataTable dataTable = new DSGymPlanner.SetsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6496,7 +6670,7 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DSGymPlanner.День_ТренуванняDataTable dataTable) {
+        public virtual int Update(DSGymPlanner.SetsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -6504,7 +6678,7 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DSGymPlanner dataSet) {
-            return this.Adapter.Update(dataSet, "День_Тренування");
+            return this.Adapter.Update(dataSet, "Sets");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6526,9 +6700,10 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID_дня, int Original_ID_тренування) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_дня));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ID_тренування));
+        public virtual int Delete(int Original_ID_Set, int Original_Num_Reps, decimal Original_Weight) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Set));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Num_Reps));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((decimal)(Original_Weight));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6549,9 +6724,9 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID_дня, int ID_тренування) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_дня));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ID_тренування));
+        public virtual int Insert(int Num_Reps, decimal Weight) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Num_Reps));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(Weight));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6572,11 +6747,13 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_дня, int ID_тренування, int Original_ID_дня, int Original_ID_тренування) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_дня));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ID_тренування));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID_дня));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID_тренування));
+        public virtual int Update(int Num_Reps, decimal Weight, int Original_ID_Set, int Original_Num_Reps, decimal Original_Weight, int ID_Set) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Num_Reps));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(Weight));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID_Set));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Num_Reps));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(Original_Weight));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(ID_Set));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6597,8 +6774,8 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Original_ID_дня, int Original_ID_тренування) {
-            return this.Update(Original_ID_дня, Original_ID_тренування, Original_ID_дня, Original_ID_тренування);
+        public virtual int Update(int Num_Reps, decimal Weight, int Original_ID_Set, int Original_Num_Reps, decimal Original_Weight) {
+            return this.Update(Num_Reps, Weight, Original_ID_Set, Original_Num_Reps, Original_Weight, Original_ID_Set);
         }
     }
     
@@ -6611,7 +6788,7 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ДніTableAdapter : global::System.ComponentModel.Component {
+    public partial class User_DayTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -6625,7 +6802,7 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public ДніTableAdapter() {
+        public User_DayTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -6722,44 +6899,41 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Дні";
-            tableMapping.ColumnMappings.Add("Дата", "Дата");
-            tableMapping.ColumnMappings.Add("Коментар", "Коментар");
-            tableMapping.ColumnMappings.Add("ID дня", "ID дня");
+            tableMapping.DataSetTable = "User_Day";
+            tableMapping.ColumnMappings.Add("Login", "Login");
+            tableMapping.ColumnMappings.Add("ID_Day", "ID_Day");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Дні] WHERE (([Дата] = @Original_Дата) AND ([ID дня] = @Origina" +
-                "l_ID_дня))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[User_Day] WHERE (([Login] = @Original_Login) AND ([ID_Day] = @" +
+                "Original_ID_Day))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Дата", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_дня", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID дня", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Login", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Day", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Дні] ([Дата], [Коментар], [ID дня]) VALUES (@Дата, @Коментар, " +
-                "@ID_дня);\r\nSELECT Дата, Коментар, [ID дня] FROM Дні WHERE ([ID дня] = @ID_дня)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[User_Day] ([Login], [ID_Day]) VALUES (@Login, @ID_Day);\r\nSELEC" +
+                "T Login, ID_Day FROM User_Day WHERE (ID_Day = @ID_Day) AND (Login = @Login)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Дата", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Коментар", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Коментар", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_дня", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID дня", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Login", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Day", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Дні] SET [Дата] = @Дата, [Коментар] = @Коментар, [ID дня] = @ID_дня" +
-                " WHERE (([Дата] = @Original_Дата) AND ([ID дня] = @Original_ID_дня));\r\nSELECT Да" +
-                "та, Коментар, [ID дня] FROM Дні WHERE ([ID дня] = @ID_дня)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[User_Day] SET [Login] = @Login, [ID_Day] = @ID_Day WHERE (([Login] " +
+                "= @Original_Login) AND ([ID_Day] = @Original_ID_Day));\r\nSELECT Login, ID_Day FRO" +
+                "M User_Day WHERE (ID_Day = @ID_Day) AND (Login = @Login)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Дата", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Коментар", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Коментар", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_дня", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID дня", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Дата", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Дата", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_дня", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID дня", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Login", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Day", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Login", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Day", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Day", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.Gym_PlannerConnectionString;
+            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.NewGymPlannerConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6768,7 +6942,7 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Дата, Коментар, [ID дня] FROM dbo.Дні";
+            this._commandCollection[0].CommandText = "SELECT Login, ID_Day FROM dbo.User_Day";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6776,7 +6950,7 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSGymPlanner.ДніDataTable dataTable) {
+        public virtual int Fill(DSGymPlanner.User_DayDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6789,9 +6963,9 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSGymPlanner.ДніDataTable GetData() {
+        public virtual DSGymPlanner.User_DayDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DSGymPlanner.ДніDataTable dataTable = new DSGymPlanner.ДніDataTable();
+            DSGymPlanner.User_DayDataTable dataTable = new DSGymPlanner.User_DayDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6799,7 +6973,7 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DSGymPlanner.ДніDataTable dataTable) {
+        public virtual int Update(DSGymPlanner.User_DayDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -6807,7 +6981,7 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DSGymPlanner dataSet) {
-            return this.Adapter.Update(dataSet, "Дні");
+            return this.Adapter.Update(dataSet, "User_Day");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6829,9 +7003,14 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(System.DateTime Original_Дата, int Original_ID_дня) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((System.DateTime)(Original_Дата));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ID_дня));
+        public virtual int Delete(string Original_Login, int Original_ID_Day) {
+            if ((Original_Login == null)) {
+                throw new global::System.ArgumentNullException("Original_Login");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Login));
+            }
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ID_Day));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6852,15 +7031,14 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(System.DateTime Дата, string Коментар, int ID_дня) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Дата));
-            if ((Коментар == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+        public virtual int Insert(string Login, int ID_Day) {
+            if ((Login == null)) {
+                throw new global::System.ArgumentNullException("Login");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Коментар));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Login));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(ID_дня));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ID_Day));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6881,17 +7059,21 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime Дата, string Коментар, int ID_дня, System.DateTime Original_Дата, int Original_ID_дня) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Дата));
-            if ((Коментар == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+        public virtual int Update(string Login, int ID_Day, string Original_Login, int Original_ID_Day) {
+            if ((Login == null)) {
+                throw new global::System.ArgumentNullException("Login");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Коментар));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Login));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(ID_дня));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(Original_Дата));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ID_дня));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ID_Day));
+            if ((Original_Login == null)) {
+                throw new global::System.ArgumentNullException("Original_Login");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Login));
+            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID_Day));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6912,8 +7094,8 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime Дата, string Коментар, System.DateTime Original_Дата, int Original_ID_дня) {
-            return this.Update(Дата, Коментар, Original_ID_дня, Original_Дата, Original_ID_дня);
+        public virtual int Update(string Original_Login, int Original_ID_Day) {
+            return this.Update(Original_Login, Original_ID_Day, Original_Login, Original_ID_Day);
         }
     }
     
@@ -6926,7 +7108,7 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Користувач_ДеньTableAdapter : global::System.ComponentModel.Component {
+    public partial class UsersTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -6940,7 +7122,7 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Користувач_ДеньTableAdapter() {
+        public UsersTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -7037,42 +7219,50 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Користувач_День";
-            tableMapping.ColumnMappings.Add("Логін", "Логін");
-            tableMapping.ColumnMappings.Add("ID дня", "ID дня");
+            tableMapping.DataSetTable = "Users";
+            tableMapping.ColumnMappings.Add("Login", "Login");
+            tableMapping.ColumnMappings.Add("Password", "Password");
+            tableMapping.ColumnMappings.Add("Name", "Name");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Користувач_День] WHERE (([Логін] = @Original_Логін) AND ([ID д" +
-                "ня] = @Original_ID_дня))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Users] WHERE (([Login] = @Original_Login) AND ((@IsNull_Passwo" +
+                "rd = 1 AND [Password] IS NULL) OR ([Password] = @Original_Password)) AND ((@IsNu" +
+                "ll_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Логін", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Логін", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_дня", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID дня", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Login", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Password", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Password", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Користувач_День] ([Логін], [ID дня]) VALUES (@Логін, @ID_дня);" +
-                "\r\nSELECT Логін, [ID дня] FROM Користувач_День WHERE ([ID дня] = @ID_дня) AND (Ло" +
-                "гін = @Логін)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Users] ([Login], [Password], [Name]) VALUES (@Login, @Password" +
+                ", @Name);\r\nSELECT Login, Password, Name FROM Users WHERE (Login = @Login)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Логін", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Логін", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_дня", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID дня", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Login", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Користувач_День] SET [Логін] = @Логін, [ID дня] = @ID_дня WHERE (([" +
-                "Логін] = @Original_Логін) AND ([ID дня] = @Original_ID_дня));\r\nSELECT Логін, [ID" +
-                " дня] FROM Користувач_День WHERE ([ID дня] = @ID_дня) AND (Логін = @Логін)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Users] SET [Login] = @Login, [Password] = @Password, [Name] = @Name WHERE (([Login] = @Original_Login) AND ((@IsNull_Password = 1 AND [Password] IS NULL) OR ([Password] = @Original_Password)) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)));
+SELECT Login, Password, Name FROM Users WHERE (Login = @Login)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Логін", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Логін", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_дня", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID дня", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Логін", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Логін", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_дня", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID дня", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Login", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Login", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Login", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Password", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Password", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Name", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.Gym_PlannerConnectionString;
+            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.NewGymPlannerConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7081,7 +7271,7 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Логін, [ID дня] FROM dbo.Користувач_День";
+            this._commandCollection[0].CommandText = "SELECT Login, Password, Name FROM dbo.Users";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7089,7 +7279,7 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSGymPlanner.Користувач_ДеньDataTable dataTable) {
+        public virtual int Fill(DSGymPlanner.UsersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7102,9 +7292,9 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSGymPlanner.Користувач_ДеньDataTable GetData() {
+        public virtual DSGymPlanner.UsersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DSGymPlanner.Користувач_ДеньDataTable dataTable = new DSGymPlanner.Користувач_ДеньDataTable();
+            DSGymPlanner.UsersDataTable dataTable = new DSGymPlanner.UsersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7112,7 +7302,7 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DSGymPlanner.Користувач_ДеньDataTable dataTable) {
+        public virtual int Update(DSGymPlanner.UsersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -7120,7 +7310,7 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DSGymPlanner dataSet) {
-            return this.Adapter.Update(dataSet, "Користувач_День");
+            return this.Adapter.Update(dataSet, "Users");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7142,352 +7332,29 @@ SELECT [ID дня], [ID тренування] FROM День_Тренування
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Логін, int Original_ID_дня) {
-            if ((Original_Логін == null)) {
-                throw new global::System.ArgumentNullException("Original_Логін");
+        public virtual int Delete(string Original_Login, string Original_Password, string Original_Name) {
+            if ((Original_Login == null)) {
+                throw new global::System.ArgumentNullException("Original_Login");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Логін));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Login));
             }
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ID_дня));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Логін, int ID_дня) {
-            if ((Логін == null)) {
-                throw new global::System.ArgumentNullException("Логін");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Логін));
-            }
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ID_дня));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Логін, int ID_дня, string Original_Логін, int Original_ID_дня) {
-            if ((Логін == null)) {
-                throw new global::System.ArgumentNullException("Логін");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Логін));
-            }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ID_дня));
-            if ((Original_Логін == null)) {
-                throw new global::System.ArgumentNullException("Original_Логін");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Логін));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID_дня));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Original_Логін, int Original_ID_дня) {
-            return this.Update(Original_Логін, Original_ID_дня, Original_Логін, Original_ID_дня);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ПідходиTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public ПідходиTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Підходи";
-            tableMapping.ColumnMappings.Add("ID підходу", "ID підходу");
-            tableMapping.ColumnMappings.Add("Кількість повторень", "Кількість повторень");
-            tableMapping.ColumnMappings.Add("Вага", "Вага");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Підходи] WHERE (([ID підходу] = @Original_ID_підходу) AND ((@IsNull_Кількість_повторень = 1 AND [Кількість повторень] IS NULL) OR ([Кількість повторень] = @Original_Кількість_повторень)) AND ((@IsNull_Вага = 1 AND [Вага] IS NULL) OR ([Вага] = @Original_Вага)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_підходу", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID підходу", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Кількість_повторень", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кількість повторень", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Кількість_повторень", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кількість повторень", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Вага", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Вага", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Вага", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Вага", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Підходи] ([ID підходу], [Кількість повторень], [Вага]) VALUES " +
-                "(@ID_підходу, @Кількість_повторень, @Вага);\r\nSELECT [ID підходу], [Кількість пов" +
-                "торень], Вага FROM Підходи WHERE ([ID підходу] = @ID_підходу)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_підходу", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID підходу", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Кількість_повторень", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кількість повторень", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Вага", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Вага", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Підходи] SET [ID підходу] = @ID_підходу, [Кількість повторень] = @Кількість_повторень, [Вага] = @Вага WHERE (([ID підходу] = @Original_ID_підходу) AND ((@IsNull_Кількість_повторень = 1 AND [Кількість повторень] IS NULL) OR ([Кількість повторень] = @Original_Кількість_повторень)) AND ((@IsNull_Вага = 1 AND [Вага] IS NULL) OR ([Вага] = @Original_Вага)));
-SELECT [ID підходу], [Кількість повторень], Вага FROM Підходи WHERE ([ID підходу] = @ID_підходу)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_підходу", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID підходу", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Кількість_повторень", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кількість повторень", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Вага", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Вага", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_підходу", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID підходу", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Кількість_повторень", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кількість повторень", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Кількість_повторень", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кількість повторень", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Вага", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Вага", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Вага", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Вага", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.Gym_PlannerConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [ID підходу], [Кількість повторень], Вага FROM dbo.Підходи";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSGymPlanner.ПідходиDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSGymPlanner.ПідходиDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            DSGymPlanner.ПідходиDataTable dataTable = new DSGymPlanner.ПідходиDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DSGymPlanner.ПідходиDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DSGymPlanner dataSet) {
-            return this.Adapter.Update(dataSet, "Підходи");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID_підходу, global::System.Nullable<int> Original_Кількість_повторень, global::System.Nullable<int> Original_Вага) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_підходу));
-            if ((Original_Кількість_повторень.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Кількість_повторень.Value));
-            }
-            else {
+            if ((Original_Password == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_Вага.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Вага.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Password));
+            }
+            if ((Original_Name == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Name));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7508,19 +7375,24 @@ SELECT [ID підходу], [Кількість повторень], Вага FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID_підходу, global::System.Nullable<int> Кількість_повторень, global::System.Nullable<int> Вага) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_підходу));
-            if ((Кількість_повторень.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Кількість_повторень.Value));
+        public virtual int Insert(string Login, string Password, string Name) {
+            if ((Login == null)) {
+                throw new global::System.ArgumentNullException("Login");
             }
             else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Login));
+            }
+            if ((Password == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((Вага.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Вага.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Password));
+            }
+            if ((Name == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Name));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7542,37 +7414,47 @@ SELECT [ID підходу], [Кількість повторень], Вага FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_підходу, global::System.Nullable<int> Кількість_повторень, global::System.Nullable<int> Вага, int Original_ID_підходу, global::System.Nullable<int> Original_Кількість_повторень, global::System.Nullable<int> Original_Вага) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_підходу));
-            if ((Кількість_повторень.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Кількість_повторень.Value));
+        public virtual int Update(string Login, string Password, string Name, string Original_Login, string Original_Password, string Original_Name) {
+            if ((Login == null)) {
+                throw new global::System.ArgumentNullException("Login");
             }
             else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Login));
+            }
+            if ((Password == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((Вага.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Вага.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Password));
+            }
+            if ((Name == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID_підходу));
-            if ((Original_Кількість_повторень.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Кількість_повторень.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Name));
+            }
+            if ((Original_Login == null)) {
+                throw new global::System.ArgumentNullException("Original_Login");
             }
             else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Login));
+            }
+            if ((Original_Password == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((Original_Вага.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Вага.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Password));
+            }
+            if ((Original_Name == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Name));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7593,8 +7475,8 @@ SELECT [ID підходу], [Кількість повторень], Вага FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> Кількість_повторень, global::System.Nullable<int> Вага, int Original_ID_підходу, global::System.Nullable<int> Original_Кількість_повторень, global::System.Nullable<int> Original_Вага) {
-            return this.Update(Original_ID_підходу, Кількість_повторень, Вага, Original_ID_підходу, Original_Кількість_повторень, Original_Вага);
+        public virtual int Update(string Password, string Name, string Original_Login, string Original_Password, string Original_Name) {
+            return this.Update(Original_Login, Password, Name, Original_Login, Original_Password, Original_Name);
         }
     }
     
@@ -7607,7 +7489,7 @@ SELECT [ID підходу], [Кількість повторень], Вага FR
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ТренуванняTableAdapter : global::System.ComponentModel.Component {
+    public partial class Workout_ExerciseTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -7621,7 +7503,7 @@ SELECT [ID підходу], [Кількість повторень], Вага FR
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public ТренуванняTableAdapter() {
+        public Workout_ExerciseTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -7718,44 +7600,41 @@ SELECT [ID підходу], [Кількість повторень], Вага FR
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Тренування";
-            tableMapping.ColumnMappings.Add("ID тренування", "ID тренування");
-            tableMapping.ColumnMappings.Add("Кількість підходів", "Кількість підходів");
+            tableMapping.DataSetTable = "Workout_Exercise";
+            tableMapping.ColumnMappings.Add("Name_Exercise", "Name_Exercise");
+            tableMapping.ColumnMappings.Add("ID_Workout", "ID_Workout");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Тренування] WHERE (([ID тренування] = @Original_ID_тренування)" +
-                " AND ((@IsNull_Кількість_підходів = 1 AND [Кількість підходів] IS NULL) OR ([Кіл" +
-                "ькість підходів] = @Original_Кількість_підходів)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Workout_Exercise] WHERE (([Name_Exercise] = @Original_Name_Exe" +
+                "rcise) AND ([ID_Workout] = @Original_ID_Workout))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_тренування", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID тренування", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Кількість_підходів", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кількість підходів", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Кількість_підходів", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кількість підходів", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_Exercise", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Exercise", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Workout", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Workout", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Тренування] ([ID тренування], [Кількість підходів]) VALUES (@I" +
-                "D_тренування, @Кількість_підходів);\r\nSELECT [ID тренування], [Кількість підходів" +
-                "] FROM Тренування WHERE ([ID тренування] = @ID_тренування)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Workout_Exercise] ([Name_Exercise], [ID_Workout]) VALUES (@Nam" +
+                "e_Exercise, @ID_Workout);\r\nSELECT Name_Exercise, ID_Workout FROM Workout_Exercis" +
+                "e WHERE (ID_Workout = @ID_Workout) AND (Name_Exercise = @Name_Exercise)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_тренування", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID тренування", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Кількість_підходів", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кількість підходів", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_Exercise", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Exercise", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Workout", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Workout", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Тренування] SET [ID тренування] = @ID_тренування, [Кількість підходів] = @Кількість_підходів WHERE (([ID тренування] = @Original_ID_тренування) AND ((@IsNull_Кількість_підходів = 1 AND [Кількість підходів] IS NULL) OR ([Кількість підходів] = @Original_Кількість_підходів)));
-SELECT [ID тренування], [Кількість підходів] FROM Тренування WHERE ([ID тренування] = @ID_тренування)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Workout_Exercise] SET [Name_Exercise] = @Name_Exercise, [ID_Workout] = @ID_Workout WHERE (([Name_Exercise] = @Original_Name_Exercise) AND ([ID_Workout] = @Original_ID_Workout));
+SELECT Name_Exercise, ID_Workout FROM Workout_Exercise WHERE (ID_Workout = @ID_Workout) AND (Name_Exercise = @Name_Exercise)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_тренування", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID тренування", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Кількість_підходів", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кількість підходів", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_тренування", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID тренування", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Кількість_підходів", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кількість підходів", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Кількість_підходів", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Кількість підходів", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_Exercise", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Exercise", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Workout", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Workout", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_Exercise", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Exercise", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Workout", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Workout", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.Gym_PlannerConnectionString;
+            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.NewGymPlannerConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7764,7 +7643,7 @@ SELECT [ID тренування], [Кількість підходів] FROM Т�
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [ID тренування], [Кількість підходів] FROM dbo.Тренування";
+            this._commandCollection[0].CommandText = "SELECT Name_Exercise, ID_Workout FROM dbo.Workout_Exercise";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7772,7 +7651,7 @@ SELECT [ID тренування], [Кількість підходів] FROM Т�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSGymPlanner.ТренуванняDataTable dataTable) {
+        public virtual int Fill(DSGymPlanner.Workout_ExerciseDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7785,9 +7664,9 @@ SELECT [ID тренування], [Кількість підходів] FROM Т�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSGymPlanner.ТренуванняDataTable GetData() {
+        public virtual DSGymPlanner.Workout_ExerciseDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DSGymPlanner.ТренуванняDataTable dataTable = new DSGymPlanner.ТренуванняDataTable();
+            DSGymPlanner.Workout_ExerciseDataTable dataTable = new DSGymPlanner.Workout_ExerciseDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7795,7 +7674,7 @@ SELECT [ID тренування], [Кількість підходів] FROM Т�
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DSGymPlanner.ТренуванняDataTable dataTable) {
+        public virtual int Update(DSGymPlanner.Workout_ExerciseDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -7803,7 +7682,7 @@ SELECT [ID тренування], [Кількість підходів] FROM Т�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DSGymPlanner dataSet) {
-            return this.Adapter.Update(dataSet, "Тренування");
+            return this.Adapter.Update(dataSet, "Workout_Exercise");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7825,16 +7704,14 @@ SELECT [ID тренування], [Кількість підходів] FROM Т�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID_тренування, global::System.Nullable<int> Original_Кількість_підходів) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_тренування));
-            if ((Original_Кількість_підходів.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Кількість_підходів.Value));
+        public virtual int Delete(string Original_Name_Exercise, int Original_ID_Workout) {
+            if ((Original_Name_Exercise == null)) {
+                throw new global::System.ArgumentNullException("Original_Name_Exercise");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Name_Exercise));
             }
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ID_Workout));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7855,14 +7732,14 @@ SELECT [ID тренування], [Кількість підходів] FROM Т�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID_тренування, global::System.Nullable<int> Кількість_підходів) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_тренування));
-            if ((Кількість_підходів.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Кількість_підходів.Value));
+        public virtual int Insert(string Name_Exercise, int ID_Workout) {
+            if ((Name_Exercise == null)) {
+                throw new global::System.ArgumentNullException("Name_Exercise");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Name_Exercise));
             }
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ID_Workout));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7883,23 +7760,21 @@ SELECT [ID тренування], [Кількість підходів] FROM Т�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_тренування, global::System.Nullable<int> Кількість_підходів, int Original_ID_тренування, global::System.Nullable<int> Original_Кількість_підходів) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_тренування));
-            if ((Кількість_підходів.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Кількість_підходів.Value));
+        public virtual int Update(string Name_Exercise, int ID_Workout, string Original_Name_Exercise, int Original_ID_Workout) {
+            if ((Name_Exercise == null)) {
+                throw new global::System.ArgumentNullException("Name_Exercise");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name_Exercise));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID_тренування));
-            if ((Original_Кількість_підходів.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Кількість_підходів.Value));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ID_Workout));
+            if ((Original_Name_Exercise == null)) {
+                throw new global::System.ArgumentNullException("Original_Name_Exercise");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Name_Exercise));
             }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID_Workout));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7920,8 +7795,8 @@ SELECT [ID тренування], [Кількість підходів] FROM Т�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> Кількість_підходів, int Original_ID_тренування, global::System.Nullable<int> Original_Кількість_підходів) {
-            return this.Update(Original_ID_тренування, Кількість_підходів, Original_ID_тренування, Original_Кількість_підходів);
+        public virtual int Update(string Original_Name_Exercise, int Original_ID_Workout) {
+            return this.Update(Original_Name_Exercise, Original_ID_Workout, Original_Name_Exercise, Original_ID_Workout);
         }
     }
     
@@ -7934,7 +7809,7 @@ SELECT [ID тренування], [Кількість підходів] FROM Т�
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Тренування_ВправаTableAdapter : global::System.ComponentModel.Component {
+    public partial class Workout_SetTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -7948,7 +7823,7 @@ SELECT [ID тренування], [Кількість підходів] FROM Т�
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Тренування_ВправаTableAdapter() {
+        public Workout_SetTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -8045,42 +7920,41 @@ SELECT [ID тренування], [Кількість підходів] FROM Т�
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Тренування_Вправа";
-            tableMapping.ColumnMappings.Add("Назва вправи", "Назва вправи");
-            tableMapping.ColumnMappings.Add("ID тренування", "ID тренування");
+            tableMapping.DataSetTable = "Workout_Set";
+            tableMapping.ColumnMappings.Add("ID_Workout", "ID_Workout");
+            tableMapping.ColumnMappings.Add("ID_Set", "ID_Set");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Тренування_Вправа] WHERE (([Назва вправи] = @Original_Назва_вп" +
-                "рави) AND ([ID тренування] = @Original_ID_тренування))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Workout_Set] WHERE (([ID_Workout] = @Original_ID_Workout) AND " +
+                "([ID_Set] = @Original_ID_Set))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Назва_вправи", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва вправи", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_тренування", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID тренування", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Workout", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Workout", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Set", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Set", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Тренування_Вправа] ([Назва вправи], [ID тренування]) VALUES (@" +
-                "Назва_вправи, @ID_тренування);\r\nSELECT [Назва вправи], [ID тренування] FROM Трен" +
-                "ування_Вправа WHERE ([ID тренування] = @ID_тренування) AND ([Назва вправи] = @На" +
-                "зва_вправи)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Workout_Set] ([ID_Workout], [ID_Set]) VALUES (@ID_Workout, @ID" +
+                "_Set);\r\nSELECT ID_Workout, ID_Set FROM Workout_Set WHERE (ID_Set = @ID_Set) AND " +
+                "(ID_Workout = @ID_Workout)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Назва_вправи", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва вправи", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_тренування", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID тренування", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Workout", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Workout", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Set", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Set", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Тренування_Вправа] SET [Назва вправи] = @Назва_вправи, [ID тренування] = @ID_тренування WHERE (([Назва вправи] = @Original_Назва_вправи) AND ([ID тренування] = @Original_ID_тренування));
-SELECT [Назва вправи], [ID тренування] FROM Тренування_Вправа WHERE ([ID тренування] = @ID_тренування) AND ([Назва вправи] = @Назва_вправи)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Workout_Set] SET [ID_Workout] = @ID_Workout, [ID_Set] = @ID_Set WHERE (([ID_Workout] = @Original_ID_Workout) AND ([ID_Set] = @Original_ID_Set));
+SELECT ID_Workout, ID_Set FROM Workout_Set WHERE (ID_Set = @ID_Set) AND (ID_Workout = @ID_Workout)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Назва_вправи", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва вправи", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_тренування", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID тренування", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Назва_вправи", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Назва вправи", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_тренування", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID тренування", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Workout", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Workout", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Set", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Set", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Workout", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Workout", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Set", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Set", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.Gym_PlannerConnectionString;
+            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.NewGymPlannerConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8089,7 +7963,7 @@ SELECT [Назва вправи], [ID тренування] FROM Тренува�
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Назва вправи], [ID тренування] FROM dbo.Тренування_Вправа";
+            this._commandCollection[0].CommandText = "SELECT ID_Workout, ID_Set FROM dbo.Workout_Set";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8097,7 +7971,7 @@ SELECT [Назва вправи], [ID тренування] FROM Тренува�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSGymPlanner.Тренування_ВправаDataTable dataTable) {
+        public virtual int Fill(DSGymPlanner.Workout_SetDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8110,9 +7984,9 @@ SELECT [Назва вправи], [ID тренування] FROM Тренува�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSGymPlanner.Тренування_ВправаDataTable GetData() {
+        public virtual DSGymPlanner.Workout_SetDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DSGymPlanner.Тренування_ВправаDataTable dataTable = new DSGymPlanner.Тренування_ВправаDataTable();
+            DSGymPlanner.Workout_SetDataTable dataTable = new DSGymPlanner.Workout_SetDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8120,7 +7994,7 @@ SELECT [Назва вправи], [ID тренування] FROM Тренува�
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DSGymPlanner.Тренування_ВправаDataTable dataTable) {
+        public virtual int Update(DSGymPlanner.Workout_SetDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -8128,7 +8002,7 @@ SELECT [Назва вправи], [ID тренування] FROM Тренува�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DSGymPlanner dataSet) {
-            return this.Adapter.Update(dataSet, "Тренування_Вправа");
+            return this.Adapter.Update(dataSet, "Workout_Set");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8150,14 +8024,9 @@ SELECT [Назва вправи], [ID тренування] FROM Тренува�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Назва_вправи, int Original_ID_тренування) {
-            if ((Original_Назва_вправи == null)) {
-                throw new global::System.ArgumentNullException("Original_Назва_вправи");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Назва_вправи));
-            }
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ID_тренування));
+        public virtual int Delete(int Original_ID_Workout, int Original_ID_Set) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Workout));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ID_Set));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8178,14 +8047,9 @@ SELECT [Назва вправи], [ID тренування] FROM Тренува�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Назва_вправи, int ID_тренування) {
-            if ((Назва_вправи == null)) {
-                throw new global::System.ArgumentNullException("Назва_вправи");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Назва_вправи));
-            }
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ID_тренування));
+        public virtual int Insert(int ID_Workout, int ID_Set) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_Workout));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ID_Set));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8206,21 +8070,11 @@ SELECT [Назва вправи], [ID тренування] FROM Тренува�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Назва_вправи, int ID_тренування, string Original_Назва_вправи, int Original_ID_тренування) {
-            if ((Назва_вправи == null)) {
-                throw new global::System.ArgumentNullException("Назва_вправи");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Назва_вправи));
-            }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ID_тренування));
-            if ((Original_Назва_вправи == null)) {
-                throw new global::System.ArgumentNullException("Original_Назва_вправи");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Назва_вправи));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID_тренування));
+        public virtual int Update(int ID_Workout, int ID_Set, int Original_ID_Workout, int Original_ID_Set) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_Workout));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ID_Set));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID_Workout));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID_Set));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8241,8 +8095,8 @@ SELECT [Назва вправи], [ID тренування] FROM Тренува�
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Original_Назва_вправи, int Original_ID_тренування) {
-            return this.Update(Original_Назва_вправи, Original_ID_тренування, Original_Назва_вправи, Original_ID_тренування);
+        public virtual int Update(int Original_ID_Workout, int Original_ID_Set) {
+            return this.Update(Original_ID_Workout, Original_ID_Set, Original_ID_Workout, Original_ID_Set);
         }
     }
     
@@ -8255,7 +8109,7 @@ SELECT [Назва вправи], [ID тренування] FROM Тренува�
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Тренування_ПідхідTableAdapter : global::System.ComponentModel.Component {
+    public partial class WorkoutsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -8269,7 +8123,7 @@ SELECT [Назва вправи], [ID тренування] FROM Тренува�
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Тренування_ПідхідTableAdapter() {
+        public WorkoutsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -8366,42 +8220,40 @@ SELECT [Назва вправи], [ID тренування] FROM Тренува�
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Тренування_Підхід";
-            tableMapping.ColumnMappings.Add("ID тренування", "ID тренування");
-            tableMapping.ColumnMappings.Add("ID підходу", "ID підходу");
+            tableMapping.DataSetTable = "Workouts";
+            tableMapping.ColumnMappings.Add("ID_Workout", "ID_Workout");
+            tableMapping.ColumnMappings.Add("Num_Sets", "Num_Sets");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Тренування_Підхід] WHERE (([ID тренування] = @Original_ID_трен" +
-                "ування) AND ([ID підходу] = @Original_ID_підходу))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Workouts] WHERE (([ID_Workout] = @Original_ID_Workout) AND ([N" +
+                "um_Sets] = @Original_Num_Sets))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_тренування", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID тренування", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_підходу", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID підходу", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Workout", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Workout", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Num_Sets", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Sets", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Тренування_Підхід] ([ID тренування], [ID підходу]) VALUES (@ID" +
-                "_тренування, @ID_підходу);\r\nSELECT [ID тренування], [ID підходу] FROM Тренування" +
-                "_Підхід WHERE ([ID підходу] = @ID_підходу) AND ([ID тренування] = @ID_тренування" +
-                ")";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Workouts] ([Num_Sets]) VALUES (@Num_Sets);\r\nSELECT ID_Workout," +
+                " Num_Sets FROM Workouts WHERE (ID_Workout = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_тренування", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID тренування", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_підходу", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID підходу", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num_Sets", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Sets", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Тренування_Підхід] SET [ID тренування] = @ID_тренування, [ID підходу] = @ID_підходу WHERE (([ID тренування] = @Original_ID_тренування) AND ([ID підходу] = @Original_ID_підходу));
-SELECT [ID тренування], [ID підходу] FROM Тренування_Підхід WHERE ([ID підходу] = @ID_підходу) AND ([ID тренування] = @ID_тренування)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Workouts] SET [Num_Sets] = @Num_Sets WHERE (([ID_Workout] = @Origin" +
+                "al_ID_Workout) AND ([Num_Sets] = @Original_Num_Sets));\r\nSELECT ID_Workout, Num_S" +
+                "ets FROM Workouts WHERE (ID_Workout = @ID_Workout)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_тренування", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID тренування", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_підходу", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID підходу", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_тренування", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID тренування", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_підходу", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID підходу", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Num_Sets", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Sets", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Workout", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Workout", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Num_Sets", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Sets", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID_Workout", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Workout", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.Gym_PlannerConnectionString;
+            this._connection.ConnectionString = global::LibraryGymPlanner.Properties.Settings.Default.NewGymPlannerConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8410,7 +8262,7 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [ID тренування], [ID підходу] FROM dbo.Тренування_Підхід";
+            this._commandCollection[0].CommandText = "SELECT ID_Workout, Num_Sets FROM dbo.Workouts";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8418,7 +8270,7 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DSGymPlanner.Тренування_ПідхідDataTable dataTable) {
+        public virtual int Fill(DSGymPlanner.WorkoutsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8431,9 +8283,9 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DSGymPlanner.Тренування_ПідхідDataTable GetData() {
+        public virtual DSGymPlanner.WorkoutsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DSGymPlanner.Тренування_ПідхідDataTable dataTable = new DSGymPlanner.Тренування_ПідхідDataTable();
+            DSGymPlanner.WorkoutsDataTable dataTable = new DSGymPlanner.WorkoutsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8441,7 +8293,7 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DSGymPlanner.Тренування_ПідхідDataTable dataTable) {
+        public virtual int Update(DSGymPlanner.WorkoutsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -8449,7 +8301,7 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DSGymPlanner dataSet) {
-            return this.Adapter.Update(dataSet, "Тренування_Підхід");
+            return this.Adapter.Update(dataSet, "Workouts");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8471,9 +8323,9 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID_тренування, int Original_ID_підходу) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_тренування));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ID_підходу));
+        public virtual int Delete(int Original_ID_Workout, int Original_Num_Sets) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID_Workout));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Num_Sets));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8494,9 +8346,8 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID_тренування, int ID_підходу) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID_тренування));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(ID_підходу));
+        public virtual int Insert(int Num_Sets) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Num_Sets));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8517,11 +8368,11 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID_тренування, int ID_підходу, int Original_ID_тренування, int Original_ID_підходу) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID_тренування));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(ID_підходу));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ID_тренування));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_ID_підходу));
+        public virtual int Update(int Num_Sets, int Original_ID_Workout, int Original_Num_Sets, int ID_Workout) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Num_Sets));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_ID_Workout));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_Num_Sets));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(ID_Workout));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8542,8 +8393,8 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Original_ID_тренування, int Original_ID_підходу) {
-            return this.Update(Original_ID_тренування, Original_ID_підходу, Original_ID_тренування, Original_ID_підходу);
+        public virtual int Update(int Num_Sets, int Original_ID_Workout, int Original_Num_Sets) {
+            return this.Update(Num_Sets, Original_ID_Workout, Original_Num_Sets, Original_ID_Workout);
         }
     }
     
@@ -8559,27 +8410,27 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         
         private UpdateOrderOption _updateOrder;
         
-        private КористувачіTableAdapter _користувачіTableAdapter;
+        private Day_WorkoutTableAdapter _day_WorkoutTableAdapter;
         
-        private Вправа_ГрупаTableAdapter _вправа_ГрупаTableAdapter;
+        private DaysTableAdapter _daysTableAdapter;
         
-        private ВправиTableAdapter _вправиTableAdapter;
+        private Exercise_MuscleGroupTableAdapter _exercise_MuscleGroupTableAdapter;
         
-        private Групи_м_язівTableAdapter _групи_м_язівTableAdapter;
+        private ExercisesTableAdapter _exercisesTableAdapter;
         
-        private День_ТренуванняTableAdapter _день_ТренуванняTableAdapter;
+        private MuscleGroupsTableAdapter _muscleGroupsTableAdapter;
         
-        private ДніTableAdapter _дніTableAdapter;
+        private SetsTableAdapter _setsTableAdapter;
         
-        private Користувач_ДеньTableAdapter _користувач_ДеньTableAdapter;
+        private User_DayTableAdapter _user_DayTableAdapter;
         
-        private ПідходиTableAdapter _підходиTableAdapter;
+        private UsersTableAdapter _usersTableAdapter;
         
-        private ТренуванняTableAdapter _тренуванняTableAdapter;
+        private Workout_ExerciseTableAdapter _workout_ExerciseTableAdapter;
         
-        private Тренування_ВправаTableAdapter _тренування_ВправаTableAdapter;
+        private Workout_SetTableAdapter _workout_SetTableAdapter;
         
-        private Тренування_ПідхідTableAdapter _тренування_ПідхідTableAdapter;
+        private WorkoutsTableAdapter _workoutsTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -8601,12 +8452,12 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public КористувачіTableAdapter КористувачіTableAdapter {
+        public Day_WorkoutTableAdapter Day_WorkoutTableAdapter {
             get {
-                return this._користувачіTableAdapter;
+                return this._day_WorkoutTableAdapter;
             }
             set {
-                this._користувачіTableAdapter = value;
+                this._day_WorkoutTableAdapter = value;
             }
         }
         
@@ -8615,12 +8466,12 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Вправа_ГрупаTableAdapter Вправа_ГрупаTableAdapter {
+        public DaysTableAdapter DaysTableAdapter {
             get {
-                return this._вправа_ГрупаTableAdapter;
+                return this._daysTableAdapter;
             }
             set {
-                this._вправа_ГрупаTableAdapter = value;
+                this._daysTableAdapter = value;
             }
         }
         
@@ -8629,12 +8480,12 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ВправиTableAdapter ВправиTableAdapter {
+        public Exercise_MuscleGroupTableAdapter Exercise_MuscleGroupTableAdapter {
             get {
-                return this._вправиTableAdapter;
+                return this._exercise_MuscleGroupTableAdapter;
             }
             set {
-                this._вправиTableAdapter = value;
+                this._exercise_MuscleGroupTableAdapter = value;
             }
         }
         
@@ -8643,12 +8494,12 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Групи_м_язівTableAdapter Групи_м_язівTableAdapter {
+        public ExercisesTableAdapter ExercisesTableAdapter {
             get {
-                return this._групи_м_язівTableAdapter;
+                return this._exercisesTableAdapter;
             }
             set {
-                this._групи_м_язівTableAdapter = value;
+                this._exercisesTableAdapter = value;
             }
         }
         
@@ -8657,12 +8508,12 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public День_ТренуванняTableAdapter День_ТренуванняTableAdapter {
+        public MuscleGroupsTableAdapter MuscleGroupsTableAdapter {
             get {
-                return this._день_ТренуванняTableAdapter;
+                return this._muscleGroupsTableAdapter;
             }
             set {
-                this._день_ТренуванняTableAdapter = value;
+                this._muscleGroupsTableAdapter = value;
             }
         }
         
@@ -8671,12 +8522,12 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ДніTableAdapter ДніTableAdapter {
+        public SetsTableAdapter SetsTableAdapter {
             get {
-                return this._дніTableAdapter;
+                return this._setsTableAdapter;
             }
             set {
-                this._дніTableAdapter = value;
+                this._setsTableAdapter = value;
             }
         }
         
@@ -8685,12 +8536,12 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Користувач_ДеньTableAdapter Користувач_ДеньTableAdapter {
+        public User_DayTableAdapter User_DayTableAdapter {
             get {
-                return this._користувач_ДеньTableAdapter;
+                return this._user_DayTableAdapter;
             }
             set {
-                this._користувач_ДеньTableAdapter = value;
+                this._user_DayTableAdapter = value;
             }
         }
         
@@ -8699,12 +8550,12 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ПідходиTableAdapter ПідходиTableAdapter {
+        public UsersTableAdapter UsersTableAdapter {
             get {
-                return this._підходиTableAdapter;
+                return this._usersTableAdapter;
             }
             set {
-                this._підходиTableAdapter = value;
+                this._usersTableAdapter = value;
             }
         }
         
@@ -8713,12 +8564,12 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ТренуванняTableAdapter ТренуванняTableAdapter {
+        public Workout_ExerciseTableAdapter Workout_ExerciseTableAdapter {
             get {
-                return this._тренуванняTableAdapter;
+                return this._workout_ExerciseTableAdapter;
             }
             set {
-                this._тренуванняTableAdapter = value;
+                this._workout_ExerciseTableAdapter = value;
             }
         }
         
@@ -8727,12 +8578,12 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Тренування_ВправаTableAdapter Тренування_ВправаTableAdapter {
+        public Workout_SetTableAdapter Workout_SetTableAdapter {
             get {
-                return this._тренування_ВправаTableAdapter;
+                return this._workout_SetTableAdapter;
             }
             set {
-                this._тренування_ВправаTableAdapter = value;
+                this._workout_SetTableAdapter = value;
             }
         }
         
@@ -8741,12 +8592,12 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Тренування_ПідхідTableAdapter Тренування_ПідхідTableAdapter {
+        public WorkoutsTableAdapter WorkoutsTableAdapter {
             get {
-                return this._тренування_ПідхідTableAdapter;
+                return this._workoutsTableAdapter;
             }
             set {
-                this._тренування_ПідхідTableAdapter = value;
+                this._workoutsTableAdapter = value;
             }
         }
         
@@ -8769,49 +8620,49 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._користувачіTableAdapter != null) 
-                            && (this._користувачіTableAdapter.Connection != null))) {
-                    return this._користувачіTableAdapter.Connection;
+                if (((this._day_WorkoutTableAdapter != null) 
+                            && (this._day_WorkoutTableAdapter.Connection != null))) {
+                    return this._day_WorkoutTableAdapter.Connection;
                 }
-                if (((this._вправа_ГрупаTableAdapter != null) 
-                            && (this._вправа_ГрупаTableAdapter.Connection != null))) {
-                    return this._вправа_ГрупаTableAdapter.Connection;
+                if (((this._daysTableAdapter != null) 
+                            && (this._daysTableAdapter.Connection != null))) {
+                    return this._daysTableAdapter.Connection;
                 }
-                if (((this._вправиTableAdapter != null) 
-                            && (this._вправиTableAdapter.Connection != null))) {
-                    return this._вправиTableAdapter.Connection;
+                if (((this._exercise_MuscleGroupTableAdapter != null) 
+                            && (this._exercise_MuscleGroupTableAdapter.Connection != null))) {
+                    return this._exercise_MuscleGroupTableAdapter.Connection;
                 }
-                if (((this._групи_м_язівTableAdapter != null) 
-                            && (this._групи_м_язівTableAdapter.Connection != null))) {
-                    return this._групи_м_язівTableAdapter.Connection;
+                if (((this._exercisesTableAdapter != null) 
+                            && (this._exercisesTableAdapter.Connection != null))) {
+                    return this._exercisesTableAdapter.Connection;
                 }
-                if (((this._день_ТренуванняTableAdapter != null) 
-                            && (this._день_ТренуванняTableAdapter.Connection != null))) {
-                    return this._день_ТренуванняTableAdapter.Connection;
+                if (((this._muscleGroupsTableAdapter != null) 
+                            && (this._muscleGroupsTableAdapter.Connection != null))) {
+                    return this._muscleGroupsTableAdapter.Connection;
                 }
-                if (((this._дніTableAdapter != null) 
-                            && (this._дніTableAdapter.Connection != null))) {
-                    return this._дніTableAdapter.Connection;
+                if (((this._setsTableAdapter != null) 
+                            && (this._setsTableAdapter.Connection != null))) {
+                    return this._setsTableAdapter.Connection;
                 }
-                if (((this._користувач_ДеньTableAdapter != null) 
-                            && (this._користувач_ДеньTableAdapter.Connection != null))) {
-                    return this._користувач_ДеньTableAdapter.Connection;
+                if (((this._user_DayTableAdapter != null) 
+                            && (this._user_DayTableAdapter.Connection != null))) {
+                    return this._user_DayTableAdapter.Connection;
                 }
-                if (((this._підходиTableAdapter != null) 
-                            && (this._підходиTableAdapter.Connection != null))) {
-                    return this._підходиTableAdapter.Connection;
+                if (((this._usersTableAdapter != null) 
+                            && (this._usersTableAdapter.Connection != null))) {
+                    return this._usersTableAdapter.Connection;
                 }
-                if (((this._тренуванняTableAdapter != null) 
-                            && (this._тренуванняTableAdapter.Connection != null))) {
-                    return this._тренуванняTableAdapter.Connection;
+                if (((this._workout_ExerciseTableAdapter != null) 
+                            && (this._workout_ExerciseTableAdapter.Connection != null))) {
+                    return this._workout_ExerciseTableAdapter.Connection;
                 }
-                if (((this._тренування_ВправаTableAdapter != null) 
-                            && (this._тренування_ВправаTableAdapter.Connection != null))) {
-                    return this._тренування_ВправаTableAdapter.Connection;
+                if (((this._workout_SetTableAdapter != null) 
+                            && (this._workout_SetTableAdapter.Connection != null))) {
+                    return this._workout_SetTableAdapter.Connection;
                 }
-                if (((this._тренування_ПідхідTableAdapter != null) 
-                            && (this._тренування_ПідхідTableAdapter.Connection != null))) {
-                    return this._тренування_ПідхідTableAdapter.Connection;
+                if (((this._workoutsTableAdapter != null) 
+                            && (this._workoutsTableAdapter.Connection != null))) {
+                    return this._workoutsTableAdapter.Connection;
                 }
                 return null;
             }
@@ -8826,37 +8677,37 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._користувачіTableAdapter != null)) {
+                if ((this._day_WorkoutTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._вправа_ГрупаTableAdapter != null)) {
+                if ((this._daysTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._вправиTableAdapter != null)) {
+                if ((this._exercise_MuscleGroupTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._групи_м_язівTableAdapter != null)) {
+                if ((this._exercisesTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._день_ТренуванняTableAdapter != null)) {
+                if ((this._muscleGroupsTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._дніTableAdapter != null)) {
+                if ((this._setsTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._користувач_ДеньTableAdapter != null)) {
+                if ((this._user_DayTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._підходиTableAdapter != null)) {
+                if ((this._usersTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._тренуванняTableAdapter != null)) {
+                if ((this._workout_ExerciseTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._тренування_ВправаTableAdapter != null)) {
+                if ((this._workout_SetTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._тренування_ПідхідTableAdapter != null)) {
+                if ((this._workoutsTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -8870,102 +8721,102 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(DSGymPlanner dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._користувачіTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Користувачі.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._daysTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Days.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._користувачіTableAdapter.Update(updatedRows));
+                    result = (result + this._daysTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._вправиTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Вправи.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._exercisesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Exercises.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._вправиTableAdapter.Update(updatedRows));
+                    result = (result + this._exercisesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._групи_м_язівTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet._Групи_м_язів.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._muscleGroupsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.MuscleGroups.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._групи_м_язівTableAdapter.Update(updatedRows));
+                    result = (result + this._muscleGroupsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._дніTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Дні.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._setsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Sets.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._дніTableAdapter.Update(updatedRows));
+                    result = (result + this._setsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._підходиTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Підходи.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._usersTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._підходиTableAdapter.Update(updatedRows));
+                    result = (result + this._usersTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._тренуванняTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Тренування.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._workoutsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Workouts.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._тренуванняTableAdapter.Update(updatedRows));
+                    result = (result + this._workoutsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._вправа_ГрупаTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Вправа_Група.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._day_WorkoutTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Day_Workout.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._вправа_ГрупаTableAdapter.Update(updatedRows));
+                    result = (result + this._day_WorkoutTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._день_ТренуванняTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.День_Тренування.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._exercise_MuscleGroupTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Exercise_MuscleGroup.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._день_ТренуванняTableAdapter.Update(updatedRows));
+                    result = (result + this._exercise_MuscleGroupTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._користувач_ДеньTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Користувач_День.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._user_DayTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.User_Day.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._користувач_ДеньTableAdapter.Update(updatedRows));
+                    result = (result + this._user_DayTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._тренування_ВправаTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Тренування_Вправа.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._workout_ExerciseTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Workout_Exercise.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._тренування_ВправаTableAdapter.Update(updatedRows));
+                    result = (result + this._workout_ExerciseTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._тренування_ПідхідTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Тренування_Підхід.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._workout_SetTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Workout_Set.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._тренування_ПідхідTableAdapter.Update(updatedRows));
+                    result = (result + this._workout_SetTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -8979,91 +8830,91 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(DSGymPlanner dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._користувачіTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Користувачі.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._daysTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Days.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._користувачіTableAdapter.Update(addedRows));
+                    result = (result + this._daysTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._вправиTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Вправи.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._exercisesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Exercises.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._вправиTableAdapter.Update(addedRows));
+                    result = (result + this._exercisesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._групи_м_язівTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet._Групи_м_язів.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._muscleGroupsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.MuscleGroups.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._групи_м_язівTableAdapter.Update(addedRows));
+                    result = (result + this._muscleGroupsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._дніTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Дні.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._setsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Sets.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._дніTableAdapter.Update(addedRows));
+                    result = (result + this._setsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._підходиTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Підходи.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._usersTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._підходиTableAdapter.Update(addedRows));
+                    result = (result + this._usersTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._тренуванняTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Тренування.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._workoutsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Workouts.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._тренуванняTableAdapter.Update(addedRows));
+                    result = (result + this._workoutsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._вправа_ГрупаTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Вправа_Група.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._day_WorkoutTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Day_Workout.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._вправа_ГрупаTableAdapter.Update(addedRows));
+                    result = (result + this._day_WorkoutTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._день_ТренуванняTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.День_Тренування.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._exercise_MuscleGroupTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Exercise_MuscleGroup.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._день_ТренуванняTableAdapter.Update(addedRows));
+                    result = (result + this._exercise_MuscleGroupTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._користувач_ДеньTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Користувач_День.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._user_DayTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.User_Day.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._користувач_ДеньTableAdapter.Update(addedRows));
+                    result = (result + this._user_DayTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._тренування_ВправаTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Тренування_Вправа.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._workout_ExerciseTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Workout_Exercise.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._тренування_ВправаTableAdapter.Update(addedRows));
+                    result = (result + this._workout_ExerciseTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._тренування_ПідхідTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Тренування_Підхід.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._workout_SetTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Workout_Set.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._тренування_ПідхідTableAdapter.Update(addedRows));
+                    result = (result + this._workout_SetTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -9077,91 +8928,91 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(DSGymPlanner dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._тренування_ПідхідTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Тренування_Підхід.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._workout_SetTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Workout_Set.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._тренування_ПідхідTableAdapter.Update(deletedRows));
+                    result = (result + this._workout_SetTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._тренування_ВправаTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Тренування_Вправа.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._workout_ExerciseTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Workout_Exercise.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._тренування_ВправаTableAdapter.Update(deletedRows));
+                    result = (result + this._workout_ExerciseTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._користувач_ДеньTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Користувач_День.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._user_DayTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.User_Day.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._користувач_ДеньTableAdapter.Update(deletedRows));
+                    result = (result + this._user_DayTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._день_ТренуванняTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.День_Тренування.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._exercise_MuscleGroupTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Exercise_MuscleGroup.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._день_ТренуванняTableAdapter.Update(deletedRows));
+                    result = (result + this._exercise_MuscleGroupTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._вправа_ГрупаTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Вправа_Група.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._day_WorkoutTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Day_Workout.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._вправа_ГрупаTableAdapter.Update(deletedRows));
+                    result = (result + this._day_WorkoutTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._тренуванняTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Тренування.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._workoutsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Workouts.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._тренуванняTableAdapter.Update(deletedRows));
+                    result = (result + this._workoutsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._підходиTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Підходи.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._usersTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._підходиTableAdapter.Update(deletedRows));
+                    result = (result + this._usersTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._дніTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Дні.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._setsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Sets.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._дніTableAdapter.Update(deletedRows));
+                    result = (result + this._setsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._групи_м_язівTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet._Групи_м_язів.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._muscleGroupsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.MuscleGroups.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._групи_м_язівTableAdapter.Update(deletedRows));
+                    result = (result + this._muscleGroupsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._вправиTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Вправи.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._exercisesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Exercises.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._вправиTableAdapter.Update(deletedRows));
+                    result = (result + this._exercisesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._користувачіTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Користувачі.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._daysTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Days.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._користувачіTableAdapter.Update(deletedRows));
+                    result = (result + this._daysTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -9204,58 +9055,58 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._користувачіTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._користувачіTableAdapter.Connection) == false))) {
+            if (((this._day_WorkoutTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._day_WorkoutTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._вправа_ГрупаTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._вправа_ГрупаTableAdapter.Connection) == false))) {
+            if (((this._daysTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._daysTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._вправиTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._вправиTableAdapter.Connection) == false))) {
+            if (((this._exercise_MuscleGroupTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._exercise_MuscleGroupTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._групи_м_язівTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._групи_м_язівTableAdapter.Connection) == false))) {
+            if (((this._exercisesTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._exercisesTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._день_ТренуванняTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._день_ТренуванняTableAdapter.Connection) == false))) {
+            if (((this._muscleGroupsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._muscleGroupsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._дніTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._дніTableAdapter.Connection) == false))) {
+            if (((this._setsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._setsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._користувач_ДеньTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._користувач_ДеньTableAdapter.Connection) == false))) {
+            if (((this._user_DayTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._user_DayTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._підходиTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._підходиTableAdapter.Connection) == false))) {
+            if (((this._usersTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._usersTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._тренуванняTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._тренуванняTableAdapter.Connection) == false))) {
+            if (((this._workout_ExerciseTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._workout_ExerciseTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._тренування_ВправаTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._тренування_ВправаTableAdapter.Connection) == false))) {
+            if (((this._workout_SetTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._workout_SetTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._тренування_ПідхідTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._тренування_ПідхідTableAdapter.Connection) == false))) {
+            if (((this._workoutsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._workoutsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -9291,103 +9142,103 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._користувачіTableAdapter != null)) {
-                    revertConnections.Add(this._користувачіTableAdapter, this._користувачіTableAdapter.Connection);
-                    this._користувачіTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._користувачіTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._користувачіTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._користувачіTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._користувачіTableAdapter.Adapter);
+                if ((this._day_WorkoutTableAdapter != null)) {
+                    revertConnections.Add(this._day_WorkoutTableAdapter, this._day_WorkoutTableAdapter.Connection);
+                    this._day_WorkoutTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._day_WorkoutTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._day_WorkoutTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._day_WorkoutTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._day_WorkoutTableAdapter.Adapter);
                     }
                 }
-                if ((this._вправа_ГрупаTableAdapter != null)) {
-                    revertConnections.Add(this._вправа_ГрупаTableAdapter, this._вправа_ГрупаTableAdapter.Connection);
-                    this._вправа_ГрупаTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._вправа_ГрупаTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._вправа_ГрупаTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._вправа_ГрупаTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._вправа_ГрупаTableAdapter.Adapter);
+                if ((this._daysTableAdapter != null)) {
+                    revertConnections.Add(this._daysTableAdapter, this._daysTableAdapter.Connection);
+                    this._daysTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._daysTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._daysTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._daysTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._daysTableAdapter.Adapter);
                     }
                 }
-                if ((this._вправиTableAdapter != null)) {
-                    revertConnections.Add(this._вправиTableAdapter, this._вправиTableAdapter.Connection);
-                    this._вправиTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._вправиTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._вправиTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._вправиTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._вправиTableAdapter.Adapter);
+                if ((this._exercise_MuscleGroupTableAdapter != null)) {
+                    revertConnections.Add(this._exercise_MuscleGroupTableAdapter, this._exercise_MuscleGroupTableAdapter.Connection);
+                    this._exercise_MuscleGroupTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._exercise_MuscleGroupTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._exercise_MuscleGroupTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._exercise_MuscleGroupTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._exercise_MuscleGroupTableAdapter.Adapter);
                     }
                 }
-                if ((this._групи_м_язівTableAdapter != null)) {
-                    revertConnections.Add(this._групи_м_язівTableAdapter, this._групи_м_язівTableAdapter.Connection);
-                    this._групи_м_язівTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._групи_м_язівTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._групи_м_язівTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._групи_м_язівTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._групи_м_язівTableAdapter.Adapter);
+                if ((this._exercisesTableAdapter != null)) {
+                    revertConnections.Add(this._exercisesTableAdapter, this._exercisesTableAdapter.Connection);
+                    this._exercisesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._exercisesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._exercisesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._exercisesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._exercisesTableAdapter.Adapter);
                     }
                 }
-                if ((this._день_ТренуванняTableAdapter != null)) {
-                    revertConnections.Add(this._день_ТренуванняTableAdapter, this._день_ТренуванняTableAdapter.Connection);
-                    this._день_ТренуванняTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._день_ТренуванняTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._день_ТренуванняTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._день_ТренуванняTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._день_ТренуванняTableAdapter.Adapter);
+                if ((this._muscleGroupsTableAdapter != null)) {
+                    revertConnections.Add(this._muscleGroupsTableAdapter, this._muscleGroupsTableAdapter.Connection);
+                    this._muscleGroupsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._muscleGroupsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._muscleGroupsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._muscleGroupsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._muscleGroupsTableAdapter.Adapter);
                     }
                 }
-                if ((this._дніTableAdapter != null)) {
-                    revertConnections.Add(this._дніTableAdapter, this._дніTableAdapter.Connection);
-                    this._дніTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._дніTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._дніTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._дніTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._дніTableAdapter.Adapter);
+                if ((this._setsTableAdapter != null)) {
+                    revertConnections.Add(this._setsTableAdapter, this._setsTableAdapter.Connection);
+                    this._setsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._setsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._setsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._setsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._setsTableAdapter.Adapter);
                     }
                 }
-                if ((this._користувач_ДеньTableAdapter != null)) {
-                    revertConnections.Add(this._користувач_ДеньTableAdapter, this._користувач_ДеньTableAdapter.Connection);
-                    this._користувач_ДеньTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._користувач_ДеньTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._користувач_ДеньTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._користувач_ДеньTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._користувач_ДеньTableAdapter.Adapter);
+                if ((this._user_DayTableAdapter != null)) {
+                    revertConnections.Add(this._user_DayTableAdapter, this._user_DayTableAdapter.Connection);
+                    this._user_DayTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._user_DayTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._user_DayTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._user_DayTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._user_DayTableAdapter.Adapter);
                     }
                 }
-                if ((this._підходиTableAdapter != null)) {
-                    revertConnections.Add(this._підходиTableAdapter, this._підходиTableAdapter.Connection);
-                    this._підходиTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._підходиTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._підходиTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._підходиTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._підходиTableAdapter.Adapter);
+                if ((this._usersTableAdapter != null)) {
+                    revertConnections.Add(this._usersTableAdapter, this._usersTableAdapter.Connection);
+                    this._usersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._usersTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._usersTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._usersTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._usersTableAdapter.Adapter);
                     }
                 }
-                if ((this._тренуванняTableAdapter != null)) {
-                    revertConnections.Add(this._тренуванняTableAdapter, this._тренуванняTableAdapter.Connection);
-                    this._тренуванняTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._тренуванняTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._тренуванняTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._тренуванняTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._тренуванняTableAdapter.Adapter);
+                if ((this._workout_ExerciseTableAdapter != null)) {
+                    revertConnections.Add(this._workout_ExerciseTableAdapter, this._workout_ExerciseTableAdapter.Connection);
+                    this._workout_ExerciseTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._workout_ExerciseTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._workout_ExerciseTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._workout_ExerciseTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._workout_ExerciseTableAdapter.Adapter);
                     }
                 }
-                if ((this._тренування_ВправаTableAdapter != null)) {
-                    revertConnections.Add(this._тренування_ВправаTableAdapter, this._тренування_ВправаTableAdapter.Connection);
-                    this._тренування_ВправаTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._тренування_ВправаTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._тренування_ВправаTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._тренування_ВправаTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._тренування_ВправаTableAdapter.Adapter);
+                if ((this._workout_SetTableAdapter != null)) {
+                    revertConnections.Add(this._workout_SetTableAdapter, this._workout_SetTableAdapter.Connection);
+                    this._workout_SetTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._workout_SetTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._workout_SetTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._workout_SetTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._workout_SetTableAdapter.Adapter);
                     }
                 }
-                if ((this._тренування_ПідхідTableAdapter != null)) {
-                    revertConnections.Add(this._тренування_ПідхідTableAdapter, this._тренування_ПідхідTableAdapter.Connection);
-                    this._тренування_ПідхідTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._тренування_ПідхідTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._тренування_ПідхідTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._тренування_ПідхідTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._тренування_ПідхідTableAdapter.Adapter);
+                if ((this._workoutsTableAdapter != null)) {
+                    revertConnections.Add(this._workoutsTableAdapter, this._workoutsTableAdapter.Connection);
+                    this._workoutsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._workoutsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._workoutsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._workoutsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._workoutsTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -9448,49 +9299,49 @@ SELECT [ID тренування], [ID підходу] FROM Тренування_
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._користувачіTableAdapter != null)) {
-                    this._користувачіTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._користувачіTableAdapter]));
-                    this._користувачіTableAdapter.Transaction = null;
+                if ((this._day_WorkoutTableAdapter != null)) {
+                    this._day_WorkoutTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._day_WorkoutTableAdapter]));
+                    this._day_WorkoutTableAdapter.Transaction = null;
                 }
-                if ((this._вправа_ГрупаTableAdapter != null)) {
-                    this._вправа_ГрупаTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._вправа_ГрупаTableAdapter]));
-                    this._вправа_ГрупаTableAdapter.Transaction = null;
+                if ((this._daysTableAdapter != null)) {
+                    this._daysTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._daysTableAdapter]));
+                    this._daysTableAdapter.Transaction = null;
                 }
-                if ((this._вправиTableAdapter != null)) {
-                    this._вправиTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._вправиTableAdapter]));
-                    this._вправиTableAdapter.Transaction = null;
+                if ((this._exercise_MuscleGroupTableAdapter != null)) {
+                    this._exercise_MuscleGroupTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._exercise_MuscleGroupTableAdapter]));
+                    this._exercise_MuscleGroupTableAdapter.Transaction = null;
                 }
-                if ((this._групи_м_язівTableAdapter != null)) {
-                    this._групи_м_язівTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._групи_м_язівTableAdapter]));
-                    this._групи_м_язівTableAdapter.Transaction = null;
+                if ((this._exercisesTableAdapter != null)) {
+                    this._exercisesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._exercisesTableAdapter]));
+                    this._exercisesTableAdapter.Transaction = null;
                 }
-                if ((this._день_ТренуванняTableAdapter != null)) {
-                    this._день_ТренуванняTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._день_ТренуванняTableAdapter]));
-                    this._день_ТренуванняTableAdapter.Transaction = null;
+                if ((this._muscleGroupsTableAdapter != null)) {
+                    this._muscleGroupsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._muscleGroupsTableAdapter]));
+                    this._muscleGroupsTableAdapter.Transaction = null;
                 }
-                if ((this._дніTableAdapter != null)) {
-                    this._дніTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._дніTableAdapter]));
-                    this._дніTableAdapter.Transaction = null;
+                if ((this._setsTableAdapter != null)) {
+                    this._setsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._setsTableAdapter]));
+                    this._setsTableAdapter.Transaction = null;
                 }
-                if ((this._користувач_ДеньTableAdapter != null)) {
-                    this._користувач_ДеньTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._користувач_ДеньTableAdapter]));
-                    this._користувач_ДеньTableAdapter.Transaction = null;
+                if ((this._user_DayTableAdapter != null)) {
+                    this._user_DayTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._user_DayTableAdapter]));
+                    this._user_DayTableAdapter.Transaction = null;
                 }
-                if ((this._підходиTableAdapter != null)) {
-                    this._підходиTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._підходиTableAdapter]));
-                    this._підходиTableAdapter.Transaction = null;
+                if ((this._usersTableAdapter != null)) {
+                    this._usersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._usersTableAdapter]));
+                    this._usersTableAdapter.Transaction = null;
                 }
-                if ((this._тренуванняTableAdapter != null)) {
-                    this._тренуванняTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._тренуванняTableAdapter]));
-                    this._тренуванняTableAdapter.Transaction = null;
+                if ((this._workout_ExerciseTableAdapter != null)) {
+                    this._workout_ExerciseTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._workout_ExerciseTableAdapter]));
+                    this._workout_ExerciseTableAdapter.Transaction = null;
                 }
-                if ((this._тренування_ВправаTableAdapter != null)) {
-                    this._тренування_ВправаTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._тренування_ВправаTableAdapter]));
-                    this._тренування_ВправаTableAdapter.Transaction = null;
+                if ((this._workout_SetTableAdapter != null)) {
+                    this._workout_SetTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._workout_SetTableAdapter]));
+                    this._workout_SetTableAdapter.Transaction = null;
                 }
-                if ((this._тренування_ПідхідTableAdapter != null)) {
-                    this._тренування_ПідхідTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._тренування_ПідхідTableAdapter]));
-                    this._тренування_ПідхідTableAdapter.Transaction = null;
+                if ((this._workoutsTableAdapter != null)) {
+                    this._workoutsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._workoutsTableAdapter]));
+                    this._workoutsTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
