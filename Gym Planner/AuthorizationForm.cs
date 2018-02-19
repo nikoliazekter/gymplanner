@@ -25,13 +25,14 @@ namespace Gym_Planner
 
         private void SignInButton_Click(object sender, EventArgs e)
         {
-            if (this.PassTextBox.Text == "")
+            if (true /*pass correspond to login*/)
             {
-                MainForm mainForm = new MainForm();
+                User user = new User(this.LoginTextBox.Text, this.PassTextBox.Text);
+                MainForm mainForm = new MainForm(user);
                 mainForm.Show();
                 this.Hide();
             }
-            else
+                else
             {
                 MessageBox.Show("Неправильний логін чи пароль! Спробуйте ще раз!","Помилка!");
             }

@@ -96,6 +96,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,6 +142,7 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -162,12 +164,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MainFrom.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LibraryGymPlanner\LibraryGymPlanner.csproj">
-      <Project>{b2c2d56e-dbe2-44c9-8c79-b34eff60aa4a}</Project>
-      <Name>LibraryGymPlanner</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\DataSources\" />

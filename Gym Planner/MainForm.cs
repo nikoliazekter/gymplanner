@@ -13,9 +13,23 @@ namespace Gym_Planner
 {
     public partial class MainForm : Form
     {
+        private User user;
+        public MainForm(User user)
+        {
+            this.user = user;
+            InitializeComponent();
+            if (this.user.isAdmin())
+                ExercisesMenuStrip.Visible = true;
+            else
+                ExercisesMenuStrip.Visible = false;
+
+        }
         public MainForm()
         {
             InitializeComponent();
+            /*
+             * connect muscle group combo box to DB
+             * */
         }
 
         private void CalendarDayClicked(object sender, DateRangeEventArgs e)
@@ -37,7 +51,7 @@ namespace Gym_Planner
 
         private void ExercisesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //change right label content
+
         }
 
         private void вправиBindingSource_CurrentChanged(object sender, EventArgs e)
@@ -66,6 +80,25 @@ namespace Gym_Planner
             // TODO: This line of code loads data into the 'newGymPlannerDataSet.Exercises' table. You can move, or remove it, as needed.
             this.exercisesTableAdapter.Fill(this.newGymPlannerDataSet.Exercises);
 
+        }
+
+        private void ExercisesDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (this.ExercisesDataGridView.SelectedCells.Count != 0)
+            {
+                int rowIndex = this.ExercisesDataGridView.SelectedCells[0].RowIndex;
+                this.ExerciseInfoLabel.Text = this.ExercisesDataGridView.Rows[rowIndex].Cells[1].Value.ToString();
+            }
+        }
+
+        private void exercisesBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MuscleGroupToolStripComboBox_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Add Muscle Groups");
         }
     }
 }
