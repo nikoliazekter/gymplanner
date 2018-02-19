@@ -41,7 +41,7 @@ namespace Gym_Planner
             foreach (System.Data.DataRowView exercise in this.ExercisesListBox.Items)
                 if (exercise[0].ToString() == this.ExerciseNameTExtBox.Text)
                 {
-                    this.exerciseName = this.ExercisesListBox.SelectedValue.ToString();
+                    this.exerciseName = this.ExerciseNameTExtBox.Text;
                     this.Close();
                     return;
                 }
