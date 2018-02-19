@@ -14,10 +14,12 @@ namespace Gym_Planner
     public partial class MainForm : Form
     {
         private User user;
+        NewGymPlannerDataSetTableAdapters.QueryAdapter queryAdapter;
         public MainForm(User user)
         {
             this.user = user;
             InitializeComponent();
+            queryAdapter = new NewGymPlannerDataSetTableAdapters.QueryAdapter();
             if (this.user.isAdmin())
                 ExercisesMenuStrip.Visible = true;
             else
@@ -118,6 +120,12 @@ namespace Gym_Planner
         private void MuscleGroupToolStripComboBox_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Add Muscle Groups");
+        }
+
+        private void RemoveExerciseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            queryAdapter.DeleteExercise(ExercisesDataGridView.CurrentCell.Value.ToString());
+            this.exercisesTableAdapter.Fill(this.newGymPlannerDataSet.Exercises);
         }
     }
 }
