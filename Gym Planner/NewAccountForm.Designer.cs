@@ -67,6 +67,7 @@
             this.CreateAccountButton.TabIndex = 3;
             this.CreateAccountButton.Text = "Створити";
             this.CreateAccountButton.UseVisualStyleBackColor = true;
+            this.CreateAccountButton.Click += new System.EventHandler(this.CreateAccountButton_Click);
             // 
             // NewAccountLabel
             // 

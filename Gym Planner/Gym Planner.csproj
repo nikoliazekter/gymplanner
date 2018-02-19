@@ -99,6 +99,7 @@
     <Compile Include="User.cs" />
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DayForm.resx">
       <DependentUpon>DayForm.cs</DependentUpon>
@@ -133,8 +134,8 @@
     </None>
     <None Include="NewGymPlannerDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>NewGymPlannerDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>NewGymPlannerDataSet.Designer.cs</LastGenOutput>
     </None>
     <None Include="NewGymPlannerDataSet.xss">
       <DependentUpon>NewGymPlannerDataSet.xsd</DependentUpon>
