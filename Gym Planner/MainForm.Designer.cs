@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.MainTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.MainTabControl = new System.Windows.Forms.TabControl();
@@ -52,9 +51,9 @@
             this.ExerciseStatisticChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.StatMenuStrip = new System.Windows.Forms.MenuStrip();
             this.ChooseExToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MuscleGroupToolStripComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.exercisesTableAdapter = new Gym_Planner.NewGymPlannerDataSetTableAdapters.ExercisesTableAdapter();
             this.recordsByDateAdapter1 = new Gym_Planner.NewGymPlannerDataSetTableAdapters.RecordsByDateAdapter();
+            this.MuscleGroupToolStripComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.CalendarTab.SuspendLayout();
@@ -249,11 +248,6 @@
             this.ExerciseStatisticChart.Legends.Add(legend1);
             this.ExerciseStatisticChart.Location = new System.Drawing.Point(0, 32);
             this.ExerciseStatisticChart.Name = "ExerciseStatisticChart";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series";
-            this.ExerciseStatisticChart.Series.Add(series1);
             this.ExerciseStatisticChart.Size = new System.Drawing.Size(810, 335);
             this.ExerciseStatisticChart.TabIndex = 1;
             this.ExerciseStatisticChart.Text = "Статистика";
@@ -279,12 +273,6 @@
             this.ChooseExToolStripMenuItem.Text = "Вибрати вправу";
             this.ChooseExToolStripMenuItem.Click += new System.EventHandler(this.ChooseExToolStripMenuItem_Click);
             // 
-            // MuscleGroupToolStripComboBox
-            // 
-            this.MuscleGroupToolStripComboBox.Name = "MuscleGroupToolStripComboBox";
-            this.MuscleGroupToolStripComboBox.Size = new System.Drawing.Size(121, 28);
-            this.MuscleGroupToolStripComboBox.SelectedIndexChanged += new System.EventHandler(this.MuscleGroupToolStripComboBox_Click);
-            // 
             // exercisesTableAdapter
             // 
             this.exercisesTableAdapter.ClearBeforeFill = true;
@@ -292,6 +280,13 @@
             // recordsByDateAdapter1
             // 
             this.recordsByDateAdapter1.ClearBeforeFill = true;
+            // 
+            // MuscleGroupToolStripComboBox
+            // 
+            this.MuscleGroupToolStripComboBox.Name = "MuscleGroupToolStripComboBox";
+            this.MuscleGroupToolStripComboBox.Size = new System.Drawing.Size(121, 28);
+            this.MuscleGroupToolStripComboBox.Text = "Виберіть вправу";
+            this.MuscleGroupToolStripComboBox.SelectedIndexChanged += new System.EventHandler(this.MuscleGroupToolStripComboBox_Click);
             // 
             // MainForm
             // 
@@ -354,7 +349,7 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart ExerciseStatisticChart;
         private System.Windows.Forms.MenuStrip StatMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem ChooseExToolStripMenuItem;
-        private System.Windows.Forms.ToolStripComboBox MuscleGroupToolStripComboBox;
         private NewGymPlannerDataSetTableAdapters.RecordsByDateAdapter recordsByDateAdapter1;
+        private System.Windows.Forms.ToolStripComboBox MuscleGroupToolStripComboBox;
     }
 }

@@ -25,13 +25,14 @@ namespace Gym_Planner
             else
                 ExercisesMenuStrip.Visible = false;
 
+            DataTable dataTable = (new NewGymPlannerDataSetTableAdapters.MuscleGroupsTableAdapter()).GetData();
+            this.MuscleGroupToolStripComboBox.ComboBox.DisplayMember = dataTable.Columns[0].ToString();
+            this.MuscleGroupToolStripComboBox.ComboBox.ValueMember = dataTable.Columns[0].ToString();
+            this.MuscleGroupToolStripComboBox.ComboBox.DataSource = dataTable;
         }
         public MainForm()
         {
             InitializeComponent();
-            /*
-             * connect muscle group combo box to DB
-             * */
         }
 
         private void CalendarDayClicked(object sender, DateRangeEventArgs e)
@@ -52,17 +53,7 @@ namespace Gym_Planner
             }
         }
 
-        private void AllExercisesListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //
-        }
-
         private void ExercisesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //
-        }
-
-        private void вправиBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             //
         }
@@ -79,22 +70,33 @@ namespace Gym_Planner
                 else
                     return;
             }
+            List<string> exercises = new List<string>();
+            exercises.Add(exerciseName);
+            this.UpdateChart(exercises);
+        }
 
+        private void UpdateChart(List<string> exercises)
+        {
+            this.ExerciseStatisticChart.Series.Clear();
             try
             {
-                DataTable dataTable = this.recordsByDateAdapter1.GetData(this.user.Login, exerciseName);
-                List<double> weights = new List<double>(dataTable.Rows.Count);
-                foreach (DataRow row in dataTable.Rows)
-                    weights.Add(Convert.ToDouble(row[1]));
-                this.ExerciseStatisticChart.Series[0].Points.DataBindY(weights);
-                this.ExerciseStatisticChart.Series[0].Name = exerciseName;
+                foreach (string exerciseName in exercises)
+                {
+                    this.ExerciseStatisticChart.Series.Add(exerciseName);
+                    DataTable dataTable = this.recordsByDateAdapter1.GetData(this.user.Login, exerciseName);
+                    List<double> weights = new List<double>(dataTable.Rows.Count);
+                    foreach (DataRow row in dataTable.Rows)
+                        weights.Add(Convert.ToDouble(row[1]));
+                    this.ExerciseStatisticChart.Series[exerciseName].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+                    this.ExerciseStatisticChart.Series[exerciseName].Points.DataBindY(weights);
+                }
             }
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-
         }
+
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -119,7 +121,14 @@ namespace Gym_Planner
 
         private void MuscleGroupToolStripComboBox_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Add Muscle Groups");
+            if (!this.MuscleGroupToolStripComboBox.Selected)
+                return;
+            DataTable dataTable = (new NewGymPlannerDataSetTableAdapters.ExerciseByMuscleGroupTableAdapter()).GetData(((System.Data.DataRowView)this.MuscleGroupToolStripComboBox.SelectedItem).Row.ItemArray[0].ToString());
+
+            List<string> exercises = new List<string>();
+            foreach (DataRow row in dataTable.Rows)
+                exercises.Add(row[0].ToString());
+            this.UpdateChart(exercises);
         }
 
         private void RemoveExerciseToolStripMenuItem_Click(object sender, EventArgs e)
