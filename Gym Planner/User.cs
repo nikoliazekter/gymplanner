@@ -24,7 +24,7 @@ namespace Gym_Planner
         }
         public bool isAdmin()
         {
-            return ((this.name == "admin") && (this.pass == "admin"));
+            return this.name == "admin";
         }
 
     }

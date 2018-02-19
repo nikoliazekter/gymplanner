@@ -15,6 +15,7 @@ namespace Gym_Planner
         public AuthorizationForm()
         {
             InitializeComponent();
+            this.LoginTextBox.Text = "admin";
         }
 
         private void NewAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

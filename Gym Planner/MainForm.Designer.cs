@@ -29,43 +29,43 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.MainTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.MainTabControl = new System.Windows.Forms.TabControl();
+            this.CalendarTab = new System.Windows.Forms.TabPage();
+            this.Calendar = new System.Windows.Forms.MonthCalendar();
+            this.ExercisesTab = new System.Windows.Forms.TabPage();
+            this.ExercisesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.ExerciseInfoLabel = new System.Windows.Forms.Label();
+            this.ExercisesDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumnInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exercisesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.newGymPlannerDataSet = new Gym_Planner.NewGymPlannerDataSet();
-            this.exercisesTableAdapter = new Gym_Planner.NewGymPlannerDataSetTableAdapters.ExercisesTableAdapter();
-            this.StatTab = new System.Windows.Forms.TabPage();
-            this.StatMenuStrip = new System.Windows.Forms.MenuStrip();
-            this.ChooseExToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ExerciseStatisticChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.ExercisesTab = new System.Windows.Forms.TabPage();
             this.ExercisesMenuStrip = new System.Windows.Forms.MenuStrip();
             this.AddNewExerciseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveExerciseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ExercisesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.ExercisesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumnInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ExerciseInfoLabel = new System.Windows.Forms.Label();
-            this.CalendarTab = new System.Windows.Forms.TabPage();
-            this.Calendar = new System.Windows.Forms.MonthCalendar();
-            this.MainTabControl = new System.Windows.Forms.TabControl();
+            this.StatTab = new System.Windows.Forms.TabPage();
+            this.ExerciseStatisticChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.StatMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.ChooseExToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MuscleGroupToolStripComboBox = new System.Windows.Forms.ToolStripComboBox();
+            this.exercisesTableAdapter = new Gym_Planner.NewGymPlannerDataSetTableAdapters.ExercisesTableAdapter();
             this.MainTableLayout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.exercisesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newGymPlannerDataSet)).BeginInit();
-            this.StatTab.SuspendLayout();
-            this.StatMenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ExerciseStatisticChart)).BeginInit();
+            this.MainTabControl.SuspendLayout();
+            this.CalendarTab.SuspendLayout();
             this.ExercisesTab.SuspendLayout();
-            this.ExercisesMenuStrip.SuspendLayout();
             this.ExercisesTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExercisesDataGridView)).BeginInit();
-            this.CalendarTab.SuspendLayout();
-            this.MainTabControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exercisesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newGymPlannerDataSet)).BeginInit();
+            this.ExercisesMenuStrip.SuspendLayout();
+            this.StatTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ExerciseStatisticChart)).BeginInit();
+            this.StatMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTableLayout
@@ -83,70 +83,37 @@
             this.MainTableLayout.Size = new System.Drawing.Size(824, 482);
             this.MainTableLayout.TabIndex = 2;
             // 
-            // exercisesBindingSource
+            // MainTabControl
             // 
-            this.exercisesBindingSource.DataMember = "Exercises";
-            this.exercisesBindingSource.DataSource = this.newGymPlannerDataSet;
-            this.exercisesBindingSource.CurrentChanged += new System.EventHandler(this.exercisesBindingSource_CurrentChanged);
+            this.MainTabControl.Controls.Add(this.CalendarTab);
+            this.MainTabControl.Controls.Add(this.ExercisesTab);
+            this.MainTabControl.Controls.Add(this.StatTab);
+            this.MainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainTabControl.Location = new System.Drawing.Point(3, 83);
+            this.MainTabControl.Name = "MainTabControl";
+            this.MainTabControl.SelectedIndex = 0;
+            this.MainTabControl.Size = new System.Drawing.Size(818, 396);
+            this.MainTabControl.TabIndex = 0;
             // 
-            // newGymPlannerDataSet
+            // CalendarTab
             // 
-            this.newGymPlannerDataSet.DataSetName = "NewGymPlannerDataSet";
-            this.newGymPlannerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.CalendarTab.Controls.Add(this.Calendar);
+            this.CalendarTab.Location = new System.Drawing.Point(4, 25);
+            this.CalendarTab.Name = "CalendarTab";
+            this.CalendarTab.Padding = new System.Windows.Forms.Padding(3);
+            this.CalendarTab.Size = new System.Drawing.Size(810, 367);
+            this.CalendarTab.TabIndex = 1;
+            this.CalendarTab.Text = "Календар";
+            this.CalendarTab.UseVisualStyleBackColor = true;
             // 
-            // exercisesTableAdapter
+            // Calendar
             // 
-            this.exercisesTableAdapter.ClearBeforeFill = true;
-            // 
-            // StatTab
-            // 
-            this.StatTab.Controls.Add(this.ExerciseStatisticChart);
-            this.StatTab.Controls.Add(this.StatMenuStrip);
-            this.StatTab.Location = new System.Drawing.Point(4, 25);
-            this.StatTab.Name = "StatTab";
-            this.StatTab.Size = new System.Drawing.Size(810, 367);
-            this.StatTab.TabIndex = 3;
-            this.StatTab.Text = "Статистика";
-            this.StatTab.UseVisualStyleBackColor = true;
-            // 
-            // StatMenuStrip
-            // 
-            this.StatMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.StatMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ChooseExToolStripMenuItem,
-            this.MuscleGroupToolStripComboBox});
-            this.StatMenuStrip.Location = new System.Drawing.Point(0, 0);
-            this.StatMenuStrip.Name = "StatMenuStrip";
-            this.StatMenuStrip.Size = new System.Drawing.Size(810, 32);
-            this.StatMenuStrip.TabIndex = 0;
-            this.StatMenuStrip.Text = "menuStrip1";
-            // 
-            // ChooseExToolStripMenuItem
-            // 
-            this.ChooseExToolStripMenuItem.Name = "ChooseExToolStripMenuItem";
-            this.ChooseExToolStripMenuItem.Size = new System.Drawing.Size(133, 28);
-            this.ChooseExToolStripMenuItem.Text = "Вибрати вправу";
-            this.ChooseExToolStripMenuItem.Click += new System.EventHandler(this.ChooseExToolStripMenuItem_Click);
-            // 
-            // ExerciseStatisticChart
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.ExerciseStatisticChart.ChartAreas.Add(chartArea2);
-            this.ExerciseStatisticChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.ExerciseStatisticChart.Legends.Add(legend2);
-            this.ExerciseStatisticChart.Location = new System.Drawing.Point(0, 32);
-            this.ExerciseStatisticChart.Name = "ExerciseStatisticChart";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.ExerciseStatisticChart.Series.Add(series2);
-            this.ExerciseStatisticChart.Size = new System.Drawing.Size(810, 335);
-            this.ExerciseStatisticChart.TabIndex = 1;
-            this.ExerciseStatisticChart.Text = "Статистика";
-            title2.Name = "Title";
-            this.ExerciseStatisticChart.Titles.Add(title2);
+            this.Calendar.CalendarDimensions = new System.Drawing.Size(3, 1);
+            this.Calendar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Calendar.Location = new System.Drawing.Point(3, 3);
+            this.Calendar.Name = "Calendar";
+            this.Calendar.TabIndex = 0;
+            this.Calendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.CalendarDayClicked);
             // 
             // ExercisesTab
             // 
@@ -158,6 +125,78 @@
             this.ExercisesTab.TabIndex = 2;
             this.ExercisesTab.Text = "Вправи";
             this.ExercisesTab.UseVisualStyleBackColor = true;
+            // 
+            // ExercisesTableLayoutPanel
+            // 
+            this.ExercisesTableLayoutPanel.ColumnCount = 2;
+            this.ExercisesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.34568F));
+            this.ExercisesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.65432F));
+            this.ExercisesTableLayoutPanel.Controls.Add(this.ExerciseInfoLabel, 1, 0);
+            this.ExercisesTableLayoutPanel.Controls.Add(this.ExercisesDataGridView, 0, 0);
+            this.ExercisesTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ExercisesTableLayoutPanel.Location = new System.Drawing.Point(0, 28);
+            this.ExercisesTableLayoutPanel.Name = "ExercisesTableLayoutPanel";
+            this.ExercisesTableLayoutPanel.RowCount = 1;
+            this.ExercisesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.ExercisesTableLayoutPanel.Size = new System.Drawing.Size(810, 339);
+            this.ExercisesTableLayoutPanel.TabIndex = 2;
+            // 
+            // ExerciseInfoLabel
+            // 
+            this.ExerciseInfoLabel.AutoSize = true;
+            this.ExerciseInfoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ExerciseInfoLabel.Location = new System.Drawing.Point(427, 0);
+            this.ExerciseInfoLabel.Name = "ExerciseInfoLabel";
+            this.ExerciseInfoLabel.Size = new System.Drawing.Size(380, 339);
+            this.ExerciseInfoLabel.TabIndex = 1;
+            this.ExerciseInfoLabel.Text = "Для інформації про вправу - натисніть на ній у списку зліва";
+            // 
+            // ExercisesDataGridView
+            // 
+            this.ExercisesDataGridView.AutoGenerateColumns = false;
+            this.ExercisesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ExercisesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ExercisesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumnName,
+            this.dataGridViewTextBoxColumnInfo});
+            this.ExercisesDataGridView.DataSource = this.exercisesBindingSource;
+            this.ExercisesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ExercisesDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.ExercisesDataGridView.Name = "ExercisesDataGridView";
+            this.ExercisesDataGridView.ReadOnly = true;
+            this.ExercisesDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.ExercisesDataGridView.RowHeadersVisible = false;
+            this.ExercisesDataGridView.RowTemplate.Height = 24;
+            this.ExercisesDataGridView.Size = new System.Drawing.Size(418, 333);
+            this.ExercisesDataGridView.TabIndex = 2;
+            this.ExercisesDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExercisesDataGridView_CellClick);
+            this.ExercisesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExercisesDataGridView_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumnName
+            // 
+            this.dataGridViewTextBoxColumnName.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumnName.HeaderText = "Назва";
+            this.dataGridViewTextBoxColumnName.Name = "dataGridViewTextBoxColumnName";
+            this.dataGridViewTextBoxColumnName.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumnInfo
+            // 
+            this.dataGridViewTextBoxColumnInfo.DataPropertyName = "Information";
+            this.dataGridViewTextBoxColumnInfo.HeaderText = "Information";
+            this.dataGridViewTextBoxColumnInfo.Name = "dataGridViewTextBoxColumnInfo";
+            this.dataGridViewTextBoxColumnInfo.ReadOnly = true;
+            this.dataGridViewTextBoxColumnInfo.Visible = false;
+            // 
+            // exercisesBindingSource
+            // 
+            this.exercisesBindingSource.DataMember = "Exercises";
+            this.exercisesBindingSource.DataSource = this.newGymPlannerDataSet;
+            this.exercisesBindingSource.CurrentChanged += new System.EventHandler(this.exercisesBindingSource_CurrentChanged);
+            // 
+            // newGymPlannerDataSet
+            // 
+            this.newGymPlannerDataSet.DataSetName = "NewGymPlannerDataSet";
+            this.newGymPlannerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ExercisesMenuStrip
             // 
@@ -184,104 +223,65 @@
             this.RemoveExerciseToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
             this.RemoveExerciseToolStripMenuItem.Text = "Видалити вправу";
             // 
-            // ExercisesTableLayoutPanel
+            // StatTab
             // 
-            this.ExercisesTableLayoutPanel.ColumnCount = 2;
-            this.ExercisesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.34568F));
-            this.ExercisesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.65432F));
-            this.ExercisesTableLayoutPanel.Controls.Add(this.ExerciseInfoLabel, 1, 0);
-            this.ExercisesTableLayoutPanel.Controls.Add(this.ExercisesDataGridView, 0, 0);
-            this.ExercisesTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ExercisesTableLayoutPanel.Location = new System.Drawing.Point(0, 28);
-            this.ExercisesTableLayoutPanel.Name = "ExercisesTableLayoutPanel";
-            this.ExercisesTableLayoutPanel.RowCount = 1;
-            this.ExercisesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ExercisesTableLayoutPanel.Size = new System.Drawing.Size(810, 339);
-            this.ExercisesTableLayoutPanel.TabIndex = 2;
+            this.StatTab.Controls.Add(this.ExerciseStatisticChart);
+            this.StatTab.Controls.Add(this.StatMenuStrip);
+            this.StatTab.Location = new System.Drawing.Point(4, 25);
+            this.StatTab.Name = "StatTab";
+            this.StatTab.Size = new System.Drawing.Size(810, 367);
+            this.StatTab.TabIndex = 3;
+            this.StatTab.Text = "Статистика";
+            this.StatTab.UseVisualStyleBackColor = true;
             // 
-            // ExercisesDataGridView
+            // ExerciseStatisticChart
             // 
-            this.ExercisesDataGridView.AutoGenerateColumns = false;
-            this.ExercisesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ExercisesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ExercisesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumnName,
-            this.dataGridViewTextBoxColumnInfo});
-            this.ExercisesDataGridView.DataSource = this.exercisesBindingSource;
-            this.ExercisesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ExercisesDataGridView.Location = new System.Drawing.Point(3, 3);
-            this.ExercisesDataGridView.Name = "ExercisesDataGridView";
-            this.ExercisesDataGridView.ReadOnly = true;
-            this.ExercisesDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.ExercisesDataGridView.RowHeadersVisible = false;
-            this.ExercisesDataGridView.RowTemplate.Height = 24;
-            this.ExercisesDataGridView.Size = new System.Drawing.Size(418, 333);
-            this.ExercisesDataGridView.TabIndex = 2;
-            this.ExercisesDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExercisesDataGridView_CellClick);
-            this.ExercisesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExercisesDataGridView_CellContentClick);
+            chartArea1.Name = "ChartArea1";
+            this.ExerciseStatisticChart.ChartAreas.Add(chartArea1);
+            this.ExerciseStatisticChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.ExerciseStatisticChart.Legends.Add(legend1);
+            this.ExerciseStatisticChart.Location = new System.Drawing.Point(0, 32);
+            this.ExerciseStatisticChart.Name = "ExerciseStatisticChart";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.ExerciseStatisticChart.Series.Add(series1);
+            this.ExerciseStatisticChart.Size = new System.Drawing.Size(810, 335);
+            this.ExerciseStatisticChart.TabIndex = 1;
+            this.ExerciseStatisticChart.Text = "Статистика";
+            title1.Name = "Title";
+            this.ExerciseStatisticChart.Titles.Add(title1);
             // 
-            // dataGridViewTextBoxColumnInfo
+            // StatMenuStrip
             // 
-            this.dataGridViewTextBoxColumnInfo.DataPropertyName = "Information";
-            this.dataGridViewTextBoxColumnInfo.HeaderText = "Information";
-            this.dataGridViewTextBoxColumnInfo.Name = "dataGridViewTextBoxColumnInfo";
-            this.dataGridViewTextBoxColumnInfo.ReadOnly = true;
-            this.dataGridViewTextBoxColumnInfo.Visible = false;
+            this.StatMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.StatMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ChooseExToolStripMenuItem,
+            this.MuscleGroupToolStripComboBox});
+            this.StatMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.StatMenuStrip.Name = "StatMenuStrip";
+            this.StatMenuStrip.Size = new System.Drawing.Size(810, 32);
+            this.StatMenuStrip.TabIndex = 0;
+            this.StatMenuStrip.Text = "menuStrip1";
             // 
-            // dataGridViewTextBoxColumnName
+            // ChooseExToolStripMenuItem
             // 
-            this.dataGridViewTextBoxColumnName.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumnName.HeaderText = "Назва";
-            this.dataGridViewTextBoxColumnName.Name = "dataGridViewTextBoxColumnName";
-            this.dataGridViewTextBoxColumnName.ReadOnly = true;
-            // 
-            // ExerciseInfoLabel
-            // 
-            this.ExerciseInfoLabel.AutoSize = true;
-            this.ExerciseInfoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ExerciseInfoLabel.Location = new System.Drawing.Point(427, 0);
-            this.ExerciseInfoLabel.Name = "ExerciseInfoLabel";
-            this.ExerciseInfoLabel.Size = new System.Drawing.Size(380, 339);
-            this.ExerciseInfoLabel.TabIndex = 1;
-            this.ExerciseInfoLabel.Text = "Для інформації про вправу - натисніть на ній у списку зліва";
-            // 
-            // CalendarTab
-            // 
-            this.CalendarTab.Controls.Add(this.Calendar);
-            this.CalendarTab.Location = new System.Drawing.Point(4, 25);
-            this.CalendarTab.Name = "CalendarTab";
-            this.CalendarTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CalendarTab.Size = new System.Drawing.Size(810, 367);
-            this.CalendarTab.TabIndex = 1;
-            this.CalendarTab.Text = "Календар";
-            this.CalendarTab.UseVisualStyleBackColor = true;
-            // 
-            // Calendar
-            // 
-            this.Calendar.CalendarDimensions = new System.Drawing.Size(3, 1);
-            this.Calendar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Calendar.Location = new System.Drawing.Point(3, 3);
-            this.Calendar.Name = "Calendar";
-            this.Calendar.TabIndex = 0;
-            this.Calendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.CalendarDayClicked);
-            // 
-            // MainTabControl
-            // 
-            this.MainTabControl.Controls.Add(this.CalendarTab);
-            this.MainTabControl.Controls.Add(this.ExercisesTab);
-            this.MainTabControl.Controls.Add(this.StatTab);
-            this.MainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainTabControl.Location = new System.Drawing.Point(3, 83);
-            this.MainTabControl.Name = "MainTabControl";
-            this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(818, 396);
-            this.MainTabControl.TabIndex = 0;
+            this.ChooseExToolStripMenuItem.Name = "ChooseExToolStripMenuItem";
+            this.ChooseExToolStripMenuItem.Size = new System.Drawing.Size(133, 28);
+            this.ChooseExToolStripMenuItem.Text = "Вибрати вправу";
+            this.ChooseExToolStripMenuItem.Click += new System.EventHandler(this.ChooseExToolStripMenuItem_Click);
             // 
             // MuscleGroupToolStripComboBox
             // 
             this.MuscleGroupToolStripComboBox.Name = "MuscleGroupToolStripComboBox";
             this.MuscleGroupToolStripComboBox.Size = new System.Drawing.Size(121, 28);
             this.MuscleGroupToolStripComboBox.SelectedIndexChanged += new System.EventHandler(this.MuscleGroupToolStripComboBox_Click);
+            // 
+            // exercisesTableAdapter
+            // 
+            this.exercisesTableAdapter.ClearBeforeFill = true;
             // 
             // MainForm
             // 
@@ -295,22 +295,22 @@
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.MainTableLayout.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.exercisesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newGymPlannerDataSet)).EndInit();
-            this.StatTab.ResumeLayout(false);
-            this.StatTab.PerformLayout();
-            this.StatMenuStrip.ResumeLayout(false);
-            this.StatMenuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ExerciseStatisticChart)).EndInit();
+            this.MainTabControl.ResumeLayout(false);
+            this.CalendarTab.ResumeLayout(false);
             this.ExercisesTab.ResumeLayout(false);
             this.ExercisesTab.PerformLayout();
-            this.ExercisesMenuStrip.ResumeLayout(false);
-            this.ExercisesMenuStrip.PerformLayout();
             this.ExercisesTableLayoutPanel.ResumeLayout(false);
             this.ExercisesTableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExercisesDataGridView)).EndInit();
-            this.CalendarTab.ResumeLayout(false);
-            this.MainTabControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.exercisesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newGymPlannerDataSet)).EndInit();
+            this.ExercisesMenuStrip.ResumeLayout(false);
+            this.ExercisesMenuStrip.PerformLayout();
+            this.StatTab.ResumeLayout(false);
+            this.StatTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ExerciseStatisticChart)).EndInit();
+            this.StatMenuStrip.ResumeLayout(false);
+            this.StatMenuStrip.PerformLayout();
             this.ResumeLayout(false);
 
         }

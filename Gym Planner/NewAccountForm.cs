@@ -12,9 +12,20 @@ namespace Gym_Planner
 {
     public partial class NewAccountForm : Form
     {
+        NewGymPlannerDataSet newGymPlannerDataSet;
+        NewGymPlannerDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
         public NewAccountForm()
         {
             InitializeComponent();
+            newGymPlannerDataSet = new NewGymPlannerDataSet();
+            usersTableAdapter = new NewGymPlannerDataSetTableAdapters.UsersTableAdapter();
+        }
+
+        private void CreateAccountButton_Click(object sender, EventArgs e)
+        {
+            newGymPlannerDataSet.Users.AddUsersRow(LoginTextBox.Text, PassTextBox.Text, NameTextBox.Text);
+            usersTableAdapter.Update(newGymPlannerDataSet);
+            this.Close();
         }
     }
 }
