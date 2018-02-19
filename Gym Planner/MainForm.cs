@@ -41,7 +41,13 @@ namespace Gym_Planner
         private void AddNewExerciseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NewExerciseForm newExerciseForm = new NewExerciseForm();
-            newExerciseForm.Show();
+            using (NewExerciseForm Window = new NewExerciseForm())
+            {
+                if (Window.ShowDialog() != DialogResult.OK)
+                {
+                    this.exercisesTableAdapter.Fill(this.newGymPlannerDataSet.Exercises);
+                }
+            }
         }
 
         private void AllExercisesListView_SelectedIndexChanged(object sender, EventArgs e)
@@ -112,11 +118,6 @@ namespace Gym_Planner
         private void MuscleGroupToolStripComboBox_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Add Muscle Groups");
-        }
-
-        private void UpdateExerciseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.exercisesTableAdapter.Fill(this.newGymPlannerDataSet.Exercises);
         }
     }
 }
