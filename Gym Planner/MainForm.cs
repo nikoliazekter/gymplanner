@@ -111,5 +111,10 @@ namespace Gym_Planner
         {
             MessageBox.Show("Add Muscle Groups");
         }
+
+        private void UpdateExerciseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.exercisesTableAdapter.Fill(this.newGymPlannerDataSet.Exercises);
+        }
     }
 }

@@ -12,11 +12,11 @@ namespace Gym_Planner
 {
     public partial class AuthorizationForm : Form
     {
-        NewGymPlannerDataSetTableAdapters.CheckUserExistsAdapter checkUserExistsAdapter;
+        NewGymPlannerDataSetTableAdapters.QueryAdapter QueryAdapter;
         public AuthorizationForm()
         {
             InitializeComponent();
-            checkUserExistsAdapter = new NewGymPlannerDataSetTableAdapters.CheckUserExistsAdapter();
+            QueryAdapter = new NewGymPlannerDataSetTableAdapters.QueryAdapter();
             this.LoginTextBox.Text = "admin";
             this.PassTextBox.Text = "admin";
         }
@@ -29,7 +29,7 @@ namespace Gym_Planner
 
         private void SignInButton_Click(object sender, EventArgs e)
         {
-            if (checkUserExistsAdapter.CheckUserExists(LoginTextBox.Text, PassTextBox.Text) == 1)
+            if (QueryAdapter.CheckUserExists(LoginTextBox.Text, PassTextBox.Text) == 1)
             {
                 User user = new User(this.LoginTextBox.Text, this.PassTextBox.Text);
                 MainForm mainForm = new MainForm(user);
