@@ -16,6 +16,13 @@ namespace Gym_Planner
             name = "default";
             pass = "default";
         }
+        public string Login
+        {
+            get
+            {
+                return name;
+            }
+        }
 
         public User(string name, string pass)
         {

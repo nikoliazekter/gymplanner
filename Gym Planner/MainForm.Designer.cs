@@ -54,6 +54,7 @@
             this.ChooseExToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MuscleGroupToolStripComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.exercisesTableAdapter = new Gym_Planner.NewGymPlannerDataSetTableAdapters.ExercisesTableAdapter();
+            this.recordsByDateAdapter1 = new Gym_Planner.NewGymPlannerDataSetTableAdapters.RecordsByDateAdapter();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.CalendarTab.SuspendLayout();
@@ -283,6 +284,10 @@
             // 
             this.exercisesTableAdapter.ClearBeforeFill = true;
             // 
+            // recordsByDateAdapter1
+            // 
+            this.recordsByDateAdapter1.ClearBeforeFill = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -345,5 +350,6 @@
         private System.Windows.Forms.MenuStrip StatMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem ChooseExToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox MuscleGroupToolStripComboBox;
+        private NewGymPlannerDataSetTableAdapters.RecordsByDateAdapter recordsByDateAdapter1;
     }
 }

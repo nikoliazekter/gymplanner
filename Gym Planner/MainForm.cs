@@ -70,9 +70,20 @@ namespace Gym_Planner
                 }
                 exerciseName = Window.exerciseName;
             }
-            /*
-             * do some load stuff for our chart
-             */
+
+            try
+            {
+                DataTable dataTable = this.recordsByDateAdapter1.GetData(this.user.Login, exerciseName);
+                List<double> weights = new List<double>(dataTable.Rows.Count);
+                foreach (DataRow row in dataTable.Rows)
+                    weights.Add((double)row[1]);
+                this.ExerciseStatisticChart.DataBindTable(weights, "Вага");
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)

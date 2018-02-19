@@ -46,9 +46,9 @@ namespace Gym_Planner {
         
         private WorkoutsDataTable tableWorkouts;
         
-        private Exercise_MuscleGroup1DataTable tableExercise_MuscleGroup1;
-        
         private ExercisesNameDataTable tableExercisesName;
+        
+        private RecordsByDateDataTable tableRecordsByDate;
         
         private global::System.Data.DataRelation relationFK_Day_Workout_Days;
         
@@ -70,15 +70,9 @@ namespace Gym_Planner {
         
         private global::System.Data.DataRelation relationFK_Workout_Set_Workouts;
         
-        private global::System.Data.DataRelation relationFK_Exercise_MuscleGroup_Exercises1;
-        
-        private global::System.Data.DataRelation relationFK_Exercise_MuscleGroup_MuscleGroups1;
-        
         private global::System.Data.DataRelation relationFK_Exercise_MuscleGroup_Exercises2;
         
         private global::System.Data.DataRelation relationFK_Workout_Exercise_Exercises1;
-        
-        private global::System.Data.DataRelation relationFK_Exercise_MuscleGroup_Exercises3;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -141,11 +135,11 @@ namespace Gym_Planner {
                 if ((ds.Tables["Workouts"] != null)) {
                     base.Tables.Add(new WorkoutsDataTable(ds.Tables["Workouts"]));
                 }
-                if ((ds.Tables["Exercise_MuscleGroup1"] != null)) {
-                    base.Tables.Add(new Exercise_MuscleGroup1DataTable(ds.Tables["Exercise_MuscleGroup1"]));
-                }
                 if ((ds.Tables["ExercisesName"] != null)) {
                     base.Tables.Add(new ExercisesNameDataTable(ds.Tables["ExercisesName"]));
+                }
+                if ((ds.Tables["RecordsByDate"] != null)) {
+                    base.Tables.Add(new RecordsByDateDataTable(ds.Tables["RecordsByDate"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -279,9 +273,9 @@ namespace Gym_Planner {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Exercise_MuscleGroup1DataTable Exercise_MuscleGroup1 {
+        public ExercisesNameDataTable ExercisesName {
             get {
-                return this.tableExercise_MuscleGroup1;
+                return this.tableExercisesName;
             }
         }
         
@@ -289,9 +283,9 @@ namespace Gym_Planner {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ExercisesNameDataTable ExercisesName {
+        public RecordsByDateDataTable RecordsByDate {
             get {
-                return this.tableExercisesName;
+                return this.tableRecordsByDate;
             }
         }
         
@@ -395,11 +389,11 @@ namespace Gym_Planner {
                 if ((ds.Tables["Workouts"] != null)) {
                     base.Tables.Add(new WorkoutsDataTable(ds.Tables["Workouts"]));
                 }
-                if ((ds.Tables["Exercise_MuscleGroup1"] != null)) {
-                    base.Tables.Add(new Exercise_MuscleGroup1DataTable(ds.Tables["Exercise_MuscleGroup1"]));
-                }
                 if ((ds.Tables["ExercisesName"] != null)) {
                     base.Tables.Add(new ExercisesNameDataTable(ds.Tables["ExercisesName"]));
+                }
+                if ((ds.Tables["RecordsByDate"] != null)) {
+                    base.Tables.Add(new RecordsByDateDataTable(ds.Tables["RecordsByDate"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -500,16 +494,16 @@ namespace Gym_Planner {
                     this.tableWorkouts.InitVars();
                 }
             }
-            this.tableExercise_MuscleGroup1 = ((Exercise_MuscleGroup1DataTable)(base.Tables["Exercise_MuscleGroup1"]));
-            if ((initTable == true)) {
-                if ((this.tableExercise_MuscleGroup1 != null)) {
-                    this.tableExercise_MuscleGroup1.InitVars();
-                }
-            }
             this.tableExercisesName = ((ExercisesNameDataTable)(base.Tables["ExercisesName"]));
             if ((initTable == true)) {
                 if ((this.tableExercisesName != null)) {
                     this.tableExercisesName.InitVars();
+                }
+            }
+            this.tableRecordsByDate = ((RecordsByDateDataTable)(base.Tables["RecordsByDate"]));
+            if ((initTable == true)) {
+                if ((this.tableRecordsByDate != null)) {
+                    this.tableRecordsByDate.InitVars();
                 }
             }
             this.relationFK_Day_Workout_Days = this.Relations["FK_Day_Workout_Days"];
@@ -522,11 +516,8 @@ namespace Gym_Planner {
             this.relationFK_Workout_Exercise_Workouts = this.Relations["FK_Workout_Exercise_Workouts"];
             this.relationFK_Workout_Set_Sets = this.Relations["FK_Workout_Set_Sets"];
             this.relationFK_Workout_Set_Workouts = this.Relations["FK_Workout_Set_Workouts"];
-            this.relationFK_Exercise_MuscleGroup_Exercises1 = this.Relations["FK_Exercise_MuscleGroup_Exercises1"];
-            this.relationFK_Exercise_MuscleGroup_MuscleGroups1 = this.Relations["FK_Exercise_MuscleGroup_MuscleGroups1"];
             this.relationFK_Exercise_MuscleGroup_Exercises2 = this.Relations["FK_Exercise_MuscleGroup_Exercises2"];
             this.relationFK_Workout_Exercise_Exercises1 = this.Relations["FK_Workout_Exercise_Exercises1"];
-            this.relationFK_Exercise_MuscleGroup_Exercises3 = this.Relations["FK_Exercise_MuscleGroup_Exercises3"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -559,10 +550,10 @@ namespace Gym_Planner {
             base.Tables.Add(this.tableWorkout_Set);
             this.tableWorkouts = new WorkoutsDataTable();
             base.Tables.Add(this.tableWorkouts);
-            this.tableExercise_MuscleGroup1 = new Exercise_MuscleGroup1DataTable();
-            base.Tables.Add(this.tableExercise_MuscleGroup1);
             this.tableExercisesName = new ExercisesNameDataTable();
             base.Tables.Add(this.tableExercisesName);
+            this.tableRecordsByDate = new RecordsByDateDataTable();
+            base.Tables.Add(this.tableRecordsByDate);
             this.relationFK_Day_Workout_Days = new global::System.Data.DataRelation("FK_Day_Workout_Days", new global::System.Data.DataColumn[] {
                         this.tableDays.ID_DayColumn}, new global::System.Data.DataColumn[] {
                         this.tableDay_Workout.ID_DayColumn}, false);
@@ -603,14 +594,6 @@ namespace Gym_Planner {
                         this.tableWorkouts.ID_WorkoutColumn}, new global::System.Data.DataColumn[] {
                         this.tableWorkout_Set.ID_WorkoutColumn}, false);
             this.Relations.Add(this.relationFK_Workout_Set_Workouts);
-            this.relationFK_Exercise_MuscleGroup_Exercises1 = new global::System.Data.DataRelation("FK_Exercise_MuscleGroup_Exercises1", new global::System.Data.DataColumn[] {
-                        this.tableExercises.NameColumn}, new global::System.Data.DataColumn[] {
-                        this.tableExercise_MuscleGroup1.Name_ExerciseColumn}, false);
-            this.Relations.Add(this.relationFK_Exercise_MuscleGroup_Exercises1);
-            this.relationFK_Exercise_MuscleGroup_MuscleGroups1 = new global::System.Data.DataRelation("FK_Exercise_MuscleGroup_MuscleGroups1", new global::System.Data.DataColumn[] {
-                        this.tableMuscleGroups.NameColumn}, new global::System.Data.DataColumn[] {
-                        this.tableExercise_MuscleGroup1.Name_MuscleGroupColumn}, false);
-            this.Relations.Add(this.relationFK_Exercise_MuscleGroup_MuscleGroups1);
             this.relationFK_Exercise_MuscleGroup_Exercises2 = new global::System.Data.DataRelation("FK_Exercise_MuscleGroup_Exercises2", new global::System.Data.DataColumn[] {
                         this.tableExercisesName.NameColumn}, new global::System.Data.DataColumn[] {
                         this.tableExercise_MuscleGroup.Name_ExerciseColumn}, false);
@@ -619,10 +602,6 @@ namespace Gym_Planner {
                         this.tableExercisesName.NameColumn}, new global::System.Data.DataColumn[] {
                         this.tableWorkout_Exercise.Name_ExerciseColumn}, false);
             this.Relations.Add(this.relationFK_Workout_Exercise_Exercises1);
-            this.relationFK_Exercise_MuscleGroup_Exercises3 = new global::System.Data.DataRelation("FK_Exercise_MuscleGroup_Exercises3", new global::System.Data.DataColumn[] {
-                        this.tableExercisesName.NameColumn}, new global::System.Data.DataColumn[] {
-                        this.tableExercise_MuscleGroup1.Name_ExerciseColumn}, false);
-            this.Relations.Add(this.relationFK_Exercise_MuscleGroup_Exercises3);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -693,13 +672,13 @@ namespace Gym_Planner {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeExercise_MuscleGroup1() {
+        private bool ShouldSerializeExercisesName() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeExercisesName() {
+        private bool ShouldSerializeRecordsByDate() {
             return false;
         }
         
@@ -792,10 +771,10 @@ namespace Gym_Planner {
         public delegate void WorkoutsRowChangeEventHandler(object sender, WorkoutsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void Exercise_MuscleGroup1RowChangeEventHandler(object sender, Exercise_MuscleGroup1RowChangeEvent e);
+        public delegate void ExercisesNameRowChangeEventHandler(object sender, ExercisesNameRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void ExercisesNameRowChangeEventHandler(object sender, ExercisesNameRowChangeEvent e);
+        public delegate void RecordsByDateRowChangeEventHandler(object sender, RecordsByDateRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -3907,288 +3886,6 @@ namespace Gym_Planner {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Exercise_MuscleGroup1DataTable : global::System.Data.TypedTableBase<Exercise_MuscleGroup1Row> {
-            
-            private global::System.Data.DataColumn columnName_Exercise;
-            
-            private global::System.Data.DataColumn columnName_MuscleGroup;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Exercise_MuscleGroup1DataTable() {
-                this.TableName = "Exercise_MuscleGroup1";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal Exercise_MuscleGroup1DataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected Exercise_MuscleGroup1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Name_ExerciseColumn {
-                get {
-                    return this.columnName_Exercise;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn Name_MuscleGroupColumn {
-                get {
-                    return this.columnName_MuscleGroup;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Exercise_MuscleGroup1Row this[int index] {
-                get {
-                    return ((Exercise_MuscleGroup1Row)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Exercise_MuscleGroup1RowChangeEventHandler Exercise_MuscleGroup1RowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Exercise_MuscleGroup1RowChangeEventHandler Exercise_MuscleGroup1RowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Exercise_MuscleGroup1RowChangeEventHandler Exercise_MuscleGroup1RowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Exercise_MuscleGroup1RowChangeEventHandler Exercise_MuscleGroup1RowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddExercise_MuscleGroup1Row(Exercise_MuscleGroup1Row row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Exercise_MuscleGroup1Row AddExercise_MuscleGroup1Row(ExercisesRow parentExercisesRowByFK_Exercise_MuscleGroup_Exercises1, MuscleGroupsRow parentMuscleGroupsRowByFK_Exercise_MuscleGroup_MuscleGroups1) {
-                Exercise_MuscleGroup1Row rowExercise_MuscleGroup1Row = ((Exercise_MuscleGroup1Row)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        null};
-                if ((parentExercisesRowByFK_Exercise_MuscleGroup_Exercises1 != null)) {
-                    columnValuesArray[0] = parentExercisesRowByFK_Exercise_MuscleGroup_Exercises1[0];
-                }
-                if ((parentMuscleGroupsRowByFK_Exercise_MuscleGroup_MuscleGroups1 != null)) {
-                    columnValuesArray[1] = parentMuscleGroupsRowByFK_Exercise_MuscleGroup_MuscleGroups1[0];
-                }
-                rowExercise_MuscleGroup1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowExercise_MuscleGroup1Row);
-                return rowExercise_MuscleGroup1Row;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Exercise_MuscleGroup1Row FindByName_ExerciseName_MuscleGroup(string Name_Exercise, string Name_MuscleGroup) {
-                return ((Exercise_MuscleGroup1Row)(this.Rows.Find(new object[] {
-                            Name_Exercise,
-                            Name_MuscleGroup})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                Exercise_MuscleGroup1DataTable cln = ((Exercise_MuscleGroup1DataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new Exercise_MuscleGroup1DataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal void InitVars() {
-                this.columnName_Exercise = base.Columns["Name_Exercise"];
-                this.columnName_MuscleGroup = base.Columns["Name_MuscleGroup"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            private void InitClass() {
-                this.columnName_Exercise = new global::System.Data.DataColumn("Name_Exercise", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnName_Exercise);
-                this.columnName_MuscleGroup = new global::System.Data.DataColumn("Name_MuscleGroup", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnName_MuscleGroup);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnName_Exercise,
-                                this.columnName_MuscleGroup}, true));
-                this.columnName_Exercise.AllowDBNull = false;
-                this.columnName_Exercise.MaxLength = 20;
-                this.columnName_MuscleGroup.AllowDBNull = false;
-                this.columnName_MuscleGroup.MaxLength = 20;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Exercise_MuscleGroup1Row NewExercise_MuscleGroup1Row() {
-                return ((Exercise_MuscleGroup1Row)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Exercise_MuscleGroup1Row(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(Exercise_MuscleGroup1Row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.Exercise_MuscleGroup1RowChanged != null)) {
-                    this.Exercise_MuscleGroup1RowChanged(this, new Exercise_MuscleGroup1RowChangeEvent(((Exercise_MuscleGroup1Row)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.Exercise_MuscleGroup1RowChanging != null)) {
-                    this.Exercise_MuscleGroup1RowChanging(this, new Exercise_MuscleGroup1RowChangeEvent(((Exercise_MuscleGroup1Row)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.Exercise_MuscleGroup1RowDeleted != null)) {
-                    this.Exercise_MuscleGroup1RowDeleted(this, new Exercise_MuscleGroup1RowChangeEvent(((Exercise_MuscleGroup1Row)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.Exercise_MuscleGroup1RowDeleting != null)) {
-                    this.Exercise_MuscleGroup1RowDeleting(this, new Exercise_MuscleGroup1RowChangeEvent(((Exercise_MuscleGroup1Row)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveExercise_MuscleGroup1Row(Exercise_MuscleGroup1Row row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                NewGymPlannerDataSet ds = new NewGymPlannerDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Exercise_MuscleGroup1DataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ExercisesNameDataTable : global::System.Data.TypedTableBase<ExercisesNameRow> {
             
             private global::System.Data.DataColumn columnName;
@@ -4403,6 +4100,269 @@ namespace Gym_Planner {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "ExercisesNameDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class RecordsByDateDataTable : global::System.Data.TypedTableBase<RecordsByDateRow> {
+            
+            private global::System.Data.DataColumn columnDate;
+            
+            private global::System.Data.DataColumn columnColumn1;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public RecordsByDateDataTable() {
+                this.TableName = "RecordsByDate";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal RecordsByDateDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected RecordsByDateDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DateColumn {
+                get {
+                    return this.columnDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn Column1Column {
+                get {
+                    return this.columnColumn1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public RecordsByDateRow this[int index] {
+                get {
+                    return ((RecordsByDateRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event RecordsByDateRowChangeEventHandler RecordsByDateRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event RecordsByDateRowChangeEventHandler RecordsByDateRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event RecordsByDateRowChangeEventHandler RecordsByDateRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event RecordsByDateRowChangeEventHandler RecordsByDateRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddRecordsByDateRow(RecordsByDateRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public RecordsByDateRow AddRecordsByDateRow(System.DateTime Date, decimal Column1) {
+                RecordsByDateRow rowRecordsByDateRow = ((RecordsByDateRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        Date,
+                        Column1};
+                rowRecordsByDateRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowRecordsByDateRow);
+                return rowRecordsByDateRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                RecordsByDateDataTable cln = ((RecordsByDateDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new RecordsByDateDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnDate = base.Columns["Date"];
+                this.columnColumn1 = base.Columns["Column1"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDate);
+                this.columnColumn1 = new global::System.Data.DataColumn("Column1", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColumn1);
+                this.columnDate.AllowDBNull = false;
+                this.columnColumn1.ReadOnly = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public RecordsByDateRow NewRecordsByDateRow() {
+                return ((RecordsByDateRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new RecordsByDateRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(RecordsByDateRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.RecordsByDateRowChanged != null)) {
+                    this.RecordsByDateRowChanged(this, new RecordsByDateRowChangeEvent(((RecordsByDateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.RecordsByDateRowChanging != null)) {
+                    this.RecordsByDateRowChanging(this, new RecordsByDateRowChangeEvent(((RecordsByDateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.RecordsByDateRowDeleted != null)) {
+                    this.RecordsByDateRowDeleted(this, new RecordsByDateRowChangeEvent(((RecordsByDateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.RecordsByDateRowDeleting != null)) {
+                    this.RecordsByDateRowDeleting(this, new RecordsByDateRowChangeEvent(((RecordsByDateRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemoveRecordsByDateRow(RecordsByDateRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                NewGymPlannerDataSet ds = new NewGymPlannerDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "RecordsByDateDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4699,17 +4659,6 @@ namespace Gym_Planner {
                     return ((Workout_ExerciseRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Workout_Exercise_Exercises"])));
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Exercise_MuscleGroup1Row[] GetExercise_MuscleGroup1Rows() {
-                if ((this.Table.ChildRelations["FK_Exercise_MuscleGroup_Exercises1"] == null)) {
-                    return new Exercise_MuscleGroup1Row[0];
-                }
-                else {
-                    return ((Exercise_MuscleGroup1Row[])(base.GetChildRows(this.Table.ChildRelations["FK_Exercise_MuscleGroup_Exercises1"])));
-                }
-            }
         }
         
         /// <summary>
@@ -4756,17 +4705,6 @@ namespace Gym_Planner {
                 }
                 else {
                     return ((Exercise_MuscleGroupRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Exercise_MuscleGroup_MuscleGroups"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Exercise_MuscleGroup1Row[] GetExercise_MuscleGroup1Rows() {
-                if ((this.Table.ChildRelations["FK_Exercise_MuscleGroup_MuscleGroups1"] == null)) {
-                    return new Exercise_MuscleGroup1Row[0];
-                }
-                else {
-                    return ((Exercise_MuscleGroup1Row[])(base.GetChildRows(this.Table.ChildRelations["FK_Exercise_MuscleGroup_MuscleGroups1"])));
                 }
             }
         }
@@ -5184,76 +5122,6 @@ namespace Gym_Planner {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Exercise_MuscleGroup1Row : global::System.Data.DataRow {
-            
-            private Exercise_MuscleGroup1DataTable tableExercise_MuscleGroup1;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal Exercise_MuscleGroup1Row(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableExercise_MuscleGroup1 = ((Exercise_MuscleGroup1DataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Name_Exercise {
-                get {
-                    return ((string)(this[this.tableExercise_MuscleGroup1.Name_ExerciseColumn]));
-                }
-                set {
-                    this[this.tableExercise_MuscleGroup1.Name_ExerciseColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string Name_MuscleGroup {
-                get {
-                    return ((string)(this[this.tableExercise_MuscleGroup1.Name_MuscleGroupColumn]));
-                }
-                set {
-                    this[this.tableExercise_MuscleGroup1.Name_MuscleGroupColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ExercisesRow ExercisesRow {
-                get {
-                    return ((ExercisesRow)(this.GetParentRow(this.Table.ParentRelations["FK_Exercise_MuscleGroup_Exercises1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Exercise_MuscleGroup_Exercises1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public MuscleGroupsRow MuscleGroupsRow {
-                get {
-                    return ((MuscleGroupsRow)(this.GetParentRow(this.Table.ParentRelations["FK_Exercise_MuscleGroup_MuscleGroups1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Exercise_MuscleGroup_MuscleGroups1"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ExercisesNameRow ExercisesNameRow {
-                get {
-                    return ((ExercisesNameRow)(this.GetParentRow(this.Table.ParentRelations["FK_Exercise_MuscleGroup_Exercises3"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Exercise_MuscleGroup_Exercises3"]);
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class ExercisesNameRow : global::System.Data.DataRow {
             
             private ExercisesNameDataTable tableExercisesName;
@@ -5297,16 +5165,59 @@ namespace Gym_Planner {
                     return ((Workout_ExerciseRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Workout_Exercise_Exercises1"])));
                 }
             }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class RecordsByDateRow : global::System.Data.DataRow {
+            
+            private RecordsByDateDataTable tableRecordsByDate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Exercise_MuscleGroup1Row[] GetExercise_MuscleGroup1Rows() {
-                if ((this.Table.ChildRelations["FK_Exercise_MuscleGroup_Exercises3"] == null)) {
-                    return new Exercise_MuscleGroup1Row[0];
+            internal RecordsByDateRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableRecordsByDate = ((RecordsByDateDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime Date {
+                get {
+                    return ((global::System.DateTime)(this[this.tableRecordsByDate.DateColumn]));
                 }
-                else {
-                    return ((Exercise_MuscleGroup1Row[])(base.GetChildRows(this.Table.ChildRelations["FK_Exercise_MuscleGroup_Exercises3"])));
+                set {
+                    this[this.tableRecordsByDate.DateColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal Column1 {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableRecordsByDate.Column1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Column1\' in table \'RecordsByDate\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableRecordsByDate.Column1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsColumn1Null() {
+                return this.IsNull(this.tableRecordsByDate.Column1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetColumn1Null() {
+                this[this.tableRecordsByDate.Column1Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -5688,22 +5599,22 @@ namespace Gym_Planner {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class Exercise_MuscleGroup1RowChangeEvent : global::System.EventArgs {
+        public class ExercisesNameRowChangeEvent : global::System.EventArgs {
             
-            private Exercise_MuscleGroup1Row eventRow;
+            private ExercisesNameRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Exercise_MuscleGroup1RowChangeEvent(Exercise_MuscleGroup1Row row, global::System.Data.DataRowAction action) {
+            public ExercisesNameRowChangeEvent(ExercisesNameRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Exercise_MuscleGroup1Row Row {
+            public ExercisesNameRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5722,22 +5633,22 @@ namespace Gym_Planner {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class ExercisesNameRowChangeEvent : global::System.EventArgs {
+        public class RecordsByDateRowChangeEvent : global::System.EventArgs {
             
-            private ExercisesNameRow eventRow;
+            private RecordsByDateRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ExercisesNameRowChangeEvent(ExercisesNameRow row, global::System.Data.DataRowAction action) {
+            public RecordsByDateRowChangeEvent(RecordsByDateRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public ExercisesNameRow Row {
+            public RecordsByDateRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -9294,240 +9205,6 @@ SELECT ID_Workout, ID_Set FROM Workout_Set WHERE (ID_Set = @ID_Set) AND (ID_Work
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Exercise_MuscleGroup1TableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public Exercise_MuscleGroup1TableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Exercise_MuscleGroup1";
-            tableMapping.ColumnMappings.Add("Name_Exercise", "Name_Exercise");
-            tableMapping.ColumnMappings.Add("Name_MuscleGroup", "Name_MuscleGroup");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Exercise_MuscleGroup] WHERE (([Name_Exercise] = @Original_Name_Exerc" +
-                "ise) AND ([Name_MuscleGroup] = @Original_Name_MuscleGroup))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_Exercise", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Exercise", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_MuscleGroup", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_MuscleGroup", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Exercise_MuscleGroup] ([Name_Exercise], [Name_MuscleGroup]) VALUES (@Name_Exercise, @Name_MuscleGroup);
-SELECT Name_Exercise, Name_MuscleGroup FROM Exercise_MuscleGroup WHERE (Name_Exercise = @Name_Exercise) AND (Name_MuscleGroup = @Name_MuscleGroup)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_Exercise", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Exercise", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_MuscleGroup", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_MuscleGroup", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Exercise_MuscleGroup] SET [Name_Exercise] = @Name_Exercise, [Name_MuscleGroup] = @Name_MuscleGroup WHERE (([Name_Exercise] = @Original_Name_Exercise) AND ([Name_MuscleGroup] = @Original_Name_MuscleGroup));
-SELECT Name_Exercise, Name_MuscleGroup FROM Exercise_MuscleGroup WHERE (Name_Exercise = @Name_Exercise) AND (Name_MuscleGroup = @Name_MuscleGroup)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_Exercise", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Exercise", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name_MuscleGroup", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_MuscleGroup", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_Exercise", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Exercise", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name_MuscleGroup", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name_MuscleGroup", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Gym_Planner.Properties.Settings.Default.NewGymPlannerConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Name_Exercise, Name_MuscleGroup FROM Exercise_MuscleGroup WHERE (Name_Musc" +
-                "leGroup = @groupName)";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@groupName", global::System.Data.SqlDbType.NChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "Name_MuscleGroup", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NewGymPlannerDataSet.Exercise_MuscleGroup1DataTable dataTable, string groupName) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((groupName == null)) {
-                throw new global::System.ArgumentNullException("groupName");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(groupName));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NewGymPlannerDataSet.Exercise_MuscleGroup1DataTable GetData(string groupName) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((groupName == null)) {
-                throw new global::System.ArgumentNullException("groupName");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(groupName));
-            }
-            NewGymPlannerDataSet.Exercise_MuscleGroup1DataTable dataTable = new NewGymPlannerDataSet.Exercise_MuscleGroup1DataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NewGymPlannerDataSet.Exercise_MuscleGroup1DataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(NewGymPlannerDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Exercise_MuscleGroup1");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class ExercisesNameTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -9830,6 +9507,200 @@ SELECT Name_Exercise, Name_MuscleGroup FROM Exercise_MuscleGroup WHERE (Name_Exe
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class RecordsByDateAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public RecordsByDateAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "RecordsByDate";
+            tableMapping.ColumnMappings.Add("Date", "Date");
+            tableMapping.ColumnMappings.Add("Column1", "Column1");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Gym_Planner.Properties.Settings.Default.NewGymPlannerConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT Date, MAX(Sets.Weight) FROM (Days INNER JOIN User_day ON Days.ID_Day = User_Day.ID_Day AND Login = @login INNER JOIN Day_Workout ON Days.ID_Day = Day_Workout.ID_Day INNER JOIN Workouts ON Day_Workout.ID_Workout = Workouts.ID_Workout INNER JOIN Workout_Exercise ON Workout_Exercise.ID_Workout = Day_Workout.ID_Workout AND Workout_Exercise.Name_Exercise = @exercise INNER JOIN Workout_Set ON Day_Workout.ID_Workout = Workout_Set.ID_Workout INNER JOIN Sets ON Workout_Set.ID_Set = Sets.ID_Set) GROUP BY Date";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@login", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@exercise", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Exercise", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(NewGymPlannerDataSet.RecordsByDateDataTable dataTable, string login, string exercise) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((login == null)) {
+                throw new global::System.ArgumentNullException("login");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(login));
+            }
+            if ((exercise == null)) {
+                throw new global::System.ArgumentNullException("exercise");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(exercise));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual NewGymPlannerDataSet.RecordsByDateDataTable GetData(string login, string exercise) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((login == null)) {
+                throw new global::System.ArgumentNullException("login");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(login));
+            }
+            if ((exercise == null)) {
+                throw new global::System.ArgumentNullException("exercise");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(exercise));
+            }
+            NewGymPlannerDataSet.RecordsByDateDataTable dataTable = new NewGymPlannerDataSet.RecordsByDateDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -9862,8 +9733,6 @@ SELECT Name_Exercise, Name_MuscleGroup FROM Exercise_MuscleGroup WHERE (Name_Exe
         private Workout_SetTableAdapter _workout_SetTableAdapter;
         
         private WorkoutsTableAdapter _workoutsTableAdapter;
-        
-        private Exercise_MuscleGroup1TableAdapter _exercise_MuscleGroup1TableAdapter;
         
         private ExercisesNameTableAdapter _exercisesNameTableAdapter;
         
@@ -10041,20 +9910,6 @@ SELECT Name_Exercise, Name_MuscleGroup FROM Exercise_MuscleGroup WHERE (Name_Exe
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Exercise_MuscleGroup1TableAdapter Exercise_MuscleGroup1TableAdapter {
-            get {
-                return this._exercise_MuscleGroup1TableAdapter;
-            }
-            set {
-                this._exercise_MuscleGroup1TableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
         public ExercisesNameTableAdapter ExercisesNameTableAdapter {
             get {
                 return this._exercisesNameTableAdapter;
@@ -10127,10 +9982,6 @@ SELECT Name_Exercise, Name_MuscleGroup FROM Exercise_MuscleGroup WHERE (Name_Exe
                             && (this._workoutsTableAdapter.Connection != null))) {
                     return this._workoutsTableAdapter.Connection;
                 }
-                if (((this._exercise_MuscleGroup1TableAdapter != null) 
-                            && (this._exercise_MuscleGroup1TableAdapter.Connection != null))) {
-                    return this._exercise_MuscleGroup1TableAdapter.Connection;
-                }
                 if (((this._exercisesNameTableAdapter != null) 
                             && (this._exercisesNameTableAdapter.Connection != null))) {
                     return this._exercisesNameTableAdapter.Connection;
@@ -10179,9 +10030,6 @@ SELECT Name_Exercise, Name_MuscleGroup FROM Exercise_MuscleGroup WHERE (Name_Exe
                     count = (count + 1);
                 }
                 if ((this._workoutsTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._exercise_MuscleGroup1TableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._exercisesNameTableAdapter != null)) {
@@ -10306,15 +10154,6 @@ SELECT Name_Exercise, Name_MuscleGroup FROM Exercise_MuscleGroup WHERE (Name_Exe
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._exercise_MuscleGroup1TableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Exercise_MuscleGroup1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._exercise_MuscleGroup1TableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -10421,14 +10260,6 @@ SELECT Name_Exercise, Name_MuscleGroup FROM Exercise_MuscleGroup WHERE (Name_Exe
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._exercise_MuscleGroup1TableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Exercise_MuscleGroup1.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._exercise_MuscleGroup1TableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -10439,14 +10270,6 @@ SELECT Name_Exercise, Name_MuscleGroup FROM Exercise_MuscleGroup WHERE (Name_Exe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateDeletedRows(NewGymPlannerDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._exercise_MuscleGroup1TableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Exercise_MuscleGroup1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._exercise_MuscleGroup1TableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._workout_SetTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Workout_Set.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -10637,11 +10460,6 @@ SELECT Name_Exercise, Name_MuscleGroup FROM Exercise_MuscleGroup WHERE (Name_Exe
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._exercise_MuscleGroup1TableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._exercise_MuscleGroup1TableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
             if (((this._exercisesNameTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._exercisesNameTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
@@ -10778,15 +10596,6 @@ SELECT Name_Exercise, Name_MuscleGroup FROM Exercise_MuscleGroup WHERE (Name_Exe
                         adaptersWithAcceptChangesDuringUpdate.Add(this._workoutsTableAdapter.Adapter);
                     }
                 }
-                if ((this._exercise_MuscleGroup1TableAdapter != null)) {
-                    revertConnections.Add(this._exercise_MuscleGroup1TableAdapter, this._exercise_MuscleGroup1TableAdapter.Connection);
-                    this._exercise_MuscleGroup1TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._exercise_MuscleGroup1TableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._exercise_MuscleGroup1TableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._exercise_MuscleGroup1TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._exercise_MuscleGroup1TableAdapter.Adapter);
-                    }
-                }
                 if ((this._exercisesNameTableAdapter != null)) {
                     revertConnections.Add(this._exercisesNameTableAdapter, this._exercisesNameTableAdapter.Connection);
                     this._exercisesNameTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -10897,10 +10706,6 @@ SELECT Name_Exercise, Name_MuscleGroup FROM Exercise_MuscleGroup WHERE (Name_Exe
                 if ((this._workoutsTableAdapter != null)) {
                     this._workoutsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._workoutsTableAdapter]));
                     this._workoutsTableAdapter.Transaction = null;
-                }
-                if ((this._exercise_MuscleGroup1TableAdapter != null)) {
-                    this._exercise_MuscleGroup1TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._exercise_MuscleGroup1TableAdapter]));
-                    this._exercise_MuscleGroup1TableAdapter.Transaction = null;
                 }
                 if ((this._exercisesNameTableAdapter != null)) {
                     this._exercisesNameTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._exercisesNameTableAdapter]));
