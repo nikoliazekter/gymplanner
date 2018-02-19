@@ -12,10 +12,13 @@ namespace Gym_Planner
 {
     public partial class AuthorizationForm : Form
     {
+        NewGymPlannerDataSetTableAdapters.CheckUserExistsAdapter checkUserExistsAdapter;
         public AuthorizationForm()
         {
             InitializeComponent();
+            checkUserExistsAdapter = new NewGymPlannerDataSetTableAdapters.CheckUserExistsAdapter();
             this.LoginTextBox.Text = "admin";
+            this.PassTextBox.Text = "admin";
         }
 
         private void NewAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -26,16 +29,16 @@ namespace Gym_Planner
 
         private void SignInButton_Click(object sender, EventArgs e)
         {
-            if (true /*pass correspond to login*/)
+            if (checkUserExistsAdapter.CheckUserExists(LoginTextBox.Text, PassTextBox.Text) == 1)
             {
                 User user = new User(this.LoginTextBox.Text, this.PassTextBox.Text);
                 MainForm mainForm = new MainForm(user);
                 mainForm.Show();
                 this.Hide();
             }
-                else
+            else
             {
-                MessageBox.Show("Неправильний логін чи пароль! Спробуйте ще раз!","Помилка!");
+                MessageBox.Show("Неправильний логін чи пароль! Спробуйте ще раз!", "Помилка!");
             }
 
         }

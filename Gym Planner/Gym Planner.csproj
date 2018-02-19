@@ -135,7 +135,7 @@
     <None Include="NewGymPlannerDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
-      <LastGenOutput>NewGymPlannerDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>NewGymPlannerDataSet.Designer.cs</LastGenOutput>
     </None>
     <None Include="NewGymPlannerDataSet.xss">
       <DependentUpon>NewGymPlannerDataSet.xsd</DependentUpon>
