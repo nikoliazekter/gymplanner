@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.MainTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.CalendarTab = new System.Windows.Forms.TabPage();
@@ -54,6 +54,7 @@
             this.ChooseExToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MuscleGroupToolStripComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.exercisesTableAdapter = new Gym_Planner.NewGymPlannerDataSetTableAdapters.ExercisesTableAdapter();
+            this.UpdateExerciseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.CalendarTab.SuspendLayout();
@@ -203,7 +204,8 @@
             this.ExercisesMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ExercisesMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddNewExerciseToolStripMenuItem,
-            this.RemoveExerciseToolStripMenuItem});
+            this.RemoveExerciseToolStripMenuItem,
+            this.UpdateExerciseToolStripMenuItem});
             this.ExercisesMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.ExercisesMenuStrip.Name = "ExercisesMenuStrip";
             this.ExercisesMenuStrip.Size = new System.Drawing.Size(810, 28);
@@ -236,23 +238,23 @@
             // 
             // ExerciseStatisticChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.ExerciseStatisticChart.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.ExerciseStatisticChart.ChartAreas.Add(chartArea2);
             this.ExerciseStatisticChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.ExerciseStatisticChart.Legends.Add(legend1);
+            legend2.Name = "Legend1";
+            this.ExerciseStatisticChart.Legends.Add(legend2);
             this.ExerciseStatisticChart.Location = new System.Drawing.Point(0, 32);
             this.ExerciseStatisticChart.Name = "ExerciseStatisticChart";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.ExerciseStatisticChart.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.ExerciseStatisticChart.Series.Add(series2);
             this.ExerciseStatisticChart.Size = new System.Drawing.Size(810, 335);
             this.ExerciseStatisticChart.TabIndex = 1;
             this.ExerciseStatisticChart.Text = "Статистика";
-            title1.Name = "Title";
-            this.ExerciseStatisticChart.Titles.Add(title1);
+            title2.Name = "Title";
+            this.ExerciseStatisticChart.Titles.Add(title2);
             // 
             // StatMenuStrip
             // 
@@ -282,6 +284,13 @@
             // exercisesTableAdapter
             // 
             this.exercisesTableAdapter.ClearBeforeFill = true;
+            // 
+            // UpdateExerciseToolStripMenuItem
+            // 
+            this.UpdateExerciseToolStripMenuItem.Name = "UpdateExerciseToolStripMenuItem";
+            this.UpdateExerciseToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.UpdateExerciseToolStripMenuItem.Text = "Оновити список";
+            this.UpdateExerciseToolStripMenuItem.Click += new System.EventHandler(this.UpdateExerciseToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -345,5 +354,6 @@
         private System.Windows.Forms.MenuStrip StatMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem ChooseExToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox MuscleGroupToolStripComboBox;
+        private System.Windows.Forms.ToolStripMenuItem UpdateExerciseToolStripMenuItem;
     }
 }
