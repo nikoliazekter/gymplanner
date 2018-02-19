@@ -63,9 +63,9 @@ namespace Gym_Planner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Arnee {
+        internal static System.Drawing.Bitmap arne {
             get {
-                object obj = ResourceManager.GetObject("Arnee", resourceCulture);
+                object obj = ResourceManager.GetObject("arne", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Gym_Planner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Drisch {
+        internal static System.Drawing.Bitmap kKI7Mcg {
             get {
-                object obj = ResourceManager.GetObject("Drisch", resourceCulture);
+                object obj = ResourceManager.GetObject("kKI7Mcg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Gym_Planner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MainFrom {
+        internal static System.Drawing.Bitmap wallpapersden_com_arnold_schwarzenegger_black_and_white_wallpaper_1249x753 {
             get {
-                object obj = ResourceManager.GetObject("MainFrom", resourceCulture);
+                object obj = ResourceManager.GetObject("wallpapersden_com_arnold_schwarzenegger_black_and_white_wallpaper_1249x753", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
