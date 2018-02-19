@@ -51,7 +51,7 @@ namespace Gym_Planner
 
         private void ExercisesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            //
         }
 
         private void вправиBindingSource_CurrentChanged(object sender, EventArgs e)
