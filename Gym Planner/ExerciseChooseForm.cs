@@ -35,14 +35,14 @@ namespace Gym_Planner
             if (this.ExercisesListBox.SelectedItems.Count != 0)
             {
                 this.exerciseName = this.ExercisesListBox.SelectedValue.ToString();
-                this.Hide();
+                this.Close();
                 return;
             }
             foreach (System.Data.DataRowView exercise in this.ExercisesListBox.Items)
                 if (exercise[0].ToString() == this.ExerciseNameTExtBox.Text)
                 {
                     this.exerciseName = this.ExercisesListBox.SelectedValue.ToString();
-                    this.Hide();
+                    this.Close();
                     return;
                 }
             MessageBox.Show("\t\tТакої вправи немає!\n\r Будь ласка, виберіть зі списку, чи введіть правильну назву вправи! :)", "Помилка");

@@ -66,9 +66,10 @@ namespace Gym_Planner
             {
                 if (Window.ShowDialog() != DialogResult.OK)
                 {
-                    return;
+                    exerciseName = Window.exerciseName;
                 }
-                exerciseName = Window.exerciseName;
+                else
+                    return;
             }
 
             try
@@ -76,8 +77,9 @@ namespace Gym_Planner
                 DataTable dataTable = this.recordsByDateAdapter1.GetData(this.user.Login, exerciseName);
                 List<double> weights = new List<double>(dataTable.Rows.Count);
                 foreach (DataRow row in dataTable.Rows)
-                    weights.Add((double)row[1]);
-                this.ExerciseStatisticChart.DataBindTable(weights, "Вага");
+                    weights.Add(Convert.ToDouble(row[1]));
+                this.ExerciseStatisticChart.Series[0].Points.DataBindY(weights);
+                this.ExerciseStatisticChart.Series[0].Name = exerciseName;
             }
             catch (System.Exception ex)
             {

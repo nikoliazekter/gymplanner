@@ -247,7 +247,7 @@
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "Series";
             this.ExerciseStatisticChart.Series.Add(series1);
             this.ExerciseStatisticChart.Size = new System.Drawing.Size(810, 335);
             this.ExerciseStatisticChart.TabIndex = 1;
