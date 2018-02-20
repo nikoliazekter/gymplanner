@@ -106,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Gym_Planner.Properties.Resources.Arnee;
+            this.BackgroundImage = global::Gym_Planner.Properties.Resources.wallpapersden_com_arnold_schwarzenegger_black_and_white_wallpaper_1249x753;
             this.ClientSize = new System.Drawing.Size(399, 250);
             this.Controls.Add(this.AuthorizationLabel);
             this.Controls.Add(this.NewAccount);

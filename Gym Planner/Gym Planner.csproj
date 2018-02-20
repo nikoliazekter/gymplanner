@@ -169,5 +169,14 @@
   <ItemGroup>
     <Folder Include="Properties\DataSources\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Build-Muscle-Like-Arnold-Schwarzenegger-696x426.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kKI7Mcg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallpapersden.com_arnold-schwarzenegger-black-and-white-wallpaper_1249x753.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

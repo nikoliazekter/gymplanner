@@ -40,28 +40,28 @@
             // 
             // NameTextBox
             // 
-            this.NameTextBox.Location = new System.Drawing.Point(147, 98);
+            this.NameTextBox.Location = new System.Drawing.Point(147, 75);
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(264, 22);
+            this.NameTextBox.Size = new System.Drawing.Size(284, 22);
             this.NameTextBox.TabIndex = 0;
             // 
             // LoginTextBox
             // 
-            this.LoginTextBox.Location = new System.Drawing.Point(147, 165);
+            this.LoginTextBox.Location = new System.Drawing.Point(147, 126);
             this.LoginTextBox.Name = "LoginTextBox";
-            this.LoginTextBox.Size = new System.Drawing.Size(264, 22);
+            this.LoginTextBox.Size = new System.Drawing.Size(284, 22);
             this.LoginTextBox.TabIndex = 1;
             // 
             // PassTextBox
             // 
-            this.PassTextBox.Location = new System.Drawing.Point(147, 236);
+            this.PassTextBox.Location = new System.Drawing.Point(147, 177);
             this.PassTextBox.Name = "PassTextBox";
-            this.PassTextBox.Size = new System.Drawing.Size(264, 22);
+            this.PassTextBox.Size = new System.Drawing.Size(284, 22);
             this.PassTextBox.TabIndex = 2;
             // 
             // CreateAccountButton
             // 
-            this.CreateAccountButton.Location = new System.Drawing.Point(209, 304);
+            this.CreateAccountButton.Location = new System.Drawing.Point(147, 219);
             this.CreateAccountButton.Name = "CreateAccountButton";
             this.CreateAccountButton.Size = new System.Drawing.Size(159, 44);
             this.CreateAccountButton.TabIndex = 3;
@@ -72,17 +72,19 @@
             // NewAccountLabel
             // 
             this.NewAccountLabel.AutoSize = true;
-            this.NewAccountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewAccountLabel.Location = new System.Drawing.Point(27, 29);
+            this.NewAccountLabel.BackColor = System.Drawing.SystemColors.Desktop;
+            this.NewAccountLabel.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewAccountLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.NewAccountLabel.Location = new System.Drawing.Point(45, 20);
             this.NewAccountLabel.Name = "NewAccountLabel";
-            this.NewAccountLabel.Size = new System.Drawing.Size(404, 32);
+            this.NewAccountLabel.Size = new System.Drawing.Size(368, 32);
             this.NewAccountLabel.TabIndex = 4;
             this.NewAccountLabel.Text = "Створення нового аккаунту";
             // 
             // NameLabel
             // 
             this.NameLabel.AutoSize = true;
-            this.NameLabel.Location = new System.Drawing.Point(30, 98);
+            this.NameLabel.Location = new System.Drawing.Point(30, 78);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(39, 17);
             this.NameLabel.TabIndex = 5;
@@ -91,7 +93,7 @@
             // NewAcLoganLabel
             // 
             this.NewAcLoganLabel.AutoSize = true;
-            this.NewAcLoganLabel.Location = new System.Drawing.Point(30, 165);
+            this.NewAcLoganLabel.Location = new System.Drawing.Point(30, 131);
             this.NewAcLoganLabel.Name = "NewAcLoganLabel";
             this.NewAcLoganLabel.Size = new System.Drawing.Size(50, 17);
             this.NewAcLoganLabel.TabIndex = 6;
@@ -100,7 +102,7 @@
             // NewAcPassLabel
             // 
             this.NewAcPassLabel.AutoSize = true;
-            this.NewAcPassLabel.Location = new System.Drawing.Point(30, 236);
+            this.NewAcPassLabel.Location = new System.Drawing.Point(30, 177);
             this.NewAcPassLabel.Name = "NewAcPassLabel";
             this.NewAcPassLabel.Size = new System.Drawing.Size(65, 17);
             this.NewAcPassLabel.TabIndex = 7;
@@ -110,8 +112,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Gym_Planner.Properties.Resources.Drisch;
-            this.ClientSize = new System.Drawing.Size(460, 382);
+            this.BackgroundImage = global::Gym_Planner.Properties.Resources.arne;
+            this.ClientSize = new System.Drawing.Size(505, 287);
             this.Controls.Add(this.NewAcPassLabel);
             this.Controls.Add(this.NewAcLoganLabel);
             this.Controls.Add(this.NameLabel);
