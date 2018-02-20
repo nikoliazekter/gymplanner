@@ -106,6 +106,11 @@ namespace Gym_Planner
                     this.ExerciseStatisticChart.Series[exerciseName].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
                     this.ExerciseStatisticChart.Series[exerciseName].Points.DataBindY(weights);
                 }
+                this.ExerciseStatisticChart.ChartAreas[0].AxisX.Title = "Час";
+                this.ExerciseStatisticChart.ChartAreas[0].AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
+                this.ExerciseStatisticChart.ChartAreas[0].AxisX.LabelStyle.Enabled = false;
+                this.ExerciseStatisticChart.ChartAreas[0].AxisY.Title = "Вага";
+                this.ExerciseStatisticChart.ChartAreas[0].AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
             }
             catch (System.Exception ex)
             {
