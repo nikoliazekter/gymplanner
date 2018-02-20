@@ -76,11 +76,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NewGymPlannerDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SetApproachesForm.cs">
+    <Compile Include="EditSetsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SetApproachesForm.Designer.cs">
-      <DependentUpon>SetApproachesForm.cs</DependentUpon>
+    <Compile Include="EditSetsForm.Designer.cs">
+      <DependentUpon>EditSetsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NewExerciseForm.cs">
       <SubType>Form</SubType>
@@ -110,8 +110,8 @@
     <EmbeddedResource Include="NewAccountForm.resx">
       <DependentUpon>NewAccountForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SetApproachesForm.resx">
-      <DependentUpon>SetApproachesForm.cs</DependentUpon>
+    <EmbeddedResource Include="EditSetsForm.resx">
+      <DependentUpon>EditSetsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewExerciseForm.resx">
       <DependentUpon>NewExerciseForm.cs</DependentUpon>

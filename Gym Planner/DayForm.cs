@@ -44,8 +44,8 @@ namespace Gym_Planner
 
         private void ChangeTrainToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SetApproachesForm setApproachesForm = new SetApproachesForm();
-            setApproachesForm.Show();
+            EditSetsForm editSetsForm = new EditSetsForm();
+            editSetsForm.Show();
         }
     }
 }

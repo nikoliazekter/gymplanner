@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Gym_Planner
 {
-    public partial class SetApproachesForm : Form
+    public partial class EditSetsForm : Form
     {
-        public SetApproachesForm()
+        public EditSetsForm()
         {
             InitializeComponent();
         }

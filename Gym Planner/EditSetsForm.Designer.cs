@@ -1,6 +1,6 @@
 ﻿namespace Gym_Planner
 {
-    partial class SetApproachesForm
+    partial class EditSetsForm
     {
         /// <summary>
         /// Required designer variable.
