@@ -15,15 +15,15 @@ namespace Gym_Planner
     {
         private User user;
         NewGymPlannerDataSetTableAdapters.QueryAdapter queryAdapter;
-        NewGymPlannerDataSetTableAdapters.DayIDByLoginAndDateAdapter dayIDAdapter;
         NewGymPlannerDataSetTableAdapters.DaysTableAdapter daysAdapter;
+        NewGymPlannerDataSetTableAdapters.User_DayTableAdapter userDayAdapter;
         public MainForm(User user)
         {
             this.user = user;
             InitializeComponent();
             queryAdapter = new NewGymPlannerDataSetTableAdapters.QueryAdapter();
-            dayIDAdapter = new NewGymPlannerDataSetTableAdapters.DayIDByLoginAndDateAdapter();
             daysAdapter = new NewGymPlannerDataSetTableAdapters.DaysTableAdapter();
+            userDayAdapter = new NewGymPlannerDataSetTableAdapters.User_DayTableAdapter();
             if (this.user.isAdmin())
                 ExercisesMenuStrip.Visible = true;
             else
@@ -41,13 +41,19 @@ namespace Gym_Planner
 
         private void CalendarDayClicked(object sender, DateRangeEventArgs e)
         {
-            DataTable dt = dayIDAdapter.GetData(user.Login, e.Start.ToShortDateString());
+            DataTable dt = daysAdapter.GetDataByLoginAndDate(user.Login, e.Start.ToShortDateString());
             int id = -1;
             if (dt.Rows.Count == 0)
             {
-                NewGymPlannerDataSet.DaysRow dayRow = newGymPlannerDataSet.Days.AddDaysRow(e.Start, "");
-                daysAdapter.Update(newGymPlannerDataSet);
+                NewGymPlannerDataSet.DaysRow dayRow = dataSet.Days.AddDaysRow(e.Start, "");
+                daysAdapter.Update(dataSet);
                 id = dayRow.ID_Day;
+
+                NewGymPlannerDataSet.User_DayRow userDayRow = dataSet.User_Day.NewUser_DayRow();
+                userDayRow.Login = user.Login;
+                userDayRow.ID_Day = id;
+                dataSet.User_Day.AddUser_DayRow(userDayRow);
+                userDayAdapter.Update(dataSet);
             }
             else
             {
@@ -64,7 +70,7 @@ namespace Gym_Planner
             {
                 if (Window.ShowDialog() == DialogResult.OK)
                 {
-                    this.exercisesTableAdapter.Fill(this.newGymPlannerDataSet.Exercises);
+                    this.exercisesTableAdapter.Fill(this.dataSet.Exercises);
                 }
             }
         }
@@ -122,7 +128,7 @@ namespace Gym_Planner
         private void MainForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'newGymPlannerDataSet.Exercises' table. You can move, or remove it, as needed.
-            this.exercisesTableAdapter.Fill(this.newGymPlannerDataSet.Exercises);
+            this.exercisesTableAdapter.Fill(this.dataSet.Exercises);
 
         }
 
@@ -155,7 +161,7 @@ namespace Gym_Planner
         private void RemoveExerciseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             queryAdapter.DeleteExercise(ExercisesDataGridView.CurrentCell.Value.ToString());
-            this.exercisesTableAdapter.Fill(this.newGymPlannerDataSet.Exercises);
+            this.exercisesTableAdapter.Fill(this.dataSet.Exercises);
         }
     }
 }

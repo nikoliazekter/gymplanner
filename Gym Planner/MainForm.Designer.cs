@@ -43,7 +43,7 @@
             this.dataGridViewTextBoxColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumnInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.exercisesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.newGymPlannerDataSet = new Gym_Planner.NewGymPlannerDataSet();
+            this.dataSet = new Gym_Planner.NewGymPlannerDataSet();
             this.ExercisesMenuStrip = new System.Windows.Forms.MenuStrip();
             this.AddNewExerciseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveExerciseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +61,7 @@
             this.ExercisesTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExercisesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exercisesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newGymPlannerDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             this.ExercisesMenuStrip.SuspendLayout();
             this.StatTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExerciseStatisticChart)).BeginInit();
@@ -194,13 +194,13 @@
             // exercisesBindingSource
             // 
             this.exercisesBindingSource.DataMember = "Exercises";
-            this.exercisesBindingSource.DataSource = this.newGymPlannerDataSet;
+            this.exercisesBindingSource.DataSource = this.dataSet;
             this.exercisesBindingSource.CurrentChanged += new System.EventHandler(this.exercisesBindingSource_CurrentChanged);
             // 
             // newGymPlannerDataSet
             // 
-            this.newGymPlannerDataSet.DataSetName = "NewGymPlannerDataSet";
-            this.newGymPlannerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataSet.DataSetName = "NewGymPlannerDataSet";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ExercisesMenuStrip
             // 
@@ -309,7 +309,7 @@
             this.ExercisesTableLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExercisesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exercisesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newGymPlannerDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             this.ExercisesMenuStrip.ResumeLayout(false);
             this.ExercisesMenuStrip.PerformLayout();
             this.StatTab.ResumeLayout(false);
@@ -331,7 +331,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn informationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn muscleGroupsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn workoutsDataGridViewTextBoxColumn;
-        private NewGymPlannerDataSet newGymPlannerDataSet;
+        private NewGymPlannerDataSet dataSet;
         private System.Windows.Forms.BindingSource exercisesBindingSource;
         private NewGymPlannerDataSetTableAdapters.ExercisesTableAdapter exercisesTableAdapter;
         private System.Windows.Forms.TabControl MainTabControl;
