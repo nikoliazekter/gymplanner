@@ -100,7 +100,7 @@ namespace Gym_Planner
             TreeNode node = PlanTreeView.SelectedNode;
             if (node == null)
             {
-                MessageBox.Show("Виберіть тренування для видалення");
+                MessageBox.Show("Виберіть тренування для зміни");
                 return;
             }
             if (node.Level == 1)
