@@ -15,11 +15,15 @@ namespace Gym_Planner
     {
         private User user;
         NewGymPlannerDataSetTableAdapters.QueryAdapter queryAdapter;
+        NewGymPlannerDataSetTableAdapters.DayIDByLoginAndDateAdapter dayIDAdapter;
+        NewGymPlannerDataSetTableAdapters.DaysTableAdapter daysAdapter;
         public MainForm(User user)
         {
             this.user = user;
             InitializeComponent();
             queryAdapter = new NewGymPlannerDataSetTableAdapters.QueryAdapter();
+            dayIDAdapter = new NewGymPlannerDataSetTableAdapters.DayIDByLoginAndDateAdapter();
+            daysAdapter = new NewGymPlannerDataSetTableAdapters.DaysTableAdapter();
             if (this.user.isAdmin())
                 ExercisesMenuStrip.Visible = true;
             else
@@ -37,7 +41,19 @@ namespace Gym_Planner
 
         private void CalendarDayClicked(object sender, DateRangeEventArgs e)
         {
-            DayForm dayForm = new DayForm(e.Start);
+            DataTable dt = dayIDAdapter.GetData(user.Login, e.Start.ToShortDateString());
+            int id = -1;
+            if (dt.Rows.Count == 0)
+            {
+                NewGymPlannerDataSet.DaysRow dayRow = newGymPlannerDataSet.Days.AddDaysRow(e.Start, "");
+                daysAdapter.Update(newGymPlannerDataSet);
+                id = dayRow.ID_Day;
+            }
+            else
+            {
+                id = (int)dt.Rows[0]["ID_Day"];
+            }
+            DayForm dayForm = new DayForm(e.Start, id);
             dayForm.Show();
         }
 
@@ -46,7 +62,7 @@ namespace Gym_Planner
             NewExerciseForm newExerciseForm = new NewExerciseForm();
             using (NewExerciseForm Window = new NewExerciseForm())
             {
-                if (Window.ShowDialog() != DialogResult.OK)
+                if (Window.ShowDialog() == DialogResult.OK)
                 {
                     this.exercisesTableAdapter.Fill(this.newGymPlannerDataSet.Exercises);
                 }
@@ -63,7 +79,7 @@ namespace Gym_Planner
             string exerciseName;
             using (ExerciseChooseForm Window = new ExerciseChooseForm())
             {
-                if (Window.ShowDialog() != DialogResult.OK)
+                if (Window.ShowDialog() == DialogResult.OK)
                 {
                     exerciseName = Window.exerciseName;
                 }

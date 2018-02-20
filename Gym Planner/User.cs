@@ -8,30 +8,29 @@ namespace Gym_Planner
 {
     public class User
     {
+        private string login;
         private string name;
         private string pass;
 
-        User()
-        {
-            name = "default";
-            pass = "default";
-        }
+        public string Name { get { return name; } }
+
         public string Login
         {
             get
             {
-                return name;
+                return login;
             }
         }
 
-        public User(string name, string pass)
+        public User(string login, string pass, string name)
         {
-            this.name = name;
+            this.login = login;
             this.pass = pass;
+            this.name = name;
         }
         public bool isAdmin()
         {
-            return this.name == "admin";
+            return this.login == "admin";
         }
 
     }

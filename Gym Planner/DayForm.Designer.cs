@@ -36,7 +36,6 @@
             this.ChangeTrainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddTrainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RemoveTrainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CopyTrainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveCommentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DayTableLayout.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -93,8 +92,7 @@
             this.редагуватиТренуванняToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ChangeTrainToolStripMenuItem,
             this.AddTrainToolStripMenuItem,
-            this.RemoveTrainToolStripMenuItem,
-            this.CopyTrainToolStripMenuItem});
+            this.RemoveTrainToolStripMenuItem});
             this.редагуватиТренуванняToolStripMenuItem.Name = "редагуватиТренуванняToolStripMenuItem";
             this.редагуватиТренуванняToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
             this.редагуватиТренуванняToolStripMenuItem.Text = "Редагувати тренування";
@@ -102,34 +100,30 @@
             // ChangeTrainToolStripMenuItem
             // 
             this.ChangeTrainToolStripMenuItem.Name = "ChangeTrainToolStripMenuItem";
-            this.ChangeTrainToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.ChangeTrainToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.ChangeTrainToolStripMenuItem.Text = "Змінити тренування";
             this.ChangeTrainToolStripMenuItem.Click += new System.EventHandler(this.ChangeTrainToolStripMenuItem_Click);
             // 
             // AddTrainToolStripMenuItem
             // 
             this.AddTrainToolStripMenuItem.Name = "AddTrainToolStripMenuItem";
-            this.AddTrainToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.AddTrainToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.AddTrainToolStripMenuItem.Text = "Додати тренування";
             this.AddTrainToolStripMenuItem.Click += new System.EventHandler(this.AddTrainToolStripMenuItem_Click);
             // 
             // RemoveTrainToolStripMenuItem
             // 
             this.RemoveTrainToolStripMenuItem.Name = "RemoveTrainToolStripMenuItem";
-            this.RemoveTrainToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
+            this.RemoveTrainToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
             this.RemoveTrainToolStripMenuItem.Text = "Видалити тренування";
-            // 
-            // CopyTrainToolStripMenuItem
-            // 
-            this.CopyTrainToolStripMenuItem.Name = "CopyTrainToolStripMenuItem";
-            this.CopyTrainToolStripMenuItem.Size = new System.Drawing.Size(258, 26);
-            this.CopyTrainToolStripMenuItem.Text = "Скопіювати з іншого дня";
+            this.RemoveTrainToolStripMenuItem.Click += new System.EventHandler(this.RemoveTrainToolStripMenuItem_Click);
             // 
             // SaveCommentToolStripMenuItem
             // 
             this.SaveCommentToolStripMenuItem.Name = "SaveCommentToolStripMenuItem";
             this.SaveCommentToolStripMenuItem.Size = new System.Drawing.Size(155, 24);
             this.SaveCommentToolStripMenuItem.Text = "Зберегти коментар";
+            this.SaveCommentToolStripMenuItem.Click += new System.EventHandler(this.SaveCommentToolStripMenuItem_Click);
             // 
             // DayForm
             // 
@@ -157,7 +151,6 @@
         private System.Windows.Forms.ToolStripMenuItem редагуватиТренуванняToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddTrainToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem RemoveTrainToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem CopyTrainToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SaveCommentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ChangeTrainToolStripMenuItem;
     }

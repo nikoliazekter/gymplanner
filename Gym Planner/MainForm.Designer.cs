@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.MainTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.CalendarTab = new System.Windows.Forms.TabPage();
@@ -241,18 +241,18 @@
             // 
             // ExerciseStatisticChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.ExerciseStatisticChart.ChartAreas.Add(chartArea1);
+            chartArea3.Name = "ChartArea1";
+            this.ExerciseStatisticChart.ChartAreas.Add(chartArea3);
             this.ExerciseStatisticChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.ExerciseStatisticChart.Legends.Add(legend1);
+            legend3.Name = "Legend1";
+            this.ExerciseStatisticChart.Legends.Add(legend3);
             this.ExerciseStatisticChart.Location = new System.Drawing.Point(0, 32);
             this.ExerciseStatisticChart.Name = "ExerciseStatisticChart";
             this.ExerciseStatisticChart.Size = new System.Drawing.Size(789, 335);
             this.ExerciseStatisticChart.TabIndex = 1;
             this.ExerciseStatisticChart.Text = "Статистика";
-            title1.Name = "Title";
-            this.ExerciseStatisticChart.Titles.Add(title1);
+            title3.Name = "Title";
+            this.ExerciseStatisticChart.Titles.Add(title3);
             // 
             // StatMenuStrip
             // 

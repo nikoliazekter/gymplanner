@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.AddApproachButton = new System.Windows.Forms.Button();
-            this.RemoveApproachButton = new System.Windows.Forms.Button();
+            this.AddSetButton = new System.Windows.Forms.Button();
+            this.RemoveSetButton = new System.Windows.Forms.Button();
             this.RepsListView = new System.Windows.Forms.ListView();
             this.Reps = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Weight = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -40,38 +40,43 @@
             this.RepsTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // AddApproachButton
+            // AddSetButton
             // 
-            this.AddApproachButton.Location = new System.Drawing.Point(232, 333);
-            this.AddApproachButton.Name = "AddApproachButton";
-            this.AddApproachButton.Size = new System.Drawing.Size(119, 45);
-            this.AddApproachButton.TabIndex = 0;
-            this.AddApproachButton.Text = "Додати підхід";
-            this.AddApproachButton.UseVisualStyleBackColor = true;
+            this.AddSetButton.Location = new System.Drawing.Point(232, 333);
+            this.AddSetButton.Name = "AddSetButton";
+            this.AddSetButton.Size = new System.Drawing.Size(119, 45);
+            this.AddSetButton.TabIndex = 0;
+            this.AddSetButton.Text = "Додати підхід";
+            this.AddSetButton.UseVisualStyleBackColor = true;
+            this.AddSetButton.Click += new System.EventHandler(this.AddSetButton_Click);
             // 
-            // RemoveApproachButton
+            // RemoveSetButton
             // 
-            this.RemoveApproachButton.Location = new System.Drawing.Point(232, 384);
-            this.RemoveApproachButton.Name = "RemoveApproachButton";
-            this.RemoveApproachButton.Size = new System.Drawing.Size(119, 45);
-            this.RemoveApproachButton.TabIndex = 1;
-            this.RemoveApproachButton.Text = "Видалити підхід";
-            this.RemoveApproachButton.UseVisualStyleBackColor = true;
+            this.RemoveSetButton.Location = new System.Drawing.Point(232, 384);
+            this.RemoveSetButton.Name = "RemoveSetButton";
+            this.RemoveSetButton.Size = new System.Drawing.Size(119, 45);
+            this.RemoveSetButton.TabIndex = 1;
+            this.RemoveSetButton.Text = "Видалити підхід";
+            this.RemoveSetButton.UseVisualStyleBackColor = true;
+            this.RemoveSetButton.Click += new System.EventHandler(this.RemoveSetButton_Click);
             // 
             // RepsListView
             // 
             this.RepsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Reps,
             this.Weight});
+            this.RepsListView.HideSelection = false;
             this.RepsListView.Location = new System.Drawing.Point(12, 12);
             this.RepsListView.Name = "RepsListView";
             this.RepsListView.Size = new System.Drawing.Size(433, 315);
             this.RepsListView.TabIndex = 2;
             this.RepsListView.UseCompatibleStateImageBehavior = false;
+            this.RepsListView.View = System.Windows.Forms.View.Details;
             // 
             // Reps
             // 
             this.Reps.Text = "Кількість повторів";
+            this.Reps.Width = 130;
             // 
             // Weight
             // 
@@ -79,13 +84,13 @@
             // 
             // DoneButton
             // 
+            this.DoneButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.DoneButton.Location = new System.Drawing.Point(357, 333);
             this.DoneButton.Name = "DoneButton";
             this.DoneButton.Size = new System.Drawing.Size(88, 96);
             this.DoneButton.TabIndex = 3;
             this.DoneButton.Text = "Готово!";
             this.DoneButton.UseVisualStyleBackColor = true;
-            this.DoneButton.Click += new System.EventHandler(this.DoneButton_Click);
             // 
             // RepsLabel
             // 
@@ -107,19 +112,19 @@
             // 
             // WeightTextBox
             // 
-            this.WeightTextBox.Location = new System.Drawing.Point(123, 402);
+            this.WeightTextBox.Location = new System.Drawing.Point(123, 395);
             this.WeightTextBox.Name = "WeightTextBox";
             this.WeightTextBox.Size = new System.Drawing.Size(100, 22);
             this.WeightTextBox.TabIndex = 6;
             // 
             // RepsTextBox
             // 
-            this.RepsTextBox.Location = new System.Drawing.Point(123, 350);
+            this.RepsTextBox.Location = new System.Drawing.Point(123, 347);
             this.RepsTextBox.Name = "RepsTextBox";
             this.RepsTextBox.Size = new System.Drawing.Size(100, 22);
             this.RepsTextBox.TabIndex = 7;
             // 
-            // SetApproachesForm
+            // EditSetsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -130,10 +135,10 @@
             this.Controls.Add(this.RepsLabel);
             this.Controls.Add(this.DoneButton);
             this.Controls.Add(this.RepsListView);
-            this.Controls.Add(this.RemoveApproachButton);
-            this.Controls.Add(this.AddApproachButton);
+            this.Controls.Add(this.RemoveSetButton);
+            this.Controls.Add(this.AddSetButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "SetApproachesForm";
+            this.Name = "EditSetsForm";
             this.Text = "Редагування підходів";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -142,8 +147,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button AddApproachButton;
-        private System.Windows.Forms.Button RemoveApproachButton;
+        private System.Windows.Forms.Button AddSetButton;
+        private System.Windows.Forms.Button RemoveSetButton;
         private System.Windows.Forms.ListView RepsListView;
         private System.Windows.Forms.ColumnHeader Reps;
         private System.Windows.Forms.ColumnHeader Weight;

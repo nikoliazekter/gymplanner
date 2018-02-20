@@ -31,7 +31,7 @@ namespace Gym_Planner
         {
             if (QueryAdapter.CheckUserExists(LoginTextBox.Text, PassTextBox.Text) == 1)
             {
-                User user = new User(this.LoginTextBox.Text, this.PassTextBox.Text);
+                User user = new User(this.LoginTextBox.Text, this.PassTextBox.Text, "TODO");
                 MainForm mainForm = new MainForm(user);
                 mainForm.Show();
                 this.Hide();

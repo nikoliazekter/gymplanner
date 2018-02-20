@@ -35,12 +35,12 @@
             this.ExerciseNameLabel = new System.Windows.Forms.Label();
             this.CreateExerciseButton = new System.Windows.Forms.Button();
             this.ChooseMuscleGroupComboBox = new System.Windows.Forms.ComboBox();
-            this.ChooseMuscleGroupLabel = new System.Windows.Forms.Label();
-            this.newGymPlannerDataSet = new Gym_Planner.NewGymPlannerDataSet();
             this.muscleGroupsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.newGymPlannerDataSet = new Gym_Planner.NewGymPlannerDataSet();
+            this.ChooseMuscleGroupLabel = new System.Windows.Forms.Label();
             this.muscleGroupsTableAdapter = new Gym_Planner.NewGymPlannerDataSetTableAdapters.MuscleGroupsTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.newGymPlannerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.muscleGroupsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newGymPlannerDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // ExerciseInfoRichTextBox
@@ -78,6 +78,7 @@
             // 
             // CreateExerciseButton
             // 
+            this.CreateExerciseButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.CreateExerciseButton.Location = new System.Drawing.Point(294, 82);
             this.CreateExerciseButton.Name = "CreateExerciseButton";
             this.CreateExerciseButton.Size = new System.Drawing.Size(88, 39);
@@ -96,6 +97,16 @@
             this.ChooseMuscleGroupComboBox.Size = new System.Drawing.Size(213, 24);
             this.ChooseMuscleGroupComboBox.TabIndex = 5;
             // 
+            // muscleGroupsBindingSource
+            // 
+            this.muscleGroupsBindingSource.DataMember = "MuscleGroups";
+            this.muscleGroupsBindingSource.DataSource = this.newGymPlannerDataSet;
+            // 
+            // newGymPlannerDataSet
+            // 
+            this.newGymPlannerDataSet.DataSetName = "NewGymPlannerDataSet";
+            this.newGymPlannerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // ChooseMuscleGroupLabel
             // 
             this.ChooseMuscleGroupLabel.AutoSize = true;
@@ -104,16 +115,6 @@
             this.ChooseMuscleGroupLabel.Size = new System.Drawing.Size(88, 17);
             this.ChooseMuscleGroupLabel.TabIndex = 6;
             this.ChooseMuscleGroupLabel.Text = "Група м\'язів";
-            // 
-            // newGymPlannerDataSet
-            // 
-            this.newGymPlannerDataSet.DataSetName = "NewGymPlannerDataSet";
-            this.newGymPlannerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // muscleGroupsBindingSource
-            // 
-            this.muscleGroupsBindingSource.DataMember = "MuscleGroups";
-            this.muscleGroupsBindingSource.DataSource = this.newGymPlannerDataSet;
             // 
             // muscleGroupsTableAdapter
             // 
@@ -135,8 +136,8 @@
             this.Name = "NewExerciseForm";
             this.Text = "Нова вправа";
             this.Load += new System.EventHandler(this.NewExerciseForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.newGymPlannerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.muscleGroupsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newGymPlannerDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

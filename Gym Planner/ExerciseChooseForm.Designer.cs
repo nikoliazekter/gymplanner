@@ -48,6 +48,7 @@
             // 
             // GetExerciseButton
             // 
+            this.GetExerciseButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.GetExerciseButton.Location = new System.Drawing.Point(301, 25);
             this.GetExerciseButton.Name = "GetExerciseButton";
             this.GetExerciseButton.Size = new System.Drawing.Size(103, 47);
