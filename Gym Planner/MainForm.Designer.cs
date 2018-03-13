@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.MainTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.CalendarTab = new System.Windows.Forms.TabPage();
@@ -52,9 +52,9 @@
             this.StatMenuStrip = new System.Windows.Forms.MenuStrip();
             this.ChooseExToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MuscleGroupToolStripComboBox = new System.Windows.Forms.ToolStripComboBox();
+            this.linkLabelLogout = new System.Windows.Forms.LinkLabel();
             this.exercisesTableAdapter = new Gym_Planner.NewGymPlannerDataSetTableAdapters.ExercisesTableAdapter();
             this.recordsByDateAdapter1 = new Gym_Planner.NewGymPlannerDataSetTableAdapters.RecordsByDateAdapter();
-            this.linkLabelLogout = new System.Windows.Forms.LinkLabel();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.CalendarTab.SuspendLayout();
@@ -243,18 +243,18 @@
             // 
             // ExerciseStatisticChart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.ExerciseStatisticChart.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.ExerciseStatisticChart.ChartAreas.Add(chartArea1);
             this.ExerciseStatisticChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.ExerciseStatisticChart.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            this.ExerciseStatisticChart.Legends.Add(legend1);
             this.ExerciseStatisticChart.Location = new System.Drawing.Point(0, 32);
             this.ExerciseStatisticChart.Name = "ExerciseStatisticChart";
             this.ExerciseStatisticChart.Size = new System.Drawing.Size(914, 335);
             this.ExerciseStatisticChart.TabIndex = 1;
             this.ExerciseStatisticChart.Text = "Статистика";
-            title2.Name = "Title";
-            this.ExerciseStatisticChart.Titles.Add(title2);
+            title1.Name = "Title";
+            this.ExerciseStatisticChart.Titles.Add(title1);
             // 
             // StatMenuStrip
             // 
@@ -283,14 +283,6 @@
             this.MuscleGroupToolStripComboBox.Text = "Виберіть групу м\'язів";
             this.MuscleGroupToolStripComboBox.SelectedIndexChanged += new System.EventHandler(this.MuscleGroupToolStripComboBox_Click);
             // 
-            // exercisesTableAdapter
-            // 
-            this.exercisesTableAdapter.ClearBeforeFill = true;
-            // 
-            // recordsByDateAdapter1
-            // 
-            this.recordsByDateAdapter1.ClearBeforeFill = true;
-            // 
             // linkLabelLogout
             // 
             this.linkLabelLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -302,6 +294,14 @@
             this.linkLabelLogout.TabStop = true;
             this.linkLabelLogout.Text = "Змінити користувача";
             this.linkLabelLogout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelLogout_LinkClicked);
+            // 
+            // exercisesTableAdapter
+            // 
+            this.exercisesTableAdapter.ClearBeforeFill = true;
+            // 
+            // recordsByDateAdapter1
+            // 
+            this.recordsByDateAdapter1.ClearBeforeFill = true;
             // 
             // MainForm
             // 
