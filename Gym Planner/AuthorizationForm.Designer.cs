@@ -58,7 +58,7 @@
             this.SignInButton.Name = "SignInButton";
             this.SignInButton.Size = new System.Drawing.Size(246, 40);
             this.SignInButton.TabIndex = 2;
-            this.SignInButton.Text = "Sign in";
+            this.SignInButton.Text = "Увійти";
             this.SignInButton.UseVisualStyleBackColor = true;
             this.SignInButton.Click += new System.EventHandler(this.SignInButton_Click);
             // 
@@ -83,19 +83,19 @@
             // NewAccount
             // 
             this.NewAccount.AutoSize = true;
-            this.NewAccount.Location = new System.Drawing.Point(140, 9);
+            this.NewAccount.Location = new System.Drawing.Point(198, 9);
             this.NewAccount.Name = "NewAccount";
-            this.NewAccount.Size = new System.Drawing.Size(235, 17);
+            this.NewAccount.Size = new System.Drawing.Size(177, 17);
             this.NewAccount.TabIndex = 5;
             this.NewAccount.TabStop = true;
-            this.NewAccount.Text = "Бажаєте створити новий аккаунт?";
+            this.NewAccount.Text = "Створити новий аккаунт?";
             this.NewAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.NewAccount_LinkClicked);
             // 
             // AuthorizationLabel
             // 
             this.AuthorizationLabel.AutoSize = true;
             this.AuthorizationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AuthorizationLabel.Location = new System.Drawing.Point(137, 47);
+            this.AuthorizationLabel.Location = new System.Drawing.Point(155, 50);
             this.AuthorizationLabel.Name = "AuthorizationLabel";
             this.AuthorizationLabel.Size = new System.Drawing.Size(220, 32);
             this.AuthorizationLabel.TabIndex = 6;

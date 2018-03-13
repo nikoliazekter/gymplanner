@@ -68,6 +68,7 @@ namespace Gym_Planner
 
         private void AddTrainToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            int workoutId = -1;
             using (ExerciseChooseForm Window = new ExerciseChooseForm())
             {
                 if (Window.ShowDialog() == DialogResult.OK)
@@ -77,6 +78,7 @@ namespace Gym_Planner
 
                     NewGymPlannerDataSet.Workout_ExerciseRow workoutExerciseRow =
                         dataSet.Workout_Exercise.NewWorkout_ExerciseRow();
+                    workoutId = workoutRow.ID_Workout;
                     workoutExerciseRow.ID_Workout = workoutRow.ID_Workout;
                     workoutExerciseRow.Name_Exercise = Window.exerciseName;
                     dataSet.Workout_Exercise.AddWorkout_ExerciseRow(workoutExerciseRow);
@@ -90,6 +92,14 @@ namespace Gym_Planner
                     dataSet.Day_Workout.AddDay_WorkoutRow(dayWorkoutRow);
                     dayWorkoutAdapter.Update(dataSet);
 
+                    UpdateTreeView();
+                }
+            }
+
+            using (EditSetsForm Window = new EditSetsForm(workoutId))
+            {
+                if (Window.ShowDialog() == DialogResult.OK)
+                {
                     UpdateTreeView();
                 }
             }

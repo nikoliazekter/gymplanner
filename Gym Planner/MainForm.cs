@@ -163,5 +163,12 @@ namespace Gym_Planner
             queryAdapter.DeleteExercise(ExercisesDataGridView.CurrentCell.Value.ToString());
             this.exercisesTableAdapter.Fill(this.dataSet.Exercises);
         }
+
+        private void linkLabelLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            AuthorizationForm authorizationForm = new AuthorizationForm();
+            authorizationForm.Show();
+        }
     }
 }

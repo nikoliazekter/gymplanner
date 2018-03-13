@@ -71,5 +71,10 @@ namespace Gym_Planner
             queryAdapter.DeleteSet((int)RepsListView.SelectedItems[0].Tag);
             UpdateListView();
         }
+
+        private void DoneButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

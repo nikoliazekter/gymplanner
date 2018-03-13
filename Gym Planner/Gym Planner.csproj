@@ -71,6 +71,9 @@
     <Compile Include="NewAccountForm.Designer.cs">
       <DependentUpon>NewAccountForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewGymPlannerDataSet.cs">
+      <DependentUpon>NewGymPlannerDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NewGymPlannerDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

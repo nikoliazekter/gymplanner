@@ -91,6 +91,7 @@
             this.DoneButton.TabIndex = 3;
             this.DoneButton.Text = "Готово!";
             this.DoneButton.UseVisualStyleBackColor = true;
+            this.DoneButton.Click += new System.EventHandler(this.DoneButton_Click);
             // 
             // RepsLabel
             // 
