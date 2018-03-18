@@ -15,6 +15,7 @@ namespace Gym_Planner
         int dayId;
 
         NewGymPlannerDataSet dataSet;
+
         NewGymPlannerDataSetTableAdapters.QueryAdapter queryAdapter;
         NewGymPlannerDataSetTableAdapters.DaysTableAdapter daysAdapter;
         NewGymPlannerDataSetTableAdapters.WorkoutsTableAdapter workoutsAdapter;

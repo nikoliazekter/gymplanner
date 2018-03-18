@@ -15,6 +15,7 @@ namespace Gym_Planner
     {
         private User user;
         NewGymPlannerDataSetTableAdapters.QueryAdapter queryAdapter;
+        NewGymPlannerDataSetTableAdapters.FindDaysTableAdapter findDays;
         NewGymPlannerDataSetTableAdapters.DaysTableAdapter daysAdapter;
         NewGymPlannerDataSetTableAdapters.User_DayTableAdapter userDayAdapter;
         public MainForm(User user)
@@ -37,6 +38,12 @@ namespace Gym_Planner
         public MainForm()
         {
             InitializeComponent();
+        }
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'newGymPlannerDataSet.Exercises' table. You can move, or remove it, as needed.
+            this.exercisesTableAdapter.Fill(this.dataSet.Exercises);
+
         }
 
         private void CalendarDayClicked(object sender, DateRangeEventArgs e)
@@ -124,14 +131,6 @@ namespace Gym_Planner
             }
         }
 
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'newGymPlannerDataSet.Exercises' table. You can move, or remove it, as needed.
-            this.exercisesTableAdapter.Fill(this.dataSet.Exercises);
-
-        }
-
         private void ExercisesDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (this.ExercisesDataGridView.SelectedCells.Count != 0)
@@ -139,11 +138,6 @@ namespace Gym_Planner
                 int rowIndex = this.ExercisesDataGridView.SelectedCells[0].RowIndex;
                 this.ExerciseInfoLabel.Text = this.ExercisesDataGridView.Rows[rowIndex].Cells[1].Value.ToString();
             }
-        }
-
-        private void exercisesBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void MuscleGroupToolStripComboBox_Click(object sender, EventArgs e)
@@ -173,7 +167,30 @@ namespace Gym_Planner
 
         private void FindButton_Click(object sender, EventArgs e)
         {
+            //try catch
+            //List<DateTime> days = new List<DateTime>();
+            this.findDays = new NewGymPlannerDataSetTableAdapters.FindDaysTableAdapter();
+            DataTable days = findDays.GetData(Parser.ToNullableInt(RepsTextBox.Text),
+                Parser.ToNullableDouble(minWeightTextBox.Text), Parser.ToNullableDouble(minWeightTextBox.Text),
+                this.user.Login, AfterDateTimePicker.Text, BeforeDateTimePicker.Text, ExerciseNameLabel.Text);
+            MessageBox.Show("");
+        }
+        private void populateDayList(List<DateTime> days)
+        {
+            //add data grid instead of listView?
+        }
 
+        private void GetExerciseButton_Click(object sender, EventArgs e)
+        {
+            using (ExerciseChooseForm Window = new ExerciseChooseForm())
+            {
+                if (Window.ShowDialog() == DialogResult.OK)
+                {
+                    this.ExerciseNameLabel.Text = Window.exerciseName;
+                }
+                else
+                    return;
+            }
         }
     }
 }

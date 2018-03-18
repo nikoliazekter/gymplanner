@@ -37,6 +37,22 @@
             this.CalendarTab = new System.Windows.Forms.TabPage();
             this.CalendarTabPanel = new System.Windows.Forms.TableLayoutPanel();
             this.Calendar = new System.Windows.Forms.MonthCalendar();
+            this.FindDayTab = new System.Windows.Forms.TabPage();
+            this.FindDayTable = new System.Windows.Forms.TableLayoutPanel();
+            this.DaysList = new System.Windows.Forms.ListView();
+            this.FindPanel = new System.Windows.Forms.Panel();
+            this.maxWeightLabel = new System.Windows.Forms.Label();
+            this.minWeightLabel = new System.Windows.Forms.Label();
+            this.rapsLabel = new System.Windows.Forms.Label();
+            this.maxDateLabel = new System.Windows.Forms.Label();
+            this.minDateLabel = new System.Windows.Forms.Label();
+            this.wereFoundLabel = new System.Windows.Forms.Label();
+            this.BeforeDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.AfterDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.FindButton = new System.Windows.Forms.Button();
+            this.minWeightTextBox = new System.Windows.Forms.TextBox();
+            this.maxWeightTextBox = new System.Windows.Forms.TextBox();
+            this.RepsTextBox = new System.Windows.Forms.TextBox();
             this.ExercisesTab = new System.Windows.Forms.TabPage();
             this.ExercisesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ExerciseInfoLabel = new System.Windows.Forms.Label();
@@ -56,26 +72,16 @@
             this.linkLabelLogout = new System.Windows.Forms.LinkLabel();
             this.exercisesTableAdapter = new Gym_Planner.NewGymPlannerDataSetTableAdapters.ExercisesTableAdapter();
             this.recordsByDateAdapter1 = new Gym_Planner.NewGymPlannerDataSetTableAdapters.RecordsByDateAdapter();
-            this.FindDayTab = new System.Windows.Forms.TabPage();
-            this.FindDayTable = new System.Windows.Forms.TableLayoutPanel();
-            this.DaysList = new System.Windows.Forms.ListView();
-            this.FindButtonsPanel = new System.Windows.Forms.Panel();
-            this.RepsTextBox = new System.Windows.Forms.TextBox();
-            this.maxWeightTextBox = new System.Windows.Forms.TextBox();
-            this.minWeightTextBox = new System.Windows.Forms.TextBox();
-            this.FindButton = new System.Windows.Forms.Button();
-            this.AfterDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.BeforeDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.wereFoundLabel = new System.Windows.Forms.Label();
-            this.minDateLabel = new System.Windows.Forms.Label();
-            this.maxDateLabel = new System.Windows.Forms.Label();
-            this.rapsLabel = new System.Windows.Forms.Label();
-            this.minWeightLabel = new System.Windows.Forms.Label();
-            this.maxWeightLabel = new System.Windows.Forms.Label();
+            this.ExerciseLabel = new System.Windows.Forms.Label();
+            this.GetExerciseButton = new System.Windows.Forms.Button();
+            this.ExerciseNameLabel = new System.Windows.Forms.Label();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.CalendarTab.SuspendLayout();
             this.CalendarTabPanel.SuspendLayout();
+            this.FindDayTab.SuspendLayout();
+            this.FindDayTable.SuspendLayout();
+            this.FindPanel.SuspendLayout();
             this.ExercisesTab.SuspendLayout();
             this.ExercisesTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExercisesDataGridView)).BeginInit();
@@ -85,9 +91,6 @@
             this.StatTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExerciseStatisticChart)).BeginInit();
             this.StatMenuStrip.SuspendLayout();
-            this.FindDayTab.SuspendLayout();
-            this.FindDayTable.SuspendLayout();
-            this.FindButtonsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTableLayout
@@ -152,6 +155,163 @@
             this.Calendar.Name = "Calendar";
             this.Calendar.TabIndex = 0;
             this.Calendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.CalendarDayClicked);
+            // 
+            // FindDayTab
+            // 
+            this.FindDayTab.Controls.Add(this.FindDayTable);
+            this.FindDayTab.Location = new System.Drawing.Point(4, 25);
+            this.FindDayTab.Name = "FindDayTab";
+            this.FindDayTab.Padding = new System.Windows.Forms.Padding(3);
+            this.FindDayTab.Size = new System.Drawing.Size(914, 414);
+            this.FindDayTab.TabIndex = 4;
+            this.FindDayTab.Text = "Пошук днів";
+            this.FindDayTab.UseVisualStyleBackColor = true;
+            // 
+            // FindDayTable
+            // 
+            this.FindDayTable.ColumnCount = 2;
+            this.FindDayTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.FindDayTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.FindDayTable.Controls.Add(this.DaysList, 0, 0);
+            this.FindDayTable.Controls.Add(this.FindPanel, 1, 0);
+            this.FindDayTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FindDayTable.Location = new System.Drawing.Point(3, 3);
+            this.FindDayTable.Name = "FindDayTable";
+            this.FindDayTable.RowCount = 1;
+            this.FindDayTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.FindDayTable.Size = new System.Drawing.Size(908, 408);
+            this.FindDayTable.TabIndex = 0;
+            // 
+            // DaysList
+            // 
+            this.DaysList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DaysList.Location = new System.Drawing.Point(3, 3);
+            this.DaysList.Name = "DaysList";
+            this.DaysList.Size = new System.Drawing.Size(448, 402);
+            this.DaysList.TabIndex = 0;
+            this.DaysList.UseCompatibleStateImageBehavior = false;
+            // 
+            // FindPanel
+            // 
+            this.FindPanel.Controls.Add(this.ExerciseNameLabel);
+            this.FindPanel.Controls.Add(this.GetExerciseButton);
+            this.FindPanel.Controls.Add(this.ExerciseLabel);
+            this.FindPanel.Controls.Add(this.maxWeightLabel);
+            this.FindPanel.Controls.Add(this.minWeightLabel);
+            this.FindPanel.Controls.Add(this.rapsLabel);
+            this.FindPanel.Controls.Add(this.maxDateLabel);
+            this.FindPanel.Controls.Add(this.minDateLabel);
+            this.FindPanel.Controls.Add(this.wereFoundLabel);
+            this.FindPanel.Controls.Add(this.BeforeDateTimePicker);
+            this.FindPanel.Controls.Add(this.AfterDateTimePicker);
+            this.FindPanel.Controls.Add(this.FindButton);
+            this.FindPanel.Controls.Add(this.minWeightTextBox);
+            this.FindPanel.Controls.Add(this.maxWeightTextBox);
+            this.FindPanel.Controls.Add(this.RepsTextBox);
+            this.FindPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FindPanel.Location = new System.Drawing.Point(457, 3);
+            this.FindPanel.Name = "FindPanel";
+            this.FindPanel.Size = new System.Drawing.Size(448, 402);
+            this.FindPanel.TabIndex = 1;
+            // 
+            // maxWeightLabel
+            // 
+            this.maxWeightLabel.AutoSize = true;
+            this.maxWeightLabel.Location = new System.Drawing.Point(24, 277);
+            this.maxWeightLabel.Name = "maxWeightLabel";
+            this.maxWeightLabel.Size = new System.Drawing.Size(157, 17);
+            this.maxWeightLabel.TabIndex = 11;
+            this.maxWeightLabel.Text = "Максимальна вага, кг :";
+            // 
+            // minWeightLabel
+            // 
+            this.minWeightLabel.AutoSize = true;
+            this.minWeightLabel.Location = new System.Drawing.Point(24, 225);
+            this.minWeightLabel.Name = "minWeightLabel";
+            this.minWeightLabel.Size = new System.Drawing.Size(141, 17);
+            this.minWeightLabel.TabIndex = 10;
+            this.minWeightLabel.Text = "Мінімальна вага, кг :";
+            // 
+            // rapsLabel
+            // 
+            this.rapsLabel.AutoSize = true;
+            this.rapsLabel.Location = new System.Drawing.Point(24, 170);
+            this.rapsLabel.Name = "rapsLabel";
+            this.rapsLabel.Size = new System.Drawing.Size(164, 17);
+            this.rapsLabel.TabIndex = 9;
+            this.rapsLabel.Text = "Кількість повторювань :";
+            // 
+            // maxDateLabel
+            // 
+            this.maxDateLabel.AutoSize = true;
+            this.maxDateLabel.Location = new System.Drawing.Point(24, 122);
+            this.maxDateLabel.Name = "maxDateLabel";
+            this.maxDateLabel.Size = new System.Drawing.Size(140, 17);
+            this.maxDateLabel.TabIndex = 8;
+            this.maxDateLabel.Text = "Максимальна дата :";
+            // 
+            // minDateLabel
+            // 
+            this.minDateLabel.AutoSize = true;
+            this.minDateLabel.Location = new System.Drawing.Point(24, 70);
+            this.minDateLabel.Name = "minDateLabel";
+            this.minDateLabel.Size = new System.Drawing.Size(124, 17);
+            this.minDateLabel.TabIndex = 7;
+            this.minDateLabel.Text = "Мінімальна дата :";
+            // 
+            // wereFoundLabel
+            // 
+            this.wereFoundLabel.AutoSize = true;
+            this.wereFoundLabel.Location = new System.Drawing.Point(203, 345);
+            this.wereFoundLabel.Name = "wereFoundLabel";
+            this.wereFoundLabel.Size = new System.Drawing.Size(85, 17);
+            this.wereFoundLabel.TabIndex = 6;
+            this.wereFoundLabel.Text = "Знайдено : ";
+            // 
+            // BeforeDateTimePicker
+            // 
+            this.BeforeDateTimePicker.Location = new System.Drawing.Point(206, 117);
+            this.BeforeDateTimePicker.Name = "BeforeDateTimePicker";
+            this.BeforeDateTimePicker.Size = new System.Drawing.Size(227, 22);
+            this.BeforeDateTimePicker.TabIndex = 5;
+            // 
+            // AfterDateTimePicker
+            // 
+            this.AfterDateTimePicker.Location = new System.Drawing.Point(206, 65);
+            this.AfterDateTimePicker.Name = "AfterDateTimePicker";
+            this.AfterDateTimePicker.Size = new System.Drawing.Size(227, 22);
+            this.AfterDateTimePicker.TabIndex = 4;
+            // 
+            // FindButton
+            // 
+            this.FindButton.Location = new System.Drawing.Point(27, 333);
+            this.FindButton.Name = "FindButton";
+            this.FindButton.Size = new System.Drawing.Size(128, 41);
+            this.FindButton.TabIndex = 3;
+            this.FindButton.Text = "Знайти!";
+            this.FindButton.UseVisualStyleBackColor = true;
+            this.FindButton.Click += new System.EventHandler(this.FindButton_Click);
+            // 
+            // minWeightTextBox
+            // 
+            this.minWeightTextBox.Location = new System.Drawing.Point(206, 220);
+            this.minWeightTextBox.Name = "minWeightTextBox";
+            this.minWeightTextBox.Size = new System.Drawing.Size(227, 22);
+            this.minWeightTextBox.TabIndex = 2;
+            // 
+            // maxWeightTextBox
+            // 
+            this.maxWeightTextBox.Location = new System.Drawing.Point(206, 274);
+            this.maxWeightTextBox.Name = "maxWeightTextBox";
+            this.maxWeightTextBox.Size = new System.Drawing.Size(227, 22);
+            this.maxWeightTextBox.TabIndex = 1;
+            // 
+            // RepsTextBox
+            // 
+            this.RepsTextBox.Location = new System.Drawing.Point(206, 165);
+            this.RepsTextBox.Name = "RepsTextBox";
+            this.RepsTextBox.Size = new System.Drawing.Size(227, 22);
+            this.RepsTextBox.TabIndex = 0;
             // 
             // ExercisesTab
             // 
@@ -233,7 +393,6 @@
             // 
             this.exercisesBindingSource.DataMember = "Exercises";
             this.exercisesBindingSource.DataSource = this.dataSet;
-            this.exercisesBindingSource.CurrentChanged += new System.EventHandler(this.exercisesBindingSource_CurrentChanged);
             // 
             // dataSet
             // 
@@ -339,159 +498,33 @@
             // 
             this.recordsByDateAdapter1.ClearBeforeFill = true;
             // 
-            // FindDayTab
+            // ExerciseLabel
             // 
-            this.FindDayTab.Controls.Add(this.FindDayTable);
-            this.FindDayTab.Location = new System.Drawing.Point(4, 25);
-            this.FindDayTab.Name = "FindDayTab";
-            this.FindDayTab.Padding = new System.Windows.Forms.Padding(3);
-            this.FindDayTab.Size = new System.Drawing.Size(914, 414);
-            this.FindDayTab.TabIndex = 4;
-            this.FindDayTab.Text = "Пошук днів";
-            this.FindDayTab.UseVisualStyleBackColor = true;
+            this.ExerciseLabel.AutoSize = true;
+            this.ExerciseLabel.Location = new System.Drawing.Point(24, 23);
+            this.ExerciseLabel.Name = "ExerciseLabel";
+            this.ExerciseLabel.Size = new System.Drawing.Size(64, 17);
+            this.ExerciseLabel.TabIndex = 12;
+            this.ExerciseLabel.Text = "Вправа :";
             // 
-            // FindDayTable
+            // GetExerciseButton
             // 
-            this.FindDayTable.ColumnCount = 2;
-            this.FindDayTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.FindDayTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.FindDayTable.Controls.Add(this.DaysList, 0, 0);
-            this.FindDayTable.Controls.Add(this.FindButtonsPanel, 1, 0);
-            this.FindDayTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FindDayTable.Location = new System.Drawing.Point(3, 3);
-            this.FindDayTable.Name = "FindDayTable";
-            this.FindDayTable.RowCount = 1;
-            this.FindDayTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.FindDayTable.Size = new System.Drawing.Size(908, 408);
-            this.FindDayTable.TabIndex = 0;
+            this.GetExerciseButton.Location = new System.Drawing.Point(303, 23);
+            this.GetExerciseButton.Name = "GetExerciseButton";
+            this.GetExerciseButton.Size = new System.Drawing.Size(130, 23);
+            this.GetExerciseButton.TabIndex = 13;
+            this.GetExerciseButton.Text = "Вибрати вправу";
+            this.GetExerciseButton.UseVisualStyleBackColor = true;
+            this.GetExerciseButton.Click += new System.EventHandler(this.GetExerciseButton_Click);
             // 
-            // DaysList
+            // ExerciseNameLabel
             // 
-            this.DaysList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DaysList.Location = new System.Drawing.Point(3, 3);
-            this.DaysList.Name = "DaysList";
-            this.DaysList.Size = new System.Drawing.Size(448, 402);
-            this.DaysList.TabIndex = 0;
-            this.DaysList.UseCompatibleStateImageBehavior = false;
-            // 
-            // FindButtonsPanel
-            // 
-            this.FindButtonsPanel.Controls.Add(this.maxWeightLabel);
-            this.FindButtonsPanel.Controls.Add(this.minWeightLabel);
-            this.FindButtonsPanel.Controls.Add(this.rapsLabel);
-            this.FindButtonsPanel.Controls.Add(this.maxDateLabel);
-            this.FindButtonsPanel.Controls.Add(this.minDateLabel);
-            this.FindButtonsPanel.Controls.Add(this.wereFoundLabel);
-            this.FindButtonsPanel.Controls.Add(this.BeforeDateTimePicker);
-            this.FindButtonsPanel.Controls.Add(this.AfterDateTimePicker);
-            this.FindButtonsPanel.Controls.Add(this.FindButton);
-            this.FindButtonsPanel.Controls.Add(this.minWeightTextBox);
-            this.FindButtonsPanel.Controls.Add(this.maxWeightTextBox);
-            this.FindButtonsPanel.Controls.Add(this.RepsTextBox);
-            this.FindButtonsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FindButtonsPanel.Location = new System.Drawing.Point(457, 3);
-            this.FindButtonsPanel.Name = "FindButtonsPanel";
-            this.FindButtonsPanel.Size = new System.Drawing.Size(448, 402);
-            this.FindButtonsPanel.TabIndex = 1;
-            // 
-            // RepsTextBox
-            // 
-            this.RepsTextBox.Location = new System.Drawing.Point(193, 149);
-            this.RepsTextBox.Name = "RepsTextBox";
-            this.RepsTextBox.Size = new System.Drawing.Size(227, 22);
-            this.RepsTextBox.TabIndex = 0;
-            // 
-            // maxWeightTextBox
-            // 
-            this.maxWeightTextBox.Location = new System.Drawing.Point(193, 256);
-            this.maxWeightTextBox.Name = "maxWeightTextBox";
-            this.maxWeightTextBox.Size = new System.Drawing.Size(227, 22);
-            this.maxWeightTextBox.TabIndex = 1;
-            // 
-            // minWeightTextBox
-            // 
-            this.minWeightTextBox.Location = new System.Drawing.Point(193, 203);
-            this.minWeightTextBox.Name = "minWeightTextBox";
-            this.minWeightTextBox.Size = new System.Drawing.Size(227, 22);
-            this.minWeightTextBox.TabIndex = 2;
-            // 
-            // FindButton
-            // 
-            this.FindButton.Location = new System.Drawing.Point(27, 321);
-            this.FindButton.Name = "FindButton";
-            this.FindButton.Size = new System.Drawing.Size(128, 41);
-            this.FindButton.TabIndex = 3;
-            this.FindButton.Text = "Знайти!";
-            this.FindButton.UseVisualStyleBackColor = true;
-            this.FindButton.Click += new System.EventHandler(this.FindButton_Click);
-            // 
-            // AfterDateTimePicker
-            // 
-            this.AfterDateTimePicker.Location = new System.Drawing.Point(193, 35);
-            this.AfterDateTimePicker.Name = "AfterDateTimePicker";
-            this.AfterDateTimePicker.Size = new System.Drawing.Size(227, 22);
-            this.AfterDateTimePicker.TabIndex = 4;
-            // 
-            // BeforeDateTimePicker
-            // 
-            this.BeforeDateTimePicker.Location = new System.Drawing.Point(193, 87);
-            this.BeforeDateTimePicker.Name = "BeforeDateTimePicker";
-            this.BeforeDateTimePicker.Size = new System.Drawing.Size(227, 22);
-            this.BeforeDateTimePicker.TabIndex = 5;
-            // 
-            // wereFoundLabel
-            // 
-            this.wereFoundLabel.AutoSize = true;
-            this.wereFoundLabel.Location = new System.Drawing.Point(190, 333);
-            this.wereFoundLabel.Name = "wereFoundLabel";
-            this.wereFoundLabel.Size = new System.Drawing.Size(85, 17);
-            this.wereFoundLabel.TabIndex = 6;
-            this.wereFoundLabel.Text = "Знайдено : ";
-            // 
-            // minDateLabel
-            // 
-            this.minDateLabel.AutoSize = true;
-            this.minDateLabel.Location = new System.Drawing.Point(24, 40);
-            this.minDateLabel.Name = "minDateLabel";
-            this.minDateLabel.Size = new System.Drawing.Size(124, 17);
-            this.minDateLabel.TabIndex = 7;
-            this.minDateLabel.Text = "Мінімальна дата :";
-            // 
-            // maxDateLabel
-            // 
-            this.maxDateLabel.AutoSize = true;
-            this.maxDateLabel.Location = new System.Drawing.Point(24, 92);
-            this.maxDateLabel.Name = "maxDateLabel";
-            this.maxDateLabel.Size = new System.Drawing.Size(140, 17);
-            this.maxDateLabel.TabIndex = 8;
-            this.maxDateLabel.Text = "Максимальна дата :";
-            // 
-            // rapsLabel
-            // 
-            this.rapsLabel.AutoSize = true;
-            this.rapsLabel.Location = new System.Drawing.Point(24, 152);
-            this.rapsLabel.Name = "rapsLabel";
-            this.rapsLabel.Size = new System.Drawing.Size(164, 17);
-            this.rapsLabel.TabIndex = 9;
-            this.rapsLabel.Text = "Кількість повторювань :";
-            // 
-            // minWeightLabel
-            // 
-            this.minWeightLabel.AutoSize = true;
-            this.minWeightLabel.Location = new System.Drawing.Point(24, 208);
-            this.minWeightLabel.Name = "minWeightLabel";
-            this.minWeightLabel.Size = new System.Drawing.Size(141, 17);
-            this.minWeightLabel.TabIndex = 10;
-            this.minWeightLabel.Text = "Мінімальна вага, кг :";
-            // 
-            // maxWeightLabel
-            // 
-            this.maxWeightLabel.AutoSize = true;
-            this.maxWeightLabel.Location = new System.Drawing.Point(24, 259);
-            this.maxWeightLabel.Name = "maxWeightLabel";
-            this.maxWeightLabel.Size = new System.Drawing.Size(157, 17);
-            this.maxWeightLabel.TabIndex = 11;
-            this.maxWeightLabel.Text = "Максимальна вага, кг :";
+            this.ExerciseNameLabel.AutoSize = true;
+            this.ExerciseNameLabel.Location = new System.Drawing.Point(98, 23);
+            this.ExerciseNameLabel.Name = "ExerciseNameLabel";
+            this.ExerciseNameLabel.Size = new System.Drawing.Size(57, 17);
+            this.ExerciseNameLabel.TabIndex = 14;
+            this.ExerciseNameLabel.Text = "Присед";
             // 
             // MainForm
             // 
@@ -510,6 +543,10 @@
             this.MainTabControl.ResumeLayout(false);
             this.CalendarTab.ResumeLayout(false);
             this.CalendarTabPanel.ResumeLayout(false);
+            this.FindDayTab.ResumeLayout(false);
+            this.FindDayTable.ResumeLayout(false);
+            this.FindPanel.ResumeLayout(false);
+            this.FindPanel.PerformLayout();
             this.ExercisesTab.ResumeLayout(false);
             this.ExercisesTab.PerformLayout();
             this.ExercisesTableLayoutPanel.ResumeLayout(false);
@@ -524,10 +561,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ExerciseStatisticChart)).EndInit();
             this.StatMenuStrip.ResumeLayout(false);
             this.StatMenuStrip.PerformLayout();
-            this.FindDayTab.ResumeLayout(false);
-            this.FindDayTable.ResumeLayout(false);
-            this.FindButtonsPanel.ResumeLayout(false);
-            this.FindButtonsPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -567,8 +600,7 @@
         private System.Windows.Forms.TableLayoutPanel CalendarTabPanel;
         private System.Windows.Forms.TabPage FindDayTab;
         private System.Windows.Forms.TableLayoutPanel FindDayTable;
-        private System.Windows.Forms.ListView DaysList;
-        private System.Windows.Forms.Panel FindButtonsPanel;
+        private System.Windows.Forms.Panel FindPanel;
         private System.Windows.Forms.Label maxWeightLabel;
         private System.Windows.Forms.Label minWeightLabel;
         private System.Windows.Forms.Label rapsLabel;
@@ -581,5 +613,9 @@
         private System.Windows.Forms.TextBox minWeightTextBox;
         private System.Windows.Forms.TextBox maxWeightTextBox;
         private System.Windows.Forms.TextBox RepsTextBox;
+        private System.Windows.Forms.ListView DaysList;
+        private System.Windows.Forms.Label ExerciseNameLabel;
+        private System.Windows.Forms.Button GetExerciseButton;
+        private System.Windows.Forms.Label ExerciseLabel;
     }
 }
