@@ -11457,7 +11457,7 @@ WHERE  (Day_Workout.ID_Day = @dayId)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT Date 
+            this._commandCollection[0].CommandText = @"SELECT DISTINCT Date 
 FROM Users INNER JOIN User_Day
 ON Users.Login = User_Day.Login 
 INNER JOIN Days 
@@ -11475,7 +11475,7 @@ ON Sets.ID_Set = Workout_Set.ID_Set
 WHERE (Num_Reps = @reps OR @reps IS NULL)
 AND ((@minweight IS NULL AND @maxweight IS NULL) OR (Weight>= @minweight AND @maxweight IS NULL) OR (Weight <=@maxweight AND @minweight IS NULL) OR (Weight BETWEEN @minweight AND @maxweight))
 AND Users.Login = @login
-AND (Days.Date BETWEEN @mindate AND @matdate)
+AND (Days.Date BETWEEN @mindate AND @maxdate)
 AND (Workout_Exercise.Name_Exercise = @exercise OR @exercise IS NULL)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reps", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Num_Reps", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11483,7 +11483,7 @@ AND (Workout_Exercise.Name_Exercise = @exercise OR @exercise IS NULL)";
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@maxweight", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 4, 1, "Weight", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@login", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mindate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@matdate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@maxdate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@exercise", global::System.Data.SqlDbType.NVarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "Name_Exercise", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -11491,7 +11491,7 @@ AND (Workout_Exercise.Name_Exercise = @exercise OR @exercise IS NULL)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(NewGymPlannerDataSet.FindDaysDataTable dataTable, global::System.Nullable<int> reps, global::System.Nullable<decimal> minweight, global::System.Nullable<decimal> maxweight, string login, string mindate, string matdate, string exercise) {
+        public virtual int Fill(NewGymPlannerDataSet.FindDaysDataTable dataTable, global::System.Nullable<int> reps, global::System.Nullable<decimal> minweight, global::System.Nullable<decimal> maxweight, string login, string mindate, string maxdate, string exercise) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((reps.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((int)(reps.Value));
@@ -11523,11 +11523,11 @@ AND (Workout_Exercise.Name_Exercise = @exercise OR @exercise IS NULL)";
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = ((string)(mindate));
             }
-            if ((matdate == null)) {
-                throw new global::System.ArgumentNullException("matdate");
+            if ((maxdate == null)) {
+                throw new global::System.ArgumentNullException("maxdate");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(matdate));
+                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(maxdate));
             }
             if ((exercise == null)) {
                 throw new global::System.ArgumentNullException("exercise");
@@ -11546,7 +11546,7 @@ AND (Workout_Exercise.Name_Exercise = @exercise OR @exercise IS NULL)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual NewGymPlannerDataSet.FindDaysDataTable GetData(global::System.Nullable<int> reps, global::System.Nullable<decimal> minweight, global::System.Nullable<decimal> maxweight, string login, string mindate, string matdate, string exercise) {
+        public virtual NewGymPlannerDataSet.FindDaysDataTable GetData(global::System.Nullable<int> reps, global::System.Nullable<decimal> minweight, global::System.Nullable<decimal> maxweight, string login, string mindate, string maxdate, string exercise) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((reps.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((int)(reps.Value));
@@ -11578,11 +11578,11 @@ AND (Workout_Exercise.Name_Exercise = @exercise OR @exercise IS NULL)";
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = ((string)(mindate));
             }
-            if ((matdate == null)) {
-                throw new global::System.ArgumentNullException("matdate");
+            if ((maxdate == null)) {
+                throw new global::System.ArgumentNullException("maxdate");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(matdate));
+                this.Adapter.SelectCommand.Parameters[5].Value = ((string)(maxdate));
             }
             if ((exercise == null)) {
                 throw new global::System.ArgumentNullException("exercise");

@@ -167,17 +167,20 @@ namespace Gym_Planner
 
         private void FindButton_Click(object sender, EventArgs e)
         {
-            //try catch
-            //List<DateTime> days = new List<DateTime>();
             this.findDays = new NewGymPlannerDataSetTableAdapters.FindDaysTableAdapter();
-            DataTable days = findDays.GetData(Parser.ToNullableInt(RepsTextBox.Text),
-                Parser.ToNullableDouble(minWeightTextBox.Text), Parser.ToNullableDouble(minWeightTextBox.Text),
-                this.user.Login, AfterDateTimePicker.Text, BeforeDateTimePicker.Text, ExerciseNameLabel.Text);
-            MessageBox.Show("");
-        }
-        private void populateDayList(List<DateTime> days)
-        {
-            //add data grid instead of listView?
+            try
+            {
+                DataTable dataTable = findDays.GetData(Parser.ToNullableInt(RepsTextBox.Text),
+                Parser.ToNullableDecimal(minWeightTextBox.Text), Parser.ToNullableDecimal(maxWeightTextBox.Text),
+                user.Login, AfterDateTimePicker.Text, BeforeDateTimePicker.Text, ExerciseNameLabel.Text);
+                this.DayListBox.DisplayMember = dataTable.Columns[0].ToString();
+                this.DayListBox.ValueMember = dataTable.Columns[0].ToString();
+                this.DayListBox.DataSource = dataTable;
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
 
         private void GetExerciseButton_Click(object sender, EventArgs e)
@@ -188,8 +191,17 @@ namespace Gym_Planner
                 {
                     this.ExerciseNameLabel.Text = Window.exerciseName;
                 }
-                else
-                    return;
+            }
+        }
+
+        private void DayListBox_DoubleClick(object sender, EventArgs e)
+        {
+            if (this.DayListBox.SelectedItems.Count == 1)
+            {
+                //var date = ((System.Data.DataRowView) DayListBox.SelectedItem).Row.ItemArray[0].ToString();
+                DataTable dt = daysAdapter.GetDataByLoginAndDate(user.Login, ((System.Data.DataRowView)DayListBox.SelectedItem).Row.ItemArray[0].ToString());
+                DayForm dayForm = new DayForm(((System.Data.DataRowView)DayListBox.SelectedItem).Row.ItemArray[0].ToString(), (int)dt.Rows[0]["ID_Day"]);
+                dayForm.Show();
             }
         }
     }

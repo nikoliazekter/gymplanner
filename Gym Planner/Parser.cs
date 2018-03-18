@@ -8,13 +8,13 @@ namespace Gym_Planner
 {
     public static class Parser
     {
-        public static int? ToNullableInt(this string s)
+        public static int? ToNullableInt(string s)
         {
             int i;
             if (int.TryParse(s, out i)) return i;
             return null;
         }
-        public static decimal? ToNullableDouble(this string s)
+        public static decimal? ToNullableDecimal(string s)
         {
             decimal i;
             if (decimal.TryParse(s, out i)) return i;

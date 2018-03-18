@@ -23,7 +23,7 @@ namespace Gym_Planner
         NewGymPlannerDataSetTableAdapters.Day_WorkoutTableAdapter dayWorkoutAdapter;
         NewGymPlannerDataSetTableAdapters.WorkoutByDayAdapter workoutByDayAdapter;
         NewGymPlannerDataSetTableAdapters.SetsTableAdapter setsAdapter;
-        public DayForm()
+        private DayForm()
         {
             InitializeComponent();
         }
@@ -32,6 +32,12 @@ namespace Gym_Planner
         {
             InitializeComponent();
             this.Text = date.ToShortDateString();
+            this.dayId = dayId;
+        }
+        public DayForm(string date,int dayId)
+        {
+            InitializeComponent();
+            this.Text = date;
             this.dayId = dayId;
         }
 

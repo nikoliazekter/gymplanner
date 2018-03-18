@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.MainTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.CalendarTab = new System.Windows.Forms.TabPage();
@@ -39,8 +39,10 @@
             this.Calendar = new System.Windows.Forms.MonthCalendar();
             this.FindDayTab = new System.Windows.Forms.TabPage();
             this.FindDayTable = new System.Windows.Forms.TableLayoutPanel();
-            this.DaysList = new System.Windows.Forms.ListView();
             this.FindPanel = new System.Windows.Forms.Panel();
+            this.ExerciseNameLabel = new System.Windows.Forms.Label();
+            this.GetExerciseButton = new System.Windows.Forms.Button();
+            this.ExerciseLabel = new System.Windows.Forms.Label();
             this.maxWeightLabel = new System.Windows.Forms.Label();
             this.minWeightLabel = new System.Windows.Forms.Label();
             this.rapsLabel = new System.Windows.Forms.Label();
@@ -72,9 +74,7 @@
             this.linkLabelLogout = new System.Windows.Forms.LinkLabel();
             this.exercisesTableAdapter = new Gym_Planner.NewGymPlannerDataSetTableAdapters.ExercisesTableAdapter();
             this.recordsByDateAdapter1 = new Gym_Planner.NewGymPlannerDataSetTableAdapters.RecordsByDateAdapter();
-            this.ExerciseLabel = new System.Windows.Forms.Label();
-            this.GetExerciseButton = new System.Windows.Forms.Button();
-            this.ExerciseNameLabel = new System.Windows.Forms.Label();
+            this.DayListBox = new System.Windows.Forms.ListBox();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.CalendarTab.SuspendLayout();
@@ -172,8 +172,8 @@
             this.FindDayTable.ColumnCount = 2;
             this.FindDayTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.FindDayTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.FindDayTable.Controls.Add(this.DaysList, 0, 0);
             this.FindDayTable.Controls.Add(this.FindPanel, 1, 0);
+            this.FindDayTable.Controls.Add(this.DayListBox, 0, 0);
             this.FindDayTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FindDayTable.Location = new System.Drawing.Point(3, 3);
             this.FindDayTable.Name = "FindDayTable";
@@ -181,15 +181,6 @@
             this.FindDayTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.FindDayTable.Size = new System.Drawing.Size(908, 408);
             this.FindDayTable.TabIndex = 0;
-            // 
-            // DaysList
-            // 
-            this.DaysList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DaysList.Location = new System.Drawing.Point(3, 3);
-            this.DaysList.Name = "DaysList";
-            this.DaysList.Size = new System.Drawing.Size(448, 402);
-            this.DaysList.TabIndex = 0;
-            this.DaysList.UseCompatibleStateImageBehavior = false;
             // 
             // FindPanel
             // 
@@ -213,6 +204,34 @@
             this.FindPanel.Name = "FindPanel";
             this.FindPanel.Size = new System.Drawing.Size(448, 402);
             this.FindPanel.TabIndex = 1;
+            // 
+            // ExerciseNameLabel
+            // 
+            this.ExerciseNameLabel.AutoSize = true;
+            this.ExerciseNameLabel.Location = new System.Drawing.Point(98, 23);
+            this.ExerciseNameLabel.Name = "ExerciseNameLabel";
+            this.ExerciseNameLabel.Size = new System.Drawing.Size(57, 17);
+            this.ExerciseNameLabel.TabIndex = 14;
+            this.ExerciseNameLabel.Text = "Присед";
+            // 
+            // GetExerciseButton
+            // 
+            this.GetExerciseButton.Location = new System.Drawing.Point(303, 23);
+            this.GetExerciseButton.Name = "GetExerciseButton";
+            this.GetExerciseButton.Size = new System.Drawing.Size(130, 23);
+            this.GetExerciseButton.TabIndex = 13;
+            this.GetExerciseButton.Text = "Вибрати вправу";
+            this.GetExerciseButton.UseVisualStyleBackColor = true;
+            this.GetExerciseButton.Click += new System.EventHandler(this.GetExerciseButton_Click);
+            // 
+            // ExerciseLabel
+            // 
+            this.ExerciseLabel.AutoSize = true;
+            this.ExerciseLabel.Location = new System.Drawing.Point(24, 23);
+            this.ExerciseLabel.Name = "ExerciseLabel";
+            this.ExerciseLabel.Size = new System.Drawing.Size(64, 17);
+            this.ExerciseLabel.TabIndex = 12;
+            this.ExerciseLabel.Text = "Вправа :";
             // 
             // maxWeightLabel
             // 
@@ -438,18 +457,18 @@
             // 
             // ExerciseStatisticChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.ExerciseStatisticChart.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.ExerciseStatisticChart.ChartAreas.Add(chartArea2);
             this.ExerciseStatisticChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.ExerciseStatisticChart.Legends.Add(legend1);
+            legend2.Name = "Legend1";
+            this.ExerciseStatisticChart.Legends.Add(legend2);
             this.ExerciseStatisticChart.Location = new System.Drawing.Point(0, 32);
             this.ExerciseStatisticChart.Name = "ExerciseStatisticChart";
             this.ExerciseStatisticChart.Size = new System.Drawing.Size(914, 382);
             this.ExerciseStatisticChart.TabIndex = 1;
             this.ExerciseStatisticChart.Text = "Статистика";
-            title1.Name = "Title";
-            this.ExerciseStatisticChart.Titles.Add(title1);
+            title2.Name = "Title";
+            this.ExerciseStatisticChart.Titles.Add(title2);
             // 
             // StatMenuStrip
             // 
@@ -498,33 +517,16 @@
             // 
             this.recordsByDateAdapter1.ClearBeforeFill = true;
             // 
-            // ExerciseLabel
+            // DayListBox
             // 
-            this.ExerciseLabel.AutoSize = true;
-            this.ExerciseLabel.Location = new System.Drawing.Point(24, 23);
-            this.ExerciseLabel.Name = "ExerciseLabel";
-            this.ExerciseLabel.Size = new System.Drawing.Size(64, 17);
-            this.ExerciseLabel.TabIndex = 12;
-            this.ExerciseLabel.Text = "Вправа :";
-            // 
-            // GetExerciseButton
-            // 
-            this.GetExerciseButton.Location = new System.Drawing.Point(303, 23);
-            this.GetExerciseButton.Name = "GetExerciseButton";
-            this.GetExerciseButton.Size = new System.Drawing.Size(130, 23);
-            this.GetExerciseButton.TabIndex = 13;
-            this.GetExerciseButton.Text = "Вибрати вправу";
-            this.GetExerciseButton.UseVisualStyleBackColor = true;
-            this.GetExerciseButton.Click += new System.EventHandler(this.GetExerciseButton_Click);
-            // 
-            // ExerciseNameLabel
-            // 
-            this.ExerciseNameLabel.AutoSize = true;
-            this.ExerciseNameLabel.Location = new System.Drawing.Point(98, 23);
-            this.ExerciseNameLabel.Name = "ExerciseNameLabel";
-            this.ExerciseNameLabel.Size = new System.Drawing.Size(57, 17);
-            this.ExerciseNameLabel.TabIndex = 14;
-            this.ExerciseNameLabel.Text = "Присед";
+            this.DayListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DayListBox.FormattingEnabled = true;
+            this.DayListBox.ItemHeight = 16;
+            this.DayListBox.Location = new System.Drawing.Point(3, 3);
+            this.DayListBox.Name = "DayListBox";
+            this.DayListBox.Size = new System.Drawing.Size(448, 402);
+            this.DayListBox.TabIndex = 2;
+            this.DayListBox.DoubleClick += new System.EventHandler(this.DayListBox_DoubleClick);
             // 
             // MainForm
             // 
@@ -613,9 +615,9 @@
         private System.Windows.Forms.TextBox minWeightTextBox;
         private System.Windows.Forms.TextBox maxWeightTextBox;
         private System.Windows.Forms.TextBox RepsTextBox;
-        private System.Windows.Forms.ListView DaysList;
         private System.Windows.Forms.Label ExerciseNameLabel;
         private System.Windows.Forms.Button GetExerciseButton;
         private System.Windows.Forms.Label ExerciseLabel;
+        private System.Windows.Forms.ListBox DayListBox;
     }
 }
