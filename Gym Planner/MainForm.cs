@@ -170,5 +170,10 @@ namespace Gym_Planner
             AuthorizationForm authorizationForm = new AuthorizationForm();
             authorizationForm.Show();
         }
+
+        private void FindButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
