@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ExerciseNameTExtBox = new System.Windows.Forms.TextBox();
+            this.ExerciseNameTextBox = new System.Windows.Forms.TextBox();
             this.GetExerciseButton = new System.Windows.Forms.Button();
             this.ExerciseNameLabel = new System.Windows.Forms.Label();
             this.ExerciseFindLabel = new System.Windows.Forms.Label();
@@ -40,11 +40,11 @@
             // 
             // ExerciseNameTExtBox
             // 
-            this.ExerciseNameTExtBox.Location = new System.Drawing.Point(15, 37);
-            this.ExerciseNameTExtBox.Name = "ExerciseNameTExtBox";
-            this.ExerciseNameTExtBox.Size = new System.Drawing.Size(262, 22);
-            this.ExerciseNameTExtBox.TabIndex = 0;
-            this.ExerciseNameTExtBox.TextChanged += new System.EventHandler(this.ExerciseNameTExtBox_TextChanged);
+            this.ExerciseNameTextBox.Location = new System.Drawing.Point(15, 37);
+            this.ExerciseNameTextBox.Name = "ExerciseNameTExtBox";
+            this.ExerciseNameTextBox.Size = new System.Drawing.Size(262, 22);
+            this.ExerciseNameTextBox.TabIndex = 0;
+            this.ExerciseNameTextBox.TextChanged += new System.EventHandler(this.ExerciseNameTExtBox_TextChanged);
             // 
             // GetExerciseButton
             // 
@@ -103,7 +103,7 @@
             this.Controls.Add(this.ExerciseFindLabel);
             this.Controls.Add(this.ExerciseNameLabel);
             this.Controls.Add(this.GetExerciseButton);
-            this.Controls.Add(this.ExerciseNameTExtBox);
+            this.Controls.Add(this.ExerciseNameTextBox);
             this.Name = "ExerciseChooseForm";
             this.Text = "Вибір вправи";
             ((System.ComponentModel.ISupportInitialize)(this.newGymPlannerDataSet)).EndInit();
@@ -114,7 +114,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox ExerciseNameTExtBox;
+        private System.Windows.Forms.TextBox ExerciseNameTextBox;
         private System.Windows.Forms.Button GetExerciseButton;
         private System.Windows.Forms.Label ExerciseNameLabel;
         private System.Windows.Forms.Label ExerciseFindLabel;

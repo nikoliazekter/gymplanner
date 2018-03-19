@@ -198,7 +198,6 @@ namespace Gym_Planner
         {
             if (this.DayListBox.SelectedItems.Count == 1)
             {
-                //var date = ((System.Data.DataRowView) DayListBox.SelectedItem).Row.ItemArray[0].ToString();
                 DataTable dt = daysAdapter.GetDataByLoginAndDate(user.Login, ((System.Data.DataRowView)DayListBox.SelectedItem).Row.ItemArray[0].ToString());
                 DayForm dayForm = new DayForm(((System.Data.DataRowView)DayListBox.SelectedItem).Row.ItemArray[0].ToString(), (int)dt.Rows[0]["ID_Day"]);
                 dayForm.Show();

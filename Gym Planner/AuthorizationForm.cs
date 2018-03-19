@@ -19,6 +19,7 @@ namespace Gym_Planner
             QueryAdapter = new NewGymPlannerDataSetTableAdapters.QueryAdapter();
             this.LoginTextBox.Text = "admin";
             this.PassTextBox.Text = "admin";
+            this.PassTextBox.UseSystemPasswordChar = true;
         }
 
         private void NewAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

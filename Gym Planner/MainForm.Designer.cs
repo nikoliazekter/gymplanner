@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.MainTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.CalendarTab = new System.Windows.Forms.TabPage();
@@ -55,6 +55,7 @@
             this.minWeightTextBox = new System.Windows.Forms.TextBox();
             this.maxWeightTextBox = new System.Windows.Forms.TextBox();
             this.RepsTextBox = new System.Windows.Forms.TextBox();
+            this.DayListBox = new System.Windows.Forms.ListBox();
             this.ExercisesTab = new System.Windows.Forms.TabPage();
             this.ExercisesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ExerciseInfoLabel = new System.Windows.Forms.Label();
@@ -74,7 +75,6 @@
             this.linkLabelLogout = new System.Windows.Forms.LinkLabel();
             this.exercisesTableAdapter = new Gym_Planner.NewGymPlannerDataSetTableAdapters.ExercisesTableAdapter();
             this.recordsByDateAdapter1 = new Gym_Planner.NewGymPlannerDataSetTableAdapters.RecordsByDateAdapter();
-            this.DayListBox = new System.Windows.Forms.ListBox();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.CalendarTab.SuspendLayout();
@@ -106,7 +106,7 @@
             this.MainTableLayout.RowCount = 2;
             this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.71018F));
             this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.28982F));
-            this.MainTableLayout.Size = new System.Drawing.Size(928, 538);
+            this.MainTableLayout.Size = new System.Drawing.Size(954, 538);
             this.MainTableLayout.TabIndex = 2;
             // 
             // MainTabControl
@@ -119,7 +119,7 @@
             this.MainTabControl.Location = new System.Drawing.Point(3, 92);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(922, 443);
+            this.MainTabControl.Size = new System.Drawing.Size(948, 443);
             this.MainTabControl.TabIndex = 0;
             // 
             // CalendarTab
@@ -128,7 +128,7 @@
             this.CalendarTab.Location = new System.Drawing.Point(4, 25);
             this.CalendarTab.Name = "CalendarTab";
             this.CalendarTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CalendarTab.Size = new System.Drawing.Size(914, 414);
+            this.CalendarTab.Size = new System.Drawing.Size(940, 414);
             this.CalendarTab.TabIndex = 1;
             this.CalendarTab.Text = "Календар";
             this.CalendarTab.UseVisualStyleBackColor = true;
@@ -144,7 +144,7 @@
             this.CalendarTabPanel.RowCount = 2;
             this.CalendarTabPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.20588F));
             this.CalendarTabPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.79412F));
-            this.CalendarTabPanel.Size = new System.Drawing.Size(908, 408);
+            this.CalendarTabPanel.Size = new System.Drawing.Size(934, 408);
             this.CalendarTabPanel.TabIndex = 1;
             // 
             // Calendar
@@ -332,6 +332,17 @@
             this.RepsTextBox.Size = new System.Drawing.Size(227, 22);
             this.RepsTextBox.TabIndex = 0;
             // 
+            // DayListBox
+            // 
+            this.DayListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DayListBox.FormattingEnabled = true;
+            this.DayListBox.ItemHeight = 16;
+            this.DayListBox.Location = new System.Drawing.Point(3, 3);
+            this.DayListBox.Name = "DayListBox";
+            this.DayListBox.Size = new System.Drawing.Size(448, 402);
+            this.DayListBox.TabIndex = 2;
+            this.DayListBox.DoubleClick += new System.EventHandler(this.DayListBox_DoubleClick);
+            // 
             // ExercisesTab
             // 
             this.ExercisesTab.Controls.Add(this.ExercisesTableLayoutPanel);
@@ -457,18 +468,18 @@
             // 
             // ExerciseStatisticChart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.ExerciseStatisticChart.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.ExerciseStatisticChart.ChartAreas.Add(chartArea1);
             this.ExerciseStatisticChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.ExerciseStatisticChart.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            this.ExerciseStatisticChart.Legends.Add(legend1);
             this.ExerciseStatisticChart.Location = new System.Drawing.Point(0, 32);
             this.ExerciseStatisticChart.Name = "ExerciseStatisticChart";
             this.ExerciseStatisticChart.Size = new System.Drawing.Size(914, 382);
             this.ExerciseStatisticChart.TabIndex = 1;
             this.ExerciseStatisticChart.Text = "Статистика";
-            title2.Name = "Title";
-            this.ExerciseStatisticChart.Titles.Add(title2);
+            title1.Name = "Title";
+            this.ExerciseStatisticChart.Titles.Add(title1);
             // 
             // StatMenuStrip
             // 
@@ -501,7 +512,7 @@
             // 
             this.linkLabelLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabelLogout.AutoSize = true;
-            this.linkLabelLogout.Location = new System.Drawing.Point(778, 0);
+            this.linkLabelLogout.Location = new System.Drawing.Point(804, 0);
             this.linkLabelLogout.Name = "linkLabelLogout";
             this.linkLabelLogout.Size = new System.Drawing.Size(147, 17);
             this.linkLabelLogout.TabIndex = 1;
@@ -517,23 +528,12 @@
             // 
             this.recordsByDateAdapter1.ClearBeforeFill = true;
             // 
-            // DayListBox
-            // 
-            this.DayListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DayListBox.FormattingEnabled = true;
-            this.DayListBox.ItemHeight = 16;
-            this.DayListBox.Location = new System.Drawing.Point(3, 3);
-            this.DayListBox.Name = "DayListBox";
-            this.DayListBox.Size = new System.Drawing.Size(448, 402);
-            this.DayListBox.TabIndex = 2;
-            this.DayListBox.DoubleClick += new System.EventHandler(this.DayListBox_DoubleClick);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Gym_Planner.Properties.Resources.kKI7Mcg;
-            this.ClientSize = new System.Drawing.Size(928, 538);
+            this.ClientSize = new System.Drawing.Size(954, 538);
             this.Controls.Add(this.MainTableLayout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.ExercisesMenuStrip;
