@@ -71,14 +71,6 @@
     <Compile Include="NewAccountForm.Designer.cs">
       <DependentUpon>NewAccountForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewGymPlannerDataSet.cs">
-      <DependentUpon>NewGymPlannerDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="NewGymPlannerDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NewGymPlannerDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="EditSetsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +88,11 @@
     </Compile>
     <Compile Include="ExerciseChooseForm.Designer.cs">
       <DependentUpon>ExerciseChooseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewGymPlannerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewGymPlannerDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Parser.cs" />
     <Compile Include="Program.cs" />

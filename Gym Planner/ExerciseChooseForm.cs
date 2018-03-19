@@ -39,12 +39,13 @@ namespace Gym_Planner
                 return;
             }
             foreach (System.Data.DataRowView exercise in this.ExercisesListBox.Items)
-                if (exercise[0].ToString() == this.ExerciseNameTExtBox.Text)
+                if (exercise[0].ToString() == this.ExerciseNameTextBox.Text)
                 {
-                    this.exerciseName = this.ExerciseNameTExtBox.Text;
+                    this.exerciseName = this.ExerciseNameTextBox.Text;
                     this.Close();
                     return;
                 }
+            DialogResult = DialogResult.None;
             MessageBox.Show("\t\tТакої вправи немає!\n\r Будь ласка, виберіть зі списку, чи введіть правильну назву вправи! :)", "Помилка");
         }
 

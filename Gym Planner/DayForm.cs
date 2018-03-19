@@ -23,10 +23,6 @@ namespace Gym_Planner
         NewGymPlannerDataSetTableAdapters.Day_WorkoutTableAdapter dayWorkoutAdapter;
         NewGymPlannerDataSetTableAdapters.WorkoutByDayAdapter workoutByDayAdapter;
         NewGymPlannerDataSetTableAdapters.SetsTableAdapter setsAdapter;
-        private DayForm()
-        {
-            InitializeComponent();
-        }
 
         public DayForm(DateTime date, int dayId)
         {
@@ -100,14 +96,14 @@ namespace Gym_Planner
                     dayWorkoutAdapter.Update(dataSet);
 
                     UpdateTreeView();
-                }
-            }
-
-            using (EditSetsForm Window = new EditSetsForm(workoutId))
-            {
-                if (Window.ShowDialog() == DialogResult.OK)
-                {
-                    UpdateTreeView();
+                   // Window.Hide();
+                    using (EditSetsForm setsForm = new EditSetsForm(workoutId))
+                    {
+                        if (setsForm.ShowDialog() == DialogResult.OK)
+                        {
+                            UpdateTreeView();
+                        }
+                    }
                 }
             }
         }

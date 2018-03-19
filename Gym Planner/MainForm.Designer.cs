@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.MainTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.CalendarTab = new System.Windows.Forms.TabPage();
@@ -55,6 +55,7 @@
             this.minWeightTextBox = new System.Windows.Forms.TextBox();
             this.maxWeightTextBox = new System.Windows.Forms.TextBox();
             this.RepsTextBox = new System.Windows.Forms.TextBox();
+            this.DayListBox = new System.Windows.Forms.ListBox();
             this.ExercisesTab = new System.Windows.Forms.TabPage();
             this.ExercisesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.ExerciseInfoLabel = new System.Windows.Forms.Label();
@@ -74,7 +75,6 @@
             this.linkLabelLogout = new System.Windows.Forms.LinkLabel();
             this.exercisesTableAdapter = new Gym_Planner.NewGymPlannerDataSetTableAdapters.ExercisesTableAdapter();
             this.recordsByDateAdapter1 = new Gym_Planner.NewGymPlannerDataSetTableAdapters.RecordsByDateAdapter();
-            this.DayListBox = new System.Windows.Forms.ListBox();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.CalendarTab.SuspendLayout();
@@ -332,6 +332,17 @@
             this.RepsTextBox.Size = new System.Drawing.Size(227, 22);
             this.RepsTextBox.TabIndex = 0;
             // 
+            // DayListBox
+            // 
+            this.DayListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DayListBox.FormattingEnabled = true;
+            this.DayListBox.ItemHeight = 16;
+            this.DayListBox.Location = new System.Drawing.Point(3, 3);
+            this.DayListBox.Name = "DayListBox";
+            this.DayListBox.Size = new System.Drawing.Size(448, 402);
+            this.DayListBox.TabIndex = 2;
+            this.DayListBox.DoubleClick += new System.EventHandler(this.DayListBox_DoubleClick);
+            // 
             // ExercisesTab
             // 
             this.ExercisesTab.Controls.Add(this.ExercisesTableLayoutPanel);
@@ -457,18 +468,18 @@
             // 
             // ExerciseStatisticChart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.ExerciseStatisticChart.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.ExerciseStatisticChart.ChartAreas.Add(chartArea1);
             this.ExerciseStatisticChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.ExerciseStatisticChart.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            this.ExerciseStatisticChart.Legends.Add(legend1);
             this.ExerciseStatisticChart.Location = new System.Drawing.Point(0, 32);
             this.ExerciseStatisticChart.Name = "ExerciseStatisticChart";
             this.ExerciseStatisticChart.Size = new System.Drawing.Size(914, 382);
             this.ExerciseStatisticChart.TabIndex = 1;
             this.ExerciseStatisticChart.Text = "Статистика";
-            title2.Name = "Title";
-            this.ExerciseStatisticChart.Titles.Add(title2);
+            title1.Name = "Title";
+            this.ExerciseStatisticChart.Titles.Add(title1);
             // 
             // StatMenuStrip
             // 
@@ -516,17 +527,6 @@
             // recordsByDateAdapter1
             // 
             this.recordsByDateAdapter1.ClearBeforeFill = true;
-            // 
-            // DayListBox
-            // 
-            this.DayListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DayListBox.FormattingEnabled = true;
-            this.DayListBox.ItemHeight = 16;
-            this.DayListBox.Location = new System.Drawing.Point(3, 3);
-            this.DayListBox.Name = "DayListBox";
-            this.DayListBox.Size = new System.Drawing.Size(448, 402);
-            this.DayListBox.TabIndex = 2;
-            this.DayListBox.DoubleClick += new System.EventHandler(this.DayListBox_DoubleClick);
             // 
             // MainForm
             // 
