@@ -55,7 +55,7 @@
             // 
             this.ExerciseNameTextBox.Location = new System.Drawing.Point(24, 44);
             this.ExerciseNameTextBox.Name = "ExerciseNameTextBox";
-            this.ExerciseNameTextBox.Size = new System.Drawing.Size(213, 22);
+            this.ExerciseNameTextBox.Size = new System.Drawing.Size(391, 22);
             this.ExerciseNameTextBox.TabIndex = 1;
             // 
             // ExerciseInformatinLabel
@@ -79,9 +79,9 @@
             // CreateExerciseButton
             // 
             this.CreateExerciseButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.CreateExerciseButton.Location = new System.Drawing.Point(294, 82);
+            this.CreateExerciseButton.Location = new System.Drawing.Point(295, 93);
             this.CreateExerciseButton.Name = "CreateExerciseButton";
-            this.CreateExerciseButton.Size = new System.Drawing.Size(88, 39);
+            this.CreateExerciseButton.Size = new System.Drawing.Size(120, 62);
             this.CreateExerciseButton.TabIndex = 4;
             this.CreateExerciseButton.Text = "Створити";
             this.CreateExerciseButton.UseVisualStyleBackColor = true;

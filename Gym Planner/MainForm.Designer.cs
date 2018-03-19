@@ -162,7 +162,7 @@
             this.FindDayTab.Location = new System.Drawing.Point(4, 25);
             this.FindDayTab.Name = "FindDayTab";
             this.FindDayTab.Padding = new System.Windows.Forms.Padding(3);
-            this.FindDayTab.Size = new System.Drawing.Size(914, 414);
+            this.FindDayTab.Size = new System.Drawing.Size(940, 414);
             this.FindDayTab.TabIndex = 4;
             this.FindDayTab.Text = "Пошук днів";
             this.FindDayTab.UseVisualStyleBackColor = true;
@@ -179,7 +179,7 @@
             this.FindDayTable.Name = "FindDayTable";
             this.FindDayTable.RowCount = 1;
             this.FindDayTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.FindDayTable.Size = new System.Drawing.Size(908, 408);
+            this.FindDayTable.Size = new System.Drawing.Size(934, 408);
             this.FindDayTable.TabIndex = 0;
             // 
             // FindPanel
@@ -200,9 +200,9 @@
             this.FindPanel.Controls.Add(this.maxWeightTextBox);
             this.FindPanel.Controls.Add(this.RepsTextBox);
             this.FindPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FindPanel.Location = new System.Drawing.Point(457, 3);
+            this.FindPanel.Location = new System.Drawing.Point(470, 3);
             this.FindPanel.Name = "FindPanel";
-            this.FindPanel.Size = new System.Drawing.Size(448, 402);
+            this.FindPanel.Size = new System.Drawing.Size(461, 402);
             this.FindPanel.TabIndex = 1;
             // 
             // ExerciseNameLabel
@@ -216,7 +216,7 @@
             // 
             // GetExerciseButton
             // 
-            this.GetExerciseButton.Location = new System.Drawing.Point(303, 23);
+            this.GetExerciseButton.Location = new System.Drawing.Point(303, 17);
             this.GetExerciseButton.Name = "GetExerciseButton";
             this.GetExerciseButton.Size = new System.Drawing.Size(130, 23);
             this.GetExerciseButton.TabIndex = 13;
@@ -339,7 +339,7 @@
             this.DayListBox.ItemHeight = 16;
             this.DayListBox.Location = new System.Drawing.Point(3, 3);
             this.DayListBox.Name = "DayListBox";
-            this.DayListBox.Size = new System.Drawing.Size(448, 402);
+            this.DayListBox.Size = new System.Drawing.Size(461, 402);
             this.DayListBox.TabIndex = 2;
             this.DayListBox.DoubleClick += new System.EventHandler(this.DayListBox_DoubleClick);
             // 
@@ -349,7 +349,7 @@
             this.ExercisesTab.Controls.Add(this.ExercisesMenuStrip);
             this.ExercisesTab.Location = new System.Drawing.Point(4, 25);
             this.ExercisesTab.Name = "ExercisesTab";
-            this.ExercisesTab.Size = new System.Drawing.Size(914, 414);
+            this.ExercisesTab.Size = new System.Drawing.Size(940, 414);
             this.ExercisesTab.TabIndex = 2;
             this.ExercisesTab.Text = "Вправи";
             this.ExercisesTab.UseVisualStyleBackColor = true;
@@ -366,16 +366,16 @@
             this.ExercisesTableLayoutPanel.Name = "ExercisesTableLayoutPanel";
             this.ExercisesTableLayoutPanel.RowCount = 1;
             this.ExercisesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.ExercisesTableLayoutPanel.Size = new System.Drawing.Size(914, 386);
+            this.ExercisesTableLayoutPanel.Size = new System.Drawing.Size(940, 386);
             this.ExercisesTableLayoutPanel.TabIndex = 2;
             // 
             // ExerciseInfoLabel
             // 
             this.ExerciseInfoLabel.AutoSize = true;
             this.ExerciseInfoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ExerciseInfoLabel.Location = new System.Drawing.Point(481, 0);
+            this.ExerciseInfoLabel.Location = new System.Drawing.Point(495, 0);
             this.ExerciseInfoLabel.Name = "ExerciseInfoLabel";
-            this.ExerciseInfoLabel.Size = new System.Drawing.Size(430, 386);
+            this.ExerciseInfoLabel.Size = new System.Drawing.Size(442, 386);
             this.ExerciseInfoLabel.TabIndex = 1;
             this.ExerciseInfoLabel.Text = "Для інформації про вправу - натисніть на ній у списку зліва";
             // 
@@ -399,7 +399,7 @@
             this.ExercisesDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.ExercisesDataGridView.RowHeadersVisible = false;
             this.ExercisesDataGridView.RowTemplate.Height = 24;
-            this.ExercisesDataGridView.Size = new System.Drawing.Size(472, 380);
+            this.ExercisesDataGridView.Size = new System.Drawing.Size(486, 380);
             this.ExercisesDataGridView.TabIndex = 2;
             this.ExercisesDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExercisesDataGridView_CellClick);
             this.ExercisesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExercisesDataGridView_CellContentClick);
@@ -437,7 +437,7 @@
             this.RemoveExerciseToolStripMenuItem});
             this.ExercisesMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.ExercisesMenuStrip.Name = "ExercisesMenuStrip";
-            this.ExercisesMenuStrip.Size = new System.Drawing.Size(914, 28);
+            this.ExercisesMenuStrip.Size = new System.Drawing.Size(940, 28);
             this.ExercisesMenuStrip.TabIndex = 1;
             this.ExercisesMenuStrip.Text = "menuStrip1";
             // 
@@ -461,7 +461,7 @@
             this.StatTab.Controls.Add(this.StatMenuStrip);
             this.StatTab.Location = new System.Drawing.Point(4, 25);
             this.StatTab.Name = "StatTab";
-            this.StatTab.Size = new System.Drawing.Size(914, 414);
+            this.StatTab.Size = new System.Drawing.Size(940, 414);
             this.StatTab.TabIndex = 3;
             this.StatTab.Text = "Статистика";
             this.StatTab.UseVisualStyleBackColor = true;
@@ -475,7 +475,7 @@
             this.ExerciseStatisticChart.Legends.Add(legend1);
             this.ExerciseStatisticChart.Location = new System.Drawing.Point(0, 32);
             this.ExerciseStatisticChart.Name = "ExerciseStatisticChart";
-            this.ExerciseStatisticChart.Size = new System.Drawing.Size(914, 382);
+            this.ExerciseStatisticChart.Size = new System.Drawing.Size(940, 382);
             this.ExerciseStatisticChart.TabIndex = 1;
             this.ExerciseStatisticChart.Text = "Статистика";
             title1.Name = "Title";
@@ -489,7 +489,7 @@
             this.MuscleGroupToolStripComboBox});
             this.StatMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.StatMenuStrip.Name = "StatMenuStrip";
-            this.StatMenuStrip.Size = new System.Drawing.Size(914, 32);
+            this.StatMenuStrip.Size = new System.Drawing.Size(940, 32);
             this.StatMenuStrip.TabIndex = 0;
             this.StatMenuStrip.Text = "menuStrip1";
             // 

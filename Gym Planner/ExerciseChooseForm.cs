@@ -21,9 +21,9 @@ namespace Gym_Planner
             try
             {
                 DataTable dataTable = this.exercisesNameTableAdapter.GetData();
+                this.ExercisesListBox.DataSource = dataTable;
                 this.ExercisesListBox.DisplayMember = dataTable.Columns[0].ToString();
                 //this.ExercisesListBox.ValueMember = dataTable.Columns[0].ToString();
-                this.ExercisesListBox.DataSource = dataTable;
                 this.listDataTable = dataTable;
             }
             catch (System.Exception ex)
@@ -36,17 +36,19 @@ namespace Gym_Planner
         {
             if (this.ExercisesListBox.SelectedItems.Count != 0)
             {
-                this.exerciseName = this.ExercisesListBox.SelectedValue.ToString();
+                this.exerciseName = ((DataRowView)this.ExercisesListBox.SelectedItem).Row.ItemArray[0].ToString();
                 this.Close();
                 return;
             }
-            foreach (System.Data.DataRowView exercise in this.ExercisesListBox.Items)
-                if (exercise[0].ToString() == this.ExerciseNameTextBox.Text)
-                {
-                    this.exerciseName = this.ExerciseNameTextBox.Text;
-                    this.Close();
-                    return;
-                }
+            // короче цей код мав працювати коли рядків в списку не виділено, але чомусь навіть попри ClearSelected вони виділені))0
+
+            //foreach (System.Data.DataRowView exercise in this.ExercisesListBox.Items)
+            //    if (exercise[0].ToString() == this.ExerciseNameTextBox.Text)
+            //    {
+            //        this.exerciseName = this.ExerciseNameTextBox.Text;
+            //        this.Close();
+            //        return;
+            //    }
             DialogResult = DialogResult.None;
             MessageBox.Show("\t\tТакої вправи немає!\n\r Будь ласка, виберіть зі списку, чи введіть правильну назву вправи! :)", "Помилка");
         }
