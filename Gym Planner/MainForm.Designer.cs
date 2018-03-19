@@ -106,7 +106,7 @@
             this.MainTableLayout.RowCount = 2;
             this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.71018F));
             this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.28982F));
-            this.MainTableLayout.Size = new System.Drawing.Size(928, 538);
+            this.MainTableLayout.Size = new System.Drawing.Size(954, 538);
             this.MainTableLayout.TabIndex = 2;
             // 
             // MainTabControl
@@ -119,7 +119,7 @@
             this.MainTabControl.Location = new System.Drawing.Point(3, 92);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(922, 443);
+            this.MainTabControl.Size = new System.Drawing.Size(948, 443);
             this.MainTabControl.TabIndex = 0;
             // 
             // CalendarTab
@@ -128,7 +128,7 @@
             this.CalendarTab.Location = new System.Drawing.Point(4, 25);
             this.CalendarTab.Name = "CalendarTab";
             this.CalendarTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CalendarTab.Size = new System.Drawing.Size(914, 414);
+            this.CalendarTab.Size = new System.Drawing.Size(940, 414);
             this.CalendarTab.TabIndex = 1;
             this.CalendarTab.Text = "Календар";
             this.CalendarTab.UseVisualStyleBackColor = true;
@@ -144,7 +144,7 @@
             this.CalendarTabPanel.RowCount = 2;
             this.CalendarTabPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.20588F));
             this.CalendarTabPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.79412F));
-            this.CalendarTabPanel.Size = new System.Drawing.Size(908, 408);
+            this.CalendarTabPanel.Size = new System.Drawing.Size(934, 408);
             this.CalendarTabPanel.TabIndex = 1;
             // 
             // Calendar
@@ -512,7 +512,7 @@
             // 
             this.linkLabelLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabelLogout.AutoSize = true;
-            this.linkLabelLogout.Location = new System.Drawing.Point(778, 0);
+            this.linkLabelLogout.Location = new System.Drawing.Point(804, 0);
             this.linkLabelLogout.Name = "linkLabelLogout";
             this.linkLabelLogout.Size = new System.Drawing.Size(147, 17);
             this.linkLabelLogout.TabIndex = 1;
@@ -533,7 +533,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Gym_Planner.Properties.Resources.kKI7Mcg;
-            this.ClientSize = new System.Drawing.Size(928, 538);
+            this.ClientSize = new System.Drawing.Size(954, 538);
             this.Controls.Add(this.MainTableLayout);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.ExercisesMenuStrip;

@@ -13,6 +13,7 @@ namespace Gym_Planner
     public partial class ExerciseChooseForm : Form
     {
         public string exerciseName;
+        private DataTable listDataTable;
         public ExerciseChooseForm()
         {
             InitializeComponent();
@@ -21,8 +22,9 @@ namespace Gym_Planner
             {
                 DataTable dataTable = this.exercisesNameTableAdapter.GetData();
                 this.ExercisesListBox.DisplayMember = dataTable.Columns[0].ToString();
-                this.ExercisesListBox.ValueMember = dataTable.Columns[0].ToString();
+                //this.ExercisesListBox.ValueMember = dataTable.Columns[0].ToString();
                 this.ExercisesListBox.DataSource = dataTable;
+                this.listDataTable = dataTable;
             }
             catch (System.Exception ex)
             {
@@ -52,6 +54,18 @@ namespace Gym_Planner
         private void ExerciseNameTExtBox_TextChanged(object sender, EventArgs e)
         {
             this.ExercisesListBox.ClearSelected();
+            DataTable newListDataTable = new DataTable();
+            newListDataTable.Columns.Add(new DataColumn("Назва вправи"));
+            foreach (DataRow row in this.listDataTable.Rows)
+                if (((string)row[0]).ToLower().Contains(ExerciseNameTextBox.Text.ToLower()))
+                {
+                    var new_row = newListDataTable.NewRow();
+                    new_row.ItemArray = row.ItemArray.Clone() as object[];
+                    newListDataTable.Rows.Add(new_row);
+                }
+            this.ExercisesListBox.DataSource = newListDataTable;
+            this.ExercisesListBox.DisplayMember = newListDataTable.Columns[0].ToString();
+            //this.ExercisesListBox.ValueMember = "Name";//newListDataTable.Columns[0].ToString();
         }
     }
 }
