@@ -47,7 +47,7 @@
             // 
             // LoginTextBox
             // 
-            this.LoginTextBox.Location = new System.Drawing.Point(147, 126);
+            this.LoginTextBox.Location = new System.Drawing.Point(147, 128);
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.Size = new System.Drawing.Size(284, 22);
             this.LoginTextBox.TabIndex = 1;
@@ -58,6 +58,7 @@
             this.PassTextBox.Name = "PassTextBox";
             this.PassTextBox.Size = new System.Drawing.Size(284, 22);
             this.PassTextBox.TabIndex = 2;
+            this.PassTextBox.UseSystemPasswordChar = true;
             // 
             // CreateAccountButton
             // 
@@ -84,7 +85,7 @@
             // NameLabel
             // 
             this.NameLabel.AutoSize = true;
-            this.NameLabel.Location = new System.Drawing.Point(30, 78);
+            this.NameLabel.Location = new System.Drawing.Point(30, 80);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(39, 17);
             this.NameLabel.TabIndex = 5;
