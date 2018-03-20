@@ -38,8 +38,9 @@ namespace Gym_Planner
 
             DataTable daysDT = findDays.GetWorkoutDays(user.Login);
             Calendar.RemoveAllBoldedDates();
-            foreach (DataRow row in daysDT.Rows) {
-               Calendar.AddBoldedDate(Convert.ToDateTime(row["Date"]));
+            foreach (DataRow row in daysDT.Rows)
+            {
+                Calendar.AddBoldedDate(Convert.ToDateTime(row["Date"]));
             }
         }
 
@@ -128,15 +129,15 @@ namespace Gym_Planner
                 {
                     this.ExerciseStatisticChart.Series.Add(exerciseName);
                     DataTable dataTable = this.recordsByDateAdapter1.GetData(this.user.Login, exerciseName);
-                    List<double> weights = new List<double>(dataTable.Rows.Count);
-                    foreach (DataRow row in dataTable.Rows)
-                        weights.Add(Convert.ToDouble(row[1]));
                     this.ExerciseStatisticChart.Series[exerciseName].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-                    this.ExerciseStatisticChart.Series[exerciseName].Points.DataBindY(weights);
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        this.ExerciseStatisticChart.Series[exerciseName].Points.AddXY(Convert.ToDateTime(row[0]), Convert.ToDouble(row[1]));
+                    }
                 }
                 this.ExerciseStatisticChart.ChartAreas[0].AxisX.Title = "Час";
                 this.ExerciseStatisticChart.ChartAreas[0].AxisX.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
-                this.ExerciseStatisticChart.ChartAreas[0].AxisX.LabelStyle.Enabled = false;
+                this.ExerciseStatisticChart.ChartAreas[0].AxisX.LabelStyle.Format = "dd-MM-yy";
                 this.ExerciseStatisticChart.ChartAreas[0].AxisY.Title = "Вага";
                 this.ExerciseStatisticChart.ChartAreas[0].AxisY.ArrowStyle = System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.Triangle;
             }
